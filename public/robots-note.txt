@@ -1,0 +1,1 @@
+robots.txt is generated dynamically by src/app/robots.ts (do not add a static one).

@@ -1,0 +1,1 @@
+/* generator placeholder — intentionally empty */

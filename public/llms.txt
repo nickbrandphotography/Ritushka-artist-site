@@ -1,0 +1,39 @@
+# Ritushka — Contemporary Abstract Landscape & Seascape Artist
+
+> Ritushka is a contemporary abstract artist based in Lane Cove, Sydney, Australia, creating large-scale abstract landscapes and seascapes. Original paintings and commissions for art collectors, interior designers, architects, property developers and corporate buyers. Worldwide insured shipping with certificate of authenticity.
+
+## Key facts
+- Artist: Ritushka
+- Discipline: Abstract landscape & seascape painting, large-scale contemporary works
+- Location: Lane Cove, Sydney, NSW, Australia
+- Offers: Original artworks, commissioned paintings, trade programs (interior designers, art consultants, buyer's agents, corporate)
+- Shipping: Worldwide, insured, certificate of authenticity
+
+## Primary pages
+- Available works: /available
+- Portfolio: /portfolio
+- Collections: /collections
+- Commission a painting: /commission
+- About the artist: /about
+- Contact: /contact
+
+## Collections
+- Abstract Landscapes: /collections/abstract-landscapes
+- Abstract Seascapes: /collections/abstract-seascapes
+- Large Scale Paintings: /collections/large-scale-paintings
+- Coastal Abstract Art: /collections/coastal-abstract-art
+- Ocean Inspired Paintings: /collections/ocean-inspired-paintings
+- Contemporary Landscape Art: /collections/contemporary-landscape-art
+- Textured Abstract Paintings: /collections/textured-abstract-paintings
+- Blue Abstract Paintings: /collections/blue-abstract-paintings
+- Modern Australian Art: /collections/modern-australian-art
+- Statement Artworks: /collections/statement-artworks
+
+## For trade
+- Interior designers: /trade/interior-designers
+- Art consultants: /trade/art-consultants
+- Buyer's agents: /trade/buyers-agents
+- Corporate art services: /trade/corporate
+
+## Journal (guides)
+- /blog — guides for collectors, interior designers, architects and homeowners

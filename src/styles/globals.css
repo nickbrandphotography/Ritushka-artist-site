@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: #f6f4ef; color: #1a1a18; -webkit-font-smoothing: antialiased; font-family: var(--font-sans); }
+::selection { background: #e8e3da; }
+.prose-art p { margin-top: 1rem; line-height: 1.75; color: rgba(26,26,24,0.8); }
+.prose-art h2 { font-family: var(--font-serif), Georgia, serif; font-size: 1.6rem; margin-top: 2rem; }
+.prose-art h3 { font-weight: 600; margin-top: 1.5rem; }
+.prose-art ul { list-style: disc; padding-left: 1.25rem; margin-top: .75rem; }
