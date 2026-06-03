@@ -24,8 +24,8 @@ export const site = {
     logoPath: '/logo.svg',
   },
   contact: {
-    email: 'studio@ritushka-art.com', // PLACEHOLDER
-    phone: '+61 PLACEHOLDER',
+    email: 'studio@ritka.net',
+    phone: '+61 403 835 467',
     studioByAppointment: true,
   },
   location: {
