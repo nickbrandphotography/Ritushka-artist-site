@@ -1,11 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function MobileNav({ items }: { items: { href: string; label: string }[] }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => { setMounted(true); }, []);
 
   // Close the menu on navigation
   useEffect(() => { setOpen(false); }, [pathname]);
@@ -15,6 +19,23 @@ export default function MobileNav({ items }: { items: { href: string; label: str
     document.body.style.overflow = open ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [open]);
+
+  const panel = (
+    <div
+      id="mobile-menu"
+      className="fixed inset-x-0 top-16 bottom-0 z-[60] overflow-y-auto border-t border-sand bg-bone md:hidden"
+    >
+      <nav aria-label="Mobile" className="px-5 py-6">
+        <ul className="flex flex-col divide-y divide-sand">
+          {items.map(n => (
+            <li key={n.href}>
+              <Link href={n.href} onClick={() => setOpen(false)} className="block py-4 font-serif text-2xl text-ink">{n.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
 
   return (
     <div className="md:hidden">
@@ -33,22 +54,7 @@ export default function MobileNav({ items }: { items: { href: string; label: str
         </span>
       </button>
 
-      {open && (
-        <div
-          id="mobile-menu"
-          className="fixed inset-x-0 top-16 bottom-0 z-50 overflow-y-auto border-t border-sand bg-bone"
-        >
-          <nav aria-label="Mobile" className="px-5 py-6">
-            <ul className="flex flex-col divide-y divide-sand">
-              {items.map(n => (
-                <li key={n.href}>
-                  <Link href={n.href} className="block py-4 font-serif text-2xl text-ink">{n.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      )}
+      {mounted && open && createPortal(panel, document.body)}
     </div>
   );
 }
