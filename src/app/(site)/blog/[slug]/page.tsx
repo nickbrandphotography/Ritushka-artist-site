@@ -1,10 +1,11 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import Container from '@/components/Container';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CtaBand from '@/components/CtaBand';
 import JsonLd from '@/components/JsonLd';
-import { blog, getPost, collectionName, getCollection } from '@/lib/data';
+import { blog, getPost, getCollection } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 import { graph, articleSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -13,16 +14,32 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const p = getPost(params.slug); if (!p) return {};
   return buildMetadata({ title: p.seoTitle, description: p.metaDescription, path: `/blog/${p.slug}`, image: p.image, type: 'article' });
 }
-function render(body: string) {
-  return body.split('\n').filter(Boolean).map((line, i) => {
-    if (line.startsWith('## ')) return <h2 key={i}>{line.slice(3)}</h2>;
-    if (line.startsWith('### ')) return <h3 key={i}>{line.slice(4)}</h3>;
-    if (line.startsWith('- ')) return <li key={i}>{line.slice(2)}</li>;
-    return <p key={i}>{line}</p>;
+
+function render(body: string): ReactNode[] {
+  const lines = body.split('\n').filter(Boolean);
+  const out: ReactNode[] = [];
+  let list: string[] = [];
+  const flush = (key: string) => {
+    if (list.length) {
+      const items = list;
+      out.push(<ul key={key}>{items.map((t, j) => <li key={j}>{t}</li>)}</ul>);
+      list = [];
+    }
+  };
+  lines.forEach((line, i) => {
+    if (line.startsWith('- ')) { list.push(line.slice(2)); return; }
+    flush('ul-' + i);
+    if (line.startsWith('## ')) out.push(<h2 key={i}>{line.slice(3)}</h2>);
+    else if (line.startsWith('### ')) out.push(<h3 key={i}>{line.slice(4)}</h3>);
+    else out.push(<p key={i}>{line}</p>);
   });
+  flush('ul-end');
+  return out;
 }
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const p = getPost(params.slug); if (!p) notFound();
+  const p = getPost(params.slug);
+  if (!p) notFound();
   const coll = getCollection(p.relatedCollection);
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Journal', path: '/blog' }, { name: p.title, path: `/blog/${p.slug}` }];
   return (
