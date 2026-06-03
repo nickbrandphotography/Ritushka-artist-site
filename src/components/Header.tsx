@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Container from './Container';
+import MobileNav from './MobileNav';
 import { site } from '@/site.config';
 
 const nav = [
@@ -23,7 +24,7 @@ export default function Header() {
             {nav.map(n => <li key={n.href}><Link href={n.href} className="hover:text-ink">{n.label}</Link></li>)}
           </ul>
         </nav>
-        <Link href="/contact" className="rounded-full border border-ink px-4 py-1.5 text-sm md:hidden">Menu</Link>
+        <MobileNav items={nav} />
       </Container>
     </header>
   );
