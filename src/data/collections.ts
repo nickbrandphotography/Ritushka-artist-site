@@ -17,7 +17,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a abstract landscapes in a specific palette?",
+        "q": "Can I commission a piece from the abstract landscapes collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -42,7 +42,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a abstract seascapes in a specific palette?",
+        "q": "Can I commission a piece from the abstract seascapes collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -67,7 +67,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a large scale paintings in a specific palette?",
+        "q": "Can I commission a piece from the large scale paintings collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -92,7 +92,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a coastal abstract art in a specific palette?",
+        "q": "Can I commission a piece from the coastal abstract art collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -117,7 +117,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a ocean inspired paintings in a specific palette?",
+        "q": "Can I commission a piece from the ocean inspired paintings collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -142,7 +142,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a contemporary landscape art in a specific palette?",
+        "q": "Can I commission a piece from the contemporary landscape art collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -167,7 +167,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a textured abstract paintings in a specific palette?",
+        "q": "Can I commission a piece from the textured abstract paintings collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -192,7 +192,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a blue abstract paintings in a specific palette?",
+        "q": "Can I commission a piece from the blue abstract paintings collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -217,7 +217,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a modern australian art in a specific palette?",
+        "q": "Can I commission a piece from the modern australian art collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {
@@ -242,7 +242,7 @@ export const collections: Collection[] = [
         "a": "Works range from intimate pieces to large-scale statement paintings over two metres. Custom sizes are available by commission."
       },
       {
-        "q": "Can I commission a statement artworks in a specific palette?",
+        "q": "Can I commission a piece from the statement artworks collection in a specific palette?",
         "a": "Yes. Ritushka accepts commissions and will work to your size, palette and space. Allow 4-8 weeks plus shipping."
       },
       {

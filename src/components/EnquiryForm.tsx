@@ -34,7 +34,7 @@ export default function EnquiryForm({ subject, kind = 'enquiry' }: { subject?: s
         Add me to the collector list for new works and private viewings.
       </label>
       <button disabled={busy} className="rounded-full bg-ink px-6 py-2.5 text-sm text-bone disabled:opacity-60">{busy ? 'Sending…' : labels[kind]}</button>
-      <p className="text-xs text-ink/50">Demo endpoint — connect to your CRM / email provider in <code>/api/enquiry</code>.</p>
+      <p className="text-xs text-ink/50">Your enquiry goes straight to Ritushka's studio. We reply within two business days.</p>
     </form>
   );
 }

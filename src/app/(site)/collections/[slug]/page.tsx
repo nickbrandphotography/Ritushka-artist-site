@@ -35,8 +35,8 @@ export default function CollectionPage({ params }: { params: { slug: string } })
           </ul>
         </section>
       )}
-      <CtaBand title={`Commission a ${c.name.toLowerCase().replace(/s$/, '')}`}
-        body="Bespoke size, palette and scale, painted for your space and shipped worldwide."
+      <CtaBand title="Commission a bespoke painting"
+        body={`A bespoke ${c.name.toLowerCase()} work in your size, palette and scale — painted for your space and shipped worldwide.`}
         primary={{ href: '/commission', label: 'Start a commission' }} secondary={{ href: '/contact', label: 'Contact studio' }} />
     </Container>
   );

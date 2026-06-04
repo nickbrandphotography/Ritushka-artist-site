@@ -38,7 +38,7 @@ export const site = {
     geo: { lat: -33.8146, lng: 151.1696 }, // Lane Cove approx
     serviceArea: ['Sydney', 'Australia', 'Worldwide'],
   },
-  url: 'https://ritushka.com', // production domain
+  url: 'https://www.ritushka.com', // production domain (canonical host)
   defaultOgImage: '/og/default.jpg',
   locale: 'en_AU',
   currency: 'AUD',

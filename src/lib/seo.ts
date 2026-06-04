@@ -26,4 +26,4 @@ export function buildMetadata({ title, description, path, image, type = 'website
   };
 }
 
-export const titleTemplate = `%s | ${site.artist.name} — ${site.artist.tagline}`;
+export const titleTemplate = `%s | ${site.artist.name}`;
