@@ -31,6 +31,17 @@ export const postsForCollection = (slug: string): BlogPost[] =>
   blog.filter(p => p.relatedCollection === slug);
 
 export const formatPrice = (price: number | null, currency = 'AUD'): string =>
-  price == null ? 'Sold' : new Intl.NumberFormat('en-AU', { style: 'currency', currency, maximumFractionDigits: 0 }).format(price);
+  price == null ? 'Price on application' : new Intl.NumberFormat('en-AU', { style: 'currency', currency, maximumFractionDigits: 0 }).format(price);
 
-export const dims = (a: Artwork): string => `${a.heightCm} × ${a.widthCm} cm (${(a.heightMm/10/2.54).toFixed(0)} × ${(a.widthMm/10/2.54).toFixed(0)} in)`;
+/** Physical dimensions, or an honest fallback when not yet recorded. */
+export const dims = (a: Artwork): string =>
+  a.heightCm != null && a.widthCm != null
+    ? `${a.heightCm} × ${a.widthCm} cm (${(a.heightCm / 2.54).toFixed(0)} × ${(a.widthCm / 2.54).toFixed(0)} in)`
+    : 'Available on request';
+
+/** CSS aspect-ratio string taken from the real photograph. */
+export const aspect = (a: Artwork): string => `${a.imageWidth} / ${a.imageHeight}`;
+
+/** Short label for price/availability used on cards. */
+export const priceLabel = (a: Artwork): string =>
+  a.status === 'sold' ? 'Sold' : a.price != null ? formatPrice(a.price, a.currency) : 'Enquire';

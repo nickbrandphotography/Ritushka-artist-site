@@ -62,18 +62,20 @@ export const visualArtworkSchema = (a: Artwork) => ({
   name: a.title,
   creator: { '@id': abs('/#person') },
   artform: 'Painting',
-  artMedium: a.medium,
+  ...(a.medium ? { artMedium: a.medium } : {}),
   artworkSurface: 'Canvas',
-  width: { '@type': 'QuantitativeValue', value: a.widthCm, unitCode: 'CMT' },
-  height: { '@type': 'QuantitativeValue', value: a.heightCm, unitCode: 'CMT' },
-  dateCreated: String(a.year),
+  ...(a.widthCm != null ? { width: { '@type': 'QuantitativeValue', value: a.widthCm, unitCode: 'CMT' } } : {}),
+  ...(a.heightCm != null ? { height: { '@type': 'QuantitativeValue', value: a.heightCm, unitCode: 'CMT' } } : {}),
+  ...(a.year != null ? { dateCreated: String(a.year) } : {}),
   description: a.story,
   image: abs(a.image),
   url: abs(`/artwork/${a.slug}`),
   inLanguage: 'en-AU',
-  ...(a.status !== 'sold' && a.price != null
-    ? { offers: { '@type': 'Offer', price: a.price, priceCurrency: a.currency, availability: 'https://schema.org/InStock', url: abs(`/artwork/${a.slug}`), seller: { '@id': abs('/#organization') } } }
-    : { offers: { '@type': 'Offer', availability: 'https://schema.org/SoldOut' } }),
+  ...(a.status === 'sold'
+    ? { offers: { '@type': 'Offer', availability: 'https://schema.org/SoldOut' } }
+    : a.price != null
+      ? { offers: { '@type': 'Offer', price: a.price, priceCurrency: a.currency, availability: 'https://schema.org/InStock', url: abs(`/artwork/${a.slug}`), seller: { '@id': abs('/#organization') } } }
+      : {}),
 });
 
 export const collectionPageSchema = (c: Collection, items: Artwork[]) => ({

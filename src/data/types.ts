@@ -1,4 +1,4 @@
-export type Status = 'available' | 'sold' | 'reserved';
+export type Status = 'available' | 'sold' | 'reserved' | 'enquire';
 
 export interface FAQ { q: string; a: string; }
 
@@ -9,8 +9,15 @@ export interface Collection {
 }
 
 export interface Artwork {
-  id: string; slug: string; title: string; year: number; medium: string;
-  widthMm: number; heightMm: number; widthCm: number; heightCm: number;
+  id: string; slug: string; title: string;
+  /** Year created — null until recorded in the Artwork Register. */
+  year: number | null;
+  /** Medium — empty string until recorded. */
+  medium: string;
+  /** Physical canvas size in cm — null until recorded (shown as "on request"). */
+  widthCm: number | null; heightCm: number | null;
+  /** Pixel dimensions of the photograph, used for correct display aspect ratio. */
+  imageWidth: number; imageHeight: number;
   palette: string; collections: string[]; primaryCollection: string;
   status: Status; price: number | null; currency: string;
   orientation: 'landscape' | 'portrait' | 'square';

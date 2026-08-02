@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import PlaceholderImage from '@/components/PlaceholderImage';
 import EnquiryForm from '@/components/EnquiryForm';
 import JsonLd from '@/components/JsonLd';
-import { mockups, getMockup, getArtwork, formatPrice, dims } from '@/lib/data';
+import { mockups, getMockup, getArtwork, priceLabel, aspect } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 import { graph, imageObjectSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -31,7 +31,7 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
             <div className="mt-6 rounded-lg border border-sand p-6">
               <p className="text-sm text-ink/55">Featured artwork</p>
               <Link href={`/artwork/${a.slug}`} className="mt-1 block font-serif text-2xl text-ink underline">{a.title}</Link>
-              <p className="mt-1 text-sm text-ink/60">{dims(a)} · {a.status === 'sold' ? 'Sold' : formatPrice(a.price, a.currency)}</p>
+              <p className="mt-1 text-sm text-ink/60">Original painting · {priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a)}</p>
               <div className="mt-4"><EnquiryForm subject={a.title} kind={a.status === 'sold' ? 'commission' : 'enquiry'} /></div>
             </div>
           )}
