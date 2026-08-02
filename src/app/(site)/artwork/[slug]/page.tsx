@@ -32,7 +32,7 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
       <Breadcrumbs crumbs={crumbs} />
       <div className="mt-6 grid gap-12 lg:grid-cols-2">
         <div>
-          <PlaceholderImage src={a.image} alt={a.alt} ratio={aspect(a)} priority />
+          <PlaceholderImage src={a.image} alt={a.alt} ratio={aspect(a)} priority framed />
           {mocks.length > 0 && (
             <div className="mt-6 grid grid-cols-3 gap-3">
               {mocks.map(m => (

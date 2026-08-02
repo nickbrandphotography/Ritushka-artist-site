@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
         </div>
         <Link href={`/artwork/${feature.slug}`} aria-label={feature.title}>
-          <PlaceholderImage src={feature.image} alt={feature.alt} ratio={aspect(feature)} priority />
+          <PlaceholderImage src={feature.image} alt={feature.alt} ratio={aspect(feature)} priority framed />
         </Link>
       </Container>
     </section>

@@ -2,14 +2,18 @@ import Image from 'next/image';
 
 /**
  * Renders an optimised artwork/mockup/blog image via next/image (AVIF/WebP,
- * lazy-loading, no layout shift). Sample images ship in /public; replace any
- * file at the same path with a real photograph and nothing else needs to change.
+ * lazy-loading, no layout shift).
+ *
+ * `framed` wraps the image in a light-timber floating frame with a charcoal
+ * reveal and a wall shadow — drawn in CSS so the source image stays clean
+ * (important for Open Graph, zooming and future re-cropping). Mockup images
+ * already contain a rendered frame, so they are left unframed.
  */
 export default function PlaceholderImage({
-  src, alt, ratio = '4 / 3', priority,
-}: { src: string; alt: string; ratio?: string; priority?: boolean }) {
-  return (
-    <figure className="relative m-0 w-full overflow-hidden rounded-sm bg-sand" style={{ aspectRatio: ratio }}>
+  src, alt, ratio = '4 / 3', priority, framed = false,
+}: { src: string; alt: string; ratio?: string; priority?: boolean; framed?: boolean }) {
+  const picture = (
+    <figure className="relative m-0 w-full overflow-hidden bg-sand" style={{ aspectRatio: ratio }}>
       <Image
         src={src}
         alt={alt}
@@ -19,5 +23,13 @@ export default function PlaceholderImage({
         priority={priority}
       />
     </figure>
+  );
+
+  if (!framed) return picture;
+
+  return (
+    <div className="rt-frame">
+      <div className="rt-reveal">{picture}</div>
+    </div>
   );
 }
