@@ -18,7 +18,7 @@ ROOMS = {
 TIMBER_LIGHT = (214, 184, 140)
 TIMBER_MID   = (198, 165, 120)
 TIMBER_DARK  = (170, 136,  94)
-REVEAL       = ( 38,  38,  38)   # 90% grey — softer than pure black
+REVEAL       = ( 51,  51,  51)   # 80% grey — softer than pure black
 
 def lerp(a, b, t): return tuple(int(a[i] + (b[i] - a[i]) * t) for i in range(3))
 

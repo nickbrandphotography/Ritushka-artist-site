@@ -13,7 +13,7 @@
      Reference: a ~1100 mm wide canvas → 0.9% ≈ 10 mm, 1.3% ≈ 15 mm. */
   --frame-w: max(2px, 0.9%);
   --reveal-w: max(1px, 0.45%);
-  --reveal: #262626; /* 90% grey */
+  --reveal: #333333; /* 80% grey — softer than black */
 }
 html { scroll-behavior: smooth; }
 body { background: #f6f4ef; color: #1a1a18; -webkit-font-smoothing: antialiased; font-family: var(--font-sans); }
