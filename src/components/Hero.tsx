@@ -2,9 +2,13 @@ import Link from 'next/link';
 import Container from './Container';
 import PlaceholderImage from './PlaceholderImage';
 import { site } from '@/site.config';
-import { artworks } from '@/lib/data';
+import { artworks, getArtwork, aspect } from '@/lib/data';
+
+/** Slug of the painting featured in the homepage hero. Change this to swap it. */
+const HERO_SLUG = 'into-the-ever-blue';
+
 export default function Hero() {
-  const feature = artworks[0];
+  const feature = getArtwork(HERO_SLUG) ?? artworks[0];
   return (
     <section className="border-b border-sand">
       <Container className="grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
@@ -18,7 +22,7 @@ export default function Hero() {
           </div>
         </div>
         <Link href={`/artwork/${feature.slug}`} aria-label={feature.title}>
-          <PlaceholderImage src={feature.image} alt={feature.alt} ratio="4 / 3" priority />
+          <PlaceholderImage src={feature.image} alt={feature.alt} ratio={aspect(feature)} priority />
         </Link>
       </Container>
     </section>
