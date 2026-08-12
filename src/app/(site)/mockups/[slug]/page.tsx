@@ -5,7 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import PlaceholderImage from '@/components/PlaceholderImage';
 import EnquiryForm from '@/components/EnquiryForm';
 import JsonLd from '@/components/JsonLd';
-import { mockups, getMockup, getArtwork, priceLabel, aspect, collectionName } from '@/lib/data';
+import { mockups, getMockup, getArtwork, priceLabel, aspect, collectionName, dims } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 import { graph, imageObjectSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -66,6 +66,11 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
                     <Link href={`/artwork/${a.slug}`} className="font-serif text-2xl text-ink hover:underline">{a.title}</Link>
                     <p className="mt-1 text-sm text-ink/60">
                       {collectionName(a.primaryCollection)} · {priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a)}
+                    </p>
+                    <p className="mt-1 text-sm text-ink/60">{dims(a)}</p>
+                    <p className="mt-2 text-xs text-ink/50">
+                      Shown to scale against a 2.7 m wall and a 120 cm bench, so the proportions
+                      match the painting in a real room.
                     </p>
                     <Link
                       href={`/artwork/${a.slug}`}

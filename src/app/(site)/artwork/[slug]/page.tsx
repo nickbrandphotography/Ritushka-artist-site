@@ -6,7 +6,7 @@ import PlaceholderImage from '@/components/PlaceholderImage';
 import EnquiryForm from '@/components/EnquiryForm';
 import Gallery from '@/components/Gallery';
 import JsonLd from '@/components/JsonLd';
-import { artworks, getArtwork, relatedArtworks, mockupsForArtwork, collectionName, priceLabel, dims, aspect } from '@/lib/data';
+import { artworks, getArtwork, relatedArtworks, mockupsForArtwork, collectionName, priceLabel, dims, aspect, framing } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 import { graph, visualArtworkSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -47,15 +47,43 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
           <p className="text-xs uppercase tracking-widest text-ink/50">{collectionName(a.primaryCollection)}</p>
           <h1 className="mt-2 font-serif text-4xl text-ink md:text-5xl">{a.title}</h1>
           <p className="mt-3 text-xl text-ink/70">{priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a)}</p>
-          <dl className="mt-6 grid grid-cols-2 gap-y-3 text-sm">
-            {a.year != null && (<><dt className="text-ink/50">Year</dt><dd>{a.year}</dd></>)}
-            <dt className="text-ink/50">Medium</dt><dd>{a.medium || 'Original painting — details on request'}</dd>
-            <dt className="text-ink/50">Dimensions</dt><dd>{dims(a)}</dd>
-            <dt className="text-ink/50">Palette</dt><dd className="capitalize">{a.palette}</dd>
-            <dt className="text-ink/50">Availability</dt><dd>{a.status === 'sold' ? 'Sold' : 'Enquire to confirm'}</dd>
-            <dt className="text-ink/50">Shipping</dt><dd>Worldwide, insured, with certificate of authenticity</dd>
-          </dl>
-          <div className="prose-art mt-6"><p>{a.story}</p></div>
+          <div className="prose-art mt-6">
+            {a.story.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+          </div>
+
+          <section className="mt-8 border-t border-sand pt-6" aria-labelledby="specification">
+            <h2 id="specification" className="font-serif text-xl text-ink">Specification</h2>
+            <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-8 gap-y-3 text-sm">
+              <dt className="text-ink/50">Dimensions</dt>
+              <dd>{dims(a)}</dd>
+              {a.depthCm != null && (<>
+                <dt className="text-ink/50">Depth</dt>
+                <dd>{a.depthCm} cm{a.depthIn != null && ` (${a.depthIn} in)`}</dd>
+              </>)}
+              <dt className="text-ink/50">Orientation</dt>
+              <dd className="capitalize">{a.orientation}</dd>
+              <dt className="text-ink/50">Medium</dt>
+              <dd>{a.medium || 'Original painting — details on request'}</dd>
+              <dt className="text-ink/50">Framing</dt>
+              <dd>{framing(a)}</dd>
+              <dt className="text-ink/50">Edition</dt>
+              <dd>{a.edition}{a.edition === 'Original' && ' — a unique, one-off work'}</dd>
+              {a.year != null && (<>
+                <dt className="text-ink/50">Year</dt>
+                <dd>{a.year}</dd>
+              </>)}
+              <dt className="text-ink/50">Palette</dt>
+              <dd className="capitalize">{a.palette}</dd>
+              <dt className="text-ink/50">Availability</dt>
+              <dd>{a.status === 'sold' ? 'Sold — commission a related work' : 'Available — enquire to confirm'}</dd>
+              <dt className="text-ink/50">Shipping</dt>
+              <dd>Worldwide, insured, with certificate of authenticity</dd>
+              {a.inventoryId && (<>
+                <dt className="text-ink/50">Reference</dt>
+                <dd>{a.inventoryId}</dd>
+              </>)}
+            </dl>
+          </section>
           <div className="mt-8 rounded-lg border border-sand p-6">
             <h2 className="font-serif text-2xl text-ink">{a.status === 'sold' ? 'Commission a related work' : 'Enquire about this work'}</h2>
             <p className="mt-2 text-sm text-ink/65">Ask about size, medium, price and availability — Ritushka&rsquo;s studio replies within two business days.</p>

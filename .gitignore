@@ -6,3 +6,10 @@ out
 *.log
 .DS_Store
 next-env.d.ts
+
+# LibreOffice lock files
+.~lock.*#
+
+# Private prospect and outreach data - stays local, never pushed
+Art_Prospect_Databases/
+Outreach_System/

@@ -17,6 +17,25 @@ All branding, SEO defaults, schema and contact details read from **`src/site.con
 Change the name, domain, email, social links and geo there — every page, sitemap, OG tag and
 JSON-LD block updates automatically.
 
+## The spreadsheet is the source of truth
+`Artwork Records.ods` → sheet **Artwork Register** drives the catalogue. Edit the spreadsheet,
+then run:
+```bash
+python3 scripts/sync-register.py     # register -> src/data/*.ts + public/llms.txt
+python3 scripts/generate-mockups.py  # re-render room mockups at true scale
+```
+`sync-register.py` reads the register, matches each row to its artwork by title, and updates
+dimensions, depth, orientation, framing, the artist's description, sold status and every piece of
+SEO copy that mentions a size. Curated fields (palette, collections, subject line) are preserved.
+Blank columns stay blank on the site — nothing is invented. Fill **Medium**, **Year Created** and
+**List Price** in the register and they will appear on the artwork pages automatically.
+
+Rows are matched on **Title**, so a title change in the spreadsheet renames the page. Slug changes
+need a 301 added to `redirects()` in `next.config.mjs`.
+
+Mockups are drawn to a single real-world scale: a 2.7 m wall, a 120 × 45 cm bench, and each
+painting at its recorded size, hung with its centre 150 cm off the floor.
+
 ## Content is data-driven (scales to 500+ works)
 `src/data/` holds typed records. Regenerate placeholder content any time:
 ```bash

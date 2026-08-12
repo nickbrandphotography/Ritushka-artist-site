@@ -6,6 +6,34 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
+  // Titles corrected against the Artwork Register — keep the old URLs alive.
+  async redirects() {
+    const slugs = {
+      erruption: 'eruption',
+      mashmellow: 'marshmallow',
+      'piece-of-white-heavan': 'peace-of-white-heaven',
+      'tree-of-our-life': 'tree-of-our-lives',
+    };
+    const rooms = {
+      erruption: 'penthouse',
+      mashmellow: 'modern-apartment',
+      'piece-of-white-heavan': 'hotel-lobby',
+      'tree-of-our-life': 'modern-apartment',
+    };
+    return [
+      ...Object.entries(slugs).map(([from, to]) => ({
+        source: `/artwork/${from}`,
+        destination: `/artwork/${to}`,
+        permanent: true,
+      })),
+      ...Object.entries(slugs).map(([from, to]) => ({
+        source: `/mockups/${from}-in-${rooms[from]}`,
+        destination: `/mockups/${to}-in-${rooms[from]}`,
+        permanent: true,
+      })),
+    ];
+  },
+
   async headers() {
     return [
       {

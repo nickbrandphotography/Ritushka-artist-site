@@ -1,6 +1,12 @@
+// ⚠️  SUPERSEDED — do not run. This was the first-pass generator, written before the
+// Artwork Register was filled in. Running it now would wipe the real dimensions,
+// descriptions and sold statuses. Use scripts/sync-register.py instead; it reads
+// "Artwork Records.ods" and updates the data in place.
+//
+// Kept only as the record of the curated palette / collection / subject copy that
+// sync-register.py preserves.
+//
 // Builds artworks.ts, collections.ts and mockups.ts from the REAL artwork files.
-// No dimensions or prices are invented — those are "on request" until the
-// Artwork Register spreadsheet is filled in.
 import fs from 'node:fs';
 
 const man = JSON.parse(fs.readFileSync('/tmp/artmanifest.json', 'utf8'));

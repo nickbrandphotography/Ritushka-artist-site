@@ -36,8 +36,20 @@ export const formatPrice = (price: number | null, currency = 'AUD'): string =>
 /** Physical dimensions, or an honest fallback when not yet recorded. */
 export const dims = (a: Artwork): string =>
   a.heightCm != null && a.widthCm != null
-    ? `${a.heightCm} × ${a.widthCm} cm (${(a.heightCm / 2.54).toFixed(0)} × ${(a.widthCm / 2.54).toFixed(0)} in)`
+    ? `${a.heightCm} × ${a.widthCm} cm (${a.heightIn ?? (a.heightCm / 2.54).toFixed(1)} × ${a.widthIn ?? (a.widthCm / 2.54).toFixed(1)} in)`
     : 'Available on request';
+
+/** Compact size label for cards and listings. */
+export const dimsShort = (a: Artwork): string =>
+  a.heightCm != null && a.widthCm != null ? `${a.heightCm} × ${a.widthCm} cm` : 'Size on request';
+
+/** Surface area in square centimetres — used to sort by scale. */
+export const areaCm2 = (a: Artwork): number =>
+  a.heightCm != null && a.widthCm != null ? a.heightCm * a.widthCm : 0;
+
+/** Framing line for the specification list. */
+export const framing = (a: Artwork): string =>
+  a.framed ? (a.frameDescription ?? 'Framed') : 'Unframed — ready to hang';
 
 /** CSS aspect-ratio string taken from the real photograph. */
 export const aspect = (a: Artwork): string => `${a.imageWidth} / ${a.imageHeight}`;
