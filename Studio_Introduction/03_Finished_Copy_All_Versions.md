@@ -48,7 +48,7 @@ Cover title: **Studio Profile — for Interior Designers**
 | **DELIVERY** | Sydney metro by hand. Interstate and international by specialist art freight |
 | **TRADE TERMS** | ‹Trade discount available to registered practices. Applied at invoice, not negotiated per piece.› |
 
-**Footer:** ritushka.com · studio@ritka.net · +61 403 835 467
+**Footer:** ritushka.com · studio@ritushka.art · +61 403 835 467
 
 ---
 
@@ -157,7 +157,7 @@ Cover title: **Studio Profile — for Interior Designers**
 **Contact block**
 > Ritushka
 > Lane Cove, Sydney NSW, Australia
-> studio@ritka.net
+> studio@ritushka.art
 > +61 403 835 467
 > ritushka.com
 

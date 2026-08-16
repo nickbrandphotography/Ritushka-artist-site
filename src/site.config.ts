@@ -25,7 +25,7 @@ export const site = {
     logoPath: '/logo.svg',
   },
   contact: {
-    email: 'studio@ritka.net',
+    email: 'studio@ritushka.art',
     phone: '+61 403 835 467',
     studioByAppointment: true,
   },

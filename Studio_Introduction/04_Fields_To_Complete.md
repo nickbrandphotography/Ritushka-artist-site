@@ -71,7 +71,7 @@ No testimonials, no press quotes, no awards, no named clients, no exhibition his
 
 ## Domain and links
 
-`src/site.config.ts` sets the canonical host as `https://www.ritushka.com` while the studio email is `studio@ritka.net`. That mismatch will read as an error to a careful buyer. Resolve it before printing — the QR codes in the PDFs point at `ritushka.com`.
+`src/site.config.ts` sets the canonical host as `https://www.ritushka.com` while the studio email is `studio@ritushka.art`. That mismatch will read as an error to a careful buyer. Resolve it before printing — the QR codes in the PDFs point at `ritushka.com`.
 
 QR destinations used:
 

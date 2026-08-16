@@ -32,7 +32,7 @@ variables in Vercel. Takes about 10 minutes.
    - *Shortcut for testing:* skip the domain for now and leave `RESEND_FROM` unset — email will send
      from Resend's shared `onboarding@resend.dev` address, which can only deliver to the email on your
      Resend account. Verify the domain when you want it to look professional.
-4. Once the domain is verified, set `RESEND_FROM` to e.g. `Ritushka Studio <studio@ritushka.com>`.
+4. Once the domain is verified, set `RESEND_FROM` to e.g. `Ritushka Studio <studio@ritushka.art>`.
 
 ## 3. Admin password
 
@@ -49,10 +49,10 @@ and Preview if you want):
 | `UPSTASH_REDIS_REST_URL` | from Upstash |
 | `UPSTASH_REDIS_REST_TOKEN` | from Upstash |
 | `RESEND_API_KEY` | from Resend (`re_…`) |
-| `ENQUIRY_NOTIFY_EMAIL` | `studio@ritka.net` (where notifications go) |
+| `ENQUIRY_NOTIFY_EMAIL` | `studio@ritushka.art` (where notifications go) |
 | `ADMIN_USER` | your chosen admin username |
 | `ADMIN_PASSWORD` | your chosen admin password |
-| `RESEND_FROM` *(optional)* | `Ritushka Studio <studio@ritushka.com>` once domain verified |
+| `RESEND_FROM` *(optional)* | `Ritushka Studio <studio@ritushka.art>` once domain verified |
 
 Then **redeploy** (Deployments → ⋯ → Redeploy, or just push any commit).
 
@@ -60,7 +60,7 @@ Then **redeploy** (Deployments → ⋯ → Redeploy, or just push any commit).
 
 - Visit **ritushka.com/admin** → browser asks for the username/password you set → the dashboard opens.
 - Submit a test enquiry from the contact page; it should appear in `/admin` and arrive at
-  `studio@ritka.net` within a few seconds.
+  `studio@ritushka.art` within a few seconds.
 - In the dashboard: change a status (new → replied → won → archived), type a note (saves when you click
   away), filter by type/status, search, and **Download CSV** to export.
 

@@ -221,7 +221,7 @@ Each page below specifies: purpose, the reader's emotional state on arrival, psy
 │  │                 │ │ value      │  │
 │  └─────────────────┘ └────────────┘  │
 │  ────────────────────────────────    │
-│  ritushka.com · studio@ritka.net     │
+│  ritushka.com · studio@ritushka.art  │
 └──────────────────────────────────────┘
 ```
 
@@ -425,7 +425,7 @@ Each page below specifies: purpose, the reader's emotional state on arrival, psy
 │   ────────                           │
 │   Ritushka                           │
 │   Lane Cove, Sydney NSW              │
-│   studio@ritka.net                   │
+│   studio@ritushka.art                │
 │   +61 403 835 467                    │
 │   ritushka.com                       │
 │                                 ┌──┐ │
