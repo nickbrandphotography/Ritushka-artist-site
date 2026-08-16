@@ -20,6 +20,10 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
   const a = getArtwork(params.slug); if (!a) notFound();
   const related = relatedArtworks(a);
   const mocks = mockupsForArtwork(a.slug);
+  // The register description is Ritushka's own words. The generated `story` is kept
+  // for structured data only — its second paragraph repeats size, frame and price,
+  // all of which the Specification list below already states.
+  const description = a.registerDescription ?? a.story.split('\n\n')[0];
   const crumbs = [
     { name: 'Home', path: '/' },
     { name: 'Portfolio', path: '/portfolio' },
@@ -37,7 +41,7 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
             <div className="mt-6 grid grid-cols-3 gap-3">
               {mocks.map(m => (
                 <Link key={m.slug} href={`/mockups/${m.slug}`}>
-                  <PlaceholderImage src={m.image} alt={m.alt} ratio="4 / 3" />
+                  <PlaceholderImage src={m.image} alt={m.alt} ratio={m.aspect} />
                 </Link>
               ))}
             </div>
@@ -48,8 +52,14 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
           <h1 className="mt-2 font-serif text-4xl text-ink md:text-5xl">{a.title}</h1>
           <p className="mt-3 text-xl text-ink/70">{priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a)}</p>
           <div className="prose-art mt-6">
-            {a.story.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+            <p>{description}</p>
           </div>
+          {a.inspiration && (
+            <figure className="mt-6 border-l border-sand pl-5">
+              <figcaption className="text-xs uppercase tracking-widest text-ink/50">Artist&rsquo;s inspiration</figcaption>
+              <blockquote className="mt-2 font-serif text-lg italic leading-relaxed text-ink/80">{a.inspiration}</blockquote>
+            </figure>
+          )}
 
           <section className="mt-8 border-t border-sand pt-6" aria-labelledby="specification">
             <h2 id="specification" className="font-serif text-xl text-ink">Specification</h2>
