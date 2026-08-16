@@ -12,6 +12,7 @@ export const site = {
       'Ritushka is a contemporary abstract artist based in Lane Cove, Sydney, creating large-scale abstract landscapes and seascapes for collectors, designers and architects worldwide.',
     nationality: 'Australian',
     jobTitle: 'Painter',
+    portraitPath: '/about/ritushka-portrait.jpg',
     sameAs: [
       'https://www.instagram.com/PLACEHOLDER',
       'https://www.facebook.com/PLACEHOLDER',

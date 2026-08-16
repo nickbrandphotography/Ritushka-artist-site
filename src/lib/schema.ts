@@ -12,7 +12,7 @@ export const personSchema = () => ({
   description: site.artist.shortBio,
   nationality: site.artist.nationality,
   url: site.url,
-  image: abs(site.defaultOgImage),
+  image: abs(site.artist.portraitPath),
   sameAs: site.artist.sameAs,
   address: {
     '@type': 'PostalAddress',
