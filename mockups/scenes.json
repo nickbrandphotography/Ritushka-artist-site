@@ -1,0 +1,167 @@
+{
+  "_comment": "Master interior scenes. Coordinates are pixels in the file under mockups/scenes/; sizes are centimetres on the wall plane. See mockups/README.md to calibrate a new one.",
+  "scenes": [
+    {
+      "id": "scandi-living-room",
+      "name": "Scandinavian living room",
+      "room": "Living Room",
+      "file": "scandi-sideboard.jpg",
+
+      "_calibration": "Measured: the sideboard is 839 px wide and 462 px in the case. At a standard 120 x 65 cm that gives 6.99 and 7.11 px/cm, so the wall plane is 7.0 px/cm. Skirting edge at y=1703 puts the floor line at y=1780, just below the frame.",
+      "wall": {
+        "quad": [[200, 240], [1600, 247], [1600, 1787], [200, 1780]],
+        "widthCm": 200,
+        "heightCm": 220
+      },
+      "hang": { "xCm": 74, "yCm": 70 },
+      "placements": [
+        {
+          "id": "above-sideboard",
+          "_note": "Centred on the sideboard, 150 cm off the floor. The plants on top reach 104 cm, so nothing may hang lower than that.",
+          "xCm": 74, "yCm": 70,
+          "maxWidthCm": 130, "maxHeightCm": 88, "minWidthCm": 45
+        },
+        {
+          "id": "clear-wall",
+          "_note": "The open wall right of the sideboard, above the armchair. Armchair tops out at 76 cm; the window frame limits width.",
+          "xCm": 190, "yCm": 70,
+          "maxWidthCm": 150, "maxHeightCm": 140, "minWidthCm": 70
+        }
+      ],
+      "light": { "from": "right", "strength": 0.30, "softness": 3.0, "relight": 0.5, "exposure": 1.0 },
+      "frameWidthCm": 2.0,
+      "match": {
+        "orientations": ["landscape", "square", "portrait"],
+        "palettes": ["neutral", "warm", "cool"],
+        "styles": ["abstract-landscapes", "contemporary-landscape-art", "textured-abstract-paintings", "modern-australian-art"]
+      },
+      "credit": null
+    },
+    {
+      "id": "plant-wall-living-room",
+      "name": "Plant wall living room",
+      "room": "Modern Apartment",
+      "file": "plant-wall.jpg",
+
+      "_calibration": "Scale set from the tall cylindrical planters: 35 cm diameter, 60 cm high, both giving ~6.2 px/cm. Floor line at y=1790. Usable wall stops short of the large plant on the right, which stands in front of the wall.",
+      "wall": {
+        "quad": [[80, 240], [1320, 250], [1320, 1800], [80, 1785]],
+        "widthCm": 200,
+        "heightCm": 250
+      },
+      "hang": { "xCm": 68, "yCm": 100 },
+      "placements": [
+        {
+          "id": "clear-wall",
+          "_note": "The plants stand in front of this wall and reach 95 cm, so a work hung centre-150 cm may be no more than 100 cm tall. The large plant on the right caps the width.",
+          "xCm": 68, "yCm": 100,
+          "maxWidthCm": 120, "maxHeightCm": 100, "minWidthCm": 40
+        },
+        {
+          "id": "hung-high",
+          "_note": "Taller works hang with their centre at 170 cm, keeping the bottom edge clear of the planting.",
+          "xCm": 68, "yCm": 80,
+          "maxWidthCm": 130, "maxHeightCm": 140, "minWidthCm": 60
+        }
+      ],
+      "light": { "from": "left", "strength": 0.32, "softness": 3.5, "relight": 0.5, "exposure": 1.0 },
+      "frameWidthCm": 2.0,
+      "match": {
+        "orientations": ["portrait", "square", "landscape"],
+        "palettes": ["cool", "neutral"],
+        "styles": ["abstract-seascapes", "ocean-inspired-paintings", "blue-abstract-paintings", "coastal-abstract-art"]
+      },
+      "credit": null
+    },
+    {
+      "id": "white-brick-loft",
+      "name": "White brick loft",
+      "room": "Designer Space",
+      "file": "white-brick-loft.jpg",
+
+      "_calibration": "Scale from the brick coursing: a Fourier read of the mortar lines gives a 28.6 px period, which at a standard 86 mm course is 3.32 px/cm. Cross-checks against the armchair at 101 cm wide. Wall/floor edge detected at y=971.",
+      "wall": {
+        "quad": [[60, 141], [1056, 141], [1056, 971], [60, 971]],
+        "widthCm": 300,
+        "heightCm": 250
+      },
+      "hang": { "xCm": 96, "yCm": 100 },
+      "placements": [
+        {
+          "id": "clear-brick-wall",
+          "_note": "The open brick left of the armchair, which begins around x=700.",
+          "xCm": 96, "yCm": 100,
+          "maxWidthCm": 150, "maxHeightCm": 130, "minWidthCm": 50
+        }
+      ],
+      "light": { "from": "left", "strength": 0.34, "softness": 3.0, "relight": 0.55, "exposure": 1.0 },
+      "frameWidthCm": 2.0,
+      "match": {
+        "orientations": ["landscape", "portrait", "square"],
+        "palettes": ["neutral", "vivid", "warm"],
+        "styles": ["textured-abstract-paintings", "statement-artworks", "other-works"]
+      },
+      "credit": null
+    },
+    {
+      "id": "red-brick-living-room",
+      "name": "Red brick living room",
+      "room": "Luxury Home",
+      "file": "red-brick-living.jpg",
+
+      "_calibration": "Brick coursing gives a 34.1 px period, 3.96 px/cm at an 86 mm course. Independently confirmed by the sofa measuring 206 cm wide, right for a three-seater. Wall/floor edge at y=1175; sofa back tops out around 60 cm.",
+      "wall": {
+        "quad": [[200, 185], [1388, 185], [1388, 1175], [200, 1175]],
+        "widthCm": 300,
+        "heightCm": 250
+      },
+      "hang": { "xCm": 152, "yCm": 95 },
+      "placements": [
+        {
+          "id": "above-sofa",
+          "_note": "Centred on the sofa, hung 155 cm off the floor so the bottom edge clears the sofa back with a comfortable gap.",
+          "xCm": 152, "yCm": 95,
+          "maxWidthCm": 160, "maxHeightCm": 130, "minWidthCm": 60
+        }
+      ],
+      "light": { "from": "left", "strength": 0.32, "softness": 3.5, "relight": 0.5, "exposure": 1.0 },
+      "frameWidthCm": 2.0,
+      "match": {
+        "orientations": ["landscape", "square"],
+        "palettes": ["warm", "vivid", "neutral"],
+        "styles": ["statement-artworks", "textured-abstract-paintings", "modern-australian-art"]
+      },
+      "credit": null
+    },
+    {
+      "id": "panelled-bedroom",
+      "name": "Panelled bedroom",
+      "room": "Refined Bedroom",
+      "file": "panelled-bedroom.jpg",
+
+      "_calibration": "No brick to measure here. Scale set from two agreeing estimates: a 180 cm headboard gives 2.44 px/cm and a 280 cm floor-to-ceiling gives 2.48, so 2.46. Wall/floor edge at y=1025; headboard tops out near 83 cm.",
+      "wall": {
+        "quad": [[380, 385], [1118, 385], [1118, 1025], [380, 1025]],
+        "widthCm": 300,
+        "heightCm": 260
+      },
+      "hang": { "xCm": 150, "yCm": 95 },
+      "placements": [
+        {
+          "id": "above-bed",
+          "_note": "Centred over the headboard at 165 cm, which keeps the work clear of the bed and narrower than it.",
+          "xCm": 150, "yCm": 95,
+          "maxWidthCm": 140, "maxHeightCm": 120, "minWidthCm": 50
+        }
+      ],
+      "light": { "from": "left", "strength": 0.28, "softness": 4.0, "relight": 0.45, "exposure": 1.0 },
+      "frameWidthCm": 2.0,
+      "match": {
+        "orientations": ["landscape", "square", "portrait"],
+        "palettes": ["cool", "neutral"],
+        "styles": ["abstract-seascapes", "abstract-landscapes", "ocean-inspired-paintings", "blue-abstract-paintings"]
+      },
+      "credit": null
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import qrCode from '../../Qrcode transparent white.png';
 import Container from './Container';
 import EmailCapture from './EmailCapture';
 import { site } from '@/site.config';
@@ -14,8 +13,10 @@ export default function Footer() {
           <p className="font-serif text-2xl">{site.artist.name}</p>
           <p className="mt-3 text-sm text-bone/70">{site.artist.tagline}. {site.location.suburb}, {site.location.city}.</p>
           <Image
-            src={qrCode}
+            src="/qr-code.png"
             alt={`Scan to visit ${site.brand.name}`}
+            width={1024}
+            height={1024}
             sizes="80px"
             className="mt-6 h-20 w-20 opacity-80 transition-opacity hover:opacity-100"
           />

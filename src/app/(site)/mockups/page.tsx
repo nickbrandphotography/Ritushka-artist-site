@@ -14,7 +14,7 @@ export default function MockupsIndex() {
       <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
         {mockups.map((m, i) => (
           <Link key={m.slug} href={`/mockups/${m.slug}`} className="group">
-            <PlaceholderImage src={m.image} alt={m.alt} ratio="4 / 3" priority={i < 3} />
+            <PlaceholderImage src={m.image} alt={m.alt} ratio={m.aspect} priority={i < 3} />
             <h2 className="mt-3 font-serif text-lg text-ink group-hover:underline">{m.title}</h2>
             <p className="text-sm text-ink/55">{m.room}</p>
           </Link>

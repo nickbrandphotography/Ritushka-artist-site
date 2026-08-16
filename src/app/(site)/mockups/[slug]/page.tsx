@@ -44,10 +44,10 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
         {/* The mockup itself links back to the artwork */}
         {a ? (
           <Link href={`/artwork/${a.slug}`} aria-label={`View ${a.title}`} className="block">
-            <PlaceholderImage src={m.image} alt={m.alt} ratio="4 / 3" priority />
+            <PlaceholderImage src={m.image} alt={m.alt} ratio={m.aspect} priority />
           </Link>
         ) : (
-          <PlaceholderImage src={m.image} alt={m.alt} ratio="4 / 3" priority />
+          <PlaceholderImage src={m.image} alt={m.alt} ratio={m.aspect} priority />
         )}
 
         <div>
@@ -69,8 +69,9 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
                     </p>
                     <p className="mt-1 text-sm text-ink/60">{dims(a)}</p>
                     <p className="mt-2 text-xs text-ink/50">
-                      Shown to scale against a 2.7 m wall and a 120 cm bench, so the proportions
-                      match the painting in a real room.
+                      {m.sceneId.startsWith('procedural-')
+                        ? 'Shown to scale against a 2.7 m wall and a 120 cm bench, so the proportions match the painting in a real room.'
+                        : 'Composited into a photographed interior at its true physical size, measured against the room’s own furniture.'}
                     </p>
                     <Link
                       href={`/artwork/${a.slug}`}
@@ -92,6 +93,19 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
                 <Link href="/mockups" className="underline">See all rooms</Link>
               </p>
             </>
+          )}
+
+          {m.credit && (
+            <p className="mt-8 border-t border-sand pt-4 text-xs text-ink/45">
+              Interior photograph by{' '}
+              <a href={m.credit.photographerUrl} rel="nofollow noopener" className="underline">
+                {m.credit.photographer}
+              </a>{' '}
+              on{' '}
+              <a href={m.credit.sourceUrl} rel="nofollow noopener" className="underline">
+                {m.credit.source}
+              </a>. The artwork is shown composited at its true physical size.
+            </p>
           )}
         </div>
       </div>

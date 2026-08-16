@@ -1,3 +1,9 @@
+import { readFileSync } from 'node:fs';
+
+// Mockup URLs move when an artwork is matched to a different interior scene.
+// scripts/match-scenes.py records every change here so no link ever 404s.
+const mockupRedirects = JSON.parse(readFileSync('./mockups/redirects.json', 'utf8'));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -29,6 +35,11 @@ const nextConfig = {
       ...Object.entries(slugs).map(([from, to]) => ({
         source: `/mockups/${from}-in-${rooms[from]}`,
         destination: `/mockups/${to}-in-${rooms[from]}`,
+        permanent: true,
+      })),
+      ...Object.entries(mockupRedirects).map(([from, to]) => ({
+        source: `/mockups/${from}`,
+        destination: `/mockups/${to}`,
         permanent: true,
       })),
     ];

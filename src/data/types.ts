@@ -40,10 +40,20 @@ export interface Artwork {
   image: string; alt: string; mockups: string[];
 }
 
+/** Attribution for a master interior photograph. Required by the Unsplash licence. */
+export interface PhotoCredit {
+  photographer: string; photographerUrl: string; source: string; sourceUrl: string;
+}
+
 export interface Mockup {
   id: string; slug: string; room: string; artworkSlug: string;
+  /** Which master interior this was composited into — see mockups/scenes.json. */
+  sceneId: string;
   title: string; image: string; alt: string;
   seoTitle: string; metaDescription: string;
+  credit: PhotoCredit | null;
+  /** CSS aspect-ratio of the rendered image — scenes are framed differently. */
+  aspect: string;
 }
 
 export interface BlogPost {

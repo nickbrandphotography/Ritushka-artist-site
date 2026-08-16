@@ -13,3 +13,8 @@ next-env.d.ts
 # Private prospect and outreach data - stays local, never pushed
 Art_Prospect_Databases/
 Outreach_System/
+
+# Mockup build artefacts (regenerate with scripts/composite-mockups.py)
+mockups/calibration/
+mockups/test/
+__pycache__/

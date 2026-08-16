@@ -1,0 +1,44 @@
+{
+  "_comment": "Worked example. Copy to scenes.json and calibrate against your own photographs — see mockups/README.md. Coordinates are pixels in the master image; sizes are centimetres on the wall.",
+  "scenes": [
+    {
+      "id": "coastal-living-room",
+      "name": "Coastal living room",
+      "room": "Coastal Home",
+      "file": "coastal-living-room.jpg",
+
+      "wall": {
+        "quad": [[300, 210], [2130, 330], [2130, 1315], [300, 1500]],
+        "widthCm": 420,
+        "heightCm": 270
+      },
+
+      "hang": { "xCm": 165, "yCm": 120 },
+
+      "usable": { "maxWidthCm": 260, "maxHeightCm": 170, "minWidthCm": 55 },
+
+      "light": {
+        "from": "left",
+        "strength": 0.34,
+        "softness": 3.0,
+        "relight": 0.55,
+        "exposure": 1.0
+      },
+
+      "frameWidthCm": 2.0,
+
+      "match": {
+        "orientations": ["landscape", "square"],
+        "palettes": ["cool", "neutral"],
+        "styles": ["abstract-seascapes", "coastal-abstract-art", "ocean-inspired-paintings"]
+      },
+
+      "credit": {
+        "photographer": "Photographer Name",
+        "photographerUrl": "https://unsplash.com/@handle",
+        "source": "Unsplash",
+        "sourceUrl": "https://unsplash.com/photos/xxxxxxxx"
+      }
+    }
+  ]
+}
