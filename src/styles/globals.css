@@ -154,6 +154,105 @@ body { background: #f6f4ef; color: #1a1a18; -webkit-font-smoothing: antialiased;
   box-shadow: 0 0 0 1px rgba(246,244,239,0.35);
 }
 
+
+/* --- Homepage hero: full-bleed artwork over a centred statement ---------- *
+   The banner is art-directed, not merely scaled: desktop gets the 3:1 crop
+   uncropped at 1440x900 (the max-height only bites on very wide or very short
+   screens), tablets get the 4:5 portrait crop trimmed to 4:3, and phones get
+   that portrait crop whole. Source swapping happens in the <picture> element
+   in Hero.tsx; this file only governs the shape of the frame it sits in. */
+.rt-hero { display: flex; flex-direction: column; min-height: calc(100svh - 4rem); }
+
+.rt-hero__art {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #e8e3da; /* sand — holds the box before the image paints */
+  aspect-ratio: 4 / 5;
+}
+.rt-hero__art a,
+.rt-hero__art picture { display: block; width: 100%; height: 100%; }
+.rt-hero__art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 46%;
+}
+@media (min-width: 640px) { .rt-hero__art { aspect-ratio: 4 / 3; } }
+@media (min-width: 1024px) { .rt-hero__art { aspect-ratio: 3 / 1; max-height: 56svh; } }
+/* Short laptops: without this the call to action falls below the fold. */
+@media (min-width: 1024px) and (max-height: 820px) { .rt-hero__art { max-height: 46svh; } }
+
+.rt-hero__type {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(28px, 3.4vh, 48px) 1.25rem clamp(30px, 3.6vh, 50px);
+}
+.rt-hero__eyebrow {
+  margin: 0;
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(26, 26, 24, 0.48);
+}
+.rt-hero__h1 { margin: 0; display: block; font-weight: 400; }
+/* The signature is an <img> INSIDE the h1 with alt="Ritushka", so the heading
+   still reads "Ritushka Contemporary abstract landscapes & seascapes" to
+   search engines and screen readers. Do not make it a background image. */
+.rt-hero__sig {
+  display: block;
+  margin: 18px auto 16px;
+  width: clamp(210px, 23vw, 318px);
+  height: auto;
+}
+.rt-hero__statement {
+  display: block;
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(27px, 3.05vw, 45px);
+  line-height: 1.14;
+  letter-spacing: -0.005em;
+  color: #1a1a18;
+}
+/* Breaks the statement onto two lines only in the band where it would
+   otherwise crowd the measure; phones wrap it naturally. */
+.rt-hero__brk { display: none; }
+@media (min-width: 640px) and (max-width: 1180px) { .rt-hero__brk { display: block; } }
+
+.rt-hero__lede {
+  margin: 19px auto 0;
+  max-width: 66ch;
+  font-size: clamp(14.5px, 1.05vw, 17px);
+  line-height: 1.72;
+  color: rgba(26, 26, 24, 0.7);
+}
+.rt-hero__cta {
+  margin-top: 18px;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .rt-hero__statement { font-size: 34px; }
+}
+@media (max-width: 639px) {
+  .rt-hero { min-height: 0; }
+  .rt-hero__type { padding: 28px 1.375rem 36px; }
+  .rt-hero__sig { margin: 14px auto 16px; width: 62%; }
+  .rt-hero__statement { font-size: 27px; line-height: 1.16; }
+  .rt-hero__lede { margin-top: 16px; font-size: 14.5px; line-height: 1.66; }
+  .rt-hero__cta { margin-top: 22px; gap: 20px; }
+}
+
 @media print {
   .rt-lang-btn { display: none; }
   .rt-paper { box-shadow: none; }
