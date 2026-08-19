@@ -39,44 +39,45 @@
 - /blog — guides for collectors, interior designers, architects and homeowners
 
 ## Original works
-Every work is an original painting, framed unless noted, shipped worldwide insured with a certificate of authenticity. Price on application.
+Every work is an original painting, framed unless noted, shipped worldwide insured with a certificate of authenticity. Prices are in Australian dollars, from A$2,450 to A$7,350.
 - Tree of Our Lives — 120 x 180 cm, sold: /artwork/tree-of-our-lives
 - Go With the Flow — 122 x 152 cm, sold: /artwork/go-with-the-flow
-- One of a Kind — 150 x 100 cm, available: /artwork/one-of-a-kind
-- Paragliding — 150 x 100 cm, available: /artwork/paragliding
-- Plateau — 100 x 150 cm, available: /artwork/plateau
-- Softly Loving Dreamscape — 152 x 91 cm, available: /artwork/softly-loving-dreamscape
+- One of a Kind — 150 x 100 cm, A$7,350, available: /artwork/one-of-a-kind
+- Paragliding — 150 x 100 cm, A$7,350, available: /artwork/paragliding
+- Plateau — 100 x 150 cm, A$7,350, available: /artwork/plateau
+- Softly Loving Dreamscape — 152 x 91 cm, A$6,950, available: /artwork/softly-loving-dreamscape
 - Strangely Attracted to You — 100 x 120 cm, sold: /artwork/strangely-attracted-to-you
-- Approaching Destination — 91 x 122 cm, available: /artwork/approaching-destination
-- Bush — 91 x 122 cm, available: /artwork/bush
-- Deliciousness — 91 x 122 cm, available: /artwork/deliciousness
-- Desire — 91 x 122 cm, available: /artwork/desire
+- Approaching Destination — 91 x 122 cm, A$5,850, available: /artwork/approaching-destination
+- Bush — 91 x 122 cm, A$5,850, available: /artwork/bush
+- Deliciousness — 91 x 122 cm, A$5,850, available: /artwork/deliciousness
+- Desire — 91 x 122 cm, A$5,850, available: /artwork/desire
 - Eruption — 122 x 91 cm, sold: /artwork/eruption
-- River of My Thoughts — 91 x 122 cm, available: /artwork/river-of-my-thoughts
-- The Apostles — 91 x 122 cm, available: /artwork/the-apostles
-- Aqua Frost — Thinking of You — 120 x 91 cm, available: /artwork/aqua-frost-thinking-of-you
-- Peony — Thinking of Me — 120 x 91 cm, available: /artwork/peony-thinking-of-me
-- Horizon — 79 x 138 cm, available: /artwork/horizon
-- Urban Jungle — 110 x 76 cm, available: /artwork/urban-jungle
-- Just Add Champagne — 90 x 90 cm, available: /artwork/just-add-champagne
+- River of My Thoughts — 91 x 122 cm, A$5,850, available: /artwork/river-of-my-thoughts
+- The Apostles — 91 x 122 cm, A$5,850, available: /artwork/the-apostles
+- Aqua Frost — Thinking of You — 120 x 91 cm, sold: /artwork/aqua-frost-thinking-of-you
+- Peony — Thinking of Me — 120 x 91 cm, A$5,800, available: /artwork/peony-thinking-of-me
+- Horizon — 79 x 138 cm, A$5,750, available: /artwork/horizon
+- Urban Jungle — 110 x 76 cm, A$4,700, available: /artwork/urban-jungle
+- Just Add Champagne — 90 x 90 cm, A$4,600, available: /artwork/just-add-champagne
 - Life Chooses You — 90 x 90 cm, sold: /artwork/life-chooses-you
-- Shoreham — 90 x 90 cm, available: /artwork/shoreham
-- Soft Awakening — 90 x 90 cm, available: /artwork/soft-awakening
-- Turquoise Tuesday — 90 x 90 cm, available: /artwork/turquoise-tuesday
+- Shoreham — 90 x 90 cm, A$4,600, available: /artwork/shoreham
+- Soft Awakening — 90 x 90 cm, A$4,600, available: /artwork/soft-awakening
+- Turquoise Tuesday — 90 x 90 cm, A$4,600, available: /artwork/turquoise-tuesday
 - Reflection — 76 x 76 cm, sold: /artwork/reflection
-- Without Sweet Harmony II — 91 x 61 cm, available: /artwork/without-sweet-harmony-2
-- Without Sweet Harmony — 91 x 61 cm, available: /artwork/without-sweet-harmony
+- Without Sweet Harmony II — 91 x 61 cm, A$3,450, available: /artwork/without-sweet-harmony-2
+- Without Sweet Harmony — 91 x 61 cm, A$3,450, available: /artwork/without-sweet-harmony
 - The World In My Eyes II — 90 x 60 cm, sold: /artwork/the-world-in-my-eyes-2
 - The World In My Eyes — 90 x 60 cm, sold: /artwork/the-world-in-my-eyes
 - Stillness — 72 x 72 cm, sold: /artwork/stillness
-- Blue Mountains — 60 x 60 cm, available: /artwork/blue-mountains
-- Coastal Waters — 60 x 60 cm, available: /artwork/coastal-waters
-- Into the Ever Blue — 60 x 60 cm, available: /artwork/into-the-ever-blue
-- Marshmallow — 60 x 60 cm, available: /artwork/marshmallow
-- Peace of White Heaven — 60 x 60 cm, available: /artwork/peace-of-white-heaven
+- Blue Mountains — 60 x 60 cm, A$2,450, available: /artwork/blue-mountains
+- Coastal Waters — 60 x 60 cm, A$2,450, available: /artwork/coastal-waters
+- Into the Ever Blue — 60 x 60 cm, A$2,450, available: /artwork/into-the-ever-blue
+- Marshmallow — 60 x 60 cm, A$2,450, available: /artwork/marshmallow
+- Peace of White Heaven — 60 x 60 cm, A$2,450, available: /artwork/peace-of-white-heaven
 - Rushing Shallows — 60 x 60 cm, sold: /artwork/rushing-shallows
-- Set Sail — 60 x 60 cm, available: /artwork/set-sail
-- Sunrise Over Tokyo — 60 x 60 cm, available: /artwork/sunrise-over-tokyo
-- Turbulence — 60 x 60 cm, available: /artwork/turbulence
+- Set Sail — 60 x 60 cm, A$2,450, available: /artwork/set-sail
+- Sunrise Over Tokyo — 60 x 60 cm, A$2,450, available: /artwork/sunrise-over-tokyo
+- Turbulence — 60 x 60 cm, A$2,450, available: /artwork/turbulence
 - Numero Uno — 50 x 40 cm, sold: /artwork/numero-uno
-- Wave — size on request, available: /artwork/wave
+- Wave — size on request, available, price on application: /artwork/wave
+

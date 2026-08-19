@@ -82,9 +82,14 @@ def read_register(path=REGISTER):
             continue
         h_mm = num(cell(row, hdr, 'Height (mm)'))
         w_mm = num(cell(row, hdr, 'Width (mm)'))
-        # The "Sold" column is the live marker. The "Status" column still holds
-        # values from the template's sample rows, so it is deliberately ignored.
+        # The "Sold" column is the primary marker, but it is not always kept up to
+        # date — a recorded Sale Price or Date Sold is equally conclusive. The
+        # "Status" column still holds values from the template's sample rows, so it
+        # is deliberately ignored.
         sold_flag = cell(row, hdr, 'Sold')
+        sold = (str(sold_flag).strip().lower() == 'sold'
+                or bool(str(cell(row, hdr, 'Sale Price') or '').strip())
+                or bool(str(cell(row, hdr, 'Date Sold') or '').strip()))
         out.append({
             'inventoryId': cell(row, hdr, 'Inventory ID'),
             'title': ' '.join(str(title).split()),
@@ -97,7 +102,11 @@ def read_register(path=REGISTER):
             'framed': str(cell(row, hdr, 'Framed?') or '').strip().lower() == 'yes',
             'frameDescription': (str(cell(row, hdr, 'Frame Description') or '').strip() or None),
             'edition': (str(cell(row, hdr, 'Edition Type') or '').strip() or None),
-            'sold': str(sold_flag).strip().lower() == 'sold',
+            'sold': sold,
+            # Published retail price. Written by scripts/apply-pricing-model.py from
+            # pricing.config.json — the register stays the single source of truth.
+            'price': num(cell(row, hdr, 'List Price')),
+            'currency': (str(cell(row, hdr, 'Currency') or '').strip() or 'AUD'),
         })
     return out
 
@@ -117,6 +126,12 @@ def write_ts(path, name, type_name, data):
 
 def inches(cm):
     return round(cm / 2.54, 1)
+
+
+def money(v, currency='AUD'):
+    """5850 -> 'A$5,850'. Whole dollars only — the price list is rounded."""
+    symbol = 'A$' if currency == 'AUD' else f'{currency} '
+    return f"{symbol}{int(round(v)):,}"
 
 
 def size_phrase(a):
@@ -150,6 +165,10 @@ def build_story(a, subject):
     if a['status'] == 'sold':
         parts.append('This work has sold. A related painting can be commissioned in a '
                      'comparable size and palette.')
+    elif a.get('price'):
+        parts.append(f"{money(a['price'], a.get('currency') or 'AUD')}"
+                     + (' framed' if a.get('framed') else ' unframed')
+                     + ', with insured worldwide shipping quoted on request.')
     else:
         parts.append('Price is available on application.')
     # First paragraph is the artist's own description, where one is recorded.
@@ -242,21 +261,30 @@ def main():
         a['registerDescription'] = r['description']
         if r['orientation'] in ('landscape', 'portrait', 'square'):
             a['orientation'] = r['orientation']
-        a['status'] = 'sold' if r['sold'] else 'enquire'
+        # A sold work never carries a price: the achieved price is not recorded in the
+        # register, and the modelled list price is not what the buyer paid.
+        a['price'] = None if r['sold'] or not r['price'] else int(round(r['price']))
+        a['currency'] = r['currency'] or 'AUD'
+        a['status'] = ('sold' if r['sold']
+                       else 'available' if a['price'] else 'enquire')
 
         # Copy that now carries the real size
         size = size_phrase({**a})
         coll = a['primaryCollection'].replace('-', ' ')
         a['story'] = build_story({**a, 'description': r['description']}, subject)
+        price_txt = money(a['price'], a['currency']) if a['price'] else None
         a['shortDescription'] = (
             f"{a['title']} — an original {coll} painting by Sydney artist Ritushka"
-            + (f", {size}." if size else '. Enquire for dimensions and price.'))
+            + (f", {size}" if size else '')
+            + (f", {price_txt}." if price_txt else '.' if size
+               else '. Enquire for dimensions and price.'))
         subj_cap = subject[0].upper() + subject[1:]
         a['metaDescription'] = (
             f"{a['title']}, an original {coll} painting by Ritushka, contemporary artist in "
             f"Lane Cove, Sydney. {subj_cap}."
             + (f" {size}." if size else '')
             + (' Sold — similar works available to commission.' if a['status'] == 'sold'
+               else f' {price_txt}, available now.' if price_txt
                else ' Enquire for price and availability.')
             + ' Ships worldwide.')
         a['alt'] = (f"{a['title']} — original {coll} painting by Ritushka in "
@@ -274,6 +302,8 @@ def main():
         a.setdefault('edition', 'Original')
         a.setdefault('inspiration', None)
         a.setdefault('registerDescription', None)
+        a.setdefault('price', None)
+        a.setdefault('currency', 'AUD')
 
     # Mockups follow any slug/title change
     mock = load_ts_array('src/data/mockups.ts')
@@ -324,12 +354,35 @@ def main():
         rng = (f"{trim_cm(smallest['heightCm'])} × {trim_cm(smallest['widthCm'])} cm "
                f"to {trim_cm(largest['heightCm'])} × {trim_cm(largest['widthCm'])} cm")
         avail = sum(1 for a in art if c['slug'] in a['collections'] and a['status'] != 'sold')
+        priced = [a['price'] for a in art
+                  if c['slug'] in a['collections'] and a.get('price')]
+        price_rng = (f"Prices in this collection run from {money(min(priced))} to "
+                     f"{money(max(priced))}." if len(priced) > 1
+                     else f"Works in this collection are {money(priced[0])}." if priced
+                     else 'Price is available on application.')
         c['intro'] = re.sub(
-            r'Dimensions, medium and price for any work are available on request\.',
+            r'(Dimensions, medium and price for any work are available on request\.'
+            r'|Works in this collection range from .*?on application\.'
+            r'|Works in this collection range from .*?to \$[\d,]+\.)',
             f"Works in this collection range from {rng}, and every painting page lists its "
-            f"exact dimensions, depth and framing. Price is available on application.",
-            c['intro'])
+            f"exact dimensions, depth and framing. {price_rng}",
+            c['intro'], count=1)
         for f in c['faqs']:
+            if 'cost' in f['q'].lower() or f['q'].lower().startswith('how much'):
+                if len(priced) > 1:
+                    f['a'] = (f"Original paintings in this collection are "
+                              f"{money(min(priced))} to {money(max(priced))} in Australian "
+                              f"dollars, listed on each artwork page. Price follows the size "
+                              f"of the work: the smallest are {money(min(priced))} and the "
+                              f"largest {money(max(priced))}. Every price includes the frame "
+                              f"where the work is framed, and a certificate of authenticity. "
+                              f"Insured worldwide shipping is quoted separately. Interior "
+                              f"designers and trade buyers can apply for trade terms.")
+                elif priced:
+                    f['a'] = (f"Original paintings in this collection are {money(priced[0])} "
+                              f"in Australian dollars, listed on the artwork page, including "
+                              f"the frame and a certificate of authenticity. Insured worldwide "
+                              f"shipping is quoted separately.")
             if f['q'].lower().startswith('what sizes'):
                 f['a'] = (f"This collection ranges from {rng} — {smallest['title']} is the most "
                           f"intimate and {largest['title']} the largest. Exact height, width, depth "
@@ -342,13 +395,18 @@ def main():
     write_ts('src/data/mockups.ts', 'mockups', 'Mockup', mock)
 
     # llms.txt: an explicit, machine-readable index of the works with sizes
+    all_priced = [a['price'] for a in art if a.get('price')]
     lines = ['## Original works',
              'Every work is an original painting, framed unless noted, shipped worldwide '
-             'insured with a certificate of authenticity. Price on application.']
+             'insured with a certificate of authenticity. Prices are in Australian dollars'
+             + (f", from {money(min(all_priced))} to {money(max(all_priced))}."
+                if all_priced else '. Price on application.')]
     for a in sorted(art, key=lambda x: -(x['heightCm'] * x['widthCm'] if x['heightCm'] and x['widthCm'] else 0)):
         size = (f"{trim_cm(a['heightCm'])} x {trim_cm(a['widthCm'])} cm"
                 if a['heightCm'] and a['widthCm'] else 'size on request')
-        state = 'sold' if a['status'] == 'sold' else 'available'
+        state = ('sold' if a['status'] == 'sold'
+                 else f"{money(a['price'], a['currency'])}, available" if a.get('price')
+                 else 'available, price on application')
         lines.append(f"- {a['title']} — {size}, {state}: /artwork/{a['slug']}")
     block = '\n'.join(lines)
     txt = open('public/llms.txt', encoding='utf-8').read()

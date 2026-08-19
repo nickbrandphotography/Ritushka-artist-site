@@ -1,0 +1,21 @@
+{
+  "_comment": "Single source of truth for Ritushka's price list. Derived from the Stage-4 forensic audit of the Australian abstract landscape/seascape market and her own recorded prices. See Australian Art Pricing Research/Ritushka_Pricing_Method.md. Change referenceRate here, re-run scripts/apply-pricing-model.py, then scripts/sync-register.py.",
+
+  "referenceRate": 5400,
+  "_referenceRate": "AUD price of a 1.0 m2 work. Her own prices imply 4430 (list) and 4861 (achieved). 5400 = the recommended STEP, placing her at the median of the artist-direct band (P25 7993 / median 9281 / P75 9737 normalised to 100x200). 6400 would enter gallery-tier pricing and needs gallery representation or a prize result first.",
+
+  "sizeExponent": 0.767,
+  "_sizeExponent": "price = referenceRate * area_m2 ^ exponent. From a within-artist log-log regression across 24 Australian artists, n=226 demeaned observations, R2=0.83. Doubling the area multiplies price by ~1.70, not 2.00. Do not change without new evidence.",
+
+  "premiumSupportUplift": 0.10,
+  "_premiumSupportUplift": "Applied when the register's Support / Substrate names linen. Her cost records: stretched canvas A$252/m2 vs Belgian linen A$522/m2.",
+  "premiumSupportMatch": ["linen"],
+
+  "roundTo": 50,
+  "_roundTo": "Published prices are rounded to this multiple.",
+
+  "currency": "AUD",
+
+  "priceSoldWorks": false,
+  "_priceSoldWorks": "Sold works carry no price. The achieved price is not recorded in the register, and the modelled list price is not what the buyer paid. Showing one would be presenting a fabricated figure."
+}

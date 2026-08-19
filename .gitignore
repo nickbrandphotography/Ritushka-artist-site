@@ -18,3 +18,8 @@ Outreach_System/
 mockups/calibration/
 mockups/test/
 __pycache__/
+
+# Pricing model and market research - margins, costs and trade terms stay local
+Australian Art Pricing Research/
+Ritushka_Pricing_Model.ods
+_to_delete/

@@ -10,7 +10,7 @@ export const collections: Collection[] = [
     "heading": "Abstract Landscapes by Ritushka",
     "seoTitle": "Abstract Landscapes | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore abstract landscapes by Ritushka — original abstract landscape art for collectors seeking contemporary abstract landscape paintings. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's abstract landscapes — original abstract landscape art created for collectors seeking contemporary abstract landscape paintings. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 100 × 150 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's abstract landscapes — original abstract landscape art created for collectors seeking contemporary abstract landscape paintings. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 100 × 150 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
         "q": "What sizes do these abstract landscapes come in?",
@@ -18,7 +18,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do abstract landscapes cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -39,15 +39,15 @@ export const collections: Collection[] = [
     "heading": "Abstract Seascapes by Ritushka",
     "seoTitle": "Abstract Seascapes | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore abstract seascapes by Ritushka — original abstract seascape paintings for buyers of coastal and ocean abstract art. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's abstract seascapes — original abstract seascape paintings created for buyers of coastal and ocean abstract art. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's abstract seascapes — original abstract seascape paintings created for buyers of coastal and ocean abstract art. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
         "q": "What sizes do these abstract seascapes come in?",
-        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 13 works available in this collection."
+        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 12 works available in this collection."
       },
       {
         "q": "How much do abstract seascapes cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -68,7 +68,7 @@ export const collections: Collection[] = [
     "heading": "Large Scale Paintings by Ritushka",
     "seoTitle": "Large Scale Paintings | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore large scale paintings by Ritushka — original large scale art for designers and architects sourcing expansive statement works. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's large scale paintings — original large scale art created for designers and architects sourcing expansive statement works. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 79 × 138 cm to 100 × 150 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's large scale paintings — original large scale art created for designers and architects sourcing expansive statement works. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 79 × 138 cm to 100 × 150 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$5,750 to A$7,350.",
     "faqs": [
       {
         "q": "What sizes do these large scale paintings come in?",
@@ -76,7 +76,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do large scale paintings cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$5,750 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$5,750 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -97,7 +97,7 @@ export const collections: Collection[] = [
     "heading": "Coastal Abstract Art by Ritushka",
     "seoTitle": "Coastal Abstract Art | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore coastal abstract art by Ritushka — original coastal abstract art for luxury coastal homes. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's coastal abstract art — original coastal abstract art created for luxury coastal homes. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's coastal abstract art — original coastal abstract art created for luxury coastal homes. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
         "q": "What sizes do these coastal abstract art come in?",
@@ -105,7 +105,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do coastal abstract art cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -126,15 +126,15 @@ export const collections: Collection[] = [
     "heading": "Ocean Inspired Paintings by Ritushka",
     "seoTitle": "Ocean Inspired Paintings | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore ocean inspired paintings by Ritushka — original ocean inspired paintings for collectors drawn to the sea. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's ocean inspired paintings — original ocean inspired paintings created for collectors drawn to the sea. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's ocean inspired paintings — original ocean inspired paintings created for collectors drawn to the sea. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
         "q": "What sizes do these ocean inspired paintings come in?",
-        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 10 works available in this collection."
+        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 9 works available in this collection."
       },
       {
         "q": "How much do ocean inspired paintings cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -155,7 +155,7 @@ export const collections: Collection[] = [
     "heading": "Contemporary Landscape Art by Ritushka",
     "seoTitle": "Contemporary Landscape Art | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore contemporary landscape art by Ritushka — original contemporary landscape art for modern interiors. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's contemporary landscape art — original contemporary landscape art created for modern interiors. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's contemporary landscape art — original contemporary landscape art created for modern interiors. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
         "q": "What sizes do these contemporary landscape art come in?",
@@ -163,7 +163,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do contemporary landscape art cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -184,7 +184,7 @@ export const collections: Collection[] = [
     "heading": "Textured Abstract Paintings by Ritushka",
     "seoTitle": "Textured Abstract Paintings | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore textured abstract paintings by Ritushka — original textured abstract paintings for collectors who value materiality and surface. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's textured abstract paintings — original textured abstract paintings created for collectors who value materiality and surface. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's textured abstract paintings — original textured abstract paintings created for collectors who value materiality and surface. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
         "q": "What sizes do these textured abstract paintings come in?",
@@ -192,7 +192,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do textured abstract paintings cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -213,15 +213,15 @@ export const collections: Collection[] = [
     "heading": "Blue Abstract Paintings by Ritushka",
     "seoTitle": "Blue Abstract Paintings | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore blue abstract paintings by Ritushka — original blue abstract paintings for colour-led buyers. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's blue abstract paintings — original blue abstract paintings created for colour-led buyers. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 152 × 91 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's blue abstract paintings — original blue abstract paintings created for colour-led buyers. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 152 × 91 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$6,950.",
     "faqs": [
       {
         "q": "What sizes do these blue abstract paintings come in?",
-        "a": "This collection ranges from 60 × 60 cm to 152 × 91 cm — Coastal Waters is the most intimate and Softly Loving Dreamscape the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 11 works available in this collection."
+        "a": "This collection ranges from 60 × 60 cm to 152 × 91 cm — Coastal Waters is the most intimate and Softly Loving Dreamscape the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 10 works available in this collection."
       },
       {
         "q": "How much do blue abstract paintings cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$6,950 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$6,950. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -242,7 +242,7 @@ export const collections: Collection[] = [
     "heading": "Modern Australian Art by Ritushka",
     "seoTitle": "Modern Australian Art | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore modern australian art by Ritushka — original modern australian art for buyers seeking Australian provenance. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's modern australian art — original modern australian art created for buyers seeking Australian provenance. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 91 × 122 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's modern australian art — original modern australian art created for buyers seeking Australian provenance. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 91 × 122 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$5,850.",
     "faqs": [
       {
         "q": "What sizes do these modern australian art come in?",
@@ -250,7 +250,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do modern australian art cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$5,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$5,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -271,7 +271,7 @@ export const collections: Collection[] = [
     "heading": "Statement Artworks by Ritushka",
     "seoTitle": "Statement Artworks | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore statement artworks by Ritushka — original statement artwork for corporate and luxury commissions. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's statement artworks — original statement artwork created for corporate and luxury commissions. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 100 × 120 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's statement artworks — original statement artwork created for corporate and luxury commissions. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 100 × 120 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$5,850.",
     "faqs": [
       {
         "q": "What sizes do these statement artworks come in?",
@@ -279,7 +279,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do statement artworks cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$2,450 to A$5,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$5,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -300,7 +300,7 @@ export const collections: Collection[] = [
     "heading": "Other Works by Ritushka",
     "seoTitle": "Other Works | Original Paintings by Ritushka, Sydney",
     "metaDescription": "Explore other works by Ritushka — original original figurative and decorative art for collectors looking beyond landscape. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
-    "intro": "This collection brings together Ritushka's other works — original original figurative and decorative art created for collectors looking beyond landscape. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 50 × 40 cm to 120 × 180 cm, and every painting page lists its exact dimensions, depth and framing. Price is available on application.",
+    "intro": "This collection brings together Ritushka's other works — original original figurative and decorative art created for collectors looking beyond landscape. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 50 × 40 cm to 120 × 180 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$4,700 to A$5,850.",
     "faqs": [
       {
         "q": "What sizes do these other works come in?",
@@ -308,7 +308,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do other works cost?",
-        "a": "Price is provided on application and depends on the size and complexity of the work. Enquire about any piece and you will receive current pricing, availability and shipping options."
+        "a": "Original paintings in this collection are A$4,700 to A$5,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$4,700 and the largest A$5,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
