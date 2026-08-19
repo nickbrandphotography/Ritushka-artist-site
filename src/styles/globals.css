@@ -54,3 +54,108 @@ body { background: #f6f4ef; color: #1a1a18; -webkit-font-smoothing: antialiased;
 @media print {
   .rt-frame { box-shadow: none; }
 }
+
+/* --- About page: editorial column with wrapped photographs --------------- */
+/* Body copy that text-wraps around floated studio photographs. Used on
+   /about for "About the artist" and the artist's letter. */
+.rt-editorial { max-width: 74ch; }
+.rt-editorial::after { content: ""; display: block; clear: both; }
+.rt-editorial p {
+  margin-top: 1rem;
+  line-height: 1.78;
+  color: rgba(26,26,24,0.82);
+}
+.rt-editorial p:first-child { margin-top: 0; }
+.rt-editorial .rt-dropcap::first-letter {
+  font-family: var(--font-serif), Georgia, serif;
+  float: left;
+  font-size: 4.1rem;
+  line-height: 0.82;
+  padding: 0.16em 0.12em 0 0;
+  color: #9a6b4f; /* accent */
+}
+
+.rt-fig { margin: 0; }
+.rt-fig__mat {
+  display: block;
+  background: #ffffff;
+  padding: 10px;
+  box-shadow:
+    0 18px 34px -20px rgba(0,0,0,0.45),
+    0 2px 6px rgba(0,0,0,0.06);
+}
+.rt-fig figcaption {
+  margin-top: 0.625rem;
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(26,26,24,0.5);
+  line-height: 1.6;
+}
+@media (min-width: 760px) {
+  .rt-fig { width: 270px; }
+  .rt-fig--wide { width: 330px; }
+  .rt-fig--left  { float: left;  margin: 0.35rem 2.1rem 1.4rem 0; shape-outside: margin-box; }
+  .rt-fig--right { float: right; margin: 0.35rem 0 1.4rem 2.1rem; shape-outside: margin-box; }
+}
+@media (max-width: 759px) {
+  .rt-fig { width: 100%; margin: 1.6rem 0 1.9rem; }
+}
+
+/* --- About page: the artist's letter, set on paper ----------------------- */
+.rt-paper {
+  position: relative;
+  background: #fdfcf9;
+  border: 1px solid #e8e3da;
+  padding: 1.875rem 1.5rem 2.25rem;
+  box-shadow: 0 30px 60px -40px rgba(0,0,0,0.45);
+}
+@media (min-width: 768px) {
+  .rt-paper { padding: 3.25rem 3.5rem 3.625rem; }
+}
+.rt-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(rgba(26,26,24,0.045) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+.rt-paper > * { position: relative; }
+
+/* --- About page: Magyarok language toggle -------------------------------- */
+.rt-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  border: 1px solid #1a1a18;
+  background: transparent;
+  color: #1a1a18;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.6875rem 1.25rem;
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease;
+}
+.rt-lang-btn:hover { background: #1a1a18; color: #f6f4ef; }
+.rt-lang-btn[aria-pressed="true"] { background: #1a1a18; color: #f6f4ef; }
+.rt-lang-btn:focus-visible { outline: 2px solid #9a6b4f; outline-offset: 3px; }
+.rt-lang-flag {
+  width: 22px;
+  height: 14px;
+  flex: 0 0 auto;
+  box-shadow: 0 0 0 1px rgba(26,26,24,0.12);
+}
+.rt-lang-btn:hover .rt-lang-flag,
+.rt-lang-btn[aria-pressed="true"] .rt-lang-flag {
+  box-shadow: 0 0 0 1px rgba(246,244,239,0.35);
+}
+
+@media print {
+  .rt-lang-btn { display: none; }
+  .rt-paper { box-shadow: none; }
+  .rt-fig__mat { box-shadow: none; }
+}

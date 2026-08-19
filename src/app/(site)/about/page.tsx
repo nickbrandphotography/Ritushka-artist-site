@@ -1,7 +1,11 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from '@/components/Container';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import PlaceholderImage from '@/components/PlaceholderImage';
+import AboutFigure from '@/components/AboutFigure';
+import ArtistLetter from '@/components/ArtistLetter';
 import CtaBand from '@/components/CtaBand';
 import JsonLd from '@/components/JsonLd';
 import { site } from '@/site.config';
@@ -13,7 +17,7 @@ const PORTRAIT = site.artist.portraitPath;
 export const metadata = buildMetadata({
   title: 'About The Artist',
   description:
-    'Ritushka is a contemporary abstract landscape and seascape artist based in Lane Cove, Sydney. Born in communist Hungary, transformed by the Australian coast — her story, her practice, and a word in her own voice.',
+    'Ritushka is a contemporary abstract landscape and seascape artist based in Lane Cove, Sydney. Born in communist Hungary, transformed by the Australian coast — her story, her practice, and a word in her own voice, in English and Hungarian.',
   path: '/about',
   image: PORTRAIT,
 });
@@ -47,13 +51,32 @@ const artistParagraphsAfterQuote = [
   'Today, Ritushka Pure Art exists as a bridge between two lifetimes: the grey and the glorious, the controlled and the chaotic, the ink and the explosion. Her work hangs in private collections and commercial spaces across the world. But the real collection? It’s still forming. Still moving. Still just out of reach.',
 ];
 
-/* --- Section 3: A word from the artist ----------------------------------- */
-const letterParagraphs = [
-  'Drawing from the depths of my memory, my career as an artist reaches all the way back to when I was four. I grew up in communist Hungary, in one of Budapest’s outer districts — Pesterzsébet, to be exact — in the middle of a concrete jungle, right next to lovely Csepel, which was maybe an even bigger dump than our own housing estate. A gold mine for proles and working stiffs; to us it was a wonderland, since we had no idea anything else existed. For a car or a landline you had to sit patiently on a waiting list for decades. The everyday view was rows of ten-storey blocks lined up in parallel, inside which thousands of families merrily lived out their lives in tiny flats. Stimulation, inspiration, visual experience: zero.',
-  'I was one of the lucky ones, because I went to the famous purple kindergarten — the most colourful building in the whole district. That’s the source of my first memory, the one that left huge question marks in everyone’s mind. Day after day I just sat at the drawing table and daubed away. Every day I came home with the same masterpiece: a whale surfacing from the depths of the sea, cheerfully spraying a jet of water into the air. I hauled whales home by the ton… to the great astonishment of my kindergarten teacher and my parents, since I had never in my life laid eyes on a whale. Beyond Hungary’s great rivers and lakes, a puddle at most. A sea — or God forbid an ocean — not even in a picture. The origin of that inspiration is a mystery to this day.',
-  'Drawing became the muse of my childhood. Our patient waiting eventually got its due reward too: a car, a phone, and the “world” opened up before us. We roamed, we travelled the country, and I spent my summers under my grandparents’ wings, watching their deft, industrious hands. My grandfather made oil paintings of professional quality; my grandmothers conjured up breathtaking handiwork — crochet, knitting, embroidered pictures; my great-grandfather built a miniature working steam locomotive out of “nothing.” Something exciting was always taking shape in their hands, and their urge to create ran through our days with untiring force. I was infected for life.',
-  'As the years went by and my brain cells multiplied, I learned, mastered, and picked up everything from them by watching, and — setting all modesty aside — became a mini creator. At first my art-making was just something to kill the boredom in our limited, simple lives, but soon I grasped the essence of it. Creating is a wonder. I was unstoppable: I crocheted, knitted, embroidered, sewed, painted furniture, carved, sculpted with clay until I dropped.',
-  'Then one day it simply passed. But it didn’t leave a void behind — it struck a spark of room for the great love: back from 3D into 2D.',
+/** Studio photographs floated into "About the artist", keyed by the paragraph they precede. */
+const artistFigures = {
+  2: {
+    src: '/about/ritushka-studio-chair.jpg',
+    alt: 'Ritushka in her Lane Cove studio, leaning on a chair in front of her abstract paintings',
+    caption: 'Ritushka in her Lane Cove studio',
+    width: 708, height: 1061, side: 'right' as const,
+  },
+  5: {
+    src: '/about/ritushka-brushwork.jpg',
+    alt: 'Close-up of Ritushka building a textured pink and gold abstract surface with a brush',
+    caption: 'Building the surface, layer on layer',
+    width: 705, height: 1060, side: 'left' as const,
+  },
+  9: {
+    src: '/about/ritushka-studio-wide.jpg',
+    alt: 'Ritushka’s studio with large abstract landscape and seascape canvases stacked wall to wall',
+    caption: 'Works in progress, wall to wall',
+    width: 746, height: 495, side: 'right' as const, wide: true,
+  },
+} as const;
+
+const stats = [
+  { figure: '300+', label: 'Works completed' },
+  { figure: '3', label: 'Continents collected' },
+  { figure: '26 yrs', label: 'In Australia' },
 ];
 
 const sections = [
@@ -67,6 +90,7 @@ export default function About() {
     ...personSchema(),
     birthPlace: { '@type': 'Place', name: 'Budapest, Hungary' },
     alumniOf: { '@type': 'EducationalOrganization', name: 'Willoughby Art School' },
+    knowsLanguage: ['en-AU', 'hu'],
     homeLocation: {
       '@type': 'Place',
       name: `${site.location.suburb}, ${site.location.city}`,
@@ -85,7 +109,7 @@ export default function About() {
     url: new URL('/about', site.url).toString(),
     name: `About ${site.artist.name}`,
     description: metadata.description as string,
-    inLanguage: 'en-AU',
+    inLanguage: ['en-AU', 'hu'],
     isPartOf: { '@id': new URL('/', site.url).toString() + '#website' },
     mainEntity: { '@id': new URL('/', site.url).toString() + '#person' },
     primaryImageOfPage: new URL(PORTRAIT, site.url).toString(),
@@ -101,23 +125,28 @@ export default function About() {
         )}
       />
 
-      {/* --- Hero ------------------------------------------------------- */}
+      {/* --- Hero (portrait unchanged) ----------------------------------- */}
       <Container className="py-14">
         <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }]} />
-        <div className="mt-6 grid gap-12 lg:grid-cols-2 lg:items-center">
-          <PlaceholderImage
-            src={PORTRAIT}
-            alt={`${site.artist.name}, contemporary abstract landscape and seascape artist, in her ${site.location.suburb} studio`}
-            ratio="4 / 5"
-            priority
-          />
+        <div className="mt-6 grid gap-12 lg:grid-cols-[0.85fr_1fr] lg:items-center lg:gap-16">
+          <div className="relative">
+            <PlaceholderImage
+              src={PORTRAIT}
+              alt={`${site.artist.name}, contemporary abstract landscape and seascape artist, in her ${site.location.suburb} studio`}
+              ratio="4 / 5"
+              priority
+            />
+            <span className="absolute bottom-4 left-0 bg-bone px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-ink/60">
+              {site.artist.name} · {site.location.suburb}, {site.location.city}
+            </span>
+          </div>
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-ink/50">{site.artist.tagline}</p>
             <h1 className="mt-3 font-serif text-4xl text-ink md:text-5xl">About {site.artist.name}</h1>
-            <p className="mt-5 font-serif text-2xl leading-snug text-ink/85">
+            <p className="mt-5 font-serif text-2xl italic leading-snug text-ink/85">
               Your world through my eyes.
             </p>
-            <div className="prose-art mt-4">
+            <div className="prose-art mt-4 max-w-[56ch]">
               <p>{site.artist.shortBio}</p>
               <p>
                 Born in Budapest and now painting from a studio in {site.location.suburb}, {site.location.city},
@@ -127,6 +156,21 @@ export default function About() {
                 projects.
               </p>
             </div>
+
+            <dl className="mt-8 flex flex-wrap border-t border-sand">
+              {stats.map(s => (
+                <div key={s.label} className="min-w-[130px] flex-1 pr-5 pt-4">
+                  <dt className="sr-only">{s.label}</dt>
+                  <dd className="m-0">
+                    <span className="block font-serif text-3xl text-ink">{s.figure}</span>
+                    <span className="mt-1 block text-[10.5px] uppercase tracking-[0.16em] text-ink/50">
+                      {s.label}
+                    </span>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
             <nav aria-label="On this page" className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-sand pt-5 text-xs uppercase tracking-widest text-ink/60">
               {sections.map(s => (
                 <a key={s.id} href={`#${s.id}`} className="hover:text-ink">
@@ -138,12 +182,12 @@ export default function About() {
         </div>
       </Container>
 
-      {/* --- 1. About the art ------------------------------------------- */}
+      {/* --- 1. About the art -------------------------------------------- */}
       <section id="about-the-art" className="scroll-mt-24 border-t border-sand">
         <Container className="py-14 md:py-20">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <h2 className="font-serif text-3xl text-ink md:text-4xl">About the art</h2>
+              <h2 className="font-serif text-3xl text-ink md:text-4xl lg:sticky lg:top-8">About the art</h2>
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
               <p className="font-serif text-2xl leading-snug text-ink md:text-3xl">{artParagraphs[0]}</p>
@@ -162,24 +206,32 @@ export default function About() {
         </Container>
       </section>
 
-      {/* --- 2. About the artist ---------------------------------------- */}
+      {/* --- 2. About the artist ----------------------------------------- */}
       <section id="about-the-artist" className="scroll-mt-24 border-t border-sand bg-white/40">
         <Container className="py-14 md:py-20">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-4">
-              <h2 className="font-serif text-3xl text-ink md:text-4xl">About the artist</h2>
-              <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink/50">
-                Ritushka Pure Art — your world through my eyes
-              </p>
+              <div className="lg:sticky lg:top-8">
+                <h2 className="font-serif text-3xl text-ink md:text-4xl">About the artist</h2>
+                <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink/50">
+                  Ritushka Pure Art — your world through my eyes
+                </p>
+              </div>
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
-              <div className="prose-art">
-                {artistParagraphs.map(p => (
-                  <p key={p.slice(0, 24)}>{p}</p>
-                ))}
+              <div className="rt-editorial">
+                {artistParagraphs.map((p, i) => {
+                  const fig = artistFigures[i as keyof typeof artistFigures];
+                  return (
+                    <Fragment key={p.slice(0, 24)}>
+                      {fig && <AboutFigure {...fig} />}
+                      <p className={i === 0 ? 'rt-dropcap' : undefined}>{p}</p>
+                    </Fragment>
+                  );
+                })}
               </div>
 
-              <blockquote className="my-10 border-l-2 border-accent pl-6">
+              <blockquote className="clear-both my-10 border-l-2 border-accent pl-6">
                 <p className="font-serif text-2xl leading-snug text-ink md:text-3xl">
                   “Explore your own imagination. I’ve already given you mine.”
                 </p>
@@ -209,36 +261,32 @@ export default function About() {
         </Container>
       </section>
 
-      {/* --- 3. A word from the artist ---------------------------------- */}
+      {/* --- Studio strip -------------------------------------------------- */}
+      <figure className="relative m-0 border-t border-sand">
+        <div className="relative h-[clamp(240px,38vw,440px)] w-full">
+          <Image
+            src="/about/ritushka-studio-portrait.jpg"
+            alt={`Ritushka’s studio in ${site.location.suburb}, ${site.location.city}, with large-scale abstract canvases stacked wall to wall`}
+            fill
+            sizes="100vw"
+            className="object-cover object-[50%_46%]"
+          />
+        </div>
+        <figcaption className="absolute bottom-4 left-5 bg-bone/90 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-ink/65 sm:left-8">
+          The studio, {site.location.suburb}
+        </figcaption>
+      </figure>
+
+      {/* --- 3. A word from the artist (EN ⇄ HU) --------------------------- */}
       <section id="a-word-from-the-artist" className="scroll-mt-24 border-t border-sand">
         <Container className="py-14 md:py-20">
-          <div className="grid gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-4">
-              <h2 className="font-serif text-3xl text-ink md:text-4xl">A word from the artist</h2>
-              <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink/50">In her own words</p>
-            </div>
-            <div className="lg:col-span-7 lg:col-start-6">
-              <figure className="m-0 rounded-lg border border-sand bg-bone p-6 md:p-10">
-                <blockquote className="prose-art">
-                  {letterParagraphs.map(p => (
-                    <p key={p.slice(0, 24)}>{p}</p>
-                  ))}
-                </blockquote>
-                <figcaption className="mt-8 border-t border-sand pt-5">
-                  <span className="block font-serif text-2xl text-ink">{site.artist.name}</span>
-                  <span className="mt-1 block text-xs uppercase tracking-widest text-ink/55">
-                    {site.location.suburb}, {site.location.city}
-                  </span>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+          <ArtistLetter />
         </Container>
       </section>
 
       <CtaBand
         title="Acquire or commission"
-        body="Browse available originals or commission a work for your space."
+        body="Browse available originals or commission a work made for the scale, palette and light of your space."
         primary={{ href: '/available', label: 'Available works' }}
         secondary={{ href: '/commission', label: 'Commission' }}
       />
