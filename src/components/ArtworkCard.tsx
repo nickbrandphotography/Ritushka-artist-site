@@ -31,12 +31,11 @@ export default function ArtworkCard({ a, priority }: { a: Artwork; priority?: bo
             out to the stage's full square — a small painting reads with a
             small caption underneath it. */}
         <div className="mx-auto mt-3" style={{ width: stageWidth(a) }}>
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-serif text-lg leading-tight text-ink group-hover:underline">{a.title}</h3>
-            <span className="shrink-0 text-sm text-ink/65">{priceLabel(a)}</span>
-          </div>
+          <h3 className="font-serif text-lg leading-tight text-ink">{a.title}</h3>
           <p className="text-sm text-ink/65">{dimsShort(a)}{a.year ? ` · ${a.year}` : ''}</p>
-          {a.medium && <p className="text-sm text-ink/65">{a.medium}</p>}
+          <p className="text-sm text-ink/65">
+            {a.medium}{a.medium && ' · '}{priceLabel(a)}
+          </p>
         </div>
       </Link>
     </article>
