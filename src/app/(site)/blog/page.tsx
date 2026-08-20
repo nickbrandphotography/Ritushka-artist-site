@@ -16,7 +16,7 @@ export default function BlogIndex() {
             <Link href={`/blog/${p.slug}`} className="group block">
               <h2 className="font-serif text-2xl text-ink group-hover:underline">{p.title}</h2>
               <p className="mt-1 text-ink/65">{p.excerpt}</p>
-              <p className="mt-2 text-xs uppercase tracking-widest text-ink/45">For {p.audience} · {p.readMinutes} min read</p>
+              <p className="mt-2 text-xs uppercase tracking-widest text-ink/65">For {p.audience} · {p.readMinutes} min read</p>
             </Link>
           </li>
         ))}

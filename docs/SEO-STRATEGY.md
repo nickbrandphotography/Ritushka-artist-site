@@ -6,7 +6,7 @@
 | Abstract landscape art | /collections/abstract-landscapes | artwork pages, blog |
 | Abstract seascape paintings | /collections/abstract-seascapes | artwork pages, blog |
 | Contemporary Australian artist | /about, /collections/modern-australian-art | home, journal |
-| Large scale art | /collections/large-scale-paintings | "Large Scale Art For Luxury Homes" |
+| Large scale art | /collections/large-scale-paintings | "How To Hang Oversized Paintings" |
 | Coastal art | /collections/coastal-abstract-art | "Best Art For Coastal Homes" |
 | Original paintings | /available | /portfolio |
 | Commissioned artwork | /commission | sold works, collection CTAs |
@@ -14,10 +14,15 @@
 | Art for interior designers | /trade/interior-designers | designer blog posts |
 | Art for architects / developers | /trade/corporate, /trade/buyers-agents | mockups |
 | Art consultant services | /trade/art-consultants | journal |
+| Figurative & decorative art | /collections/other-works | artwork pages |
+
+Journal posts were consolidated from 50 templated pages to 31 hand-written ones in
+Aug 2026 — see `scripts/rewrite-blog-content.py` for the full mapping and the 19
+retired slugs' 301 targets (`scripts/.blog-redirects.json`).
 
 ## Technical SEO (implemented)
 - SSG + SSR-safe metadata; canonical on every page (`buildMetadata`)
-- `sitemap.xml` (all 139 routes, priority-weighted), `robots.txt`, `manifest`
+- `sitemap.xml` (all 140 routes, priority-weighted), `robots.txt`, `manifest`
 - Open Graph + Twitter cards; `metadataBase` set for absolute URLs
 - Semantic HTML, single H1/page, breadcrumb trails, descriptive alt text
 - Image optimisation path via `next/image` (AVIF/WebP) once real assets land

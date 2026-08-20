@@ -2,11 +2,17 @@ import Container from './Container';
 import Breadcrumbs from './Breadcrumbs';
 import EnquiryForm from './EnquiryForm';
 import FAQList from './FAQList';
+import JsonLd from './JsonLd';
 import type { Program } from '@/data/programs';
+import { graph, breadcrumbSchema } from '@/lib/schema';
 export default function ProgramPage({ p }: { p: Program }) {
+  // No dedicated /trade index exists, so the trail stops at Home rather than
+  // pointing every one of the four programs at /trade/interior-designers.
+  const crumbs = [{ name: 'Home', path: '/' }, { name: p.title, path: `/trade/${p.slug}` }];
   return (
     <Container className="py-14">
-      <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Trade', path: '/trade/interior-designers' }, { name: p.title, path: `/trade/${p.slug}` }]} />
+      <JsonLd data={graph(breadcrumbSchema(crumbs))} />
+      <Breadcrumbs crumbs={crumbs} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">{p.title}</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink/75">{p.intro}</p>
       <div className="mt-12 grid gap-12 lg:grid-cols-2">

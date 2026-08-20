@@ -16,7 +16,7 @@ export default function MockupsIndex() {
           <Link key={m.slug} href={`/mockups/${m.slug}`} className="group">
             <PlaceholderImage src={m.image} alt={m.alt} ratio={m.aspect} priority={i < 3} />
             <h2 className="mt-3 font-serif text-lg text-ink group-hover:underline">{m.title}</h2>
-            <p className="text-sm text-ink/55">{m.room}</p>
+            <p className="text-sm text-ink/65">{m.room}</p>
           </Link>
         ))}
       </div>

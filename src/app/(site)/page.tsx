@@ -24,7 +24,7 @@ export default function HomePage() {
           {collections.map(c => (
             <Link key={c.slug} href={`/collections/${c.slug}`} className="rounded-md border border-sand p-5 hover:border-ink">
               <h3 className="font-serif text-lg text-ink">{c.name}</h3>
-              <p className="mt-1 text-xs text-ink/55">{c.keyword}</p>
+              <p className="mt-1 text-xs text-ink/65">{c.keyword}</p>
             </Link>
           ))}
         </div>

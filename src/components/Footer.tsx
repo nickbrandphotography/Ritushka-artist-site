@@ -33,7 +33,7 @@ export default function Footer() {
           <ul className="mt-3 space-y-1.5 text-sm text-bone/80">
             <li><Link href="/trade/interior-designers" className="hover:text-bone">Interior Designers</Link></li>
             <li><Link href="/trade/art-consultants" className="hover:text-bone">Art Consultants</Link></li>
-            <li><Link href="/trade/buyers-agents" className="hover:text-bone">Buyer's Agents</Link></li>
+            <li><Link href="/trade/buyers-agents" className="hover:text-bone">Buyer&rsquo;s Agents</Link></li>
             <li><Link href="/trade/corporate" className="hover:text-bone">Corporate Art</Link></li>
             <li><Link href="/commission" className="hover:text-bone">Commissions</Link></li>
           </ul>
@@ -46,7 +46,9 @@ export default function Footer() {
       </Container>
       <Container className="flex flex-col gap-2 border-t border-bone/15 py-6 text-xs text-bone/50 sm:flex-row sm:justify-between">
         <p>© {new Date().getFullYear()} {site.brand.name}. All rights reserved.</p>
-        <nav aria-label="Legal"><ul className="flex gap-4">
+        <nav aria-label="More"><ul className="flex flex-wrap gap-4">
+          <li><Link href="/portfolio" className="hover:text-bone">Portfolio</Link></li>
+          <li><Link href="/sold" className="hover:text-bone">Sold Works</Link></li>
           <li><Link href="/shipping" className="hover:text-bone">Shipping</Link></li>
           <li><Link href="/faq" className="hover:text-bone">FAQ</Link></li>
           <li><Link href="/privacy" className="hover:text-bone">Privacy</Link></li>

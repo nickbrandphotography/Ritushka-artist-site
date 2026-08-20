@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { site } from '@/site.config';
 import { getArtwork } from '@/lib/data';
 
@@ -38,6 +39,9 @@ export default function Hero() {
       <source media={PORTRAIT_UP_TO} srcSet={`${TALL}-900.jpg 900w, ${TALL}-1600.jpg 1600w`} sizes="100vw" />
       <source type="image/avif" srcSet={`${WIDE}-1920.avif 1920w, ${WIDE}-3840.avif 3840w`} sizes="100vw" />
       <source type="image/webp" srcSet={`${WIDE}-1920.webp 1920w, ${WIDE}-3840.webp 3840w`} sizes="100vw" />
+      {/* eslint-disable-next-line @next/next/no-img-element -- art-directed
+          <picture> with per-breakpoint crops; next/image can't swap source
+          images on a media query, see the file header comment above. */}
       <img
         src={`${WIDE}-3840.jpg`}
         srcSet={`${WIDE}-1920.jpg 1920w, ${WIDE}-3840.jpg 3840w`}
@@ -63,12 +67,19 @@ export default function Hero() {
         </p>
 
         <h1 className="rt-hero__h1">
-          <img
+          <Image
             className="rt-hero__sig"
             src="/hero/signature-ink.png"
             alt={site.artist.name}
             width={2302}
             height={401}
+            // Mirrors the CSS `width: clamp(210px, 23vw, 318px)` on .rt-hero__sig
+            // exactly (crossover points are 210/0.23 ≈ 913px and 318/0.23 ≈ 1383px).
+            // A looser hint like a flat "30vw" under-reported the true display
+            // width on phones, so next/image served a lower-resolution srcset
+            // candidate than the element's actual CSS size × device pixel ratio
+            // needed (Lighthouse: "Serves images with low resolution").
+            sizes="(min-width: 1383px) 318px, (min-width: 913px) 23vw, 210px"
           />
           <span className="rt-hero__statement">
             Contemporary abstract landscapes <span className="rt-hero__brk" />&amp; seascapes

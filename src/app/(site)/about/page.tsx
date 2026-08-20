@@ -136,12 +136,12 @@ export default function About() {
               ratio="4 / 5"
               priority
             />
-            <span className="absolute bottom-4 left-0 bg-bone px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-ink/60">
+            <span className="absolute bottom-4 left-0 bg-bone px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-ink/65">
               {site.artist.name} · {site.location.suburb}, {site.location.city}
             </span>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-ink/50">{site.artist.tagline}</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-ink/65">{site.artist.tagline}</p>
             <h1 className="mt-3 font-serif text-4xl text-ink md:text-5xl">About {site.artist.name}</h1>
             <p className="mt-5 font-serif text-2xl italic leading-snug text-ink/85">
               Your world through my eyes.
@@ -163,7 +163,7 @@ export default function About() {
                   <dt className="sr-only">{s.label}</dt>
                   <dd className="m-0">
                     <span className="block font-serif text-3xl text-ink">{s.figure}</span>
-                    <span className="mt-1 block text-[10.5px] uppercase tracking-[0.16em] text-ink/50">
+                    <span className="mt-1 block text-[10.5px] uppercase tracking-[0.16em] text-ink/65">
                       {s.label}
                     </span>
                   </dd>
@@ -171,7 +171,7 @@ export default function About() {
               ))}
             </dl>
 
-            <nav aria-label="On this page" className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-sand pt-5 text-xs uppercase tracking-widest text-ink/60">
+            <nav aria-label="On this page" className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-sand pt-5 text-xs uppercase tracking-widest text-ink/65">
               {sections.map(s => (
                 <a key={s.id} href={`#${s.id}`} className="hover:text-ink">
                   {s.label}
@@ -196,7 +196,7 @@ export default function About() {
                   <p key={p.slice(0, 24)}>{p}</p>
                 ))}
               </div>
-              <p className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-ink/60">
+              <p className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-ink/65">
                 <Link href="/available" className="hover:text-ink">Available works</Link>
                 <Link href="/collections" className="hover:text-ink">Collections</Link>
                 <Link href="/commission" className="hover:text-ink">Commission a painting</Link>
@@ -213,7 +213,7 @@ export default function About() {
             <div className="lg:col-span-4">
               <div className="lg:sticky lg:top-8">
                 <h2 className="font-serif text-3xl text-ink md:text-4xl">About the artist</h2>
-                <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink/50">
+                <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink/65">
                   Ritushka Pure Art — your world through my eyes
                 </p>
               </div>
@@ -251,7 +251,7 @@ export default function About() {
                 Only where it takes you.
               </p>
 
-              <p className="mt-8 border-t border-sand pt-5 text-sm text-ink/60">
+              <p className="mt-8 border-t border-sand pt-5 text-sm text-ink/65">
                 <span className="block font-serif text-base text-ink">Ritushka Pure Art</span>
                 Acrylic on canvas. Abstract landscapes of the soul. Based in Australia, born of Hungary,
                 dreaming in colour.

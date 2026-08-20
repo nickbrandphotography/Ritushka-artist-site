@@ -13,7 +13,7 @@ import { graph, collectionPageSchema } from '@/lib/schema';
 export function generateStaticParams() { return collections.map(c => ({ slug: c.slug })); }
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const c = getCollection(params.slug); if (!c) return {};
-  return buildMetadata({ title: c.name, description: c.metaDescription, path: `/collections/${c.slug}` });
+  return buildMetadata({ title: c.seoTitle, description: c.metaDescription, path: `/collections/${c.slug}` });
 }
 export default function CollectionPage({ params }: { params: { slug: string } }) {
   const c = getCollection(params.slug); if (!c) notFound();

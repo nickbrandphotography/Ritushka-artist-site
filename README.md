@@ -51,7 +51,9 @@ sitemap, schema and internal links all derive from the data.
 replace `PlaceholderImage` with `next/image` for automatic AVIF/WebP optimisation.
 
 ## What's included
-- 19 core pages + 10 collections + 50 artwork pages + 50 mockups + 50 blog posts (139 routes)
+- 19 core pages + 10 collections + 40 artwork pages + 40 mockups + 31 blog posts (140 routes) — the
+  Journal was cut from 50 templated posts to 31 hand-written ones in Aug 2026; see
+  `scripts/rewrite-blog-content.py`.
 - Full JSON-LD: Person, Organization/LocalBusiness, WebSite, VisualArtwork, CollectionPage,
   Article, FAQPage, BreadcrumbList, ImageObject
 - `sitemap.xml`, `robots.txt` (AI crawlers explicitly welcomed), `manifest`, `llms.txt`

@@ -47,7 +47,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <JsonLd data={graph(articleSchema(p), breadcrumbSchema(crumbs))} />
       <Breadcrumbs crumbs={crumbs} />
       <article className="mx-auto mt-6 max-w-2xl">
-        <p className="text-xs uppercase tracking-widest text-ink/45">For {p.audience} · {new Date(p.publishedAt).toLocaleDateString('en-AU', { year: 'numeric', month: 'long' })}</p>
+        <p className="text-xs uppercase tracking-widest text-ink/65">For {p.audience} · {new Date(p.publishedAt).toLocaleDateString('en-AU', { year: 'numeric', month: 'long' })}</p>
         <h1 className="mt-3 font-serif text-4xl text-ink md:text-5xl">{p.title}</h1>
         <div className="prose-art mt-8">{render(p.body)}</div>
         {coll && <p className="mt-8">Explore <Link href={`/collections/${coll.slug}`} className="underline">{coll.name}</Link>.</p>}

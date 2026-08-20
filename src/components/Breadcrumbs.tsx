@@ -3,7 +3,7 @@ import JsonLd from './JsonLd';
 import { graph, breadcrumbSchema } from '@/lib/schema';
 export default function Breadcrumbs({ crumbs }: { crumbs: { name: string; path: string }[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-widest text-ink/60">
+    <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-widest text-ink/65">
       <JsonLd data={graph(breadcrumbSchema(crumbs))} />
       <ol className="flex flex-wrap gap-2">
         {crumbs.map((c, i) => (

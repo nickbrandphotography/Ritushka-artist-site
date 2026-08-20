@@ -4,8 +4,9 @@
 
 :root {
   color-scheme: light;
-  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* --font-serif and --font-sans are supplied by next/font (see layout.tsx)
+     via a class on <html> — do not redeclare them here, it would fight the
+     self-hosted @font-face the build generates. */
   /* Light timber floating frame — matches the rendered mockup frames.
      Sized as a PERCENTAGE of the image width so the frame stays in scale with
      the painting at any display size (CSS padding % always resolves against
@@ -89,7 +90,7 @@ body { background: #f6f4ef; color: #1a1a18; -webkit-font-smoothing: antialiased;
   font-size: 10.5px;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: rgba(26,26,24,0.5);
+  color: rgba(26,26,24,0.65); /* was 0.5 — failed WCAG AA (3.27:1) at this size; 0.65 passes at 5.21:1 */
   line-height: 1.6;
 }
 @media (min-width: 760px) {
@@ -199,7 +200,7 @@ body { background: #f6f4ef; color: #1a1a18; -webkit-font-smoothing: antialiased;
   font-size: 10.5px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(26, 26, 24, 0.48);
+  color: rgba(26, 26, 24, 0.65); /* was 0.48 — failed WCAG AA (~3.1:1); 0.65 passes at 5.21:1 */
 }
 .rt-hero__h1 { margin: 0; display: block; font-weight: 400; }
 /* The signature is an <img> INSIDE the h1 with alt="Ritushka", so the heading

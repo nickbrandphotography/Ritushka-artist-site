@@ -48,7 +48,7 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
           )}
         </div>
         <div>
-          <p className="text-xs uppercase tracking-widest text-ink/50">{collectionName(a.primaryCollection)}</p>
+          <p className="text-xs uppercase tracking-widest text-ink/65">{collectionName(a.primaryCollection)}</p>
           <h1 className="mt-2 font-serif text-4xl text-ink md:text-5xl">{a.title}</h1>
           <p className="mt-3 text-xl text-ink/70">{priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a)}</p>
           <div className="prose-art mt-6">
@@ -56,7 +56,7 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
           </div>
           {a.inspiration && (
             <figure className="mt-6 border-l border-sand pl-5">
-              <figcaption className="text-xs uppercase tracking-widest text-ink/50">Artist&rsquo;s inspiration</figcaption>
+              <figcaption className="text-xs uppercase tracking-widest text-ink/65">Artist&rsquo;s inspiration</figcaption>
               <blockquote className="mt-2 font-serif text-lg italic leading-relaxed text-ink/80">{a.inspiration}</blockquote>
             </figure>
           )}
@@ -64,32 +64,32 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
           <section className="mt-8 border-t border-sand pt-6" aria-labelledby="specification">
             <h2 id="specification" className="font-serif text-xl text-ink">Specification</h2>
             <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-8 gap-y-3 text-sm">
-              <dt className="text-ink/50">Dimensions</dt>
+              <dt className="text-ink/65">Dimensions</dt>
               <dd>{dims(a)}</dd>
               {a.depthCm != null && (<>
-                <dt className="text-ink/50">Depth</dt>
+                <dt className="text-ink/65">Depth</dt>
                 <dd>{a.depthCm} cm{a.depthIn != null && ` (${a.depthIn} in)`}</dd>
               </>)}
-              <dt className="text-ink/50">Orientation</dt>
+              <dt className="text-ink/65">Orientation</dt>
               <dd className="capitalize">{a.orientation}</dd>
-              <dt className="text-ink/50">Medium</dt>
+              <dt className="text-ink/65">Medium</dt>
               <dd>{a.medium || 'Original painting — details on request'}</dd>
-              <dt className="text-ink/50">Framing</dt>
+              <dt className="text-ink/65">Framing</dt>
               <dd>{framing(a)}</dd>
-              <dt className="text-ink/50">Edition</dt>
+              <dt className="text-ink/65">Edition</dt>
               <dd>{a.edition}{a.edition === 'Original' && ' — a unique, one-off work'}</dd>
               {a.year != null && (<>
-                <dt className="text-ink/50">Year</dt>
+                <dt className="text-ink/65">Year</dt>
                 <dd>{a.year}</dd>
               </>)}
-              <dt className="text-ink/50">Palette</dt>
+              <dt className="text-ink/65">Palette</dt>
               <dd className="capitalize">{a.palette}</dd>
-              <dt className="text-ink/50">Availability</dt>
+              <dt className="text-ink/65">Availability</dt>
               <dd>{a.status === 'sold' ? 'Sold — commission a related work' : 'Available — enquire to confirm'}</dd>
-              <dt className="text-ink/50">Shipping</dt>
+              <dt className="text-ink/65">Shipping</dt>
               <dd>Worldwide, insured, with certificate of authenticity</dd>
               {a.inventoryId && (<>
-                <dt className="text-ink/50">Reference</dt>
+                <dt className="text-ink/65">Reference</dt>
                 <dd>{a.inventoryId}</dd>
               </>)}
             </dl>
