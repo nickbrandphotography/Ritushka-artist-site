@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -8,6 +8,8 @@ export default function MobileNav({ items }: { items: { href: string; label: str
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -20,6 +22,19 @@ export default function MobileNav({ items }: { items: { href: string; label: str
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
+  // Escape closes the menu and returns focus to the toggle; opening moves
+  // focus into the panel so keyboard and screen-reader users land somewhere
+  // useful rather than in the still-visually-hidden page behind it.
+  useEffect(() => {
+    if (!open) return;
+    firstLinkRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setOpen(false); toggleRef.current?.focus(); }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
+
   const panel = (
     <div
       id="mobile-menu"
@@ -27,9 +42,16 @@ export default function MobileNav({ items }: { items: { href: string; label: str
     >
       <nav aria-label="Mobile" className="px-5 py-6">
         <ul className="flex flex-col divide-y divide-sand">
-          {items.map(n => (
+          {items.map((n, i) => (
             <li key={n.href}>
-              <Link href={n.href} onClick={() => setOpen(false)} className="block py-4 font-serif text-2xl text-ink">{n.label}</Link>
+              <Link
+                href={n.href}
+                ref={i === 0 ? firstLinkRef : undefined}
+                onClick={() => setOpen(false)}
+                className="block py-4 font-serif text-2xl text-ink"
+              >
+                {n.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -40,6 +62,7 @@ export default function MobileNav({ items }: { items: { href: string; label: str
   return (
     <div className="md:hidden">
       <button
+        ref={toggleRef}
         type="button"
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}

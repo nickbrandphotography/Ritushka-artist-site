@@ -13,10 +13,10 @@ export default function Contact() {
         <div className="text-ink/75">
           <p>For acquisitions, commissions, trade enquiries and press.</p>
           <dl className="mt-6 space-y-3 text-sm">
-            <div><dt className="text-ink/50">Email</dt><dd><a href={`mailto:${site.contact.email}`} className="underline hover:text-ink">{site.contact.email}</a></dd></div>
-            <div><dt className="text-ink/50">Phone</dt><dd><a href={`tel:${site.contact.phone.replace(/\s+/g, '')}`} className="underline hover:text-ink">{site.contact.phone}</a></dd></div>
-            <div><dt className="text-ink/50">Studio</dt><dd>{site.location.suburb}, {site.location.city}, {site.location.state} — by appointment</dd></div>
-            <div><dt className="text-ink/50">Shipping</dt><dd>Worldwide, insured</dd></div>
+            <div><dt className="text-ink/65">Email</dt><dd><a href={`mailto:${site.contact.email}`} className="underline hover:text-ink">{site.contact.email}</a></dd></div>
+            <div><dt className="text-ink/65">Phone</dt><dd><a href={`tel:${site.contact.phone.replace(/\s+/g, '')}`} className="underline hover:text-ink">{site.contact.phone}</a></dd></div>
+            <div><dt className="text-ink/65">Studio</dt><dd>{site.location.suburb}, {site.location.city}, {site.location.state} — by appointment</dd></div>
+            <div><dt className="text-ink/65">Shipping</dt><dd>Worldwide, insured</dd></div>
           </dl>
         </div>
         <div className="rounded-lg border border-sand p-6"><EnquiryForm kind="enquiry" /></div>

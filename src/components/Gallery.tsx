@@ -13,7 +13,7 @@ export default function Gallery({
   return (
     <div>
       {toScaleNote && list.length > 1 && (
-        <p className="mb-5 text-xs uppercase tracking-[0.14em] text-ink/45">
+        <p className="mb-5 text-xs uppercase tracking-[0.14em] text-ink/65">
           Shown in proportion to one another
         </p>
       )}

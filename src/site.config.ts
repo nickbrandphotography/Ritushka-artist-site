@@ -13,16 +13,22 @@ export const site = {
     nationality: 'Australian',
     jobTitle: 'Painter',
     portraitPath: '/about/ritushka-portrait.jpg',
-    sameAs: [
-      'https://www.instagram.com/PLACEHOLDER',
-      'https://www.facebook.com/PLACEHOLDER',
-      'https://www.pinterest.com/PLACEHOLDER',
-    ],
+    // Real, live social profile URLs only — schema.org `sameAs` and the
+    // Person/Organization JSON-LD tell search engines and AI systems "this
+    // is the same entity as this profile". A dead or placeholder URL here is
+    // worse than none: it either 404s or, worse, resolves to someone else's
+    // account. Add each handle here the day it goes live; leave empty until
+    // then. See docs/SEO-STRATEGY.md "Remaining external actions".
+    sameAs: [] as string[],
   },
   brand: {
     name: 'Ritushka Fine Art',
-    legalName: 'Ritushka Fine Art Pty Ltd', // PLACEHOLDER
-    logoPath: '/logo.svg',
+    // Legal entity name for Organization schema — only set this once it is
+    // confirmed (sole trader vs. a registered Pty Ltd, and its exact
+    // registered name/ABN). An unverified legal name in structured data is a
+    // trust and compliance risk. Leave null until confirmed.
+    legalName: null as string | null,
+    logoPath: '/logo.png',
   },
   contact: {
     email: 'studio@ritushka.art',

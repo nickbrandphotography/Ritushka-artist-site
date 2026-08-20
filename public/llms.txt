@@ -28,8 +28,10 @@
 - Blue Abstract Paintings: /collections/blue-abstract-paintings
 - Modern Australian Art: /collections/modern-australian-art
 - Statement Artworks: /collections/statement-artworks
+- Other Works: /collections/other-works
 
 ## For trade
+- All trade programs: /trade
 - Interior designers: /trade/interior-designers
 - Art consultants: /trade/art-consultants
 - Buyer's agents: /trade/buyers-agents

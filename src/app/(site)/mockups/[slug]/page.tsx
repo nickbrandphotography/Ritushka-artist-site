@@ -51,24 +51,24 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
         )}
 
         <div>
-          <p className="text-xs uppercase tracking-widest text-ink/50">{m.room}</p>
+          <p className="text-xs uppercase tracking-widest text-ink/65">{m.room}</p>
           <h1 className="mt-2 font-serif text-4xl text-ink">{m.title}</h1>
 
           {a && (
             <>
               <div className="mt-6 rounded-lg border border-sand p-6">
-                <p className="text-xs uppercase tracking-widest text-ink/50">The artwork</p>
+                <p className="text-xs uppercase tracking-widest text-ink/65">The artwork</p>
                 <div className="mt-3 flex items-start gap-4">
                   <Link href={`/artwork/${a.slug}`} className="w-28 shrink-0" aria-label={`View ${a.title}`}>
                     <PlaceholderImage src={a.image} alt={a.alt} ratio={aspect(a)} framed />
                   </Link>
                   <div className="min-w-0">
                     <Link href={`/artwork/${a.slug}`} className="font-serif text-2xl text-ink hover:underline">{a.title}</Link>
-                    <p className="mt-1 text-sm text-ink/60">
+                    <p className="mt-1 text-sm text-ink/65">
                       {collectionName(a.primaryCollection)} · {priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a)}
                     </p>
-                    <p className="mt-1 text-sm text-ink/60">{dims(a)}</p>
-                    <p className="mt-2 text-xs text-ink/50">
+                    <p className="mt-1 text-sm text-ink/65">{dims(a)}</p>
+                    <p className="mt-2 text-xs text-ink/65">
                       {m.sceneId.startsWith('procedural-')
                         ? 'Shown to scale against a 2.7 m wall and a 120 cm bench, so the proportions match the painting in a real room.'
                         : 'Composited into a photographed interior at its true physical size, measured against the room’s own furniture.'}
@@ -96,7 +96,7 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
           )}
 
           {m.credit && (
-            <p className="mt-8 border-t border-sand pt-4 text-xs text-ink/45">
+            <p className="mt-8 border-t border-sand pt-4 text-xs text-ink/65">
               Interior photograph by{' '}
               <a href={m.credit.photographerUrl} rel="nofollow noopener" className="underline">
                 {m.credit.photographer}

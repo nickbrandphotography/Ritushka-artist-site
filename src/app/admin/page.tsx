@@ -12,7 +12,7 @@ export default async function AdminPage() {
     <div className="mx-auto max-w-content px-5 py-10 sm:px-8">
       <header className="flex flex-wrap items-baseline justify-between gap-3 border-b border-sand pb-5">
         <h1 className="font-serif text-3xl text-ink">Studio enquiries</h1>
-        <p className="text-sm text-ink/55">{enquiries.length} total</p>
+        <p className="text-sm text-ink/65">{enquiries.length} total</p>
       </header>
       {!storeEnabled && !mailEnabled && (
         <p className="mt-6 rounded-md bg-red-50 p-4 text-sm text-red-900">

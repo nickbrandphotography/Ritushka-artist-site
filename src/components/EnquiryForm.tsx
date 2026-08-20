@@ -13,7 +13,7 @@ export default function EnquiryForm({ subject, kind = 'enquiry' }: { subject?: s
     } catch { setFailed(true); }
     setBusy(false);
   }
-  if (sent) return <p className="rounded-md bg-sand/60 p-4 text-ink">Thank you — your {kind} request has been received. Ritushka's studio will reply within two business days.</p>;
+  if (sent) return <p className="rounded-md bg-sand/60 p-4 text-ink">Thank you — your {kind} request has been received. Ritushka&rsquo;s studio will reply within two business days.</p>;
   const labels: Record<string, string> = { enquiry: 'Enquire about this work', commission: 'Start a commission', trade: 'Apply to the trade program', consultation: 'Book a consultation' };
   return (
     <form onSubmit={submit} className="space-y-4">
@@ -42,12 +42,15 @@ export default function EnquiryForm({ subject, kind = 'enquiry' }: { subject?: s
         <span className="text-ink/70">Message</span>
         <textarea name="message" rows={4} className="mt-1 w-full rounded-md border border-ink/20 px-3 py-2" defaultValue={subject ? `I'm interested in "${subject}".` : ''} />
       </label>
-      <label className="flex items-start gap-2 text-xs text-ink/60">
-        <input type="checkbox" name="subscribe" defaultChecked className="mt-0.5" />
+      <label className="flex items-start gap-2 text-xs text-ink/65">
+        {/* Unchecked by default: a pre-ticked marketing consent box isn't valid
+            consent under GDPR (Art. 4(11)) or Australia's Spam Act, and worldwide
+            collectors are exactly this form's audience. */}
+        <input type="checkbox" name="subscribe" className="mt-0.5" />
         Add me to the collector list for new works and private viewings.
       </label>
       <button disabled={busy} className="rounded-full bg-ink px-6 py-2.5 text-sm text-bone disabled:opacity-60">{busy ? 'Sending…' : labels[kind]}</button>
-      <p className="text-xs text-ink/50">Your enquiry goes straight to Ritushka's studio. We reply within two business days.</p>
+      <p className="text-xs text-ink/65">Your enquiry goes straight to Ritushka&rsquo;s studio. We reply within two business days.</p>
     </form>
   );
 }

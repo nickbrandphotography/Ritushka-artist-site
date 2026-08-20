@@ -6,7 +6,7 @@ const STATUSES: EnquiryStatus[] = ['new', 'replied', 'won', 'archived'];
 const KINDS = ['all', 'enquiry', 'commission', 'trade', 'consultation'] as const;
 const statusColor: Record<EnquiryStatus, string> = {
   new: 'bg-sea/15 text-sea', replied: 'bg-amber-100 text-amber-800',
-  won: 'bg-green-100 text-green-800', archived: 'bg-ink/10 text-ink/50',
+  won: 'bg-green-100 text-green-800', archived: 'bg-ink/10 text-ink/65',
 };
 
 export default function AdminBoard({ initial }: { initial: Enquiry[] }) {
@@ -52,15 +52,15 @@ export default function AdminBoard({ initial }: { initial: Enquiry[] }) {
         <button onClick={exportCsv} className="rounded-full bg-ink px-4 py-1.5 text-sm text-bone">Download CSV</button>
       </div>
 
-      <p className="mt-3 text-xs text-ink/45">{filtered.length} shown</p>
+      <p className="mt-3 text-xs text-ink/65">{filtered.length} shown</p>
 
       <ul className="mt-4 space-y-4">
         {filtered.map(r => (
           <li key={r.id} className="rounded-lg border border-sand p-5">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="font-medium text-ink">{r.name || '(no name)'} · <span className="capitalize text-ink/60">{r.kind}</span></p>
-                <p className="text-sm text-ink/60">
+                <p className="font-medium text-ink">{r.name || '(no name)'} · <span className="capitalize text-ink/65">{r.kind}</span></p>
+                <p className="text-sm text-ink/65">
                   {r.email && <a className="underline" href={`mailto:${r.email}`}>{r.email}</a>}
                   {r.phone && <> · <a className="underline" href={`tel:${r.phone.replace(/\s+/g, '')}`}>{r.phone}</a></>}
                   {r.company && <> · {r.company}</>}
@@ -69,13 +69,13 @@ export default function AdminBoard({ initial }: { initial: Enquiry[] }) {
               </div>
               <div className="text-right">
                 <span className={`inline-block rounded-full px-2.5 py-1 text-xs capitalize ${statusColor[r.status]}`}>{r.status}</span>
-                <p className="mt-1 text-xs text-ink/40">{new Date(r.createdAt).toLocaleString('en-AU')}</p>
+                <p className="mt-1 text-xs text-ink/65">{new Date(r.createdAt).toLocaleString('en-AU')}</p>
               </div>
             </div>
             {r.message && <p className="mt-3 whitespace-pre-wrap text-sm text-ink/80">{r.message}</p>}
-            {(r.size || r.palette) && <p className="mt-2 text-xs text-ink/55">{r.size && `Size: ${r.size}`} {r.palette && `· Palette: ${r.palette}`}</p>}
+            {(r.size || r.palette) && <p className="mt-2 text-xs text-ink/65">{r.size && `Size: ${r.size}`} {r.palette && `· Palette: ${r.palette}`}</p>}
             <div className="mt-4 flex flex-wrap items-center gap-3">
-              <label className="text-xs text-ink/50">Status
+              <label className="text-xs text-ink/65">Status
                 <select value={r.status} onChange={e => patch(r.id, { status: e.target.value as EnquiryStatus })} className="ml-2 rounded border border-ink/20 px-2 py-1 text-sm capitalize">
                   {STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
                 </select>
@@ -89,7 +89,7 @@ export default function AdminBoard({ initial }: { initial: Enquiry[] }) {
             </div>
           </li>
         ))}
-        {filtered.length === 0 && <li className="py-10 text-center text-ink/40">No enquiries yet.</li>}
+        {filtered.length === 0 && <li className="py-10 text-center text-ink/65">No enquiries yet.</li>}
       </ul>
     </div>
   );

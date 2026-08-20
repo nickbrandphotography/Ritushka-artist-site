@@ -13,7 +13,7 @@ export const personSchema = () => ({
   nationality: site.artist.nationality,
   url: site.url,
   image: abs(site.artist.portraitPath),
-  sameAs: site.artist.sameAs,
+  ...(site.artist.sameAs.length > 0 ? { sameAs: site.artist.sameAs } : {}),
   address: {
     '@type': 'PostalAddress',
     addressLocality: site.location.suburb,
@@ -27,7 +27,7 @@ export const organizationSchema = () => ({
   '@type': ['Organization', 'LocalBusiness'],
   '@id': abs('/#organization'),
   name: site.brand.name,
-  legalName: site.brand.legalName,
+  ...(site.brand.legalName ? { legalName: site.brand.legalName } : {}),
   url: site.url,
   logo: abs(site.brand.logoPath),
   email: site.contact.email,
@@ -91,6 +91,24 @@ export const collectionPageSchema = (c: Collection, items: Artwork[]) => ({
   description: c.metaDescription,
   url: abs(`/collections/${c.slug}`),
   about: c.keyword,
+  isPartOf: { '@id': abs('/#website') },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: items.length,
+    itemListElement: items.map((a, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`/artwork/${a.slug}`), name: a.title })),
+  },
+});
+
+/** CollectionPage/ItemList for the hub pages that aren't a curated Collection
+ *  record — /portfolio, /available, /sold. Same shape as collectionPageSchema
+ *  so these pages are legible to search/AI as a defined set of works, not an
+ *  unstructured gallery. */
+export const worksListPageSchema = (path: string, name: string, description: string, items: Artwork[]) => ({
+  '@type': 'CollectionPage',
+  '@id': abs(`${path}#collection`),
+  name,
+  description,
+  url: abs(path),
   isPartOf: { '@id': abs('/#website') },
   mainEntity: {
     '@type': 'ItemList',

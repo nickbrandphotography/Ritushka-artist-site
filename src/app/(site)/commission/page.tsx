@@ -25,7 +25,7 @@ export default function Commission() {
       <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map(([t, d], i) => (
           <li key={t} className="rounded-md border border-sand p-5">
-            <span className="font-serif text-3xl text-ink/30">{i + 1}</span>
+            <span className="font-serif text-3xl text-ink/65">{i + 1}</span>
             <h2 className="mt-1 font-serif text-xl text-ink">{t}</h2>
             <p className="mt-1 text-sm text-ink/65">{d}</p>
           </li>

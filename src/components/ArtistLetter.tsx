@@ -83,7 +83,7 @@ export default function ArtistLetter() {
           <h2 className="font-serif text-3xl text-ink md:text-4xl" lang={isHu ? 'hu' : 'en-AU'}>
             {t.heading}
           </h2>
-          <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink/50" lang={isHu ? 'hu' : 'en-AU'}>
+          <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink/65" lang={isHu ? 'hu' : 'en-AU'}>
             {t.eyebrow}
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function ArtistLetter() {
             </svg>
             <span>{t.button}</span>
           </button>
-          <span className="text-[10.5px] uppercase tracking-[0.16em] text-ink/45" lang={isHu ? 'hu' : 'en-AU'}>
+          <span className="text-[10.5px] uppercase tracking-[0.16em] text-ink/65" lang={isHu ? 'hu' : 'en-AU'}>
             {t.note}
           </span>
         </div>
@@ -123,7 +123,7 @@ export default function ArtistLetter() {
 
           <figcaption className="clear-both mt-8 border-t border-sand pt-5">
             <span className="block font-serif text-2xl text-ink">Ritushka</span>
-            <span className="mt-1 block text-xs uppercase tracking-widest text-ink/55">Lane Cove, Sydney</span>
+            <span className="mt-1 block text-xs uppercase tracking-widest text-ink/65">Lane Cove, Sydney</span>
           </figcaption>
         </figure>
       </div>

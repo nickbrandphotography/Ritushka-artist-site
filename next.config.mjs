@@ -4,13 +4,21 @@ import { readFileSync } from 'node:fs';
 // scripts/match-scenes.py records every change here so no link ever 404s.
 const mockupRedirects = JSON.parse(readFileSync('./mockups/redirects.json', 'utf8'));
 
+// Blog posts retired in the templated-content cleanup (scripts/rewrite-blog-content.py)
+// — each 301s to the closest surviving post or collection so no former URL 404s.
+const blogRedirects = JSON.parse(readFileSync('./scripts/.blog-redirects.json', 'utf8'));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [{ protocol: 'https', hostname: '**' }],
+    // Every image on the site ships from /public — there is no remote or
+    // user-supplied image source. A wildcard remotePatterns entry would let
+    // the Image Optimizer fetch and proxy any HTTPS URL (SSRF / cost-abuse
+    // surface) for no benefit. Add a specific hostname here only when a real
+    // remote source (e.g. a CMS media host) is wired in.
   },
   // Titles corrected against the Artwork Register — keep the old URLs alive.
   async redirects() {
@@ -40,6 +48,11 @@ const nextConfig = {
       ...Object.entries(mockupRedirects).map(([from, to]) => ({
         source: `/mockups/${from}`,
         destination: `/mockups/${to}`,
+        permanent: true,
+      })),
+      ...Object.entries(blogRedirects).map(([from, to]) => ({
+        source: `/blog/${from}`,
+        destination: to,
         permanent: true,
       })),
     ];
