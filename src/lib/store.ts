@@ -32,7 +32,7 @@ async function pipeline(commands: (string | number)[][]): Promise<any[]> {
   return json.map((r: any) => r.result);
 }
 
-export type EnquiryKind = 'enquiry' | 'commission' | 'trade' | 'consultation';
+export type EnquiryKind = 'enquiry' | 'commission' | 'trade' | 'consultation' | 'framing';
 export type EnquiryStatus = 'new' | 'replied' | 'won' | 'archived';
 
 export interface Enquiry {

@@ -16,13 +16,13 @@ src/
     api/enquiry  api/subscribe        # form endpoints (stub → wire to CRM/email)
     (site)/                           # all public pages share Header/Footer
       page.tsx                        # home
-      about portfolio available sold commission contact faq shipping
+      about portfolio available sold commission framing contact faq shipping
       installation-guide privacy terms
       collections/ + collections/[slug]
       artwork/[slug]
       mockups/ + mockups/[slug]
       blog/ + blog/[slug]
-      trade/{interior-designers,art-consultants,buyers-agents,corporate}
+      trade/ + trade/{interior-designers,art-consultants,buyers-agents,corporate}
   components/             # Header, Footer, Gallery, ArtworkCard, EnquiryForm, FAQList, schema JsonLd...
   lib/                    # data.ts (access helpers), seo.ts (metadata), schema.ts (JSON-LD)
   data/                   # types.ts + generated artworks/collections/mockups/blog + programs.ts
@@ -39,8 +39,8 @@ docs/                     # strategy & deployment
 /available    /sold
 /mockups      /mockups/:slug
 /blog         /blog/:slug
-/commission
-/trade/interior-designers  /art-consultants  /buyers-agents  /corporate
+/commission   /framing
+/trade  /trade/interior-designers  /art-consultants  /buyers-agents  /corporate
 /installation-guide  /shipping  /faq  /contact  /privacy  /terms
 ```
 

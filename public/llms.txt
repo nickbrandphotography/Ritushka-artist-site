@@ -6,14 +6,15 @@
 - Artist: Ritushka
 - Discipline: Abstract landscape & seascape painting, large-scale contemporary works
 - Location: Lane Cove, Sydney, NSW, Australia
-- Offers: Original artworks, commissioned paintings, trade programs (interior designers, art consultants, buyer's agents, corporate)
-- Shipping: Worldwide, insured, certificate of authenticity
+- Offers: Original artworks, commissioned paintings, custom framing, trade programs (interior designers, art consultants, buyer's agents, corporate)
+- Shipping: Worldwide, insured, certificate of authenticity. Free local delivery within ~50km of the Lane Cove studio (Greater Sydney) on originals over A$1,000; paid installation service available for smaller pieces, wider metro and international deliveries.
 
 ## Primary pages
 - Available works: /available
 - Portfolio: /portfolio
 - Collections: /collections
 - Commission a painting: /commission
+- Custom framing: /framing
 - About the artist: /about
 - Contact: /contact
 

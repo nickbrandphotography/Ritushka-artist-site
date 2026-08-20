@@ -5,7 +5,7 @@ import { artworks, collections, mockups, blog } from '@/lib/data';
 export default function sitemap(): MetadataRoute.Sitemap {
   const u = (p: string) => new URL(p, site.url).toString();
   const now = new Date();
-  const statics = ['', '/about', '/portfolio', '/collections', '/available', '/sold', '/commission',
+  const statics = ['', '/about', '/portfolio', '/collections', '/available', '/sold', '/commission', '/framing',
     '/trade', '/trade/interior-designers', '/trade/art-consultants', '/trade/buyers-agents', '/trade/corporate',
     '/installation-guide', '/shipping', '/faq', '/contact', '/mockups', '/blog', '/privacy', '/terms'];
   return [

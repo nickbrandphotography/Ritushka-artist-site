@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Container from '@/components/Container';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import EnquiryForm from '@/components/EnquiryForm';
@@ -15,6 +16,7 @@ const faqs = [
   { q: 'How long does a commission take?', a: 'Typically 4–8 weeks of studio time plus shipping. Rush timelines can sometimes be accommodated.' },
   { q: 'Can I specify the colours?', a: 'Yes. Ritushka works to your palette and the light in your space, sharing progress images along the way.' },
   { q: 'Do you work with interior designers?', a: 'Extensively — see the trade programs for designer, consultant and corporate terms.' },
+  { q: 'Can a commission be custom framed?', a: 'Yes — every commission can be framed to order, in a range of materials and finishes, quoted separately from the painting itself.' },
 ];
 export default function Commission() {
   return (
@@ -22,6 +24,10 @@ export default function Commission() {
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Commission', path: '/commission' }]} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">Commission a painting</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink/75">An original abstract landscape or seascape, created for your space — your size, your palette, your scale.</p>
+      <p className="mt-2 max-w-2xl text-sm text-ink/65">
+        Every commission can also be <Link href="/framing" className="underline hover:text-ink">custom framed</Link>{' '}
+        to suit the room it&rsquo;s going into.
+      </p>
       <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map(([t, d], i) => (
           <li key={t} className="rounded-md border border-sand p-5">

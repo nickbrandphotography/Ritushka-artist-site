@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import type { Enquiry, EnquiryStatus } from '@/lib/store';
 
 const STATUSES: EnquiryStatus[] = ['new', 'replied', 'won', 'archived'];
-const KINDS = ['all', 'enquiry', 'commission', 'trade', 'consultation'] as const;
+const KINDS = ['all', 'enquiry', 'commission', 'trade', 'consultation', 'framing'] as const;
 const statusColor: Record<EnquiryStatus, string> = {
   new: 'bg-sea/15 text-sea', replied: 'bg-amber-100 text-amber-800',
   won: 'bg-green-100 text-green-800', archived: 'bg-ink/10 text-ink/65',

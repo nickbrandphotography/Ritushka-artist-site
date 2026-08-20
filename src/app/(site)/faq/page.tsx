@@ -6,6 +6,8 @@ const faqs = [
   { q: 'Are the paintings original?', a: 'Yes — every work is an original, hand-painted, signed and accompanied by a certificate of authenticity. Prints are not sold.' },
   { q: 'Do you ship worldwide?', a: 'Yes. All works ship worldwide, fully insured, with tracking. Large works are professionally crated.' },
   { q: 'How are paintings packaged?', a: 'Smaller works ship rolled or boxed; large works are crated. All shipments are insured to full value.' },
+  { q: 'Do you deliver locally?', a: 'Yes — free delivery within roughly 50km of the Lane Cove studio (Greater Sydney) on originals over A$1,000. A paid installation service is also available; see Shipping for details.' },
+  { q: 'Can I get a custom frame?', a: 'Yes — every original, available or commissioned, can be custom framed in a range of materials and finishes, quoted individually. See Custom Framing.' },
   { q: 'Can I commission a custom size?', a: 'Yes. Commissions are tailored to your size, palette and space, typically over 4–8 weeks.' },
   { q: 'Do you offer trade pricing?', a: 'Yes — interior designers, art consultants, buyer\'s agents and corporate buyers can register for trade programs.' },
   { q: 'What is your return policy?', a: 'Originals may be returned within 14 days of delivery in original condition; see Terms for details.' },

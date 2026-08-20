@@ -50,6 +50,7 @@ export default function Footer() {
         <nav aria-label="More"><ul className="flex flex-wrap gap-4">
           <li><Link href="/portfolio" className="hover:text-bone">Portfolio</Link></li>
           <li><Link href="/sold" className="hover:text-bone">Sold Works</Link></li>
+          <li><Link href="/framing" className="hover:text-bone">Custom Framing</Link></li>
           <li><Link href="/shipping" className="hover:text-bone">Shipping</Link></li>
           <li><Link href="/faq" className="hover:text-bone">FAQ</Link></li>
           <li><Link href="/privacy" className="hover:text-bone">Privacy</Link></li>

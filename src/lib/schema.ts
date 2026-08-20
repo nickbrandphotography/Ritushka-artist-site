@@ -117,6 +117,18 @@ export const worksListPageSchema = (path: string, name: string, description: str
   },
 });
 
+/** A service offered alongside the artwork itself (framing, installation) —
+ *  distinct from a Product/Offer, since there's no fixed price to publish. */
+export const serviceSchema = (path: string, name: string, description: string, areaServed?: readonly string[]) => ({
+  '@type': 'Service',
+  '@id': abs(`${path}#service`),
+  name,
+  description,
+  url: abs(path),
+  provider: { '@id': abs('/#organization') },
+  ...(areaServed ? { areaServed } : {}),
+});
+
 export const articleSchema = (p: BlogPost) => ({
   '@type': 'Article',
   '@id': abs(`/blog/${p.slug}#article`),

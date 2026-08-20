@@ -75,7 +75,7 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
               <dt className="text-ink/65">Medium</dt>
               <dd>{a.medium || 'Original painting — details on request'}</dd>
               <dt className="text-ink/65">Framing</dt>
-              <dd>{framing(a)}</dd>
+              <dd>{framing(a)} — <Link href="/framing" className="underline hover:text-ink">custom framing available</Link></dd>
               <dt className="text-ink/65">Edition</dt>
               <dd>{a.edition}{a.edition === 'Original' && ' — a unique, one-off work'}</dd>
               {a.year != null && (<>
