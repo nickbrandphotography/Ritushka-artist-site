@@ -26,11 +26,18 @@ export default function ArtworkCard({ a, priority }: { a: Artwork; priority?: bo
             />
           </div>
         </div>
-        <div className="mt-3 flex items-baseline justify-between gap-3">
-          <h3 className="font-serif text-lg leading-tight text-ink group-hover:underline">{a.title}</h3>
-          <span className="shrink-0 text-sm text-ink/65">{priceLabel(a)}</span>
+        {/* Same width as the painting above it (not the full card), so the
+            caption sits within the picture's own edges instead of spreading
+            out to the stage's full square — a small painting reads with a
+            small caption underneath it. */}
+        <div className="mx-auto mt-3" style={{ width: stageWidth(a) }}>
+          <div className="flex items-baseline justify-between gap-3">
+            <h3 className="font-serif text-lg leading-tight text-ink group-hover:underline">{a.title}</h3>
+            <span className="shrink-0 text-sm text-ink/65">{priceLabel(a)}</span>
+          </div>
+          <p className="text-sm text-ink/65">{dimsShort(a)}{a.year ? ` · ${a.year}` : ''}</p>
+          {a.medium && <p className="text-sm text-ink/65">{a.medium}</p>}
         </div>
-        <p className="text-sm text-ink/65">{dimsShort(a)}{a.year ? ` · ${a.year}` : ''}</p>
       </Link>
     </article>
   );
