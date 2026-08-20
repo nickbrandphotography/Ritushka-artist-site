@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const u = (p: string) => new URL(p, site.url).toString();
   const now = new Date();
   const statics = ['', '/about', '/portfolio', '/collections', '/available', '/sold', '/commission',
-    '/trade/interior-designers', '/trade/art-consultants', '/trade/buyers-agents', '/trade/corporate',
+    '/trade', '/trade/interior-designers', '/trade/art-consultants', '/trade/buyers-agents', '/trade/corporate',
     '/installation-guide', '/shipping', '/faq', '/contact', '/mockups', '/blog', '/privacy', '/terms'];
   return [
     ...statics.map(p => ({ url: u(p || '/'), lastModified: now, changeFrequency: 'weekly' as const, priority: p === '' ? 1 : 0.7 })),

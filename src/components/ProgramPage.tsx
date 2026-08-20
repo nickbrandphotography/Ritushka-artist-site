@@ -6,9 +6,7 @@ import JsonLd from './JsonLd';
 import type { Program } from '@/data/programs';
 import { graph, breadcrumbSchema } from '@/lib/schema';
 export default function ProgramPage({ p }: { p: Program }) {
-  // No dedicated /trade index exists, so the trail stops at Home rather than
-  // pointing every one of the four programs at /trade/interior-designers.
-  const crumbs = [{ name: 'Home', path: '/' }, { name: p.title, path: `/trade/${p.slug}` }];
+  const crumbs = [{ name: 'Home', path: '/' }, { name: 'Trade', path: '/trade' }, { name: p.title, path: `/trade/${p.slug}` }];
   return (
     <Container className="py-14">
       <JsonLd data={graph(breadcrumbSchema(crumbs))} />

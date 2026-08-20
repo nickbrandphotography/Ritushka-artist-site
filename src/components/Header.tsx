@@ -8,7 +8,7 @@ const nav = [
   { href: '/collections', label: 'Collections' },
   { href: '/available', label: 'Available' },
   { href: '/commission', label: 'Commission' },
-  { href: '/trade/interior-designers', label: 'Trade' },
+  { href: '/trade', label: 'Trade' },
   { href: '/blog', label: 'Journal' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },

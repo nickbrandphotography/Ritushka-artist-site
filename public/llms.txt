@@ -31,6 +31,7 @@
 - Other Works: /collections/other-works
 
 ## For trade
+- All trade programs: /trade
 - Interior designers: /trade/interior-designers
 - Art consultants: /trade/art-consultants
 - Buyer's agents: /trade/buyers-agents

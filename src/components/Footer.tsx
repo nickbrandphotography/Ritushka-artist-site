@@ -35,6 +35,7 @@ export default function Footer() {
             <li><Link href="/trade/art-consultants" className="hover:text-bone">Art Consultants</Link></li>
             <li><Link href="/trade/buyers-agents" className="hover:text-bone">Buyer&rsquo;s Agents</Link></li>
             <li><Link href="/trade/corporate" className="hover:text-bone">Corporate Art</Link></li>
+            <li><Link href="/trade" className="underline">All trade programs</Link></li>
             <li><Link href="/commission" className="hover:text-bone">Commissions</Link></li>
           </ul>
         </nav>
