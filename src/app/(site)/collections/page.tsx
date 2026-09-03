@@ -1,18 +1,13 @@
 import Link from 'next/link';
 import Container from '@/components/Container';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import PageWatermark from '@/components/PageWatermark';
 import { collections, artworksInCollection } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({ title: 'Collections', description: 'Browse Ritushka\'s collections of abstract landscapes, seascapes and large-scale contemporary paintings. Original art for collectors, designers and architects.', path: '/collections' });
 export default function CollectionsIndex() {
   return (
-    <div
-      // MOCKUP: same full-page watermark treatment as /commission, /blog,
-      // /contact and /trade, using a faded version of collections.JPG
-      // (public/about/watermark-collections.jpg).
-      className="bg-fixed bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url(/about/watermark-collections.jpg)' }}
-    >
+    <PageWatermark src="/about/watermark-collections.jpg">
     <Container className="py-14">
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Collections', path: '/collections' }]} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">Collections</h1>
@@ -27,6 +22,6 @@ export default function CollectionsIndex() {
         ))}
       </div>
     </Container>
-    </div>
+    </PageWatermark>
   );
 }
