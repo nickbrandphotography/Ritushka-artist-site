@@ -29,10 +29,10 @@ const figures: Record<number, Omit<AboutFigureProps, 'side'> & { side: AboutFigu
     width: 707, height: 915, side: 'left',
   },
   6: {
-    src: '/about/ritushka-studio-portrait.jpg',
-    alt: 'Ritushka standing in her Lane Cove studio among large-scale abstract landscape paintings',
+    src: '/about/ritushka-hero-shot.jpg',
+    alt: 'Ritushka in her Lane Cove studio, leaning on a chair in front of her abstract paintings',
     caption: 'Twenty-six years later — the Australian studio',
-    width: 742, height: 494, side: 'right', wide: true,
+    width: 1600, height: 1045, side: 'right', wide: true,
   },
   8: {
     src: '/about/ritushka-painting-canvas.jpg',

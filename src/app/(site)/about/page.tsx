@@ -54,10 +54,10 @@ const artistParagraphsAfterQuote = [
 /** Studio photographs floated into "About the artist", keyed by the paragraph they precede. */
 const artistFigures = {
   2: {
-    src: '/about/ritushka-hero-shot.jpg',
-    alt: 'Ritushka in her Lane Cove studio, leaning on a chair in front of her abstract paintings',
+    src: '/about/ritushka-champagne.jpg',
+    alt: 'Ritushka seated in her Lane Cove studio, in front of her abstract paintings',
     caption: 'Ritushka in her Lane Cove studio',
-    width: 1600, height: 1045, side: 'right' as const, wide: true,
+    width: 1600, height: 1067, side: 'right' as const, wide: true,
   },
   5: {
     src: '/about/ritushka-brushwork.jpg',
