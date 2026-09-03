@@ -10,8 +10,8 @@ import Image from 'next/image';
  * already contain a rendered frame, so they are left unframed.
  */
 export default function PlaceholderImage({
-  src, alt, ratio = '4 / 3', priority, framed = false, sizes,
-}: { src: string; alt: string; ratio?: string; priority?: boolean; framed?: boolean; sizes?: string }) {
+  src, alt, ratio = '4 / 3', priority, framed = false, sizes, quality,
+}: { src: string; alt: string; ratio?: string; priority?: boolean; framed?: boolean; sizes?: string; quality?: number }) {
   const picture = (
     <figure className="relative m-0 w-full overflow-hidden bg-sand" style={{ aspectRatio: ratio }}>
       <Image
@@ -21,6 +21,7 @@ export default function PlaceholderImage({
         sizes={sizes ?? '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'}
         className="object-cover"
         priority={priority}
+        quality={quality}
       />
     </figure>
   );

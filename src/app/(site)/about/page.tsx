@@ -135,6 +135,20 @@ export default function About() {
               alt={`${site.artist.name}, contemporary abstract landscape and seascape artist, in her ${site.location.suburb} studio`}
               ratio="4 / 5"
               priority
+              // Without this, PlaceholderImage's default sizes fallback
+              // ("33vw" at desktop widths) badly under-states how wide this
+              // renders in the 0.85fr/1fr grid below (really ~44-46% of the
+              // container, capped at ~529px once Container's max-width
+              // caps out) — next/image was serving a too-small srcset
+              // candidate and the browser stretched it, reading as blur.
+              sizes="(max-width: 1023px) 100vw, (min-width: 1280px) 529px, 44vw"
+              // Smooth continuous-tone content — skin, and the heavily blurred
+              // bokeh background — shows next/image's default q=75 recompression
+              // far more readily than the site's other photos (mostly textured
+              // paintings/studio shots, where compression artifacts hide in the
+              // texture). Bump quality specifically for this image rather than
+              // sitewide, since q=75 reads fine everywhere else.
+              quality={95}
             />
             <span className="absolute bottom-4 left-0 bg-bone px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-ink/65">
               {site.artist.name} · {site.location.suburb}, {site.location.city}
