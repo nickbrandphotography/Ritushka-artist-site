@@ -1,6 +1,7 @@
 'use client';
 
 import { Fragment, useId, useState } from 'react';
+import Image from 'next/image';
 import AboutFigure, { type AboutFigureProps } from './AboutFigure';
 import { letterEn, letterHu } from '@/content/artist-letter';
 
@@ -16,10 +17,10 @@ import { letterEn, letterHu } from '@/content/artist-letter';
 /** Studio photographs floated into the letter, keyed by the paragraph they precede. */
 const figures: Record<number, Omit<AboutFigureProps, 'side'> & { side: AboutFigureProps['side'] }> = {
   1: {
-    src: '/about/ritushka-studio-bench.jpg',
-    alt: 'Ritushka at her studio bench, surrounded by paint, brushes and finished abstract canvases',
-    caption: 'At the bench — paint, brushes and the next idea',
-    width: 739, height: 493, side: 'right', wide: true,
+    src: '/about/ritushka-young.jpg',
+    alt: 'Ritushka as a young child in Hungary, smiling in a striped jumper',
+    caption: 'Ritushka, as a child, in Hungary',
+    width: 750, height: 750, side: 'right',
   },
   3: {
     src: '/about/ritushka-palette.jpg',
@@ -120,6 +121,24 @@ export default function ArtistLetter() {
           <div id={huId}>
             <Body paragraphs={letterHu} lang="hu" hidden={!isHu} />
           </div>
+
+          {/* Closing photograph — shared across both languages, so it sits once
+              at the bottom of the letter rather than being tied to a paragraph. */}
+          <figure className="clear-both m-0 mt-10">
+            <span className="rt-fig__mat block">
+              <Image
+                src="/about/ritushka-studio-laugh.jpg"
+                alt="Ritushka laughing in her studio, holding paintbrushes in front of an abstract canvas"
+                width={1800}
+                height={1800}
+                sizes="(max-width: 759px) 100vw, 620px"
+                className="h-auto w-full"
+              />
+            </span>
+            <figcaption className="mt-2.5 text-[10.5px] uppercase tracking-[0.13em] text-ink/65">
+              Still laughing, still painting
+            </figcaption>
+          </figure>
 
           <figcaption className="clear-both mt-8 border-t border-sand pt-5">
             <span className="block font-serif text-2xl text-ink">Ritushka</span>
