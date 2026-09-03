@@ -21,13 +21,13 @@ const faqs = [
 export default function Commission() {
   return (
     <div
-      // MOCKUP: full-page watermark, using a faded/desaturated version of
-      // brushes.jpg (see public/about/watermark-brushes.jpg — original is
-      // far too vivid/busy at full strength to sit behind text). Fixed +
-      // cover so it holds steady behind the whole page as you scroll,
-      // rather than scrolling with the content or repeating with seams.
+      // MOCKUP: full-page watermark, using a faded version of commission.jpg
+      // — a close-up of pink/purple/blue paint texture (see
+      // public/about/watermark-commission.jpg). Fixed + cover so it holds
+      // steady behind the whole page as you scroll, rather than scrolling
+      // with the content or repeating with seams.
       className="bg-fixed bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url(/about/watermark-brushes.jpg)' }}
+      style={{ backgroundImage: 'url(/about/watermark-commission.jpg)' }}
     >
     <Container className="py-14">
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Commission', path: '/commission' }]} />
