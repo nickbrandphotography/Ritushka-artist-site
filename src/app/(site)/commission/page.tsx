@@ -20,6 +20,15 @@ const faqs = [
 ];
 export default function Commission() {
   return (
+    <div
+      // MOCKUP: full-page watermark, using a faded/desaturated version of
+      // brushes.jpg (see public/about/watermark-brushes.jpg — original is
+      // far too vivid/busy at full strength to sit behind text). Fixed +
+      // cover so it holds steady behind the whole page as you scroll,
+      // rather than scrolling with the content or repeating with seams.
+      className="bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/about/watermark-brushes.jpg)' }}
+    >
     <Container className="py-14">
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Commission', path: '/commission' }]} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">Commission a painting</h1>
@@ -30,7 +39,7 @@ export default function Commission() {
       </p>
       <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map(([t, d], i) => (
-          <li key={t} className="rounded-md border border-sand p-5">
+          <li key={t} className="rounded-md border border-sand bg-bone/90 p-5">
             <span className="font-serif text-3xl text-ink/65">{i + 1}</span>
             <h2 className="mt-1 font-serif text-xl text-ink">{t}</h2>
             <p className="mt-1 text-sm text-ink/65">{d}</p>
@@ -38,12 +47,13 @@ export default function Commission() {
         ))}
       </ol>
       <div className="mt-12 grid gap-12 lg:grid-cols-2">
-        <div className="rounded-lg border border-sand p-6">
+        <div className="rounded-lg border border-sand bg-bone/90 p-6">
           <h2 className="font-serif text-2xl text-ink">Start your commission</h2>
           <div className="mt-4"><EnquiryForm kind="commission" /></div>
         </div>
         <FAQList faqs={faqs} />
       </div>
     </Container>
+    </div>
   );
 }
