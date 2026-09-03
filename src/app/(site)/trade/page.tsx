@@ -14,6 +14,13 @@ export const metadata = buildMetadata({ title: 'Trade Programs', description, pa
 export default function TradeIndex() {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Trade', path: '/trade' }];
   return (
+    <div
+      // MOCKUP: same full-page watermark treatment as /commission, /blog and
+      // /contact, using a faded version of the "Soft Awakening" painting
+      // (public/about/watermark-trade.jpg).
+      className="bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/about/watermark-trade.jpg)' }}
+    >
     <Container className="py-14">
       <JsonLd data={graph(breadcrumbSchema(crumbs))} />
       <Breadcrumbs crumbs={crumbs} />
@@ -27,7 +34,7 @@ export default function TradeIndex() {
           <Link
             key={p.slug}
             href={`/trade/${p.slug}`}
-            className="rounded-md border border-sand p-6 hover:border-ink"
+            className="rounded-md border border-sand bg-bone/90 p-6 hover:border-ink"
           >
             <h2 className="font-serif text-2xl text-ink">{p.title}</h2>
             <p className="mt-2 text-sm text-ink/65">{p.intro}</p>
@@ -38,5 +45,6 @@ export default function TradeIndex() {
         ))}
       </div>
     </Container>
+    </div>
   );
 }
