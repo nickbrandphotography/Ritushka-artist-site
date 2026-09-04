@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Gallery from '@/components/Gallery';
 import CtaBand from '@/components/CtaBand';
 import JsonLd from '@/components/JsonLd';
+import AvailableBanner from '@/components/AvailableBanner';
 import { availableWorks } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 import { graph, worksListPageSchema } from '@/lib/schema';
@@ -12,6 +13,8 @@ export const metadata = buildMetadata({ title: 'Available Works', description, p
 export default function Available() {
   const works = availableWorks();
   return (
+    <>
+    <AvailableBanner />
     <Container className="py-14">
       <JsonLd data={graph(worksListPageSchema('/available', 'Available Works — Ritushka', description, works))} />
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Available Works', path: '/available' }]} />
@@ -24,5 +27,6 @@ export default function Available() {
       </p>
       <CtaBand title="Can't find the right size?" body="Commission a bespoke painting in your dimensions and palette." primary={{ href: '/commission', label: 'Commission' }} />
     </Container>
+    </>
   );
 }
