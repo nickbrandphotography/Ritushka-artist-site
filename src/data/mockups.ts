@@ -546,19 +546,5 @@ export const mockups: Mockup[] = [
     "metaDescription": "See Without Sweet Harmony (91 × 61 cm (35.8 × 24 in)) by Ritushka styled in a hotel lobby, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
-  },
-  {
-    "id": "mk-040",
-    "slug": "wave-in-boardroom",
-    "sceneId": "procedural-boardroom",
-    "room": "Boardroom",
-    "artworkSlug": "wave",
-    "title": "Wave in a Boardroom",
-    "image": "/mockups/wave-in-boardroom.jpg",
-    "alt": "Wave by Ritushka displayed in a boardroom",
-    "seoTitle": "Wave Styled in a Boardroom",
-    "metaDescription": "See Wave by Ritushka styled in a boardroom, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
-    "credit": null,
-    "aspect": "4 / 3"
   }
 ];

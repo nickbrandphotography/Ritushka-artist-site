@@ -1576,46 +1576,5 @@ export const artworks: Artwork[] = [
     "edition": "Original",
     "inspiration": "Feeling betrayed.",
     "registerDescription": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust."
-  },
-  {
-    "id": "aw-040",
-    "slug": "wave",
-    "title": "Wave",
-    "year": null,
-    "medium": "Acrylic on canvas",
-    "widthCm": null,
-    "heightCm": null,
-    "imageWidth": 2400,
-    "imageHeight": 1817,
-    "palette": "turquoise, deep blue and foam white",
-    "collections": [
-      "abstract-seascapes",
-      "ocean-inspired-paintings",
-      "blue-abstract-paintings"
-    ],
-    "primaryCollection": "abstract-seascapes",
-    "status": "enquire",
-    "price": null,
-    "currency": "AUD",
-    "orientation": "landscape",
-    "story": "Wave is an original painting by Ritushka — the curl and break of a single wave, worked in turquoise, deep blue and foam white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. Dimensions, medium and price for this work are available on request.",
-    "shortDescription": "Wave — an original abstract seascapes painting by Sydney artist Ritushka. Enquire for dimensions, medium and price.",
-    "seoTitle": "Wave | Original Painting",
-    "metaDescription": "Wave, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. The curl and break of a single wave. Enquire for size, medium and price. Ships worldwide.",
-    "image": "/artworks/wave.jpg",
-    "alt": "Wave — original abstract seascapes painting by Ritushka in turquoise, deep blue and foam white",
-    "mockups": [
-      "wave-in-boardroom"
-    ],
-    "inventoryId": null,
-    "depthCm": null,
-    "heightIn": null,
-    "widthIn": null,
-    "depthIn": null,
-    "framed": false,
-    "frameDescription": null,
-    "edition": "Original",
-    "inspiration": null,
-    "registerDescription": null
   }
 ];

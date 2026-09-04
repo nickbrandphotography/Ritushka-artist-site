@@ -45,6 +45,11 @@ const nextConfig = {
         destination: `/mockups/${to}-in-${rooms[from]}`,
         permanent: true,
       })),
+      // "Wave" was a stray duplicate entry, never part of the Artwork
+      // Register — removed from artworks.ts/mockups.ts. Redirected rather
+      // than left to 404, in case either URL was ever crawled or bookmarked.
+      { source: '/artwork/wave', destination: '/collections/abstract-seascapes', permanent: true },
+      { source: '/mockups/wave-in-boardroom', destination: '/mockups', permanent: true },
       ...Object.entries(mockupRedirects).map(([from, to]) => ({
         source: `/mockups/${from}`,
         destination: `/mockups/${to}`,
