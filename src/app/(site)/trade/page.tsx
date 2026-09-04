@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Container from '@/components/Container';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
-import PageWatermark from '@/components/PageWatermark';
 import { programs } from '@/data/programs';
 import { buildMetadata } from '@/lib/seo';
 import { graph, breadcrumbSchema } from '@/lib/schema';
@@ -15,7 +14,13 @@ export const metadata = buildMetadata({ title: 'Trade Programs', description, pa
 export default function TradeIndex() {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Trade', path: '/trade' }];
   return (
-    <PageWatermark src="/about/watermark-trade.jpg">
+    <div
+      // MOCKUP: same full-page watermark treatment as /commission, /blog and
+      // /contact, using a faded version of the "Soft Awakening" painting
+      // (public/about/watermark-trade.jpg).
+      className="bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/about/watermark-trade.jpg)' }}
+    >
     <Container className="py-14">
       <JsonLd data={graph(breadcrumbSchema(crumbs))} />
       <Breadcrumbs crumbs={crumbs} />
@@ -40,6 +45,6 @@ export default function TradeIndex() {
         ))}
       </div>
     </Container>
-    </PageWatermark>
+    </div>
   );
 }
