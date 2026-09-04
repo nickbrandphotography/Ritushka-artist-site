@@ -23,6 +23,7 @@ export default function ArtworkCard({ a, priority }: { a: Artwork; priority?: bo
               sizes={cardSizes(a)}
               priority={priority}
               framed
+              bright
             />
           </div>
         </div>

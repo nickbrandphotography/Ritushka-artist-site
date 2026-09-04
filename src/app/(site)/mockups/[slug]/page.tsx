@@ -60,7 +60,7 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
                 <p className="text-xs uppercase tracking-widest text-ink/65">The artwork</p>
                 <div className="mt-3 flex items-start gap-4">
                   <Link href={`/artwork/${a.slug}`} className="w-28 shrink-0" aria-label={`View ${a.title}`}>
-                    <PlaceholderImage src={a.image} alt={a.alt} ratio={aspect(a)} framed />
+                    <PlaceholderImage src={a.image} alt={a.alt} ratio={aspect(a)} framed bright />
                   </Link>
                   <div className="min-w-0">
                     <Link href={`/artwork/${a.slug}`} className="font-serif text-2xl text-ink hover:underline">{a.title}</Link>
