@@ -13,8 +13,12 @@ export default function PairedArtworkCards({
 }: { pair: [Artwork, Artwork]; priority?: [boolean, boolean] }) {
   return (
     <div className="col-span-1 flex flex-col gap-3 sm:col-span-2 sm:flex-row">
-      <div className="sm:w-1/2"><ArtworkCard a={pair[0]} priority={priority[0]} /></div>
-      <div className="sm:w-1/2"><ArtworkCard a={pair[1]} priority={priority[1]} /></div>
+      {/* align="end"/"start" pulls each painting to the shared inner edge —
+          without it, a portrait painting centers inside its own square
+          stage and the gap-3 above is swallowed by that centering margin,
+          so the pair reads no closer together than two unrelated cards. */}
+      <div className="sm:w-1/2"><ArtworkCard a={pair[0]} priority={priority[0]} align="end" /></div>
+      <div className="sm:w-1/2"><ArtworkCard a={pair[1]} priority={priority[1]} align="start" /></div>
     </div>
   );
 }

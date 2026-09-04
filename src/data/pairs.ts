@@ -14,3 +14,10 @@ export const artworkPairs: [string, string][] = [
   ['the-world-in-my-eyes', 'the-world-in-my-eyes-2'],
   ['without-sweet-harmony', 'without-sweet-harmony-2'],
 ];
+
+/** Same three pairs, by mockup slug, for the /mockups index grid. */
+export const mockupPairs: [string, string][] = [
+  ['aqua-frost-thinking-of-you-in-luxury-home', 'peony-thinking-of-me-in-penthouse'],
+  ['the-world-in-my-eyes-in-coastal-home', 'the-world-in-my-eyes-2-in-luxury-home'],
+  ['without-sweet-harmony-in-hotel-lobby', 'without-sweet-harmony-2-in-penthouse'],
+];

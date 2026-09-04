@@ -1,36 +1,8 @@
 import ArtworkCard from './ArtworkCard';
 import PairedArtworkCards from './PairedArtworkCards';
 import { artworkPairs } from '@/data/pairs';
+import { groupPairs } from '@/lib/groupPairs';
 import type { Artwork } from '@/data/types';
-
-/**
- * Groups a list into singles and companion pairs (see src/data/pairs.ts).
- * A pair only forms when BOTH members are present in `list` — e.g. two
- * companion works with different status only pair up on Portfolio (which
- * lists everything), not on Available/Sold (split by status). Each group
- * keeps the position of whichever member appears first in `list`, but
- * renders in the pair's own declared left/top-first order.
- */
-function groupPairs(list: Artwork[]): (Artwork | [Artwork, Artwork])[] {
-  const bySlug = new Map(list.map(a => [a.slug, a]));
-  const consumed = new Set<string>();
-  const groups: (Artwork | [Artwork, Artwork])[] = [];
-  for (const item of list) {
-    if (consumed.has(item.slug)) continue;
-    const pair = artworkPairs.find(([x, y]) => x === item.slug || y === item.slug);
-    const first = pair && bySlug.get(pair[0]);
-    const second = pair && bySlug.get(pair[1]);
-    if (first && second) {
-      groups.push([first, second]);
-      consumed.add(first.slug);
-      consumed.add(second.slug);
-    } else {
-      groups.push(item);
-      consumed.add(item.slug);
-    }
-  }
-  return groups;
-}
 
 /**
  * Grid of artwork cards. Paintings are drawn in proportion to one another —
@@ -41,7 +13,7 @@ export default function Gallery({
   items, max, toScaleNote = true,
 }: { items: Artwork[]; max?: number; toScaleNote?: boolean }) {
   const list = max ? items.slice(0, max) : items;
-  const groups = groupPairs(list);
+  const groups = groupPairs(list, artworkPairs, a => a.slug);
   let rendered = 0;
   return (
     <div>
