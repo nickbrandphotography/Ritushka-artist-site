@@ -1,20 +1,13 @@
 import Link from 'next/link';
 import Container from '@/components/Container';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import PageWatermark from '@/components/PageWatermark';
 import { blog } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({ title: 'Art Journal', description: 'Guides on choosing, commissioning, placing and investing in original abstract art — for collectors, interior designers, architects and luxury homeowners.', path: '/blog' });
 export default function BlogIndex() {
   return (
-    <div
-      // MOCKUP: same full-page watermark treatment as /commission, using a
-      // faded version of the journal pencil sketch (public/about/watermark-journal.jpg).
-      className="bg-fixed bg-cover bg-no-repeat"
-      // Full-bleed cover, repositioned so the visible window falls around
-      // eyes-through-chin rather than top-aligned (which cut the mouth and
-      // chin off below the fold) or centred (which cut off the chin/beard).
-      style={{ backgroundImage: 'url(/about/watermark-journal.jpg)', backgroundPosition: 'center 38%' }}
-    >
+    <PageWatermark src="/about/watermark-journal.jpg" position="center 38%">
     <Container className="py-14">
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Journal', path: '/blog' }]} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">Art Journal</h1>
@@ -31,6 +24,6 @@ export default function BlogIndex() {
         ))}
       </ul>
     </Container>
-    </div>
+    </PageWatermark>
   );
 }

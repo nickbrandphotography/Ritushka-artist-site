@@ -3,6 +3,7 @@ import Container from '@/components/Container';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import EnquiryForm from '@/components/EnquiryForm';
 import FAQList from '@/components/FAQList';
+import PageWatermark from '@/components/PageWatermark';
 import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({ title: 'Commission a Painting', description: 'Commission an original abstract landscape or seascape by Ritushka, tailored to your size, palette and space. Worldwide delivery. Enquire to begin.', path: '/commission' });
 const steps = [
@@ -20,15 +21,7 @@ const faqs = [
 ];
 export default function Commission() {
   return (
-    <div
-      // MOCKUP: full-page watermark, using a faded version of commission.jpg
-      // — a close-up of pink/purple/blue paint texture (see
-      // public/about/watermark-commission.jpg). Fixed + cover so it holds
-      // steady behind the whole page as you scroll, rather than scrolling
-      // with the content or repeating with seams.
-      className="bg-fixed bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url(/about/watermark-commission.jpg)' }}
-    >
+    <PageWatermark src="/about/watermark-commission.jpg">
     <Container className="py-14">
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Commission', path: '/commission' }]} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">Commission a painting</h1>
@@ -54,6 +47,6 @@ export default function Commission() {
         <FAQList faqs={faqs} />
       </div>
     </Container>
-    </div>
+    </PageWatermark>
   );
 }
