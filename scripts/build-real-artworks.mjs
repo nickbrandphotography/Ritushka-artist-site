@@ -50,8 +50,8 @@ const META = {
   'turbulence': ['Turbulence', ['abstract-seascapes','abstract-landscapes','blue-abstract-paintings'], 'pale blue, cloud white and aqua', 'weather gathering over open water'],
   'turquoise-tuesday': ['Turquoise Tuesday', ['abstract-seascapes','coastal-abstract-art','ocean-inspired-paintings','blue-abstract-paintings'], 'turquoise, surf white and soft sky', 'a bright day of moving surf'],
   'urban-jungle': ['Urban Jungle', ['textured-abstract-paintings','other-works'], 'pale grey, aqua and silver', 'pattern emerging through a worked surface'],
-  'without-sweet-harmony': ['Without Sweet Harmony', ['statement-artworks'], 'flame orange, crimson and rose', 'heat and movement in full colour'],
-  'without-sweet-harmony-2': ['Without Sweet Harmony II', ['statement-artworks'], 'scarlet, orange and deep rose', 'a second movement in fire and rose'],
+  'without-sweet-harmony': ['Without Sweet Harmony', ['statement-artworks'], 'scarlet, orange and deep rose', 'heat and movement in full colour'],
+  'without-sweet-harmony-2': ['Without Sweet Harmony II', ['statement-artworks'], 'flame orange, crimson and rose', 'a second movement in fire and rose'],
   'wave': ['Wave', ['abstract-seascapes','ocean-inspired-paintings','blue-abstract-paintings'], 'turquoise, deep blue and foam white', 'the curl and break of a single wave'],
 };
 

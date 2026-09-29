@@ -64,10 +64,10 @@ export const artworks: Artwork[] = [
     "price": 2800,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "The lily pads, crisp with morning's freshness, sway and bend ever so softly beneath the quiet influence of your breath—as if the very dawn were sighing through you.\n\nAqua Frost — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface, worked in frosted aqua, silver and pale blue. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$2,800 framed, with insured worldwide shipping quoted on request.",
+    "story": "The lily pads, crisp with morning's freshness, sway and bend ever so softly beneath the quiet influence of your breath—as if the very dawn were sighing through you.\n\nAqua Frost — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface, worked in frosted aqua, silver and pale blue. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$2,800 framed, with insured worldwide shipping quoted on request.",
     "shortDescription": "Aqua Frost — Thinking of You — an original abstract seascapes painting by Sydney artist Ritushka, 120 × 91 cm (47.2 × 35.8 in), A$2,800.",
     "seoTitle": "Aqua Frost — Thinking of You | Original Painting",
-    "metaDescription": "Aqua Frost — Thinking of You, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface. 120 × 91 cm (47.2 × 35.8 in). A$2,800, available now. Ships worldwide.",
+    "metaDescription": "Aqua Frost — Thinking of You, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface. 120 × 91 cm (47.2 × 35.8 in). A$2,800, available now. Ships worldwide.",
     "image": "/artworks/aqua-frost-thinking-of-you.jpg",
     "alt": "Aqua Frost — Thinking of You — original abstract seascapes painting by Ritushka in frosted aqua, silver and pale blue, 120 × 91 cm (47.2 × 35.8 in)",
     "mockups": [
@@ -726,10 +726,10 @@ export const artworks: Artwork[] = [
     "price": 2800,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "The morning sun, with an inexplicable magnetism, drew my very soul into its luminous embrace.\n\nPeony — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth, worked in cream, blush and soft apricot. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$2,800 framed, with insured worldwide shipping quoted on request.",
+    "story": "The morning sun, with an inexplicable magnetism, drew my very soul into its luminous embrace.\n\nPeony — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth, worked in cream, blush and soft apricot. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$2,800 framed, with insured worldwide shipping quoted on request.",
     "shortDescription": "Peony — Thinking of Me — an original statement artworks painting by Sydney artist Ritushka, 120 × 91 cm (47.2 × 35.8 in), A$2,800.",
     "seoTitle": "Peony — Thinking of Me | Original Painting",
-    "metaDescription": "Peony — Thinking of Me, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth. 120 × 91 cm (47.2 × 35.8 in). A$2,800, available now. Ships worldwide.",
+    "metaDescription": "Peony — Thinking of Me, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth. 120 × 91 cm (47.2 × 35.8 in). A$2,800, available now. Ships worldwide.",
     "image": "/artworks/peony-thinking-of-me.jpg",
     "alt": "Peony — Thinking of Me — original statement artworks painting by Ritushka in cream, blush and soft apricot, 120 × 91 cm (47.2 × 35.8 in)",
     "mockups": [
@@ -1544,9 +1544,9 @@ export const artworks: Artwork[] = [
     "medium": "Acrylic on canvas",
     "widthCm": 61,
     "heightCm": 91,
-    "imageWidth": 1614,
+    "imageWidth": 1628,
     "imageHeight": 2400,
-    "palette": "scarlet, orange and deep rose",
+    "palette": "flame orange, crimson and rose",
     "collections": [
       "statement-artworks"
     ],
@@ -1555,14 +1555,14 @@ export const artworks: Artwork[] = [
     "price": 2150,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony II is an original painting by Ritushka — a second movement in fire and rose, worked in scarlet, orange and deep rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$2,150 framed, with insured worldwide shipping quoted on request.",
+    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony II is an original painting by Ritushka — a second movement in fire and rose, worked in flame orange, crimson and rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$2,150 framed, with insured worldwide shipping quoted on request.",
     "shortDescription": "Without Sweet Harmony II — an original statement artworks painting by Sydney artist Ritushka, 91 × 61 cm (35.8 × 24 in), A$2,150.",
     "seoTitle": "Without Sweet Harmony II | Original Painting",
     "metaDescription": "Without Sweet Harmony II, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. A second movement in fire and rose. 91 × 61 cm (35.8 × 24 in). A$2,150, available now. Ships worldwide.",
     "image": "/artworks/without-sweet-harmony-2.jpg",
-    "alt": "Without Sweet Harmony II — original statement artworks painting by Ritushka in scarlet, orange and deep rose, 91 × 61 cm (35.8 × 24 in)",
+    "alt": "Without Sweet Harmony II — original statement artworks painting by Ritushka in flame orange, crimson and rose, 91 × 61 cm (35.8 × 24 in)",
     "mockups": [
-      "without-sweet-harmony-2-in-penthouse"
+      "without-sweet-harmony-2-in-hotel-lobby"
     ],
     "inventoryId": "RIT-0039",
     "depthCm": 4.0,
@@ -1584,9 +1584,9 @@ export const artworks: Artwork[] = [
     "medium": "Acrylic on canvas",
     "widthCm": 61,
     "heightCm": 91,
-    "imageWidth": 1628,
+    "imageWidth": 1614,
     "imageHeight": 2400,
-    "palette": "flame orange, crimson and rose",
+    "palette": "scarlet, orange and deep rose",
     "collections": [
       "statement-artworks"
     ],
@@ -1595,14 +1595,14 @@ export const artworks: Artwork[] = [
     "price": 2150,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony is an original painting by Ritushka — heat and movement in full colour, worked in flame orange, crimson and rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$2,150 framed, with insured worldwide shipping quoted on request.",
+    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony is an original painting by Ritushka — heat and movement in full colour, worked in scarlet, orange and deep rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$2,150 framed, with insured worldwide shipping quoted on request.",
     "shortDescription": "Without Sweet Harmony — an original statement artworks painting by Sydney artist Ritushka, 91 × 61 cm (35.8 × 24 in), A$2,150.",
     "seoTitle": "Without Sweet Harmony | Original Painting",
     "metaDescription": "Without Sweet Harmony, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Heat and movement in full colour. 91 × 61 cm (35.8 × 24 in). A$2,150, available now. Ships worldwide.",
     "image": "/artworks/without-sweet-harmony.jpg",
-    "alt": "Without Sweet Harmony — original statement artworks painting by Ritushka in flame orange, crimson and rose, 91 × 61 cm (35.8 × 24 in)",
+    "alt": "Without Sweet Harmony — original statement artworks painting by Ritushka in scarlet, orange and deep rose, 91 × 61 cm (35.8 × 24 in)",
     "mockups": [
-      "without-sweet-harmony-in-hotel-lobby"
+      "without-sweet-harmony-in-penthouse"
     ],
     "inventoryId": "RIT-0038",
     "depthCm": 4.0,

@@ -19,5 +19,5 @@ export const artworkPairs: [string, string][] = [
 export const mockupPairs: [string, string][] = [
   ['aqua-frost-thinking-of-you-in-luxury-home', 'peony-thinking-of-me-in-penthouse'],
   ['the-world-in-my-eyes-in-coastal-home', 'the-world-in-my-eyes-2-in-luxury-home'],
-  ['without-sweet-harmony-in-hotel-lobby', 'without-sweet-harmony-2-in-penthouse'],
+  ['without-sweet-harmony-in-penthouse', 'without-sweet-harmony-2-in-hotel-lobby'],
 ];
