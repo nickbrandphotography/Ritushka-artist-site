@@ -10,7 +10,7 @@ export const mockups: Mockup[] = [
     "title": "Approaching Destination in a Living Room",
     "image": "/mockups/approaching-destination-in-living-room.jpg",
     "alt": "Approaching Destination by Ritushka displayed in a living room — 91 × 122 cm (35.8 × 48 in)",
-    "seoTitle": "Approaching Destination Styled in a Living Room",
+    "seoTitle": "Approaching Destination Styled in a Living Room | Ritushka",
     "metaDescription": "See Approaching Destination (91 × 122 cm (35.8 × 48 in)) by Ritushka styled in a living room, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -24,7 +24,7 @@ export const mockups: Mockup[] = [
     "title": "Aqua Frost — Thinking of You in a Luxury Home",
     "image": "/mockups/aqua-frost-thinking-of-you-in-luxury-home.jpg",
     "alt": "Aqua Frost — Thinking of You by Ritushka displayed in a luxury home — 120 × 91 cm (47.2 × 35.8 in)",
-    "seoTitle": "Aqua Frost — Thinking of You Styled in a Luxury Home",
+    "seoTitle": "Aqua Frost — Thinking of You Styled in a Luxury Home | Ritushka",
     "metaDescription": "See Aqua Frost — Thinking of You (120 × 91 cm (47.2 × 35.8 in)) by Ritushka styled in a luxury home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -38,7 +38,7 @@ export const mockups: Mockup[] = [
     "title": "Blue Mountains in a Coastal Home",
     "image": "/mockups/blue-mountains-in-coastal-home.jpg",
     "alt": "Blue Mountains by Ritushka displayed in a coastal home — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Blue Mountains Styled in a Coastal Home",
+    "seoTitle": "Blue Mountains Styled in a Coastal Home | Ritushka",
     "metaDescription": "See Blue Mountains (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a coastal home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -52,7 +52,7 @@ export const mockups: Mockup[] = [
     "title": "Bush in a Modern Apartment",
     "image": "/mockups/bush-in-modern-apartment.jpg",
     "alt": "Bush by Ritushka displayed in a modern apartment — 91 × 122 cm (35.8 × 48 in)",
-    "seoTitle": "Bush Styled in a Modern Apartment",
+    "seoTitle": "Bush Styled in a Modern Apartment | Ritushka",
     "metaDescription": "See Bush (91 × 122 cm (35.8 × 48 in)) by Ritushka styled in a modern apartment, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -63,10 +63,10 @@ export const mockups: Mockup[] = [
     "sceneId": "procedural-architectural-interior",
     "room": "Architectural Interior",
     "artworkSlug": "coastal-waters",
-    "title": "Coastal Waters in an Architectural Interior",
+    "title": "Coastal Waters in a Architectural Interior",
     "image": "/mockups/coastal-waters-in-architectural-interior.jpg",
     "alt": "Coastal Waters by Ritushka displayed in a architectural interior — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Coastal Waters Styled in an Architectural Interior",
+    "seoTitle": "Coastal Waters Styled in a Architectural Interior | Ritushka",
     "metaDescription": "See Coastal Waters (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a architectural interior, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -80,7 +80,7 @@ export const mockups: Mockup[] = [
     "title": "Deliciousness in a Commercial Space",
     "image": "/mockups/deliciousness-in-commercial-space.jpg",
     "alt": "Deliciousness by Ritushka displayed in a commercial space — 91 × 122 cm (35.8 × 48 in)",
-    "seoTitle": "Deliciousness Styled in a Commercial Space",
+    "seoTitle": "Deliciousness Styled in a Commercial Space | Ritushka",
     "metaDescription": "See Deliciousness (91 × 122 cm (35.8 × 48 in)) by Ritushka styled in a commercial space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -94,7 +94,7 @@ export const mockups: Mockup[] = [
     "title": "Desire in a Designer Space",
     "image": "/mockups/desire-in-designer-space.jpg",
     "alt": "Desire by Ritushka displayed in a designer space — 91 × 122 cm (35.8 × 48 in)",
-    "seoTitle": "Desire Styled in a Designer Space",
+    "seoTitle": "Desire Styled in a Designer Space | Ritushka",
     "metaDescription": "See Desire (91 × 122 cm (35.8 × 48 in)) by Ritushka styled in a designer space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -108,7 +108,7 @@ export const mockups: Mockup[] = [
     "title": "Eruption in a Penthouse",
     "image": "/mockups/eruption-in-penthouse.jpg",
     "alt": "Eruption by Ritushka displayed in a penthouse — 122 × 91 cm (48 × 35.8 in)",
-    "seoTitle": "Eruption Styled in a Penthouse",
+    "seoTitle": "Eruption Styled in a Penthouse | Ritushka",
     "metaDescription": "See Eruption (122 × 91 cm (48 × 35.8 in)) by Ritushka styled in a penthouse, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -122,7 +122,7 @@ export const mockups: Mockup[] = [
     "title": "Go With the Flow in a Hotel Lobby",
     "image": "/mockups/go-with-the-flow-in-hotel-lobby.jpg",
     "alt": "Go With the Flow by Ritushka displayed in a hotel lobby — 122 × 152 cm (48 × 59.8 in)",
-    "seoTitle": "Go With the Flow Styled in a Hotel Lobby",
+    "seoTitle": "Go With the Flow Styled in a Hotel Lobby | Ritushka",
     "metaDescription": "See Go With the Flow (122 × 152 cm (48 × 59.8 in)) by Ritushka styled in a hotel lobby, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -136,7 +136,7 @@ export const mockups: Mockup[] = [
     "title": "Horizon in a Boardroom",
     "image": "/mockups/horizon-in-boardroom.jpg",
     "alt": "Horizon by Ritushka displayed in a boardroom — 79 × 138 cm (31.1 × 54.3 in)",
-    "seoTitle": "Horizon Styled in a Boardroom",
+    "seoTitle": "Horizon Styled in a Boardroom | Ritushka",
     "metaDescription": "See Horizon (79 × 138 cm (31.1 × 54.3 in)) by Ritushka styled in a boardroom, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -150,7 +150,7 @@ export const mockups: Mockup[] = [
     "title": "Into the Ever Blue in a Living Room",
     "image": "/mockups/into-the-ever-blue-in-living-room.jpg",
     "alt": "Into the Ever Blue by Ritushka displayed in a living room — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Into the Ever Blue Styled in a Living Room",
+    "seoTitle": "Into the Ever Blue Styled in a Living Room | Ritushka",
     "metaDescription": "See Into the Ever Blue (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a living room, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -164,7 +164,7 @@ export const mockups: Mockup[] = [
     "title": "Just Add Champagne in a Luxury Home",
     "image": "/mockups/just-add-champagne-in-luxury-home.jpg",
     "alt": "Just Add Champagne by Ritushka displayed in a luxury home — 90 × 90 cm (35.4 × 35.4 in)",
-    "seoTitle": "Just Add Champagne Styled in a Luxury Home",
+    "seoTitle": "Just Add Champagne Styled in a Luxury Home | Ritushka",
     "metaDescription": "See Just Add Champagne (90 × 90 cm (35.4 × 35.4 in)) by Ritushka styled in a luxury home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -178,7 +178,7 @@ export const mockups: Mockup[] = [
     "title": "Life Chooses You in a Coastal Home",
     "image": "/mockups/life-chooses-you-in-coastal-home.jpg",
     "alt": "Life Chooses You by Ritushka displayed in a coastal home — 90 × 90 cm (35.4 × 35.4 in)",
-    "seoTitle": "Life Chooses You Styled in a Coastal Home",
+    "seoTitle": "Life Chooses You Styled in a Coastal Home | Ritushka",
     "metaDescription": "See Life Chooses You (90 × 90 cm (35.4 × 35.4 in)) by Ritushka styled in a coastal home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -192,7 +192,7 @@ export const mockups: Mockup[] = [
     "title": "Marshmallow in a Modern Apartment",
     "image": "/mockups/marshmallow-in-modern-apartment.jpg",
     "alt": "Marshmallow by Ritushka displayed in a modern apartment — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Marshmallow Styled in a Modern Apartment",
+    "seoTitle": "Marshmallow Styled in a Modern Apartment | Ritushka",
     "metaDescription": "See Marshmallow (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a modern apartment, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -203,10 +203,10 @@ export const mockups: Mockup[] = [
     "sceneId": "procedural-architectural-interior",
     "room": "Architectural Interior",
     "artworkSlug": "numero-uno",
-    "title": "Numero Uno in an Architectural Interior",
+    "title": "Numero Uno in a Architectural Interior",
     "image": "/mockups/numero-uno-in-architectural-interior.jpg",
     "alt": "Numero Uno by Ritushka displayed in a architectural interior — 50 × 40 cm (19.7 × 15.7 in)",
-    "seoTitle": "Numero Uno Styled in an Architectural Interior",
+    "seoTitle": "Numero Uno Styled in a Architectural Interior | Ritushka",
     "metaDescription": "See Numero Uno (50 × 40 cm (19.7 × 15.7 in)) by Ritushka styled in a architectural interior, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -220,7 +220,7 @@ export const mockups: Mockup[] = [
     "title": "One of a Kind in a Commercial Space",
     "image": "/mockups/one-of-a-kind-in-commercial-space.jpg",
     "alt": "One of a Kind by Ritushka displayed in a commercial space — 150 × 100 cm (59.1 × 39.4 in)",
-    "seoTitle": "One of a Kind Styled in a Commercial Space",
+    "seoTitle": "One of a Kind Styled in a Commercial Space | Ritushka",
     "metaDescription": "See One of a Kind (150 × 100 cm (59.1 × 39.4 in)) by Ritushka styled in a commercial space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -234,7 +234,7 @@ export const mockups: Mockup[] = [
     "title": "Paragliding in a Designer Space",
     "image": "/mockups/paragliding-in-designer-space.jpg",
     "alt": "Paragliding by Ritushka displayed in a designer space — 150 × 100 cm (59.1 × 39.4 in)",
-    "seoTitle": "Paragliding Styled in a Designer Space",
+    "seoTitle": "Paragliding Styled in a Designer Space | Ritushka",
     "metaDescription": "See Paragliding (150 × 100 cm (59.1 × 39.4 in)) by Ritushka styled in a designer space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -248,7 +248,7 @@ export const mockups: Mockup[] = [
     "title": "Peony — Thinking of Me in a Penthouse",
     "image": "/mockups/peony-thinking-of-me-in-penthouse.jpg",
     "alt": "Peony — Thinking of Me by Ritushka displayed in a penthouse — 120 × 91 cm (47.2 × 35.8 in)",
-    "seoTitle": "Peony — Thinking of Me Styled in a Penthouse",
+    "seoTitle": "Peony — Thinking of Me Styled in a Penthouse | Ritushka",
     "metaDescription": "See Peony — Thinking of Me (120 × 91 cm (47.2 × 35.8 in)) by Ritushka styled in a penthouse, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -262,7 +262,7 @@ export const mockups: Mockup[] = [
     "title": "Peace of White Heaven in a Hotel Lobby",
     "image": "/mockups/peace-of-white-heaven-in-hotel-lobby.jpg",
     "alt": "Peace of White Heaven by Ritushka displayed in a hotel lobby — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Peace of White Heaven Styled in a Hotel Lobby",
+    "seoTitle": "Peace of White Heaven Styled in a Hotel Lobby | Ritushka",
     "metaDescription": "See Peace of White Heaven (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a hotel lobby, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -276,7 +276,7 @@ export const mockups: Mockup[] = [
     "title": "Plateau in a Boardroom",
     "image": "/mockups/plateau-in-boardroom.jpg",
     "alt": "Plateau by Ritushka displayed in a boardroom — 100 × 150 cm (39.4 × 59.1 in)",
-    "seoTitle": "Plateau Styled in a Boardroom",
+    "seoTitle": "Plateau Styled in a Boardroom | Ritushka",
     "metaDescription": "See Plateau (100 × 150 cm (39.4 × 59.1 in)) by Ritushka styled in a boardroom, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -290,7 +290,7 @@ export const mockups: Mockup[] = [
     "title": "Reflection in a Living Room",
     "image": "/mockups/reflection-in-living-room.jpg",
     "alt": "Reflection by Ritushka displayed in a living room — 76 × 76 cm (29.9 × 29.9 in)",
-    "seoTitle": "Reflection Styled in a Living Room",
+    "seoTitle": "Reflection Styled in a Living Room | Ritushka",
     "metaDescription": "See Reflection (76 × 76 cm (29.9 × 29.9 in)) by Ritushka styled in a living room, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -304,7 +304,7 @@ export const mockups: Mockup[] = [
     "title": "River of My Thoughts in a Luxury Home",
     "image": "/mockups/river-of-my-thoughts-in-luxury-home.jpg",
     "alt": "River of My Thoughts by Ritushka displayed in a luxury home — 91 × 122 cm (35.8 × 48 in)",
-    "seoTitle": "River of My Thoughts Styled in a Luxury Home",
+    "seoTitle": "River of My Thoughts Styled in a Luxury Home | Ritushka",
     "metaDescription": "See River of My Thoughts (91 × 122 cm (35.8 × 48 in)) by Ritushka styled in a luxury home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -318,7 +318,7 @@ export const mockups: Mockup[] = [
     "title": "Rushing Shallows in a Coastal Home",
     "image": "/mockups/rushing-shallows-in-coastal-home.jpg",
     "alt": "Rushing Shallows by Ritushka displayed in a coastal home — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Rushing Shallows Styled in a Coastal Home",
+    "seoTitle": "Rushing Shallows Styled in a Coastal Home | Ritushka",
     "metaDescription": "See Rushing Shallows (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a coastal home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -332,7 +332,7 @@ export const mockups: Mockup[] = [
     "title": "Set Sail in a Modern Apartment",
     "image": "/mockups/set-sail-in-modern-apartment.jpg",
     "alt": "Set Sail by Ritushka displayed in a modern apartment — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Set Sail Styled in a Modern Apartment",
+    "seoTitle": "Set Sail Styled in a Modern Apartment | Ritushka",
     "metaDescription": "See Set Sail (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a modern apartment, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -343,10 +343,10 @@ export const mockups: Mockup[] = [
     "sceneId": "procedural-architectural-interior",
     "room": "Architectural Interior",
     "artworkSlug": "shoreham",
-    "title": "Shoreham in an Architectural Interior",
+    "title": "Shoreham in a Architectural Interior",
     "image": "/mockups/shoreham-in-architectural-interior.jpg",
     "alt": "Shoreham by Ritushka displayed in a architectural interior — 90 × 90 cm (35.4 × 35.4 in)",
-    "seoTitle": "Shoreham Styled in an Architectural Interior",
+    "seoTitle": "Shoreham Styled in a Architectural Interior | Ritushka",
     "metaDescription": "See Shoreham (90 × 90 cm (35.4 × 35.4 in)) by Ritushka styled in a architectural interior, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -360,7 +360,7 @@ export const mockups: Mockup[] = [
     "title": "Soft Awakening in a Commercial Space",
     "image": "/mockups/soft-awakening-in-commercial-space.jpg",
     "alt": "Soft Awakening by Ritushka displayed in a commercial space — 90 × 90 cm (35.4 × 35.4 in)",
-    "seoTitle": "Soft Awakening Styled in a Commercial Space",
+    "seoTitle": "Soft Awakening Styled in a Commercial Space | Ritushka",
     "metaDescription": "See Soft Awakening (90 × 90 cm (35.4 × 35.4 in)) by Ritushka styled in a commercial space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -374,7 +374,7 @@ export const mockups: Mockup[] = [
     "title": "Softly Loving Dreamscape in a Designer Space",
     "image": "/mockups/softly-loving-dreamscape-in-designer-space.jpg",
     "alt": "Softly Loving Dreamscape by Ritushka displayed in a designer space — 152 × 91 cm (59.8 × 35.8 in)",
-    "seoTitle": "Softly Loving Dreamscape Styled in a Designer Space",
+    "seoTitle": "Softly Loving Dreamscape Styled in a Designer Space | Ritushka",
     "metaDescription": "See Softly Loving Dreamscape (152 × 91 cm (59.8 × 35.8 in)) by Ritushka styled in a designer space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -388,7 +388,7 @@ export const mockups: Mockup[] = [
     "title": "Stillness in a Penthouse",
     "image": "/mockups/stillness-in-penthouse.jpg",
     "alt": "Stillness by Ritushka displayed in a penthouse — 72 × 72 cm (28.3 × 28.3 in)",
-    "seoTitle": "Stillness Styled in a Penthouse",
+    "seoTitle": "Stillness Styled in a Penthouse | Ritushka",
     "metaDescription": "See Stillness (72 × 72 cm (28.3 × 28.3 in)) by Ritushka styled in a penthouse, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -402,7 +402,7 @@ export const mockups: Mockup[] = [
     "title": "Strangely Attracted to You in a Hotel Lobby",
     "image": "/mockups/strangely-attracted-to-you-in-hotel-lobby.jpg",
     "alt": "Strangely Attracted to You by Ritushka displayed in a hotel lobby — 100 × 120 cm (39.4 × 47.2 in)",
-    "seoTitle": "Strangely Attracted to You Styled in a Hotel Lobby",
+    "seoTitle": "Strangely Attracted to You Styled in a Hotel Lobby | Ritushka",
     "metaDescription": "See Strangely Attracted to You (100 × 120 cm (39.4 × 47.2 in)) by Ritushka styled in a hotel lobby, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -416,7 +416,7 @@ export const mockups: Mockup[] = [
     "title": "Sunrise Over Tokyo in a Boardroom",
     "image": "/mockups/sunrise-over-tokyo-in-boardroom.jpg",
     "alt": "Sunrise Over Tokyo by Ritushka displayed in a boardroom — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Sunrise Over Tokyo Styled in a Boardroom",
+    "seoTitle": "Sunrise Over Tokyo Styled in a Boardroom | Ritushka",
     "metaDescription": "See Sunrise Over Tokyo (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a boardroom, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -430,7 +430,7 @@ export const mockups: Mockup[] = [
     "title": "The Apostles in a Living Room",
     "image": "/mockups/the-apostles-in-living-room.jpg",
     "alt": "The Apostles by Ritushka displayed in a living room — 91 × 122 cm (35.8 × 48 in)",
-    "seoTitle": "The Apostles Styled in a Living Room",
+    "seoTitle": "The Apostles Styled in a Living Room | Ritushka",
     "metaDescription": "See The Apostles (91 × 122 cm (35.8 × 48 in)) by Ritushka styled in a living room, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -444,7 +444,7 @@ export const mockups: Mockup[] = [
     "title": "The World In My Eyes II in a Luxury Home",
     "image": "/mockups/the-world-in-my-eyes-2-in-luxury-home.jpg",
     "alt": "The World In My Eyes II by Ritushka displayed in a luxury home — 90 × 60 cm (35.4 × 23.6 in)",
-    "seoTitle": "The World In My Eyes II Styled in a Luxury Home",
+    "seoTitle": "The World In My Eyes II Styled in a Luxury Home | Ritushka",
     "metaDescription": "See The World In My Eyes II (90 × 60 cm (35.4 × 23.6 in)) by Ritushka styled in a luxury home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -458,7 +458,7 @@ export const mockups: Mockup[] = [
     "title": "The World In My Eyes in a Coastal Home",
     "image": "/mockups/the-world-in-my-eyes-in-coastal-home.jpg",
     "alt": "The World In My Eyes by Ritushka displayed in a coastal home — 90 × 60 cm (35.4 × 23.6 in)",
-    "seoTitle": "The World In My Eyes Styled in a Coastal Home",
+    "seoTitle": "The World In My Eyes Styled in a Coastal Home | Ritushka",
     "metaDescription": "See The World In My Eyes (90 × 60 cm (35.4 × 23.6 in)) by Ritushka styled in a coastal home, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -472,7 +472,7 @@ export const mockups: Mockup[] = [
     "title": "Tree of Our Lives in a Modern Apartment",
     "image": "/mockups/tree-of-our-lives-in-modern-apartment.jpg",
     "alt": "Tree of Our Lives by Ritushka displayed in a modern apartment — 120 × 180 cm (47.2 × 70.9 in)",
-    "seoTitle": "Tree of Our Lives Styled in a Modern Apartment",
+    "seoTitle": "Tree of Our Lives Styled in a Modern Apartment | Ritushka",
     "metaDescription": "See Tree of Our Lives (120 × 180 cm (47.2 × 70.9 in)) by Ritushka styled in a modern apartment, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -483,10 +483,10 @@ export const mockups: Mockup[] = [
     "sceneId": "procedural-architectural-interior",
     "room": "Architectural Interior",
     "artworkSlug": "turbulence",
-    "title": "Turbulence in an Architectural Interior",
+    "title": "Turbulence in a Architectural Interior",
     "image": "/mockups/turbulence-in-architectural-interior.jpg",
     "alt": "Turbulence by Ritushka displayed in a architectural interior — 60 × 60 cm (23.6 × 23.6 in)",
-    "seoTitle": "Turbulence Styled in an Architectural Interior",
+    "seoTitle": "Turbulence Styled in a Architectural Interior | Ritushka",
     "metaDescription": "See Turbulence (60 × 60 cm (23.6 × 23.6 in)) by Ritushka styled in a architectural interior, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -500,7 +500,7 @@ export const mockups: Mockup[] = [
     "title": "Turquoise Tuesday in a Commercial Space",
     "image": "/mockups/turquoise-tuesday-in-commercial-space.jpg",
     "alt": "Turquoise Tuesday by Ritushka displayed in a commercial space — 90 × 90 cm (35.4 × 35.4 in)",
-    "seoTitle": "Turquoise Tuesday Styled in a Commercial Space",
+    "seoTitle": "Turquoise Tuesday Styled in a Commercial Space | Ritushka",
     "metaDescription": "See Turquoise Tuesday (90 × 90 cm (35.4 × 35.4 in)) by Ritushka styled in a commercial space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -514,7 +514,7 @@ export const mockups: Mockup[] = [
     "title": "Urban Jungle in a Designer Space",
     "image": "/mockups/urban-jungle-in-designer-space.jpg",
     "alt": "Urban Jungle by Ritushka displayed in a designer space — 110 × 76 cm (43.3 × 29.9 in)",
-    "seoTitle": "Urban Jungle Styled in a Designer Space",
+    "seoTitle": "Urban Jungle Styled in a Designer Space | Ritushka",
     "metaDescription": "See Urban Jungle (110 × 76 cm (43.3 × 29.9 in)) by Ritushka styled in a designer space, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -528,7 +528,7 @@ export const mockups: Mockup[] = [
     "title": "Without Sweet Harmony II in a Penthouse",
     "image": "/mockups/without-sweet-harmony-2-in-penthouse.jpg",
     "alt": "Without Sweet Harmony II by Ritushka displayed in a penthouse — 91 × 61 cm (35.8 × 24 in)",
-    "seoTitle": "Without Sweet Harmony II Styled in a Penthouse",
+    "seoTitle": "Without Sweet Harmony II Styled in a Penthouse | Ritushka",
     "metaDescription": "See Without Sweet Harmony II (91 × 61 cm (35.8 × 24 in)) by Ritushka styled in a penthouse, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"
@@ -542,7 +542,7 @@ export const mockups: Mockup[] = [
     "title": "Without Sweet Harmony in a Hotel Lobby",
     "image": "/mockups/without-sweet-harmony-in-hotel-lobby.jpg",
     "alt": "Without Sweet Harmony by Ritushka displayed in a hotel lobby — 91 × 61 cm (35.8 × 24 in)",
-    "seoTitle": "Without Sweet Harmony Styled in a Hotel Lobby",
+    "seoTitle": "Without Sweet Harmony Styled in a Hotel Lobby | Ritushka",
     "metaDescription": "See Without Sweet Harmony (91 × 61 cm (35.8 × 24 in)) by Ritushka styled in a hotel lobby, shown to scale. Placement and proportion reference for collectors and interior designers. Enquire to acquire or commission.",
     "credit": null,
     "aspect": "4 / 3"

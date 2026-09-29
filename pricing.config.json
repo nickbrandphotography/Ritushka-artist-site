@@ -17,5 +17,19 @@
   "currency": "AUD",
 
   "priceSoldWorks": false,
-  "_priceSoldWorks": "Sold works carry no price. The achieved price is not recorded in the register, and the modelled list price is not what the buyer paid. Showing one would be presenting a fabricated figure."
+  "_priceSoldWorks": "A sold work never carries a MODELLED list price: the modelled figure is not what the buyer paid, so apply-pricing-model.py skips sold rows. It does carry its ACHIEVED price, read straight from the register's Sale Price column by sync-register.py into Artwork.soldPrice and published on the artwork page, the sold archive and in schema.org as a SoldOut Offer. Nothing is modelled there — a sold work with no Sale Price recorded shows a plain 'Sold'.",
+
+  "printSizeLongEdgeCm": { "small": 40, "medium": 60, "large": 80 },
+  "_printSizeLongEdgeCm": "Long-edge target per print tier, in cm, before the size-cap rule below is applied. See docs/prints-decisions.md Section 5.",
+
+  "printSizeCapPercent": 0.8,
+  "_printSizeCapPercent": "A print's long edge may never exceed this fraction of the original artwork's own long edge. A tier whose target long edge exceeds the cap for a given artwork is not offered for that work (e.g. Large is dropped for a 60x60cm original). Original-protection rule, not a pricing input.",
+
+  "printEditionSize": { "small": 50, "medium": 30, "large": 15 },
+  "_printEditionSize": "Fixed edition size per tier, same for every artwork. Each tier is its own independently numbered edition (n / N), never shared across tiers. See docs/prints-decisions.md Section 4.",
+
+  "printTierPercent": { "small": 0.12, "medium": 0.16, "large": 0.22 },
+  "_printTierPercent": "print price = referenceRate * areaM2^sizeExponent * printTierPercent[tier], then rounded to roundTo. Reuses the existing size-scaling curve (referenceRate/sizeExponent above) purely as a fair relative-scaling reference between print sizes -- NOT a claim that a print is worth this fraction of an equivalent original. Rises with scarcity (smaller edition = higher percent). Margin-checked in docs/prints-decisions.md Section 6 against estimated Australian giclee production costs; re-check against a real print-lab quote before relying on it for launch pricing.",
+
+  "printCurrency": "AUD"
 }

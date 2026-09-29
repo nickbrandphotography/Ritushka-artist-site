@@ -19,13 +19,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-seascapes",
     "status": "available",
-    "price": 5850,
+    "price": 3850,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "Layered blues and whites evoking the movement of tide over sand.\n\nApproaching Destination is an original painting by Ritushka — a swelling body of water breaking toward the shore, worked in deep teal, seafoam and warm sand. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$5,850 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Approaching Destination — an original abstract seascapes painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$5,850.",
+    "story": "Layered blues and whites evoking the movement of tide over sand.\n\nApproaching Destination is an original painting by Ritushka — a swelling body of water breaking toward the shore, worked in deep teal, seafoam and warm sand. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$3,850 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Approaching Destination — an original abstract seascapes painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$3,850.",
     "seoTitle": "Approaching Destination | Original Painting",
-    "metaDescription": "Approaching Destination, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A swelling body of water breaking toward the shore. 91 × 122 cm (35.8 × 48 in). A$5,850, available now. Ships worldwide.",
+    "metaDescription": "Approaching Destination, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A swelling body of water breaking toward the shore. 91 × 122 cm (35.8 × 48 in). A$3,850, available now. Ships worldwide.",
     "image": "/artworks/approaching-destination.jpg",
     "alt": "Approaching Destination — original abstract seascapes painting by Ritushka in deep teal, seafoam and warm sand, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
@@ -40,7 +40,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "While I was island hopping in Malaysia",
-    "registerDescription": "Layered blues and whites evoking the movement of tide over sand."
+    "registerDescription": "Layered blues and whites evoking the movement of tide over sand.",
+    "soldPrice": null
   },
   {
     "id": "aw-002",
@@ -59,14 +60,14 @@ export const artworks: Artwork[] = [
       "blue-abstract-paintings"
     ],
     "primaryCollection": "abstract-seascapes",
-    "status": "sold",
-    "price": null,
+    "status": "available",
+    "price": 2800,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "The lily pads, crisp with morning's freshness, sway and bend ever so softly beneath the quiet influence of your breath—as if the very dawn were sighing through you.\n\nAqua Frost — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface, worked in frosted aqua, silver and pale blue. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Aqua Frost — Thinking of You — an original abstract seascapes painting by Sydney artist Ritushka, 120 × 91 cm (47.2 × 35.8 in).",
+    "story": "The lily pads, crisp with morning's freshness, sway and bend ever so softly beneath the quiet influence of your breath—as if the very dawn were sighing through you.\n\nAqua Frost — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface, worked in frosted aqua, silver and pale blue. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$2,800 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Aqua Frost — Thinking of You — an original abstract seascapes painting by Sydney artist Ritushka, 120 × 91 cm (47.2 × 35.8 in), A$2,800.",
     "seoTitle": "Aqua Frost — Thinking of You | Original Painting",
-    "metaDescription": "Aqua Frost — Thinking of You, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface. 120 × 91 cm (47.2 × 35.8 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Aqua Frost — Thinking of You, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — Thinking of You is an original painting by Ritushka — light scattering across a still, shallow surface. 120 × 91 cm (47.2 × 35.8 in). A$2,800, available now. Ships worldwide.",
     "image": "/artworks/aqua-frost-thinking-of-you.jpg",
     "alt": "Aqua Frost — Thinking of You — original abstract seascapes painting by Ritushka in frosted aqua, silver and pale blue, 120 × 91 cm (47.2 × 35.8 in)",
     "mockups": [
@@ -81,7 +82,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Seeing the frost on a meadow",
-    "registerDescription": "The lily pads, crisp with morning's freshness, sway and bend ever so softly beneath the quiet influence of your breath—as if the very dawn were sighing through you."
+    "registerDescription": "The lily pads, crisp with morning's freshness, sway and bend ever so softly beneath the quiet influence of your breath—as if the very dawn were sighing through you.",
+    "soldPrice": null
   },
   {
     "id": "aw-003",
@@ -102,13 +104,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-landscapes",
     "status": "available",
-    "price": 2450,
+    "price": 1950,
     "currency": "AUD",
     "orientation": "square",
-    "story": "The cliff face emerged from the very breath of the eucalyptus forest—as though the trees had exhaled it into being.\n\nBlue Mountains is an original painting by Ritushka — ranges dissolving into cloud and distance, worked in stone grey, mist blue and chalk white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$2,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Blue Mountains — an original abstract landscapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$2,450.",
+    "story": "The cliff face emerged from the very breath of the eucalyptus forest—as though the trees had exhaled it into being.\n\nBlue Mountains is an original painting by Ritushka — ranges dissolving into cloud and distance, worked in stone grey, mist blue and chalk white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$1,950 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Blue Mountains — an original abstract landscapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$1,950.",
     "seoTitle": "Blue Mountains | Original Painting",
-    "metaDescription": "Blue Mountains, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Ranges dissolving into cloud and distance. 60 × 60 cm (23.6 × 23.6 in). A$2,450, available now. Ships worldwide.",
+    "metaDescription": "Blue Mountains, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Ranges dissolving into cloud and distance. 60 × 60 cm (23.6 × 23.6 in). A$1,950, available now. Ships worldwide.",
     "image": "/artworks/blue-mountains.jpg",
     "alt": "Blue Mountains — original abstract landscapes painting by Ritushka in stone grey, mist blue and chalk white, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -123,7 +125,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Watching the clouds sinking into the valleys in the Blue Mountains",
-    "registerDescription": "The cliff face emerged from the very breath of the eucalyptus forest—as though the trees had exhaled it into being."
+    "registerDescription": "The cliff face emerged from the very breath of the eucalyptus forest—as though the trees had exhaled it into being.",
+    "soldPrice": null
   },
   {
     "id": "aw-004",
@@ -142,15 +145,15 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "other-works",
     "status": "available",
-    "price": 5850,
+    "price": 3550,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "The quiet elegance of nature reveals itself in every uneven line, unexpected detail, and gentle flaw—where imperfection becomes the very essence of perfection.\n\nBush is an original painting by Ritushka — native foliage drawn in white against darkness, worked in white and silver on deep black. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$5,850 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Bush — an original painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$5,850.",
+    "story": "The quiet elegance of nature reveals itself in every uneven line, unexpected detail, and gentle flaw—where imperfection becomes the very essence of perfection.\n\nBush is an original painting by Ritushka — native foliage drawn in white against darkness, worked in white and silver on deep black. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$3,550 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Bush — an original other works painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$3,550.",
     "seoTitle": "Bush | Original Painting",
-    "metaDescription": "Bush, an original painting by Ritushka, contemporary artist in Lane Cove, Sydney. Native foliage drawn in white against darkness. 91 × 122 cm (35.8 × 48 in). A$5,850, available now. Ships worldwide.",
+    "metaDescription": "Bush, an original other works painting by Ritushka, contemporary artist in Lane Cove, Sydney. Native foliage drawn in white against darkness. 91 × 122 cm (35.8 × 48 in). A$3,550, available now. Ships worldwide.",
     "image": "/artworks/bush.jpg",
-    "alt": "Bush — original painting by Ritushka in white and silver on deep black, 91 × 122 cm (35.8 × 48 in)",
+    "alt": "Bush — original other works painting by Ritushka in white and silver on deep black, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
       "bush-in-modern-apartment"
     ],
@@ -163,7 +166,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Admiring the variety of the Australian native plants",
-    "registerDescription": "The quiet elegance of nature reveals itself in every uneven line, unexpected detail, and gentle flaw—where imperfection becomes the very essence of perfection."
+    "registerDescription": "The quiet elegance of nature reveals itself in every uneven line, unexpected detail, and gentle flaw—where imperfection becomes the very essence of perfection.",
+    "soldPrice": null
   },
   {
     "id": "aw-005",
@@ -183,14 +187,14 @@ export const artworks: Artwork[] = [
       "blue-abstract-paintings"
     ],
     "primaryCollection": "abstract-seascapes",
-    "status": "available",
-    "price": 2450,
+    "status": "sold",
+    "price": null,
     "currency": "AUD",
     "orientation": "square",
-    "story": "Gentle in its motion yet potent in its purpose, the tide sweeps the sand from the shore—a quiet, unrelenting ritual of renewal.\n\nCoastal Waters is an original painting by Ritushka — the turning weight of a wave close to shore, worked in turquoise, jade and foam white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$2,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Coastal Waters — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$2,450.",
+    "story": "Gentle in its motion yet potent in its purpose, the tide sweeps the sand from the shore—a quiet, unrelenting ritual of renewal.\n\nCoastal Waters is an original painting by Ritushka — the turning weight of a wave close to shore, worked in turquoise, jade and foam white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$1,450. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Coastal Waters — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), sold for A$1,450.",
     "seoTitle": "Coastal Waters | Original Painting",
-    "metaDescription": "Coastal Waters, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. The turning weight of a wave close to shore. 60 × 60 cm (23.6 × 23.6 in). A$2,450, available now. Ships worldwide.",
+    "metaDescription": "Coastal Waters, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. The turning weight of a wave close to shore. 60 × 60 cm (23.6 × 23.6 in). Sold for A$1,450 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/coastal-waters.jpg",
     "alt": "Coastal Waters — original abstract seascapes painting by Ritushka in turquoise, jade and foam white, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -205,7 +209,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "watching  river waters meeting the salt water at The Entrance NSW",
-    "registerDescription": "Gentle in its motion yet potent in its purpose, the tide sweeps the sand from the shore—a quiet, unrelenting ritual of renewal."
+    "registerDescription": "Gentle in its motion yet potent in its purpose, the tide sweeps the sand from the shore—a quiet, unrelenting ritual of renewal.",
+    "soldPrice": 1450
   },
   {
     "id": "aw-006",
@@ -224,13 +229,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "statement-artworks",
     "status": "available",
-    "price": 5850,
+    "price": 3850,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "A vibrant symphony of flavours, aromas, and sensations unfolds, capturing the intoxicating richness and wonder of life’s most exquisite moments.\n\nDeliciousness is an original painting by Ritushka — a soft bloom of warmth and light, worked in blush pink, coral and cream. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$5,850 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Deliciousness — an original statement artworks painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$5,850.",
+    "story": "A vibrant symphony of flavours, aromas, and sensations unfolds, capturing the intoxicating richness and wonder of life’s most exquisite moments.\n\nDeliciousness is an original painting by Ritushka — a soft bloom of warmth and light, worked in blush pink, coral and cream. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$3,850 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Deliciousness — an original statement artworks painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$3,850.",
     "seoTitle": "Deliciousness | Original Painting",
-    "metaDescription": "Deliciousness, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. A soft bloom of warmth and light. 91 × 122 cm (35.8 × 48 in). A$5,850, available now. Ships worldwide.",
+    "metaDescription": "Deliciousness, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. A soft bloom of warmth and light. 91 × 122 cm (35.8 × 48 in). A$3,850, available now. Ships worldwide.",
     "image": "/artworks/deliciousness.jpg",
     "alt": "Deliciousness — original statement artworks painting by Ritushka in blush pink, coral and cream, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
@@ -245,7 +250,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Watching the sky starting to clear after a big storm",
-    "registerDescription": "A vibrant symphony of flavours, aromas, and sensations unfolds, capturing the intoxicating richness and wonder of life’s most exquisite moments."
+    "registerDescription": "A vibrant symphony of flavours, aromas, and sensations unfolds, capturing the intoxicating richness and wonder of life’s most exquisite moments.",
+    "soldPrice": null
   },
   {
     "id": "aw-007",
@@ -266,13 +272,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-seascapes",
     "status": "available",
-    "price": 5850,
+    "price": 3850,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "A longing to escape into a world of wonder, where dreams come alive and anything feels possible.\n\nDesire is an original painting by Ritushka — a wave at the moment it begins to fold, worked in deep ocean blue, teal and breaking white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$5,850 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Desire — an original abstract seascapes painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$5,850.",
+    "story": "A longing to escape into a world of wonder, where dreams come alive and anything feels possible.\n\nDesire is an original painting by Ritushka — a wave at the moment it begins to fold, worked in deep ocean blue, teal and breaking white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$3,850 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Desire — an original abstract seascapes painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$3,850.",
     "seoTitle": "Desire | Original Painting",
-    "metaDescription": "Desire, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A wave at the moment it begins to fold. 91 × 122 cm (35.8 × 48 in). A$5,850, available now. Ships worldwide.",
+    "metaDescription": "Desire, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A wave at the moment it begins to fold. 91 × 122 cm (35.8 × 48 in). A$3,850, available now. Ships worldwide.",
     "image": "/artworks/desire.jpg",
     "alt": "Desire — original abstract seascapes painting by Ritushka in deep ocean blue, teal and breaking white, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
@@ -287,7 +293,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Island Hopping in Malaysia",
-    "registerDescription": "A longing to escape into a world of wonder, where dreams come alive and anything feels possible."
+    "registerDescription": "A longing to escape into a world of wonder, where dreams come alive and anything feels possible.",
+    "soldPrice": null
   },
   {
     "id": "aw-008",
@@ -310,10 +317,10 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "A breathtakingly beautiful reality, filled with wonder beyond anything words can truly describe.\n\nEruption is an original painting by Ritushka — a headland meeting bright shallow water, worked in rust, cloud white and lagoon blue. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 122 × 91 cm (48 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Eruption — an original abstract landscapes painting by Sydney artist Ritushka, 122 × 91 cm (48 × 35.8 in).",
+    "story": "A breathtakingly beautiful reality, filled with wonder beyond anything words can truly describe.\n\nEruption is an original painting by Ritushka — a headland meeting bright shallow water, worked in rust, cloud white and lagoon blue. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 122 × 91 cm (48 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$3,850. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Eruption — an original abstract landscapes painting by Sydney artist Ritushka, 122 × 91 cm (48 × 35.8 in), sold for A$3,850.",
     "seoTitle": "Erruption | Original Painting",
-    "metaDescription": "Eruption, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A headland meeting bright shallow water. 122 × 91 cm (48 × 35.8 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Eruption, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A headland meeting bright shallow water. 122 × 91 cm (48 × 35.8 in). Sold for A$3,850 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/eruption.jpg",
     "alt": "Eruption — original abstract landscapes painting by Ritushka in rust, cloud white and lagoon blue, 122 × 91 cm (48 × 35.8 in)",
     "mockups": [
@@ -328,7 +335,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Seeing my Fiancé's beautiful photograph that he took in the Canary Islands",
-    "registerDescription": "A breathtakingly beautiful reality, filled with wonder beyond anything words can truly describe."
+    "registerDescription": "A breathtakingly beautiful reality, filled with wonder beyond anything words can truly describe.",
+    "soldPrice": 3850
   },
   {
     "id": "aw-009",
@@ -349,12 +357,12 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "Effortlessly merging with the rhythm of those around me, I am carried by a shared energy of movement, connection, and quiet exhilaration.\n\nGo With the Flow is an original painting by Ritushka — a shoal of fish moving together as one, worked in turquoise with jewelled brights. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 122 × 152 cm (48 × 59.8 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Go With the Flow — an original painting by Sydney artist Ritushka, 122 × 152 cm (48 × 59.8 in).",
+    "story": "Effortlessly merging with the rhythm of those around me, I am carried by a shared energy of movement, connection, and quiet exhilaration.\n\nGo With the Flow is an original painting by Ritushka — a shoal of fish moving together as one, worked in turquoise with jewelled brights. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 122 × 152 cm (48 × 59.8 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$6,250. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Go With the Flow — an original other works painting by Sydney artist Ritushka, 122 × 152 cm (48 × 59.8 in), sold for A$6,250.",
     "seoTitle": "Go With the Flow | Original Painting",
-    "metaDescription": "Go With the Flow, an original painting by Ritushka, contemporary artist in Lane Cove, Sydney. A shoal of fish moving together as one. 122 × 152 cm (48 × 59.8 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Go With the Flow, an original other works painting by Ritushka, contemporary artist in Lane Cove, Sydney. A shoal of fish moving together as one. 122 × 152 cm (48 × 59.8 in). Sold for A$6,250 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/go-with-the-flow.jpg",
-    "alt": "Go With the Flow — original painting by Ritushka in turquoise with jewelled brights, 122 × 152 cm (48 × 59.8 in)",
+    "alt": "Go With the Flow — original other works painting by Ritushka in turquoise with jewelled brights, 122 × 152 cm (48 × 59.8 in)",
     "mockups": [
       "go-with-the-flow-in-hotel-lobby"
     ],
@@ -367,7 +375,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "After many hours of snorkelling On the reef",
-    "registerDescription": "Effortlessly merging with the rhythm of those around me, I am carried by a shared energy of movement, connection, and quiet exhilaration."
+    "registerDescription": "Effortlessly merging with the rhythm of those around me, I am carried by a shared energy of movement, connection, and quiet exhilaration.",
+    "soldPrice": 6250
   },
   {
     "id": "aw-010",
@@ -387,13 +396,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-landscapes",
     "status": "available",
-    "price": 5750,
+    "price": 4850,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "Beyond the horizon of the present lies an unfolding mystery, where the possibilities of the future remain unseen, waiting to reveal their hidden beauty.\n\nHorizon is an original painting by Ritushka — a long, quiet horizon held in haze, worked in warm grey, taupe and soft gold. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 79 × 138 cm (31.1 × 54.3 in), 4 cm deep, and is presented in a floating oak frame. A$5,750 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Horizon — an original abstract landscapes painting by Sydney artist Ritushka, 79 × 138 cm (31.1 × 54.3 in), A$5,750.",
+    "story": "Beyond the horizon of the present lies an unfolding mystery, where the possibilities of the future remain unseen, waiting to reveal their hidden beauty.\n\nHorizon is an original painting by Ritushka — a long, quiet horizon held in haze, worked in warm grey, taupe and soft gold. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 79 × 138 cm (31.1 × 54.3 in), 4 cm deep, and is presented in a floating oak frame. A$4,850 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Horizon — an original abstract landscapes painting by Sydney artist Ritushka, 79 × 138 cm (31.1 × 54.3 in), A$4,850.",
     "seoTitle": "Horizon | Original Painting",
-    "metaDescription": "Horizon, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A long, quiet horizon held in haze. 79 × 138 cm (31.1 × 54.3 in). A$5,750, available now. Ships worldwide.",
+    "metaDescription": "Horizon, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A long, quiet horizon held in haze. 79 × 138 cm (31.1 × 54.3 in). A$4,850, available now. Ships worldwide.",
     "image": "/artworks/horizon.jpg",
     "alt": "Horizon — original abstract landscapes painting by Ritushka in warm grey, taupe and soft gold, 79 × 138 cm (31.1 × 54.3 in)",
     "mockups": [
@@ -408,7 +417,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Watching the sun setting over a chain of islands in Thailand",
-    "registerDescription": "Beyond the horizon of the present lies an unfolding mystery, where the possibilities of the future remain unseen, waiting to reveal their hidden beauty."
+    "registerDescription": "Beyond the horizon of the present lies an unfolding mystery, where the possibilities of the future remain unseen, waiting to reveal their hidden beauty.",
+    "soldPrice": null
   },
   {
     "id": "aw-011",
@@ -427,14 +437,14 @@ export const artworks: Artwork[] = [
       "blue-abstract-paintings"
     ],
     "primaryCollection": "abstract-seascapes",
-    "status": "available",
-    "price": 2450,
+    "status": "sold",
+    "price": null,
     "currency": "AUD",
     "orientation": "square",
-    "story": "As we descended beneath the surface, the realms of sky, earth, and the enigmatic underwater world dissolved into one another—converging into a sublime, otherworldly tableau, as if we had slipped into the pages of a forgotten fairy tale, where the very laws of nature had been rewritten by wonder.\n\nInto the Ever Blue is an original painting by Ritushka — the pull of open water beyond the break, worked in turquoise, ice white and slate. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$2,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Into the Ever Blue — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$2,450.",
+    "story": "As we descended beneath the surface, the realms of sky, earth, and the enigmatic underwater world dissolved into one another—converging into a sublime, otherworldly tableau, as if we had slipped into the pages of a forgotten fairy tale, where the very laws of nature had been rewritten by wonder.\n\nInto the Ever Blue is an original painting by Ritushka — the pull of open water beyond the break, worked in turquoise, ice white and slate. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$2,450. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Into the Ever Blue — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), sold for A$2,450.",
     "seoTitle": "Into the Ever Blue | Original Painting",
-    "metaDescription": "Into the Ever Blue, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. The pull of open water beyond the break. 60 × 60 cm (23.6 × 23.6 in). A$2,450, available now. Ships worldwide.",
+    "metaDescription": "Into the Ever Blue, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. The pull of open water beyond the break. 60 × 60 cm (23.6 × 23.6 in). Sold for A$2,450 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/into-the-ever-blue.jpg",
     "alt": "Into the Ever Blue — original abstract seascapes painting by Ritushka in turquoise, ice white and slate, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -449,7 +459,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Peecking my head out of the water while snorkelling",
-    "registerDescription": "As we descended beneath the surface, the realms of sky, earth, and the enigmatic underwater world dissolved into one another—converging into a sublime, otherworldly tableau, as if we had slipped into the pages of a forgotten fairy tale, where the very laws of nature had been rewritten by wonder."
+    "registerDescription": "As we descended beneath the surface, the realms of sky, earth, and the enigmatic underwater world dissolved into one another—converging into a sublime, otherworldly tableau, as if we had slipped into the pages of a forgotten fairy tale, where the very laws of nature had been rewritten by wonder.",
+    "soldPrice": 2450
   },
   {
     "id": "aw-012",
@@ -467,13 +478,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "statement-artworks",
     "status": "available",
-    "price": 4600,
+    "price": 2500,
     "currency": "AUD",
     "orientation": "square",
-    "story": "The thought of you lingered with me last night, softly tickling my heart with quiet delight.\n\nJust Add Champagne is an original painting by Ritushka — effervescence caught mid-rise, worked in rose, blush and pale gold. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$4,600 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Just Add Champagne — an original statement artworks painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$4,600.",
+    "story": "The thought of you lingered with me last night, softly tickling my heart with quiet delight.\n\nJust Add Champagne is an original painting by Ritushka — effervescence caught mid-rise, worked in rose, blush and pale gold. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$2,500 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Just Add Champagne — an original statement artworks painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$2,500.",
     "seoTitle": "Just Add Champagne | Original Painting",
-    "metaDescription": "Just Add Champagne, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Effervescence caught mid-rise. 90 × 90 cm (35.4 × 35.4 in). A$4,600, available now. Ships worldwide.",
+    "metaDescription": "Just Add Champagne, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Effervescence caught mid-rise. 90 × 90 cm (35.4 × 35.4 in). A$2,500, available now. Ships worldwide.",
     "image": "/artworks/just-add-champagne.jpg",
     "alt": "Just Add Champagne — original statement artworks painting by Ritushka in rose, blush and pale gold, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
@@ -488,7 +499,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Thoughts of pleasure",
-    "registerDescription": "The thought of you lingered with me last night, softly tickling my heart with quiet delight"
+    "registerDescription": "The thought of you lingered with me last night, softly tickling my heart with quiet delight",
+    "soldPrice": null
   },
   {
     "id": "aw-013",
@@ -510,10 +522,10 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "square",
-    "story": "As the morning dew shimmered at the foot of the mountains, a crisp, cool breeze stirred softly through the field, grazing mother earth with a tender, reverent touch.\n\nLife Chooses You is an original painting by Ritushka — a worked surface of drift and sediment, worked in cream, umber and weathered white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Life Chooses You — an original textured abstract paintings painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in).",
+    "story": "As the morning dew shimmered at the foot of the mountains, a crisp, cool breeze stirred softly through the field, grazing mother earth with a tender, reverent touch.\n\nLife Chooses You is an original painting by Ritushka — a worked surface of drift and sediment, worked in cream, umber and weathered white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$2,950. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Life Chooses You — an original textured abstract paintings painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), sold for A$2,950.",
     "seoTitle": "Life Chooses You | Original Painting",
-    "metaDescription": "Life Chooses You, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. A worked surface of drift and sediment. 90 × 90 cm (35.4 × 35.4 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Life Chooses You, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. A worked surface of drift and sediment. 90 × 90 cm (35.4 × 35.4 in). Sold for A$2,950 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/life-chooses-you.jpg",
     "alt": "Life Chooses You — original textured abstract paintings painting by Ritushka in cream, umber and weathered white, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
@@ -528,7 +540,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Looking over the hills of Hunter Valley",
-    "registerDescription": "As the morning dew shimmered at the foot of the mountains, a crisp, cool breeze stirred softly through the field, grazing mother earth with a tender, reverent touch."
+    "registerDescription": "As the morning dew shimmered at the foot of the mountains, a crisp, cool breeze stirred softly through the field, grazing mother earth with a tender, reverent touch.",
+    "soldPrice": 2950
   },
   {
     "id": "aw-014",
@@ -547,13 +560,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "statement-artworks",
     "status": "available",
-    "price": 2450,
+    "price": 1950,
     "currency": "AUD",
     "orientation": "square",
-    "story": "A delicate invitation to experience beauty through subtle sensation, where softness, intimacy, and quiet emotion unfold like a lingering whisper.\n\nMarshmallow is an original painting by Ritushka — warmth settling into softness, worked in butter cream, sand and pale rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$2,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Marshmallow — an original statement artworks painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$2,450.",
+    "story": "A delicate invitation to experience beauty through subtle sensation, where softness, intimacy, and quiet emotion unfold like a lingering whisper.\n\nMarshmallow is an original painting by Ritushka — warmth settling into softness, worked in butter cream, sand and pale rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$1,950 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Marshmallow — an original statement artworks painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$1,950.",
     "seoTitle": "Mashmellow | Original Painting",
-    "metaDescription": "Marshmallow, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Warmth settling into softness. 60 × 60 cm (23.6 × 23.6 in). A$2,450, available now. Ships worldwide.",
+    "metaDescription": "Marshmallow, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Warmth settling into softness. 60 × 60 cm (23.6 × 23.6 in). A$1,950, available now. Ships worldwide.",
     "image": "/artworks/marshmallow.jpg",
     "alt": "Marshmallow — original statement artworks painting by Ritushka in butter cream, sand and pale rose, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -568,7 +581,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Softness of beautiful, fluffy. Clouds.",
-    "registerDescription": "A delicate invitation to experience beauty through subtle sensation, where softness, intimacy, and quiet emotion unfold like a lingering whisper"
+    "registerDescription": "A delicate invitation to experience beauty through subtle sensation, where softness, intimacy, and quiet emotion unfold like a lingering whisper",
+    "soldPrice": null
   },
   {
     "id": "aw-015",
@@ -589,12 +603,12 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "Drawn to the quiet elegance of sails upon the water, I find a world of freedom, adventure, and endless possibility carried upon the breath of the wind.\n\nNumero Uno is an original painting by Ritushka — repeated forms in ordered rhythm, worked in white and pearl on black. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 50 × 40 cm (19.7 × 15.7 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Numero Uno — an original painting by Sydney artist Ritushka, 50 × 40 cm (19.7 × 15.7 in).",
+    "story": "Drawn to the quiet elegance of sails upon the water, I find a world of freedom, adventure, and endless possibility carried upon the breath of the wind.\n\nNumero Uno is an original painting by Ritushka — repeated forms in ordered rhythm, worked in white and pearl on black. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 50 × 40 cm (19.7 × 15.7 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$1,250. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Numero Uno — an original other works painting by Sydney artist Ritushka, 50 × 40 cm (19.7 × 15.7 in), sold for A$1,250.",
     "seoTitle": "Numero Uno | Original Painting",
-    "metaDescription": "Numero Uno, an original painting by Ritushka, contemporary artist in Lane Cove, Sydney. Repeated forms in ordered rhythm. 50 × 40 cm (19.7 × 15.7 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Numero Uno, an original other works painting by Ritushka, contemporary artist in Lane Cove, Sydney. Repeated forms in ordered rhythm. 50 × 40 cm (19.7 × 15.7 in). Sold for A$1,250 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/numero-uno.jpg",
-    "alt": "Numero Uno — original painting by Ritushka in white and pearl on black, 50 × 40 cm (19.7 × 15.7 in)",
+    "alt": "Numero Uno — original other works painting by Ritushka in white and pearl on black, 50 × 40 cm (19.7 × 15.7 in)",
     "mockups": [
       "numero-uno-in-architectural-interior"
     ],
@@ -607,7 +621,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "A beautiful marina in Greece",
-    "registerDescription": "Drawn to the quiet elegance of sails upon the water, I find a world of freedom, adventure, and endless possibility carried upon the breath of the wind."
+    "registerDescription": "Drawn to the quiet elegance of sails upon the water, I find a world of freedom, adventure, and endless possibility carried upon the breath of the wind.",
+    "soldPrice": 1250
   },
   {
     "id": "aw-016",
@@ -626,14 +641,14 @@ export const artworks: Artwork[] = [
       "coastal-abstract-art"
     ],
     "primaryCollection": "abstract-seascapes",
-    "status": "available",
-    "price": 7350,
+    "status": "sold",
+    "price": null,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "A quiet yet powerful pursuit to emerge from the vastness of existence, leaving behind a unique imprint that speaks of individuality, courage, and purpose.\n\nOne of a Kind is an original painting by Ritushka — sails held on dark, glassy water, worked in deep teal, ink blue and mast white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 150 × 100 cm (59.1 × 39.4 in), 4 cm deep, and is presented in a floating oak frame. A$7,350 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "One of a Kind — an original abstract seascapes painting by Sydney artist Ritushka, 150 × 100 cm (59.1 × 39.4 in), A$7,350.",
+    "story": "A quiet yet powerful pursuit to emerge from the vastness of existence, leaving behind a unique imprint that speaks of individuality, courage, and purpose.\n\nOne of a Kind is an original painting by Ritushka — sails held on dark, glassy water, worked in deep teal, ink blue and mast white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 150 × 100 cm (59.1 × 39.4 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$3,550. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "One of a Kind — an original abstract seascapes painting by Sydney artist Ritushka, 150 × 100 cm (59.1 × 39.4 in), sold for A$3,550.",
     "seoTitle": "One of a Kind | Original Painting",
-    "metaDescription": "One of a Kind, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Sails held on dark, glassy water. 150 × 100 cm (59.1 × 39.4 in). A$7,350, available now. Ships worldwide.",
+    "metaDescription": "One of a Kind, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Sails held on dark, glassy water. 150 × 100 cm (59.1 × 39.4 in). Sold for A$3,550 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/one-of-a-kind.jpg",
     "alt": "One of a Kind — original abstract seascapes painting by Ritushka in deep teal, ink blue and mast white, 150 × 100 cm (59.1 × 39.4 in)",
     "mockups": [
@@ -648,7 +663,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Random inspiration after a glass or 2 of wine",
-    "registerDescription": "A quiet yet powerful pursuit to emerge from the vastness of existence, leaving behind a unique imprint that speaks of individuality, courage, and purpose."
+    "registerDescription": "A quiet yet powerful pursuit to emerge from the vastness of existence, leaving behind a unique imprint that speaks of individuality, courage, and purpose.",
+    "soldPrice": 3550
   },
   {
     "id": "aw-017",
@@ -667,13 +683,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "textured-abstract-paintings",
     "status": "available",
-    "price": 7350,
+    "price": 5250,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "A quiet yearning to leave the weight of the world behind, to take flight on gentle wings and disappear into a place where the sky holds endless dreams.\n\nParagliding is an original painting by Ritushka — the ground seen from a lifting height, worked in earth brown, teal and bone. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 150 × 100 cm (59.1 × 39.4 in), 4 cm deep, and is presented in a floating oak frame. A$7,350 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Paragliding — an original textured abstract paintings painting by Sydney artist Ritushka, 150 × 100 cm (59.1 × 39.4 in), A$7,350.",
+    "story": "A quiet yearning to leave the weight of the world behind, to take flight on gentle wings and disappear into a place where the sky holds endless dreams.\n\nParagliding is an original painting by Ritushka — the ground seen from a lifting height, worked in earth brown, teal and bone. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 150 × 100 cm (59.1 × 39.4 in), 4 cm deep, and is presented in a floating oak frame. A$5,250 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Paragliding — an original textured abstract paintings painting by Sydney artist Ritushka, 150 × 100 cm (59.1 × 39.4 in), A$5,250.",
     "seoTitle": "Paragliding | Original Painting",
-    "metaDescription": "Paragliding, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. The ground seen from a lifting height. 150 × 100 cm (59.1 × 39.4 in). A$7,350, available now. Ships worldwide.",
+    "metaDescription": "Paragliding, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. The ground seen from a lifting height. 150 × 100 cm (59.1 × 39.4 in). A$5,250, available now. Ships worldwide.",
     "image": "/artworks/paragliding.jpg",
     "alt": "Paragliding — original textured abstract paintings painting by Ritushka in earth brown, teal and bone, 150 × 100 cm (59.1 × 39.4 in)",
     "mockups": [
@@ -688,7 +704,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Imagining what a paraglider would see.",
-    "registerDescription": "A quiet yearning to leave the weight of the world behind, to take flight on gentle wings and disappear into a place where the sky holds endless dreams."
+    "registerDescription": "A quiet yearning to leave the weight of the world behind, to take flight on gentle wings and disappear into a place where the sky holds endless dreams.",
+    "soldPrice": null
   },
   {
     "id": "aw-018",
@@ -706,13 +723,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "statement-artworks",
     "status": "available",
-    "price": 5800,
+    "price": 2800,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "The morning sun, with an inexplicable magnetism, drew my very soul into its luminous embrace.\n\nPeony — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth, worked in cream, blush and soft apricot. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$5,800 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Peony — Thinking of Me — an original statement artworks painting by Sydney artist Ritushka, 120 × 91 cm (47.2 × 35.8 in), A$5,800.",
+    "story": "The morning sun, with an inexplicable magnetism, drew my very soul into its luminous embrace.\n\nPeony — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth, worked in cream, blush and soft apricot. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 91 cm (47.2 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$2,800 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Peony — Thinking of Me — an original statement artworks painting by Sydney artist Ritushka, 120 × 91 cm (47.2 × 35.8 in), A$2,800.",
     "seoTitle": "Peony — Thinking of Me | Original Painting",
-    "metaDescription": "Peony — Thinking of Me, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth. 120 × 91 cm (47.2 × 35.8 in). A$5,800, available now. Ships worldwide.",
+    "metaDescription": "Peony — Thinking of Me, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — Thinking of Me is an original painting by Ritushka — a petal-light field of warmth. 120 × 91 cm (47.2 × 35.8 in). A$2,800, available now. Ships worldwide.",
     "image": "/artworks/peony-thinking-of-me.jpg",
     "alt": "Peony — Thinking of Me — original statement artworks painting by Ritushka in cream, blush and soft apricot, 120 × 91 cm (47.2 × 35.8 in)",
     "mockups": [
@@ -727,7 +744,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Misty sunset over a field of wheat.",
-    "registerDescription": "The morning sun, with an inexplicable magnetism, drew my very soul into its luminous embrace."
+    "registerDescription": "The morning sun, with an inexplicable magnetism, drew my very soul into its luminous embrace.",
+    "soldPrice": null
   },
   {
     "id": "aw-019",
@@ -747,13 +765,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-landscapes",
     "status": "available",
-    "price": 2450,
+    "price": 1950,
     "currency": "AUD",
     "orientation": "square",
-    "story": "A beauty untouched by any sense—never seen, tasted, touched, heard, felt, nor smelled—still breathes, still exists, still waits.\n\nPeace of White Heaven is an original painting by Ritushka — clouds breaking over open water, worked in sky blue, cloud white and aqua. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$2,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Peace of White Heaven — an original abstract landscapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$2,450.",
+    "story": "A beauty untouched by any sense—never seen, tasted, touched, heard, felt, nor smelled—still breathes, still exists, still waits.\n\nPeace of White Heaven is an original painting by Ritushka — clouds breaking over open water, worked in sky blue, cloud white and aqua. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$1,950 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Peace of White Heaven — an original abstract landscapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$1,950.",
     "seoTitle": "Piece of White Heaven | Original Painting",
-    "metaDescription": "Peace of White Heaven, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Clouds breaking over open water. 60 × 60 cm (23.6 × 23.6 in). A$2,450, available now. Ships worldwide.",
+    "metaDescription": "Peace of White Heaven, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Clouds breaking over open water. 60 × 60 cm (23.6 × 23.6 in). A$1,950, available now. Ships worldwide.",
     "image": "/artworks/peace-of-white-heaven.jpg",
     "alt": "Peace of White Heaven — original abstract landscapes painting by Ritushka in sky blue, cloud white and aqua, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -768,7 +786,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Flying over Whitehaven Beach",
-    "registerDescription": "A beauty untouched by any sense—never seen, tasted, touched, heard, felt, nor smelled—still breathes, still exists, still waits."
+    "registerDescription": "A beauty untouched by any sense—never seen, tasted, touched, heard, felt, nor smelled—still breathes, still exists, still waits.",
+    "soldPrice": null
   },
   {
     "id": "aw-020",
@@ -788,13 +807,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-landscapes",
     "status": "available",
-    "price": 7350,
+    "price": 5250,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "As we journey onward, the landscape whispers its quiet stories, flowing past like a living painting filled with stillness, harmony, and understated wonder.\n\nPlateau is an original painting by Ritushka — a wide, still expanse under flat light, worked in bone, oyster and pale sand. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 100 × 150 cm (39.4 × 59.1 in), 4 cm deep, and is presented in a floating oak frame. A$7,350 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Plateau — an original abstract landscapes painting by Sydney artist Ritushka, 100 × 150 cm (39.4 × 59.1 in), A$7,350.",
+    "story": "As we journey onward, the landscape whispers its quiet stories, flowing past like a living painting filled with stillness, harmony, and understated wonder.\n\nPlateau is an original painting by Ritushka — a wide, still expanse under flat light, worked in bone, oyster and pale sand. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 100 × 150 cm (39.4 × 59.1 in), 4 cm deep, and is presented in a floating oak frame. A$5,250 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Plateau — an original abstract landscapes painting by Sydney artist Ritushka, 100 × 150 cm (39.4 × 59.1 in), A$5,250.",
     "seoTitle": "Plateau | Original Painting",
-    "metaDescription": "Plateau, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A wide, still expanse under flat light. 100 × 150 cm (39.4 × 59.1 in). A$7,350, available now. Ships worldwide.",
+    "metaDescription": "Plateau, an original abstract landscapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A wide, still expanse under flat light. 100 × 150 cm (39.4 × 59.1 in). A$5,250, available now. Ships worldwide.",
     "image": "/artworks/plateau.jpg",
     "alt": "Plateau — original abstract landscapes painting by Ritushka in bone, oyster and pale sand, 100 × 150 cm (39.4 × 59.1 in)",
     "mockups": [
@@ -809,7 +828,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Driving next to Lake George in the Australian Capital Territory",
-    "registerDescription": "As we journey onward, the landscape whispers its quiet stories, flowing past like a living painting filled with stillness, harmony, and understated wonder."
+    "registerDescription": "As we journey onward, the landscape whispers its quiet stories, flowing past like a living painting filled with stillness, harmony, and understated wonder.",
+    "soldPrice": null
   },
   {
     "id": "aw-021",
@@ -831,12 +851,12 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "square",
-    "story": "As we admired the rays of the setting sun cast upon the harbor, you leaned close and whispered softly into my ear.\n\nReflection is an original painting by Ritushka — light scattered in circles across deep blue, worked in cobalt, ultramarine and white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 76 × 76 cm (29.9 × 29.9 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Reflection — an original painting by Sydney artist Ritushka, 76 × 76 cm (29.9 × 29.9 in).",
+    "story": "As we admired the rays of the setting sun cast upon the harbor, you leaned close and whispered softly into my ear.\n\nReflection is an original painting by Ritushka — light scattered in circles across deep blue, worked in cobalt, ultramarine and white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 76 × 76 cm (29.9 × 29.9 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$1,950. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Reflection — an original other works painting by Sydney artist Ritushka, 76 × 76 cm (29.9 × 29.9 in), sold for A$1,950.",
     "seoTitle": "Reflection | Original Painting",
-    "metaDescription": "Reflection, an original painting by Ritushka, contemporary artist in Lane Cove, Sydney. Light scattered in circles across deep blue. 76 × 76 cm (29.9 × 29.9 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Reflection, an original other works painting by Ritushka, contemporary artist in Lane Cove, Sydney. Light scattered in circles across deep blue. 76 × 76 cm (29.9 × 29.9 in). Sold for A$1,950 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/reflection.jpg",
-    "alt": "Reflection — original painting by Ritushka in cobalt, ultramarine and white, 76 × 76 cm (29.9 × 29.9 in)",
+    "alt": "Reflection — original other works painting by Ritushka in cobalt, ultramarine and white, 76 × 76 cm (29.9 × 29.9 in)",
     "mockups": [
       "reflection-in-living-room"
     ],
@@ -849,7 +869,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Sunset reflecting on Sydney Harbour",
-    "registerDescription": "As we admired the rays of the setting sun cast upon the harbor, you leaned close and whispered softly into my ear"
+    "registerDescription": "As we admired the rays of the setting sun cast upon the harbor, you leaned close and whispered softly into my ear",
+    "soldPrice": 1950
   },
   {
     "id": "aw-022",
@@ -868,13 +889,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "textured-abstract-paintings",
     "status": "available",
-    "price": 5850,
+    "price": 3850,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "Amid the chaos of voices and symbols, a hidden harmony begins to appear—as though the fragments were always searching for one another to create a story only the soul could understand.\n\nRiver of My Thoughts is an original painting by Ritushka — a current of drifting, layered marks, worked in pearl, russet and soft grey. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$5,850 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "River of My Thoughts — an original textured abstract paintings painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$5,850.",
+    "story": "Amid the chaos of voices and symbols, a hidden harmony begins to appear—as though the fragments were always searching for one another to create a story only the soul could understand.\n\nRiver of My Thoughts is an original painting by Ritushka — a current of drifting, layered marks, worked in pearl, russet and soft grey. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$3,850 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "River of My Thoughts — an original textured abstract paintings painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$3,850.",
     "seoTitle": "River of My Thoughts | Original Painting",
-    "metaDescription": "River of My Thoughts, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. A current of drifting, layered marks. 91 × 122 cm (35.8 × 48 in). A$5,850, available now. Ships worldwide.",
+    "metaDescription": "River of My Thoughts, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. A current of drifting, layered marks. 91 × 122 cm (35.8 × 48 in). A$3,850, available now. Ships worldwide.",
     "image": "/artworks/river-of-my-thoughts.jpg",
     "alt": "River of My Thoughts — original textured abstract paintings painting by Ritushka in pearl, russet and soft grey, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
@@ -889,7 +910,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Trying to detangle my thoughts.",
-    "registerDescription": "Amid the chaos of voices and symbols, a hidden harmony begins to appear—as though the fragments were always searching for one another to create a story only the soul could understand."
+    "registerDescription": "Amid the chaos of voices and symbols, a hidden harmony begins to appear—as though the fragments were always searching for one another to create a story only the soul could understand.",
+    "soldPrice": null
   },
   {
     "id": "aw-023",
@@ -912,10 +934,10 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "square",
-    "story": "As though an endless, flowing current—tireless and unyielding in its rush toward the goal—it twists and turns, carving its own relentless path through every obstacle.\n\nRushing Shallows is an original painting by Ritushka — water racing over rock and sand, worked in bone white, stone and pale aqua. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Rushing Shallows — an original coastal abstract art painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in).",
+    "story": "As though an endless, flowing current—tireless and unyielding in its rush toward the goal—it twists and turns, carving its own relentless path through every obstacle.\n\nRushing Shallows is an original painting by Ritushka — water racing over rock and sand, worked in bone white, stone and pale aqua. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$1,950. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Rushing Shallows — an original coastal abstract art painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), sold for A$1,950.",
     "seoTitle": "Rushing Shallows | Original Painting",
-    "metaDescription": "Rushing Shallows, an original coastal abstract art painting by Ritushka, contemporary artist in Lane Cove, Sydney. Water racing over rock and sand. 60 × 60 cm (23.6 × 23.6 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Rushing Shallows, an original coastal abstract art painting by Ritushka, contemporary artist in Lane Cove, Sydney. Water racing over rock and sand. 60 × 60 cm (23.6 × 23.6 in). Sold for A$1,950 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/rushing-shallows.jpg",
     "alt": "Rushing Shallows — original coastal abstract art painting by Ritushka in bone white, stone and pale aqua, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -930,7 +952,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Driving down Route 31 west of Adelaide",
-    "registerDescription": "As though an endless, flowing current—tireless and unyielding in its rush toward the goal—it twists and turns, carving its own relentless path through every obstacle."
+    "registerDescription": "As though an endless, flowing current—tireless and unyielding in its rush toward the goal—it twists and turns, carving its own relentless path through every obstacle.",
+    "soldPrice": 1950
   },
   {
     "id": "aw-024",
@@ -950,13 +973,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-seascapes",
     "status": "available",
-    "price": 2450,
+    "price": 1500,
     "currency": "AUD",
     "orientation": "square",
-    "story": "The wind favored us with perfect tenderness that Sunday, it rose just enough to carry our spirits gently forward.\n\nSet Sail is an original painting by Ritushka — sails against a darkening harbour, worked in deep sea blue, teal and white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$2,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Set Sail — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$2,450.",
+    "story": "The wind favored us with perfect tenderness that Sunday, it rose just enough to carry our spirits gently forward.\n\nSet Sail is an original painting by Ritushka — sails against a darkening harbour, worked in deep sea blue, teal and white. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$1,500 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Set Sail — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$1,500.",
     "seoTitle": "Set Sail | Original Painting",
-    "metaDescription": "Set Sail, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Sails against a darkening harbour. 60 × 60 cm (23.6 × 23.6 in). A$2,450, available now. Ships worldwide.",
+    "metaDescription": "Set Sail, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Sails against a darkening harbour. 60 × 60 cm (23.6 × 23.6 in). A$1,500, available now. Ships worldwide.",
     "image": "/artworks/set-sail.jpg",
     "alt": "Set Sail — original abstract seascapes painting by Ritushka in deep sea blue, teal and white, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -971,7 +994,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Getting ready to hit the water in Lake Balaton, Hungary",
-    "registerDescription": "The wind favored us with perfect tenderness that Sunday, it rose just enough to carry our spirits gently forward."
+    "registerDescription": "The wind favored us with perfect tenderness that Sunday, it rose just enough to carry our spirits gently forward.",
+    "soldPrice": null
   },
   {
     "id": "aw-025",
@@ -991,13 +1015,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "coastal-abstract-art",
     "status": "available",
-    "price": 4600,
+    "price": 2950,
     "currency": "AUD",
     "orientation": "square",
-    "story": "In the gentle details we so often overlook, life reveals its deepest pleasures—proof that the most meaningful moments are sometimes the ones that ask for nothing at all.\n\nShoreham is an original painting by Ritushka — a dune rising under a wide coastal sky, worked in sky blue, cloud white and warm dune. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$4,600 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Shoreham — an original coastal abstract art painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$4,600.",
+    "story": "In the gentle details we so often overlook, life reveals its deepest pleasures—proof that the most meaningful moments are sometimes the ones that ask for nothing at all.\n\nShoreham is an original painting by Ritushka — a dune rising under a wide coastal sky, worked in sky blue, cloud white and warm dune. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$2,950 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Shoreham — an original coastal abstract art painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$2,950.",
     "seoTitle": "Shoreham | Original Painting",
-    "metaDescription": "Shoreham, an original coastal abstract art painting by Ritushka, contemporary artist in Lane Cove, Sydney. A dune rising under a wide coastal sky. 90 × 90 cm (35.4 × 35.4 in). A$4,600, available now. Ships worldwide.",
+    "metaDescription": "Shoreham, an original coastal abstract art painting by Ritushka, contemporary artist in Lane Cove, Sydney. A dune rising under a wide coastal sky. 90 × 90 cm (35.4 × 35.4 in). A$2,950, available now. Ships worldwide.",
     "image": "/artworks/shoreham.jpg",
     "alt": "Shoreham — original coastal abstract art painting by Ritushka in sky blue, cloud white and warm dune, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
@@ -1012,7 +1036,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Inspired by my fiance's photograph taken on a shoot in Shoreham, England.",
-    "registerDescription": "In the gentle details we so often overlook, life reveals its deepest pleasures—proof that the most meaningful moments are sometimes the ones that ask for nothing at all."
+    "registerDescription": "In the gentle details we so often overlook, life reveals its deepest pleasures—proof that the most meaningful moments are sometimes the ones that ask for nothing at all.",
+    "soldPrice": null
   },
   {
     "id": "aw-026",
@@ -1031,13 +1056,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-seascapes",
     "status": "available",
-    "price": 4600,
+    "price": 2500,
     "currency": "AUD",
     "orientation": "square",
-    "story": "The tranquil blue of early morning light brings me a quiet, happy reminder of that tender night I shared with you—each shade of dawn still echoing your warmth.\n\nSoft Awakening is an original painting by Ritushka — first light spreading across still water, worked in pale aqua, mist and cream. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$4,600 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Soft Awakening — an original abstract seascapes painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$4,600.",
+    "story": "The tranquil blue of early morning light brings me a quiet, happy reminder of that tender night I shared with you—each shade of dawn still echoing your warmth.\n\nSoft Awakening is an original painting by Ritushka — first light spreading across still water, worked in pale aqua, mist and cream. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$2,500 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Soft Awakening — an original abstract seascapes painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$2,500.",
     "seoTitle": "Soft Awakening | Original Painting",
-    "metaDescription": "Soft Awakening, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. First light spreading across still water. 90 × 90 cm (35.4 × 35.4 in). A$4,600, available now. Ships worldwide.",
+    "metaDescription": "Soft Awakening, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. First light spreading across still water. 90 × 90 cm (35.4 × 35.4 in). A$2,500, available now. Ships worldwide.",
     "image": "/artworks/soft-awakening.jpg",
     "alt": "Soft Awakening — original abstract seascapes painting by Ritushka in pale aqua, mist and cream, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
@@ -1052,7 +1077,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Beautiful thoughts after a fun night.",
-    "registerDescription": "The tranquil blue of early morning light brings me a quiet, happy reminder of that tender night I shared with you—each shade of dawn still echoing your warmth."
+    "registerDescription": "The tranquil blue of early morning light brings me a quiet, happy reminder of that tender night I shared with you—each shade of dawn still echoing your warmth.",
+    "soldPrice": null
   },
   {
     "id": "aw-027",
@@ -1073,13 +1099,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "ocean-inspired-paintings",
     "status": "available",
-    "price": 6950,
+    "price": 4950,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "The unfathomable narrowness of imagination constrains the spirit's capacity to expand across the vastness of space and the depths of time.\n\nSoftly Loving Dreamscape is an original painting by Ritushka — looking down through clear, moving water, worked in turquoise, deep teal and foam. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 152 × 91 cm (59.8 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$6,950 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Softly Loving Dreamscape — an original ocean inspired paintings painting by Sydney artist Ritushka, 152 × 91 cm (59.8 × 35.8 in), A$6,950.",
+    "story": "The unfathomable narrowness of imagination constrains the spirit's capacity to expand across the vastness of space and the depths of time.\n\nSoftly Loving Dreamscape is an original painting by Ritushka — looking down through clear, moving water, worked in turquoise, deep teal and foam. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 152 × 91 cm (59.8 × 35.8 in), 4 cm deep, and is presented in a floating oak frame. A$4,950 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Softly Loving Dreamscape — an original ocean inspired paintings painting by Sydney artist Ritushka, 152 × 91 cm (59.8 × 35.8 in), A$4,950.",
     "seoTitle": "Softly Loving Dreamscape | Original Painting",
-    "metaDescription": "Softly Loving Dreamscape, an original ocean inspired paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. Looking down through clear, moving water. 152 × 91 cm (59.8 × 35.8 in). A$6,950, available now. Ships worldwide.",
+    "metaDescription": "Softly Loving Dreamscape, an original ocean inspired paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. Looking down through clear, moving water. 152 × 91 cm (59.8 × 35.8 in). A$4,950, available now. Ships worldwide.",
     "image": "/artworks/softly-loving-dreamscape.jpg",
     "alt": "Softly Loving Dreamscape — original ocean inspired paintings painting by Ritushka in turquoise, deep teal and foam, 152 × 91 cm (59.8 × 35.8 in)",
     "mockups": [
@@ -1094,7 +1120,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Flying over the Whitsundays.",
-    "registerDescription": "The unfathomable narrowness of imagination constrains the spirit's capacity to expand across the vastness of space and the depths of time"
+    "registerDescription": "The unfathomable narrowness of imagination constrains the spirit's capacity to expand across the vastness of space and the depths of time",
+    "soldPrice": null
   },
   {
     "id": "aw-028",
@@ -1117,10 +1144,10 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "square",
-    "story": "As we left behind the clamor of the city and the turquoise embrace of the ocean shore, a profound stillness settled over my heart.\n\nStillness is an original painting by Ritushka — banded sea and sky at rest, worked in cobalt, aqua and warm sand. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 72 × 72 cm (28.3 × 28.3 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Stillness — an original abstract seascapes painting by Sydney artist Ritushka, 72 × 72 cm (28.3 × 28.3 in).",
+    "story": "As we left behind the clamor of the city and the turquoise embrace of the ocean shore, a profound stillness settled over my heart.\n\nStillness is an original painting by Ritushka — banded sea and sky at rest, worked in cobalt, aqua and warm sand. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 72 × 72 cm (28.3 × 28.3 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$1,450. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Stillness — an original abstract seascapes painting by Sydney artist Ritushka, 72 × 72 cm (28.3 × 28.3 in), sold for A$1,450.",
     "seoTitle": "Stillness | Original Painting",
-    "metaDescription": "Stillness, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Banded sea and sky at rest. 72 × 72 cm (28.3 × 28.3 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Stillness, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Banded sea and sky at rest. 72 × 72 cm (28.3 × 28.3 in). Sold for A$1,450 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/stillness.jpg",
     "alt": "Stillness — original abstract seascapes painting by Ritushka in cobalt, aqua and warm sand, 72 × 72 cm (28.3 × 28.3 in)",
     "mockups": [
@@ -1135,7 +1162,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Watching the ocean.",
-    "registerDescription": "As we left behind the clamor of the city and the turquoise embrace of the ocean shore, a profound stillness settled over my heart."
+    "registerDescription": "As we left behind the clamor of the city and the turquoise embrace of the ocean shore, a profound stillness settled over my heart.",
+    "soldPrice": 1450
   },
   {
     "id": "aw-029",
@@ -1158,7 +1186,7 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "Sweet moments of affection are often confronted with inexplicable pain.\n\nStrangely Attracted to You is an original painting by Ritushka — a charged field of colour and mark, worked in rose, crimson and cream. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 100 × 120 cm (39.4 × 47.2 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
+    "story": "Sweet moments of affection are often confronted with inexplicable pain.\n\nStrangely Attracted to You is an original painting by Ritushka — a charged field of colour and mark, worked in rose, crimson and cream. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 100 × 120 cm (39.4 × 47.2 in), 4 cm deep, and is presented in a floating oak frame. This work sold. A related painting can be commissioned in a comparable size and palette.",
     "shortDescription": "Strangely Attracted to You — an original statement artworks painting by Sydney artist Ritushka, 100 × 120 cm (39.4 × 47.2 in).",
     "seoTitle": "Strangely Attracted to You | Original Painting",
     "metaDescription": "Strangely Attracted to You, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. A charged field of colour and mark. 100 × 120 cm (39.4 × 47.2 in). Sold — similar works available to commission. Ships worldwide.",
@@ -1176,7 +1204,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Dealing with the highs and the lows of My relationship.",
-    "registerDescription": "Sweet moments of affection are often confronted with inexplicable pain."
+    "registerDescription": "Sweet moments of affection are often confronted with inexplicable pain.",
+    "soldPrice": null
   },
   {
     "id": "aw-030",
@@ -1216,7 +1245,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Watching the sunrise over Tokyo.",
-    "registerDescription": "A breath held between two worlds—the peaceful pause before life bursts forward in a whirlwind of energy, voices, and endless motion."
+    "registerDescription": "A breath held between two worlds—the peaceful pause before life bursts forward in a whirlwind of energy, voices, and endless motion.",
+    "soldPrice": null
   },
   {
     "id": "aw-031",
@@ -1236,13 +1266,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "coastal-abstract-art",
     "status": "available",
-    "price": 5850,
+    "price": 4850,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "A moment of discovery where reality expands beyond our understanding, revealing a beauty and magnificence that leaves the soul humbled and in awe.\n\nThe Apostles is an original painting by Ritushka — sea stacks standing in restless water, worked in sea green, storm grey and ochre stone. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$5,850 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "The Apostles — an original coastal abstract art painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$5,850.",
+    "story": "A moment of discovery where reality expands beyond our understanding, revealing a beauty and magnificence that leaves the soul humbled and in awe.\n\nThe Apostles is an original painting by Ritushka — sea stacks standing in restless water, worked in sea green, storm grey and ochre stone. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 122 cm (35.8 × 48 in), 4 cm deep, and is presented in a floating oak frame. A$4,850 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "The Apostles — an original coastal abstract art painting by Sydney artist Ritushka, 91 × 122 cm (35.8 × 48 in), A$4,850.",
     "seoTitle": "The Apostles | Original Painting",
-    "metaDescription": "The Apostles, an original coastal abstract art painting by Ritushka, contemporary artist in Lane Cove, Sydney. Sea stacks standing in restless water. 91 × 122 cm (35.8 × 48 in). A$5,850, available now. Ships worldwide.",
+    "metaDescription": "The Apostles, an original coastal abstract art painting by Ritushka, contemporary artist in Lane Cove, Sydney. Sea stacks standing in restless water. 91 × 122 cm (35.8 × 48 in). A$4,850, available now. Ships worldwide.",
     "image": "/artworks/the-apostles.jpg",
     "alt": "The Apostles — original coastal abstract art painting by Ritushka in sea green, storm grey and ochre stone, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
@@ -1257,7 +1287,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Road trip with my family.",
-    "registerDescription": "A moment of discovery where reality expands beyond our understanding, revealing a beauty and magnificence that leaves the soul humbled and in awe."
+    "registerDescription": "A moment of discovery where reality expands beyond our understanding, revealing a beauty and magnificence that leaves the soul humbled and in awe.",
+    "soldPrice": null
   },
   {
     "id": "aw-032",
@@ -1278,12 +1309,12 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention.\n\nThe World In My Eyes II is an original painting by Ritushka — an eye opening into pattern and colour, worked in saturated orange, blue and teal. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 60 cm (35.4 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "The World In My Eyes II — an original painting by Sydney artist Ritushka, 90 × 60 cm (35.4 × 23.6 in).",
+    "story": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention.\n\nThe World In My Eyes II is an original painting by Ritushka — an eye opening into pattern and colour, worked in saturated orange, blue and teal. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 60 cm (35.4 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$3,250. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "The World In My Eyes II — an original other works painting by Sydney artist Ritushka, 90 × 60 cm (35.4 × 23.6 in), sold for A$3,250.",
     "seoTitle": "The World In My Eyes II | Original Painting",
-    "metaDescription": "The World In My Eyes II, an original painting by Ritushka, contemporary artist in Lane Cove, Sydney. An eye opening into pattern and colour. 90 × 60 cm (35.4 × 23.6 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "The World In My Eyes II, an original other works painting by Ritushka, contemporary artist in Lane Cove, Sydney. An eye opening into pattern and colour. 90 × 60 cm (35.4 × 23.6 in). Sold for A$3,250 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/the-world-in-my-eyes-2.jpg",
-    "alt": "The World In My Eyes II — original painting by Ritushka in saturated orange, blue and teal, 90 × 60 cm (35.4 × 23.6 in)",
+    "alt": "The World In My Eyes II — original other works painting by Ritushka in saturated orange, blue and teal, 90 × 60 cm (35.4 × 23.6 in)",
     "mockups": [
       "the-world-in-my-eyes-2-in-luxury-home"
     ],
@@ -1296,7 +1327,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Inspired by Salvador Dali.",
-    "registerDescription": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention."
+    "registerDescription": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention.",
+    "soldPrice": 3250
   },
   {
     "id": "aw-033",
@@ -1317,12 +1349,12 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention.\n\nThe World In My Eyes is an original painting by Ritushka — a figure rendered in bold graphic colour, worked in saturated blue, red and gold. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 60 cm (35.4 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "The World In My Eyes — an original painting by Sydney artist Ritushka, 90 × 60 cm (35.4 × 23.6 in).",
+    "story": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention.\n\nThe World In My Eyes is an original painting by Ritushka — a figure rendered in bold graphic colour, worked in saturated blue, red and gold. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 60 cm (35.4 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$3,250. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "The World In My Eyes — an original other works painting by Sydney artist Ritushka, 90 × 60 cm (35.4 × 23.6 in), sold for A$3,250.",
     "seoTitle": "The World In My Eyes | Original Painting",
-    "metaDescription": "The World In My Eyes, an original painting by Ritushka, contemporary artist in Lane Cove, Sydney. A figure rendered in bold graphic colour. 90 × 60 cm (35.4 × 23.6 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "The World In My Eyes, an original other works painting by Ritushka, contemporary artist in Lane Cove, Sydney. A figure rendered in bold graphic colour. 90 × 60 cm (35.4 × 23.6 in). Sold for A$3,250 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/the-world-in-my-eyes.jpg",
-    "alt": "The World In My Eyes — original painting by Ritushka in saturated blue, red and gold, 90 × 60 cm (35.4 × 23.6 in)",
+    "alt": "The World In My Eyes — original other works painting by Ritushka in saturated blue, red and gold, 90 × 60 cm (35.4 × 23.6 in)",
     "mockups": [
       "the-world-in-my-eyes-in-coastal-home"
     ],
@@ -1335,7 +1367,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Inspired by Salvador Dali.",
-    "registerDescription": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention."
+    "registerDescription": "To perceive the world through a lens where complexity becomes irresistible, and beauty reveals itself in unexpected curves, layered mysteries, and an alluring elegance that defies convention.",
+    "soldPrice": 3250
   },
   {
     "id": "aw-034",
@@ -1356,12 +1389,12 @@ export const artworks: Artwork[] = [
     "price": null,
     "currency": "AUD",
     "orientation": "landscape",
-    "story": "Like threads in an endless tapestry, laughter, compassion, love, and respect are gently woven through generations, connecting past, present, and those yet to come.\n\nTree of Our Lives is an original painting by Ritushka — a tree alive with birds, flowers and detail, worked in turquoise, blush and jewelled brights. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 180 cm (47.2 × 70.9 in), 4 cm deep, and is presented in a floating oak frame. This work has sold. A related painting can be commissioned in a comparable size and palette.",
-    "shortDescription": "Tree of Our Lives — an original painting by Sydney artist Ritushka, 120 × 180 cm (47.2 × 70.9 in).",
+    "story": "Like threads in an endless tapestry, laughter, compassion, love, and respect are gently woven through generations, connecting past, present, and those yet to come.\n\nTree of Our Lives is an original painting by Ritushka — a tree alive with birds, flowers and detail, worked in turquoise, blush and jewelled brights. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 120 × 180 cm (47.2 × 70.9 in), 4 cm deep, and is presented in a floating oak frame. This work sold for A$6,850. A related painting can be commissioned in a comparable size and palette.",
+    "shortDescription": "Tree of Our Lives — an original other works painting by Sydney artist Ritushka, 120 × 180 cm (47.2 × 70.9 in), sold for A$6,850.",
     "seoTitle": "Tree of Our Life | Original Painting",
-    "metaDescription": "Tree of Our Lives, an original painting by Ritushka, contemporary artist in Lane Cove, Sydney. A tree alive with birds, flowers and detail. 120 × 180 cm (47.2 × 70.9 in). Sold — similar works available to commission. Ships worldwide.",
+    "metaDescription": "Tree of Our Lives, an original other works painting by Ritushka, contemporary artist in Lane Cove, Sydney. A tree alive with birds, flowers and detail. 120 × 180 cm (47.2 × 70.9 in). Sold for A$6,850 — similar works available to commission. Ships worldwide.",
     "image": "/artworks/tree-of-our-lives.jpg",
-    "alt": "Tree of Our Lives — original painting by Ritushka in turquoise, blush and jewelled brights, 120 × 180 cm (47.2 × 70.9 in)",
+    "alt": "Tree of Our Lives — original other works painting by Ritushka in turquoise, blush and jewelled brights, 120 × 180 cm (47.2 × 70.9 in)",
     "mockups": [
       "tree-of-our-lives-in-modern-apartment"
     ],
@@ -1374,7 +1407,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Painting while I was pregnant with my second child",
-    "registerDescription": "Like threads in an endless tapestry, laughter, compassion, love, and respect are gently woven through generations, connecting past, present, and those yet to come."
+    "registerDescription": "Like threads in an endless tapestry, laughter, compassion, love, and respect are gently woven through generations, connecting past, present, and those yet to come.",
+    "soldPrice": 6850
   },
   {
     "id": "aw-035",
@@ -1394,13 +1428,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-seascapes",
     "status": "available",
-    "price": 2450,
+    "price": 1450,
     "currency": "AUD",
     "orientation": "square",
-    "story": "In the delicate tension between fear and exhilaration, the spirit discovers an intoxicating ecstasy, where vulnerability and courage exist as one.\n\nTurbulence is an original painting by Ritushka — weather gathering over open water, worked in pale blue, cloud white and aqua. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$2,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Turbulence — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$2,450.",
+    "story": "In the delicate tension between fear and exhilaration, the spirit discovers an intoxicating ecstasy, where vulnerability and courage exist as one.\n\nTurbulence is an original painting by Ritushka — weather gathering over open water, worked in pale blue, cloud white and aqua. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 60 × 60 cm (23.6 × 23.6 in), 4 cm deep, and is presented in a floating oak frame. A$1,450 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Turbulence — an original abstract seascapes painting by Sydney artist Ritushka, 60 × 60 cm (23.6 × 23.6 in), A$1,450.",
     "seoTitle": "Turbulence | Original Painting",
-    "metaDescription": "Turbulence, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Weather gathering over open water. 60 × 60 cm (23.6 × 23.6 in). A$2,450, available now. Ships worldwide.",
+    "metaDescription": "Turbulence, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. Weather gathering over open water. 60 × 60 cm (23.6 × 23.6 in). A$1,450, available now. Ships worldwide.",
     "image": "/artworks/turbulence.jpg",
     "alt": "Turbulence — original abstract seascapes painting by Ritushka in pale blue, cloud white and aqua, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
@@ -1415,7 +1449,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Watching the clouds from 30,000 feet.",
-    "registerDescription": "In the delicate tension between fear and exhilaration, the spirit discovers an intoxicating ecstasy, where vulnerability and courage exist as one."
+    "registerDescription": "In the delicate tension between fear and exhilaration, the spirit discovers an intoxicating ecstasy, where vulnerability and courage exist as one.",
+    "soldPrice": null
   },
   {
     "id": "aw-036",
@@ -1436,13 +1471,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "abstract-seascapes",
     "status": "available",
-    "price": 4600,
+    "price": 2950,
     "currency": "AUD",
     "orientation": "square",
-    "story": "A single day unfolds like a living canvas, glowing with unexpected hues and reminding us that even the most familiar moments can be touched by wonder.\n\nTurquoise Tuesday is an original painting by Ritushka — a bright day of moving surf, worked in turquoise, surf white and soft sky. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$4,600 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Turquoise Tuesday — an original abstract seascapes painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$4,600.",
+    "story": "A single day unfolds like a living canvas, glowing with unexpected hues and reminding us that even the most familiar moments can be touched by wonder.\n\nTurquoise Tuesday is an original painting by Ritushka — a bright day of moving surf, worked in turquoise, surf white and soft sky. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 90 × 90 cm (35.4 × 35.4 in), 4 cm deep, and is presented in a floating oak frame. A$2,950 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Turquoise Tuesday — an original abstract seascapes painting by Sydney artist Ritushka, 90 × 90 cm (35.4 × 35.4 in), A$2,950.",
     "seoTitle": "Turquoise Tuesday | Original Painting",
-    "metaDescription": "Turquoise Tuesday, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A bright day of moving surf. 90 × 90 cm (35.4 × 35.4 in). A$4,600, available now. Ships worldwide.",
+    "metaDescription": "Turquoise Tuesday, an original abstract seascapes painting by Ritushka, contemporary artist in Lane Cove, Sydney. A bright day of moving surf. 90 × 90 cm (35.4 × 35.4 in). A$2,950, available now. Ships worldwide.",
     "image": "/artworks/turquoise-tuesday.jpg",
     "alt": "Turquoise Tuesday — original abstract seascapes painting by Ritushka in turquoise, surf white and soft sky, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
@@ -1457,7 +1492,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Glorious morning in Queensland.",
-    "registerDescription": "A single day unfolds like a living canvas, glowing with unexpected hues and reminding us that even the most familiar moments can be touched by wonder."
+    "registerDescription": "A single day unfolds like a living canvas, glowing with unexpected hues and reminding us that even the most familiar moments can be touched by wonder.",
+    "soldPrice": null
   },
   {
     "id": "aw-037",
@@ -1476,13 +1512,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "textured-abstract-paintings",
     "status": "available",
-    "price": 4700,
+    "price": 2950,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "Even amidst the stark monoliths of concrete, nature's raw power erupts forth, demanding a quiet, reverent humility.\n\nUrban Jungle is an original painting by Ritushka — pattern emerging through a worked surface, worked in pale grey, aqua and silver. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 110 × 76 cm (43.3 × 29.9 in), 4 cm deep, and is presented in a floating oak frame. A$4,700 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Urban Jungle — an original textured abstract paintings painting by Sydney artist Ritushka, 110 × 76 cm (43.3 × 29.9 in), A$4,700.",
+    "story": "Even amidst the stark monoliths of concrete, nature's raw power erupts forth, demanding a quiet, reverent humility.\n\nUrban Jungle is an original painting by Ritushka — pattern emerging through a worked surface, worked in pale grey, aqua and silver. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 110 × 76 cm (43.3 × 29.9 in), 4 cm deep, and is presented in a floating oak frame. A$2,950 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Urban Jungle — an original textured abstract paintings painting by Sydney artist Ritushka, 110 × 76 cm (43.3 × 29.9 in), A$2,950.",
     "seoTitle": "Urban Jungle | Original Painting",
-    "metaDescription": "Urban Jungle, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. Pattern emerging through a worked surface. 110 × 76 cm (43.3 × 29.9 in). A$4,700, available now. Ships worldwide.",
+    "metaDescription": "Urban Jungle, an original textured abstract paintings painting by Ritushka, contemporary artist in Lane Cove, Sydney. Pattern emerging through a worked surface. 110 × 76 cm (43.3 × 29.9 in). A$2,950, available now. Ships worldwide.",
     "image": "/artworks/urban-jungle.jpg",
     "alt": "Urban Jungle — original textured abstract paintings painting by Ritushka in pale grey, aqua and silver, 110 × 76 cm (43.3 × 29.9 in)",
     "mockups": [
@@ -1497,7 +1533,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Imagining when nature takes over mankind",
-    "registerDescription": "Even amidst the stark monoliths of concrete, nature's raw power erupts forth, demanding a quiet, reverent humility."
+    "registerDescription": "Even amidst the stark monoliths of concrete, nature's raw power erupts forth, demanding a quiet, reverent humility.",
+    "soldPrice": null
   },
   {
     "id": "aw-038",
@@ -1515,13 +1552,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "statement-artworks",
     "status": "available",
-    "price": 3450,
+    "price": 2150,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony II is an original painting by Ritushka — a second movement in fire and rose, worked in scarlet, orange and deep rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$3,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Without Sweet Harmony II — an original statement artworks painting by Sydney artist Ritushka, 91 × 61 cm (35.8 × 24 in), A$3,450.",
+    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony II is an original painting by Ritushka — a second movement in fire and rose, worked in scarlet, orange and deep rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$2,150 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Without Sweet Harmony II — an original statement artworks painting by Sydney artist Ritushka, 91 × 61 cm (35.8 × 24 in), A$2,150.",
     "seoTitle": "Without Sweet Harmony II | Original Painting",
-    "metaDescription": "Without Sweet Harmony II, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. A second movement in fire and rose. 91 × 61 cm (35.8 × 24 in). A$3,450, available now. Ships worldwide.",
+    "metaDescription": "Without Sweet Harmony II, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. A second movement in fire and rose. 91 × 61 cm (35.8 × 24 in). A$2,150, available now. Ships worldwide.",
     "image": "/artworks/without-sweet-harmony-2.jpg",
     "alt": "Without Sweet Harmony II — original statement artworks painting by Ritushka in scarlet, orange and deep rose, 91 × 61 cm (35.8 × 24 in)",
     "mockups": [
@@ -1536,7 +1573,8 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Feeling betrayed",
-    "registerDescription": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust."
+    "registerDescription": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.",
+    "soldPrice": null
   },
   {
     "id": "aw-039",
@@ -1554,13 +1592,13 @@ export const artworks: Artwork[] = [
     ],
     "primaryCollection": "statement-artworks",
     "status": "available",
-    "price": 3450,
+    "price": 2150,
     "currency": "AUD",
     "orientation": "portrait",
-    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony is an original painting by Ritushka — heat and movement in full colour, worked in flame orange, crimson and rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$3,450 framed, with insured worldwide shipping quoted on request.",
-    "shortDescription": "Without Sweet Harmony — an original statement artworks painting by Sydney artist Ritushka, 91 × 61 cm (35.8 × 24 in), A$3,450.",
+    "story": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.\n\nWithout Sweet Harmony is an original painting by Ritushka — heat and movement in full colour, worked in flame orange, crimson and rose. Built in layers from her Lane Cove studio in Sydney, the surface is developed and reworked so that light seems to shift across it as you move. The painting measures 91 × 61 cm (35.8 × 24 in), 4 cm deep, and is presented in a floating oak frame. A$2,150 framed, with insured worldwide shipping quoted on request.",
+    "shortDescription": "Without Sweet Harmony — an original statement artworks painting by Sydney artist Ritushka, 91 × 61 cm (35.8 × 24 in), A$2,150.",
     "seoTitle": "Without Sweet Harmony | Original Painting",
-    "metaDescription": "Without Sweet Harmony, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Heat and movement in full colour. 91 × 61 cm (35.8 × 24 in). A$3,450, available now. Ships worldwide.",
+    "metaDescription": "Without Sweet Harmony, an original statement artworks painting by Ritushka, contemporary artist in Lane Cove, Sydney. Heat and movement in full colour. 91 × 61 cm (35.8 × 24 in). A$2,150, available now. Ships worldwide.",
     "image": "/artworks/without-sweet-harmony.jpg",
     "alt": "Without Sweet Harmony — original statement artworks painting by Ritushka in flame orange, crimson and rose, 91 × 61 cm (35.8 × 24 in)",
     "mockups": [
@@ -1575,6 +1613,7 @@ export const artworks: Artwork[] = [
     "frameDescription": "Floating oak frame",
     "edition": "Original",
     "inspiration": "Feeling betrayed.",
-    "registerDescription": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust."
+    "registerDescription": "A quiet ache born from the desire to feel chosen and protected—a longing for two hearts to face the world together with courage and trust.",
+    "soldPrice": null
   }
 ];

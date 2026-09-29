@@ -54,9 +54,19 @@ export const framing = (a: Artwork): string =>
 /** CSS aspect-ratio string taken from the real photograph. */
 export const aspect = (a: Artwork): string => `${a.imageWidth} / ${a.imageHeight}`;
 
-/** Short label for price/availability used on cards. */
+/** Short label for price/availability used on cards.
+ *  A sold work shows what it achieved where the register records it — the sale
+ *  price is public, so a collector browsing the archive sees the market, not
+ *  just the word "Sold". Works sold before the register was kept fall back to
+ *  the bare label rather than inventing a figure. */
 export const priceLabel = (a: Artwork): string =>
-  a.status === 'sold' ? 'Sold' : a.price != null ? formatPrice(a.price, a.currency) : 'Enquire';
+  a.status === 'sold'
+    ? a.soldPrice != null ? `Sold — ${formatPrice(a.soldPrice, a.currency)}` : 'Sold'
+    : a.price != null ? formatPrice(a.price, a.currency) : 'Enquire';
+
+/** The achieved price on its own, for the artwork page's specification list. */
+export const soldPriceLabel = (a: Artwork): string | null =>
+  a.status === 'sold' && a.soldPrice != null ? formatPrice(a.soldPrice, a.currency) : null;
 
 /* --- Proportional display scale ------------------------------------------
    Gallery cards used to render every painting at the same width, so a 40 cm

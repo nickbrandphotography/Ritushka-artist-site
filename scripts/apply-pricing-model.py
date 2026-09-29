@@ -132,9 +132,13 @@ def main():
             c = cells[col[name]]
             return c.getAttribute('value') or text_of(c)
 
-        # A work counts as sold if the Sold column is ticked OR a sale was recorded.
-        # The register's Sold column is not always kept up to date.
-        sale_evidence = [n for n in ('Sale Price', 'Date Sold')
+        # A work counts as sold if the Sold column is ticked OR a Sale Price is
+        # recorded. "Date Sold" is deliberately NOT evidence on its own: the
+        # workbook template ships sample values in that column on its first rows
+        # (RIT-0002 carries a date, an invoice number and a gallery show that
+        # were never Ritushka's), which would otherwise retire a work that has
+        # never sold. Same rule as scripts/sync-register.py — keep them in step.
+        sale_evidence = [n for n in ('Sale Price',)
                          if n in col and text_of(cells[col[n]])]
         if text_of(cells[col['Sold']]).lower() == 'sold' or sale_evidence:
             skipped_sold += 1

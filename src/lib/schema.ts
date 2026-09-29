@@ -1,5 +1,5 @@
 import { site } from '@/site.config';
-import type { Artwork, Collection, BlogPost, FAQ } from '@/data/types';
+import type { Artwork, Collection, BlogPost, FAQ, PrintEdition } from '@/data/types';
 
 const abs = (p: string) => new URL(p, site.url).toString();
 
@@ -77,11 +77,78 @@ export const visualArtworkSchema = (a: Artwork) => ({
   image: abs(a.image),
   url: abs(`/artwork/${a.slug}`),
   inLanguage: 'en-AU',
+  // A sold work still carries an Offer, marked SoldOut, so search and AI
+  // engines can read the achieved price where one is recorded — the price a
+  // painting reached is the strongest signal of the artist's market.
   ...(a.status === 'sold'
-    ? { offers: { '@type': 'Offer', availability: 'https://schema.org/SoldOut' } }
+    ? { offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/SoldOut',
+        ...(a.soldPrice != null
+          ? { price: a.soldPrice, priceCurrency: a.currency, url: abs(`/artwork/${a.slug}`) }
+          : {}),
+      } }
     : a.price != null
       ? { offers: { '@type': 'Offer', price: a.price, priceCurrency: a.currency, availability: 'https://schema.org/InStock', url: abs(`/artwork/${a.slug}`), seller: { '@id': abs('/#organization') } } }
       : {}),
+});
+
+/** Product + AggregateOffer for a print edition's product page. Every price
+ *  and availability value comes from the edition's own computed sizes
+ *  (src/lib/prints.ts) — never a fabricated figure. `isBasedOn` links to the
+ *  original's own VisualArtwork node rather than duplicating its facts. */
+export const printProductSchema = (edition: PrintEdition) => {
+  const a = edition.artwork;
+  const prices = edition.sizes.map(s => s.price);
+  return {
+    '@type': 'Product',
+    '@id': abs(`/limited-edition-prints/${a.slug}#product`),
+    name: `${a.title} — Limited Edition Print`,
+    description: `Limited edition archival giclée print of "${a.title}" by ${site.artist.fullName}, hand-signed and numbered.`,
+    image: abs(a.image),
+    url: abs(`/limited-edition-prints/${a.slug}`),
+    brand: { '@id': abs('/#organization') },
+    isBasedOn: { '@id': abs(`/artwork/${a.slug}#artwork`) },
+    ...(edition.sizes.length > 0
+      ? {
+          offers: {
+            '@type': 'AggregateOffer',
+            priceCurrency: edition.sizes[0].currency,
+            lowPrice: Math.min(...prices),
+            highPrice: Math.max(...prices),
+            offerCount: edition.sizes.length,
+            offers: edition.sizes.map(s => ({
+              '@type': 'Offer',
+              name: `${s.label} — ${s.heightCm} × ${s.widthCm} cm`,
+              price: s.price,
+              priceCurrency: s.currency,
+              availability: s.remaining > 0 ? 'https://schema.org/LimitedAvailability' : 'https://schema.org/SoldOut',
+              sku: s.sku,
+              url: abs(`/limited-edition-prints/${a.slug}`),
+              seller: { '@id': abs('/#organization') },
+            })),
+          },
+        }
+      : {}),
+  };
+};
+
+/** CollectionPage/ItemList for the /limited-edition-prints hub. */
+export const printsCollectionPageSchema = (editions: PrintEdition[]) => ({
+  '@type': 'CollectionPage',
+  '@id': abs('/limited-edition-prints#collection'),
+  name: 'Limited Edition Prints',
+  description: 'Fixed, numbered limited edition archival prints of original paintings by Ritushka, hand-signed and printed on archival cotton rag paper.',
+  url: abs('/limited-edition-prints'),
+  isPartOf: { '@id': abs('/#website') },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: editions.length,
+    itemListElement: editions.map((e, i) => ({
+      '@type': 'ListItem', position: i + 1,
+      url: abs(`/limited-edition-prints/${e.artwork.slug}`), name: `${e.artwork.title} — Limited Edition Print`,
+    })),
+  },
 });
 
 export const collectionPageSchema = (c: Collection, items: Artwork[]) => ({

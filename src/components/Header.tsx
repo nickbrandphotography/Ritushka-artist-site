@@ -7,6 +7,7 @@ const nav = [
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/collections', label: 'Collections' },
   { href: '/available', label: 'Available' },
+  { href: '/limited-edition-prints', label: 'Prints' },
   { href: '/commission', label: 'Commission' },
   { href: '/trade', label: 'Trade' },
   { href: '/blog', label: 'Journal' },

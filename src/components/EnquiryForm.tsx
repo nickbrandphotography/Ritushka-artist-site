@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { site } from '@/site.config';
-export default function EnquiryForm({ subject, kind = 'enquiry' }: { subject?: string; kind?: 'enquiry' | 'commission' | 'trade' | 'consultation' | 'framing' }) {
+export default function EnquiryForm({ subject, kind = 'enquiry', size }: { subject?: string; kind?: 'enquiry' | 'commission' | 'trade' | 'consultation' | 'framing' | 'print'; size?: string }) {
   const [sent, setSent] = useState(false); const [busy, setBusy] = useState(false); const [failed, setFailed] = useState(false);
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault(); setBusy(true); setFailed(false);
@@ -13,8 +13,8 @@ export default function EnquiryForm({ subject, kind = 'enquiry' }: { subject?: s
     } catch { setFailed(true); }
     setBusy(false);
   }
-  if (sent) return <p className="rounded-md bg-sand/60 p-4 text-ink">Thank you — your {kind} request has been received. Ritushka&rsquo;s studio will reply within two business days.</p>;
-  const labels: Record<string, string> = { enquiry: 'Enquire about this work', commission: 'Start a commission', trade: 'Apply to the trade program', consultation: 'Book a consultation', framing: 'Get a framing quote' };
+  if (sent) return <p className="rounded-md bg-sand/60 p-4 text-ink">Thank you — your {kind === 'print' ? 'reservation' : kind} request has been received. Ritushka&rsquo;s studio will reply within two business days.</p>;
+  const labels: Record<string, string> = { enquiry: 'Enquire about this work', commission: 'Start a commission', trade: 'Apply to the trade program', consultation: 'Book a consultation', framing: 'Get a framing quote', print: 'Reserve this print' };
   return (
     <form onSubmit={submit} className="space-y-4">
       {failed && (
@@ -26,6 +26,7 @@ export default function EnquiryForm({ subject, kind = 'enquiry' }: { subject?: s
         </p>
       )}
       {subject && <input type="hidden" name="subject" value={subject} />}
+      {kind === 'print' && size && <input type="hidden" name="size" value={size} />}
       <div className="grid gap-4 sm:grid-cols-2">
         <Field name="name" label="Full name" required />
         <Field name="email" label="Email" type="email" required />

@@ -1,0 +1,41 @@
+The homepage hero redesign has ALREADY been implemented in this repo.
+Do not re-implement it. Do not treat no-changes-needed as a failure.
+Verify it, then report.
+
+What was changed (only these three things):
+  src/components/Hero.tsx   - rewritten
+  src/styles/globals.css    - a new .rt-hero block appended at the end
+  public/hero/              - 12 image derivatives plus the signature PNG
+
+The design: a full-bleed artwork banner above a centred typographic
+statement. Desktop uses hero-wide (3840x1280, ratio 3:1). Tablet and
+phone use hero-mobile (1600x2000, ratio 4:5). The crop is swapped per
+breakpoint using a picture element, deliberately NOT next/image,
+because next/image cannot art-direct a different source file on a
+media query. Leave that decision alone. next/image is still the right
+choice everywhere else on the site.
+
+Verify the following and report anything that fails:
+
+1. npm run build completes with no errors.
+
+2. npm run start, then load the homepage at these viewport sizes:
+   1920x1080, 1440x900, 1440x768, 834x1112, 390x844.
+
+3. At each size confirm:
+   - no horizontal scrollbar
+   - the artwork is not distorted or awkwardly cropped
+   - the whole hero clears the fold on every desktop and tablet size
+     (the phone is expected to run about 140px past the fold)
+   - no console errors
+
+4. Confirm the h1 resolves to this text:
+   Ritushka Contemporary abstract landscapes and seascapes
+   The signature is an img element inside the heading, with its alt
+   attribute set to Ritushka. Do not convert it to a background image.
+
+5. Confirm CLS is 0, and that all 9 header nav links still work.
+
+6. Confirm the hero banner links to /artwork/rushing-shallows.
+
+Do not modify anything outside the hero.

@@ -18,7 +18,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do abstract landscapes cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,450 to A$5,250 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,450 and the largest A$5,250. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -43,11 +43,11 @@ export const collections: Collection[] = [
     "faqs": [
       {
         "q": "What sizes do these abstract seascapes come in?",
-        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 12 works available in this collection."
+        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 9 works available in this collection."
       },
       {
         "q": "How much do abstract seascapes cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,450 to A$4,950 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,450 and the largest A$4,950. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -76,7 +76,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do large scale paintings cost?",
-        "a": "Original paintings in this collection are A$5,750 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$5,750 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$3,850 to A$5,250 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$3,850 and the largest A$5,250. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -101,11 +101,11 @@ export const collections: Collection[] = [
     "faqs": [
       {
         "q": "What sizes do these coastal abstract art come in?",
-        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 5 works available in this collection."
+        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 3 works available in this collection."
       },
       {
         "q": "How much do coastal abstract art cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$2,950 to A$4,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,950 and the largest A$4,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -130,11 +130,11 @@ export const collections: Collection[] = [
     "faqs": [
       {
         "q": "What sizes do these ocean inspired paintings come in?",
-        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 9 works available in this collection."
+        "a": "This collection ranges from 60 × 60 cm to 150 × 100 cm — Coastal Waters is the most intimate and One of a Kind the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 6 works available in this collection."
       },
       {
         "q": "How much do ocean inspired paintings cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,500 to A$4,950 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,500 and the largest A$4,950. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -163,7 +163,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do contemporary landscape art cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,950 to A$5,250 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,950 and the largest A$5,250. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -192,7 +192,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do textured abstract paintings cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$7,350 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$7,350. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,950 to A$5,250 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,950 and the largest A$5,250. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -217,11 +217,11 @@ export const collections: Collection[] = [
     "faqs": [
       {
         "q": "What sizes do these blue abstract paintings come in?",
-        "a": "This collection ranges from 60 × 60 cm to 152 × 91 cm — Coastal Waters is the most intimate and Softly Loving Dreamscape the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 10 works available in this collection."
+        "a": "This collection ranges from 60 × 60 cm to 152 × 91 cm — Coastal Waters is the most intimate and Softly Loving Dreamscape the largest. Exact height, width, depth and framing are listed on every artwork page, and each work is shown to scale in a room mockup. There are currently 8 works available in this collection."
       },
       {
         "q": "How much do blue abstract paintings cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$6,950 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$6,950. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,450 to A$4,950 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,450 and the largest A$4,950. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -250,7 +250,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do modern australian art cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$5,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$5,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,950 to A$4,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,950 and the largest A$4,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -279,7 +279,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do statement artworks cost?",
-        "a": "Original paintings in this collection are A$2,450 to A$5,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,450 and the largest A$5,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$1,950 to A$3,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$1,950 and the largest A$3,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",
@@ -308,7 +308,7 @@ export const collections: Collection[] = [
       },
       {
         "q": "How much do other works cost?",
-        "a": "Original paintings in this collection are A$4,700 to A$5,850 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$4,700 and the largest A$5,850. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
+        "a": "Original paintings in this collection are A$2,950 to A$3,550 in Australian dollars, listed on each artwork page. Price follows the size of the work: the smallest are A$2,950 and the largest A$3,550. Every price includes the frame where the work is framed, and a certificate of authenticity. Insured worldwide shipping is quoted separately. Interior designers and trade buyers can apply for trade terms."
       },
       {
         "q": "Can I commission a work in this style?",

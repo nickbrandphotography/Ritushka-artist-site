@@ -1,0 +1,27 @@
+The homepage hero redesign is already implemented in this repo, but it
+has never been committed. That is why git push reports Everything
+up-to-date: nothing is staged or committed, so there is nothing to send.
+
+Fix that. Do this and nothing else:
+
+1. Run git status and show me the output.
+
+2. Stage exactly these three paths and nothing else:
+     src/components/Hero.tsx
+     src/styles/globals.css
+     public/hero
+
+   Do not use git add -A and do not use git add with a dot. The hero
+   folder at the repo root is not gitignored and holds about 8 MB of
+   source masters that must stay out of the repo.
+
+3. Commit with this message:
+     Redesign homepage hero as full-bleed artwork over centred statement
+
+4. Push. If the branch has no upstream set, set it and push again.
+
+5. Confirm it worked: run git log --oneline -1 and git status, and show
+   me both.
+
+If any git command fails or leaves a lock file in .git, stop and tell me
+what happened. Do not retry.

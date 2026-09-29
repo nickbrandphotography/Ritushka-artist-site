@@ -30,6 +30,16 @@ export default function HomePage() {
         </div>
       </Container>
 
+      <Container className="py-8">
+        <div className="flex flex-col items-start gap-4 rounded-lg border border-sand p-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="font-serif text-2xl text-ink">Limited edition prints</h2>
+            <p className="mt-2 max-w-lg text-ink/70">Fixed, numbered archival prints of select paintings — hand-signed, printed on cotton rag paper, never at the scale of the original.</p>
+          </div>
+          <Link href="/limited-edition-prints" className="shrink-0 rounded-full border border-ink px-6 py-3 text-sm text-ink">View prints</Link>
+        </div>
+      </Container>
+
       <CtaBand title="Sourcing for a client or project?"
         body="Interior designers, architects and consultants receive trade pricing, reserved previews and white-glove delivery."
         primary={{ href: '/trade/interior-designers', label: 'Trade programs' }}

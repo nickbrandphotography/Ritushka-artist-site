@@ -31,6 +31,11 @@ SLUG_CORRECTIONS = {
     'piece-of-white-heavan': 'peace-of-white-heaven',
     'tree-of-our-life': 'tree-of-our-lives',
 }
+# Works confirmed sold by the artist whose register row does not yet carry the
+# sale. Each entry is a note that the register needs filling in, not a
+# permanent fact: once the row records "Sold" or a Sale Price, the entry here
+# becomes redundant and should be deleted.
+SOLD_OVERRIDES = set()  # Stillness removed 2026-09-29: register row now records the sale
 
 
 def norm(s):
@@ -82,14 +87,15 @@ def read_register(path=REGISTER):
             continue
         h_mm = num(cell(row, hdr, 'Height (mm)'))
         w_mm = num(cell(row, hdr, 'Width (mm)'))
-        # The "Sold" column is the primary marker, but it is not always kept up to
-        # date — a recorded Sale Price or Date Sold is equally conclusive. The
-        # "Status" column still holds values from the template's sample rows, so it
-        # is deliberately ignored.
+        # The "Sold" column is the primary marker; a recorded Sale Price is
+        # equally conclusive. "Status" and "Date Sold" are deliberately ignored:
+        # both still carry the workbook template's sample values on the first
+        # rows (RIT-0002 shows a Date Sold, invoice number and gallery show that
+        # ship with the blank template), which would otherwise retire a work
+        # that has never sold.
         sold_flag = cell(row, hdr, 'Sold')
-        sold = (str(sold_flag).strip().lower() == 'sold'
-                or bool(str(cell(row, hdr, 'Sale Price') or '').strip())
-                or bool(str(cell(row, hdr, 'Date Sold') or '').strip()))
+        sale_price = num(str(cell(row, hdr, 'Sale Price') or '').replace(',', '').strip() or None)
+        sold = str(sold_flag).strip().lower() == 'sold' or sale_price is not None
         out.append({
             'inventoryId': cell(row, hdr, 'Inventory ID'),
             'title': ' '.join(str(title).split()),
@@ -106,6 +112,9 @@ def read_register(path=REGISTER):
             # Published retail price. Written by scripts/apply-pricing-model.py from
             # pricing.config.json — the register stays the single source of truth.
             'price': num(cell(row, hdr, 'List Price')),
+            # What the work actually sold for, as recorded in the register.
+            # Published on the artwork page — see build_story() below.
+            'soldPrice': sale_price,
             'currency': (str(cell(row, hdr, 'Currency') or '').strip() or 'AUD'),
         })
     return out
@@ -163,8 +172,10 @@ def build_story(a, subject):
         detail += '.'
         parts.append(detail)
     if a['status'] == 'sold':
-        parts.append('This work has sold. A related painting can be commissioned in a '
-                     'comparable size and palette.')
+        sold_for = (f" for {money(a['soldPrice'], a.get('currency') or 'AUD')}"
+                    if a.get('soldPrice') else '')
+        parts.append(f"This work sold{sold_for}. A related painting can be commissioned "
+                     "in a comparable size and palette.")
     elif a.get('price'):
         parts.append(f"{money(a['price'], a.get('currency') or 'AUD')}"
                      + (' framed' if a.get('framed') else ' unframed')
@@ -261,11 +272,14 @@ def main():
         a['registerDescription'] = r['description']
         if r['orientation'] in ('landscape', 'portrait', 'square'):
             a['orientation'] = r['orientation']
-        # A sold work never carries a price: the achieved price is not recorded in the
-        # register, and the modelled list price is not what the buyer paid.
-        a['price'] = None if r['sold'] or not r['price'] else int(round(r['price']))
+        # A sold work never carries a list price — the modelled list price is not
+        # what the buyer paid. What it carries instead is `soldPrice`: the achieved
+        # figure from the register's "Sale Price" column, which the site publishes.
+        sold = r['sold'] or a['slug'] in SOLD_OVERRIDES
+        a['price'] = None if sold or not r['price'] else int(round(r['price']))
+        a['soldPrice'] = int(round(r['soldPrice'])) if sold and r['soldPrice'] else None
         a['currency'] = r['currency'] or 'AUD'
-        a['status'] = ('sold' if r['sold']
+        a['status'] = ('sold' if sold
                        else 'available' if a['price'] else 'enquire')
 
         # Copy that now carries the real size
@@ -273,17 +287,22 @@ def main():
         coll = a['primaryCollection'].replace('-', ' ')
         a['story'] = build_story({**a, 'description': r['description']}, subject)
         price_txt = money(a['price'], a['currency']) if a['price'] else None
+        sold_txt = money(a['soldPrice'], a['currency']) if a['soldPrice'] else None
         a['shortDescription'] = (
             f"{a['title']} — an original {coll} painting by Sydney artist Ritushka"
             + (f", {size}" if size else '')
-            + (f", {price_txt}." if price_txt else '.' if size
+            + (f", {price_txt}." if price_txt
+               else f", sold for {sold_txt}." if sold_txt
+               else '.' if size
                else '. Enquire for dimensions and price.'))
         subj_cap = subject[0].upper() + subject[1:]
         a['metaDescription'] = (
             f"{a['title']}, an original {coll} painting by Ritushka, contemporary artist in "
             f"Lane Cove, Sydney. {subj_cap}."
             + (f" {size}." if size else '')
-            + (' Sold — similar works available to commission.' if a['status'] == 'sold'
+            + ((f' Sold for {sold_txt} — similar works available to commission.' if sold_txt
+                else ' Sold — similar works available to commission.')
+               if a['status'] == 'sold'
                else f' {price_txt}, available now.' if price_txt
                else ' Enquire for price and availability.')
             + ' Ships worldwide.')
@@ -303,6 +322,7 @@ def main():
         a.setdefault('inspiration', None)
         a.setdefault('registerDescription', None)
         a.setdefault('price', None)
+        a.setdefault('soldPrice', None)
         a.setdefault('currency', 'AUD')
 
     # Mockups follow any slug/title change
@@ -404,9 +424,11 @@ def main():
     for a in sorted(art, key=lambda x: -(x['heightCm'] * x['widthCm'] if x['heightCm'] and x['widthCm'] else 0)):
         size = (f"{trim_cm(a['heightCm'])} x {trim_cm(a['widthCm'])} cm"
                 if a['heightCm'] and a['widthCm'] else 'size on request')
-        state = ('sold' if a['status'] == 'sold'
-                 else f"{money(a['price'], a['currency'])}, available" if a.get('price')
-                 else 'available, price on application')
+        state = (
+            (f"sold for {money(a['soldPrice'], a['currency'])}" if a.get('soldPrice') else 'sold')
+            if a['status'] == 'sold'
+            else f"{money(a['price'], a['currency'])}, available" if a.get('price')
+            else 'available, price on application')
         lines.append(f"- {a['title']} — {size}, {state}: /artwork/{a['slug']}")
     block = '\n'.join(lines)
     txt = open('public/llms.txt', encoding='utf-8').read()
