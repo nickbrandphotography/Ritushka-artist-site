@@ -21,6 +21,12 @@ export const site = {
     // then. See docs/SEO-STRATEGY.md "Remaining external actions".
     sameAs: [] as string[],
   },
+  social: {
+    // Full Instagram profile URL, e.g. 'https://www.instagram.com/<handle>/'.
+    // Drives the footer + contact-page links and is added to the Person
+    // schema's `sameAs` automatically. Leave '' to hide it everywhere.
+    instagram: 'https://www.instagram.com/ritushka.art/' as string,
+  },
   brand: {
     name: 'Ritushka Fine Art',
     // Legal entity name for Organization schema — only set this once it is
@@ -32,7 +38,7 @@ export const site = {
   },
   contact: {
     email: 'studio@ritushka.art',
-    phone: '+61 403 835 467',
+    phone: '+61 405 441 516',
     studioByAppointment: true,
   },
   location: {

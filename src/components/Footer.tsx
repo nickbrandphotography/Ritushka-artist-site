@@ -4,21 +4,39 @@ import Container from './Container';
 import EmailCapture from './EmailCapture';
 import { site } from '@/site.config';
 import { collections } from '@/lib/data';
+import { instagramHandle } from '@/lib/schema';
 
 export default function Footer() {
+  const ig = instagramHandle();
   return (
     <footer className="mt-24 border-t border-sand bg-ink text-bone">
       <Container className="grid gap-10 py-16 md:grid-cols-4">
         <div className="md:col-span-1">
           <p className="font-serif text-2xl">{site.artist.name}</p>
           <p className="mt-3 text-sm text-bone/70">{site.artist.tagline}. {site.location.suburb}, {site.location.city}.</p>
+          {ig && (
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label={`${site.artist.name} on Instagram (opens in a new tab)`}
+              className="mt-4 inline-flex items-center gap-2 text-sm text-bone/80 transition-colors hover:text-bone"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+              </svg>
+              @{ig}
+            </a>
+          )}
           <Image
             src="/qr-code.png"
             alt={`Scan to visit ${site.brand.name}`}
             width={1024}
             height={1024}
             sizes="80px"
-            className="mt-6 h-20 w-20 opacity-80 transition-opacity hover:opacity-100"
+            className="mt-6 block h-20 w-20 opacity-80 transition-opacity hover:opacity-100"
           />
         </div>
         <nav aria-label="Collections">

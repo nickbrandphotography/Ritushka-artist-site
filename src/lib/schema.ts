@@ -3,6 +3,18 @@ import type { Artwork, Collection, BlogPost, FAQ, PrintEdition } from '@/data/ty
 
 const abs = (p: string) => new URL(p, site.url).toString();
 
+/** Instagram handle (without @) parsed from the configured profile URL. */
+export const instagramHandle = (): string | null => {
+  const u = site.social.instagram;
+  if (!u) return null;
+  const m = u.match(/instagram\.com\/([^/?#]+)/i);
+  return m ? m[1] : null;
+};
+
+// Every verified profile URL for the artist: Instagram + any others in sameAs.
+const profileUrls = (): string[] =>
+  Array.from(new Set([site.social.instagram, ...site.artist.sameAs].filter(Boolean)));
+
 export const personSchema = () => ({
   '@type': 'Person',
   '@id': abs('/#person'),
@@ -13,7 +25,7 @@ export const personSchema = () => ({
   nationality: site.artist.nationality,
   url: site.url,
   image: abs(site.artist.portraitPath),
-  ...(site.artist.sameAs.length > 0 ? { sameAs: site.artist.sameAs } : {}),
+  ...(profileUrls().length > 0 ? { sameAs: profileUrls() } : {}),
   address: {
     '@type': 'PostalAddress',
     addressLocality: site.location.suburb,
