@@ -49,4 +49,5 @@ export const printEditions: PrintEditionRecord[] = [
   { artworkSlug: 'urban-jungle' },
   { artworkSlug: 'without-sweet-harmony-2' },
   { artworkSlug: 'without-sweet-harmony' },
+  { artworkSlug: 'behind-the-scenes' },
 ];

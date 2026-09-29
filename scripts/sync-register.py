@@ -96,17 +96,31 @@ def read_register(path=REGISTER):
         sold_flag = cell(row, hdr, 'Sold')
         sale_price = num(str(cell(row, hdr, 'Sale Price') or '').replace(',', '').strip() or None)
         sold = str(sold_flag).strip().lower() == 'sold' or sale_price is not None
+        # Orientation is derived from the recorded size when the typed label
+        # contradicts it (RIT-0040 was entered "Portrait" at 600 x 1500 mm).
+        orient = (str(cell(row, hdr, 'Orientation') or '').strip().lower() or None)
+        if h_mm and w_mm:
+            by_size = ('square' if abs(h_mm - w_mm) < 1e-9
+                       else 'landscape' if w_mm > h_mm else 'portrait')
+            if orient != by_size:
+                if orient:
+                    print(f"   !! {title}: register says {orient} but {h_mm:g} x {w_mm:g} mm "
+                          f"is {by_size} — using {by_size}")
+                orient = by_size
+        frame_desc = (str(cell(row, hdr, 'Frame Description') or '').strip() or None)
         out.append({
             'inventoryId': cell(row, hdr, 'Inventory ID'),
             'title': ' '.join(str(title).split()),
             'description': (str(cell(row, hdr, 'Description') or '').strip() or None),
             'inspiration': (str(cell(row, hdr, 'Inspiration / Location') or '').strip() or None),
-            'orientation': (str(cell(row, hdr, 'Orientation') or '').strip().lower() or None),
+            'orientation': orient,
             'heightCm': trim_cm(h_mm / 10) if h_mm else None,
             'widthCm': trim_cm(w_mm / 10) if w_mm else None,
             'depthCm': num(cell(row, hdr, 'Depth (cm)')),
-            'framed': str(cell(row, hdr, 'Framed?') or '').strip().lower() == 'yes',
-            'frameDescription': (str(cell(row, hdr, 'Frame Description') or '').strip() or None),
+            # A recorded frame description is as good as "Yes" in Framed?.
+            'framed': (str(cell(row, hdr, 'Framed?') or '').strip().lower() == 'yes'
+                       or frame_desc is not None),
+            'frameDescription': frame_desc,
             'edition': (str(cell(row, hdr, 'Edition Type') or '').strip() or None),
             'sold': sold,
             # Published retail price. Written by scripts/apply-pricing-model.py from
