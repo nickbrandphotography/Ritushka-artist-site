@@ -39,6 +39,7 @@ export const site = {
   contact: {
     email: 'studio@ritushka.art',
     phone: '+61 405 441 516',
+    studioPhone: '0403 835 467',
     studioByAppointment: true,
   },
   location: {
