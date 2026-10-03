@@ -8,9 +8,9 @@ import { site } from '@/site.config';
 import { buildMetadata } from '@/lib/seo';
 import { graph, breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
-const description = 'Custom framing for any original painting or commission by Ritushka — a wide range of materials and finishes, priced individually and quoted before you commit. Placement and installation guidance included.';
+const description = 'Custom framing for any original painting or commission by Ritushka, in a wide range of materials and finishes, priced individually and quoted up front.';
 
-export const metadata = buildMetadata({ title: 'Custom Framing', description, path: '/framing' });
+export const metadata = buildMetadata({ title: 'Custom Framing for Original Paintings', description, path: '/framing' });
 
 const faqs = [
   {

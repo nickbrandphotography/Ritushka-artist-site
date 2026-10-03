@@ -5,7 +5,7 @@ import PageWatermark from '@/components/PageWatermark';
 import { site } from '@/site.config';
 import { instagramHandle } from '@/lib/schema';
 import { buildMetadata } from '@/lib/seo';
-export const metadata = buildMetadata({ title: 'Contact', description: 'Contact Ritushka\'s studio in Lane Cove, Sydney to enquire about original paintings, commissions, trade programs or studio visits by appointment.', path: '/contact' });
+export const metadata = buildMetadata({ title: 'Contact the Studio — Lane Cove, Sydney', description: 'Contact Ritushka\'s studio in Lane Cove, Sydney to enquire about original paintings, commissions, trade programs or studio visits by appointment.', path: '/contact' });
 export default function Contact() {
   const ig = instagramHandle();
   return (

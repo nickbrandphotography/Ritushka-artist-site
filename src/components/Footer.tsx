@@ -40,14 +40,14 @@ export default function Footer() {
           />
         </div>
         <nav aria-label="Collections">
-          <h2 className="text-xs uppercase tracking-widest text-bone/50">Collections</h2>
+          <p className="text-xs uppercase tracking-widest text-bone/50">Collections</p>
           <ul className="mt-3 space-y-1.5 text-sm text-bone/80">
             {collections.slice(0, 6).map(c => <li key={c.slug}><Link href={`/collections/${c.slug}`} className="hover:text-bone">{c.name}</Link></li>)}
             <li><Link href="/collections" className="underline">All collections</Link></li>
           </ul>
         </nav>
         <nav aria-label="For trade">
-          <h2 className="text-xs uppercase tracking-widest text-bone/50">For Trade</h2>
+          <p className="text-xs uppercase tracking-widest text-bone/50">For Trade</p>
           <ul className="mt-3 space-y-1.5 text-sm text-bone/80">
             <li><Link href="/trade/interior-designers" className="hover:text-bone">Interior Designers</Link></li>
             <li><Link href="/trade/art-consultants" className="hover:text-bone">Art Consultants</Link></li>
@@ -58,7 +58,7 @@ export default function Footer() {
           </ul>
         </nav>
         <div>
-          <h2 className="text-xs uppercase tracking-widest text-bone/50">Collector List</h2>
+          <p className="text-xs uppercase tracking-widest text-bone/50">Collector List</p>
           <p className="mt-3 text-sm text-bone/70">New works and private viewings, first.</p>
           <div className="mt-3"><EmailCapture dark /></div>
         </div>

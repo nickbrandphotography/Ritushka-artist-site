@@ -8,9 +8,9 @@ import { buildMetadata } from '@/lib/seo';
 import { graph, breadcrumbSchema } from '@/lib/schema';
 
 const list = Object.values(programs);
-const description = 'Trade programs for interior designers, art consultants, buyer’s agents and corporate buyers sourcing original paintings by Ritushka — trade pricing, reserved previews and bespoke sizing.';
+const description = 'Trade programs for interior designers, art consultants, buyer’s agents and corporate buyers: trade pricing, reserved previews and bespoke sizing.';
 
-export const metadata = buildMetadata({ title: 'Trade Programs', description, path: '/trade' });
+export const metadata = buildMetadata({ title: 'Trade Programs for Designers & Consultants', description, path: '/trade' });
 
 export default function TradeIndex() {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Trade', path: '/trade' }];

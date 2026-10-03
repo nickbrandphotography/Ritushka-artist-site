@@ -20,9 +20,15 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const edition = getPrintEdition(params.slug);
   if (!edition) return {};
   const { artwork: a, fromPrice, sizes } = edition;
+  // Keep "<title> | Ritushka" within 60 characters and the description within
+  // 160, dropping the least important words for the longest artwork titles.
+  const title = `${a.title} — Limited Edition Print`.length <= 49
+    ? `${a.title} — Limited Edition Print` : `${a.title} — Limited Edition`;
+  const details = `Hand-signed and numbered on cotton rag paper, edition of ${sizes[0]?.editionSize ?? ''}${fromPrice != null ? `, from A$${fromPrice.toLocaleString('en-AU')}` : ''}.`;
+  const long = `Limited edition archival print of "${a.title}" by Sydney artist Ritushka. ${details}`;
   return buildMetadata({
-    title: `${a.title} — Limited Edition Print`,
-    description: `Limited edition archival print of "${a.title}" by Ritushka. Hand-signed, numbered edition of ${sizes[0]?.editionSize ?? ''}${fromPrice != null ? `, from A$${fromPrice.toLocaleString('en-AU')}` : ''}.`,
+    title,
+    description: long.length <= 160 ? long : `Limited edition print of "${a.title}" by Ritushka. ${details}`,
     path: `/limited-edition-prints/${a.slug}`,
     image: a.image,
   });

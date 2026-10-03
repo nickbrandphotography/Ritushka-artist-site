@@ -12,7 +12,7 @@ import type { PrintEdition } from '@/data/types';
  * has no concept of. Per 2.8's own carve-out: print sizes are chosen by the
  * collector, so the card leads with the artwork, not a single size claim.
  */
-export default function PrintCard({ edition, priority }: { edition: PrintEdition; priority?: boolean }) {
+export default function PrintCard({ edition, priority, heading: Heading = 'h3' }: { edition: PrintEdition; priority?: boolean; heading?: 'h2' | 'h3' }) {
   const { artwork: a, sizes, fromPrice } = edition;
   const smallest = sizes[0];
   const largest = sizes[sizes.length - 1];
@@ -30,7 +30,7 @@ export default function PrintCard({ edition, priority }: { edition: PrintEdition
         </div>
         <div className="mx-auto mt-3" style={{ width: stageWidth(a) }}>
           <p className="text-xs uppercase tracking-widest text-ink/65">Limited edition print</p>
-          <h3 className="mt-1 font-serif text-lg leading-tight text-ink">{a.title}</h3>
+          <Heading className="mt-1 font-serif text-lg leading-tight text-ink">{a.title}</Heading>
           <p className="mt-1 text-sm text-ink/65">{sizeRange}</p>
           <p className="text-sm text-ink/65">
             {sizes.length > 1 ? `${sizes.length} sizes · ` : ''}Editions of {sizes.map(s => s.editionSize).join('/')}

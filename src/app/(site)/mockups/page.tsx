@@ -7,7 +7,7 @@ import { mockups } from '@/lib/data';
 import { mockupPairs } from '@/data/pairs';
 import { groupPairs } from '@/lib/groupPairs';
 import { buildMetadata } from '@/lib/seo';
-export const metadata = buildMetadata({ title: 'In Situ — Art in Interiors', description: 'See Ritushka\'s paintings styled in living rooms, luxury and coastal homes, apartments and architectural interiors. Scale and placement references for designers and collectors.', path: '/mockups' });
+export const metadata = buildMetadata({ title: 'In Situ — Art in Interiors', description: 'Ritushka\'s paintings styled in living rooms, coastal and luxury homes, apartments and offices: scale and placement references for designers and collectors.', path: '/mockups' });
 export default function MockupsIndex() {
   const groups = groupPairs(mockups, mockupPairs, m => m.slug);
   let rendered = 0;

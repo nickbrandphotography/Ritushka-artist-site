@@ -164,6 +164,64 @@ def size_phrase(a):
             f"({inches(a['heightCm']):g} × {inches(a['widthCm']):g} in)")
 
 
+META_MAX = 160  # Google truncates longer descriptions in results
+
+# Singular, readable form of each collection for "an original ___ painting".
+KIND = {
+    'abstract-landscapes': 'abstract landscape', 'abstract-seascapes': 'abstract seascape',
+    'large-scale-paintings': 'large-scale abstract', 'coastal-abstract-art': 'coastal abstract',
+    'ocean-inspired-paintings': 'ocean-inspired abstract',
+    'contemporary-landscape-art': 'contemporary landscape',
+    'textured-abstract-paintings': 'textured abstract', 'blue-abstract-paintings': 'blue abstract',
+    'modern-australian-art': 'modern Australian', 'statement-artworks': 'statement abstract',
+    'other-works': '',
+}
+
+
+def kind_of(collection_slug):
+    k = KIND.get(collection_slug, collection_slug.replace('-', ' '))
+    return k
+
+
+def a_an(word):
+    return 'an' if word[:1].lower() in 'aeiou' else 'a'
+
+
+def fit(parts, limit=META_MAX):
+    """Join the required first part with as many optional parts as fit, in order."""
+    out = parts[0]
+    for p in parts[1:]:
+        if p and len(out) + 1 + len(p) <= limit:
+            out += ' ' + p
+    return out
+
+
+def artwork_meta(a, kind, subject, price_txt, sold_txt):
+    painting = f"{kind} painting" if kind else 'painting'
+    cm = (f"{trim_cm(a['heightCm'])} × {trim_cm(a['widthCm'])} cm."
+          if a.get('heightCm') is not None and a.get('widthCm') is not None else None)
+    status = (f"Sold for {sold_txt}; commissions open." if sold_txt
+              else 'Sold; commissions open.' if a['status'] == 'sold'
+              else f"{price_txt}, available now." if price_txt
+              else 'Enquire for price.')
+    subj = subject[0].upper() + subject[1:] + '.' if subject else None
+    lead = f"{a['title']}, an original {painting} by Sydney artist Ritushka."
+    # Size and price matter most in search results; the subject line adds
+    # uniqueness when there is room for it.
+    core = fit([lead, cm, status])
+    with_subj = fit([lead, subj, cm, status])
+    best = with_subj if len(with_subj) > len(core) and cm in with_subj and status in with_subj else core
+    return fit([best, 'Ships worldwide.'])
+
+
+def mockup_meta(title, room, size):
+    lead = f"See {title} by Ritushka styled in {a_an(room)} {room.lower()}, shown to scale"
+    size_part = f"({size.split(' (')[0]})" if size else None  # cm only; no nested brackets
+    tail = '— a placement reference for collectors and designers.'
+    with_size = fit([lead, size_part]) if size_part else lead
+    return fit([with_size, tail]) if len(with_size) + len(tail) < META_MAX else fit([lead, tail])
+
+
 def build_story(a, subject):
     """Artist's own words first, then the studio/material context."""
     parts = []
@@ -212,9 +270,15 @@ def main():
     by_slug = {a['slug']: a for a in art}
 
     # Preserve the subject clause from the existing story for reuse.
+    # Anchored on "by Ritushka — " rather than the first em dash: a title that
+    # itself contains "—" (e.g. "Aqua Frost — Thinking of You") used to match
+    # early, pulling part of the title into the subject and adding another
+    # copy of it on every run. The rsplit also repairs stories that already
+    # carry those repeats.
     def subject_of(a):
-        m = re.search(r'— (.+?), worked in ', a.get('story', ''))
-        return m.group(1) if m else f"an original work in {a['palette']}"
+        m = re.search(r'by Ritushka — (.+?), worked in ', a.get('story', ''))
+        return (m.group(1).rsplit('by Ritushka — ', 1)[-1] if m
+                else f"an original work in {a['palette']}")
 
     # Exact matches first, then fuzzy over what is left — one row per artwork.
     matched, unmatched, taken = {}, [], set()
@@ -298,7 +362,7 @@ def main():
 
         # Copy that now carries the real size
         size = size_phrase({**a})
-        coll = a['primaryCollection'].replace('-', ' ')
+        coll = kind_of(a['primaryCollection'])
         a['story'] = build_story({**a, 'description': r['description']}, subject)
         price_txt = money(a['price'], a['currency']) if a['price'] else None
         sold_txt = money(a['soldPrice'], a['currency']) if a['soldPrice'] else None
@@ -309,17 +373,7 @@ def main():
                else f", sold for {sold_txt}." if sold_txt
                else '.' if size
                else '. Enquire for dimensions and price.'))
-        subj_cap = subject[0].upper() + subject[1:]
-        a['metaDescription'] = (
-            f"{a['title']}, an original {coll} painting by Ritushka, contemporary artist in "
-            f"Lane Cove, Sydney. {subj_cap}."
-            + (f" {size}." if size else '')
-            + ((f' Sold for {sold_txt} — similar works available to commission.' if sold_txt
-                else ' Sold — similar works available to commission.')
-               if a['status'] == 'sold'
-               else f' {price_txt}, available now.' if price_txt
-               else ' Enquire for price and availability.')
-            + ' Ships worldwide.')
+        a['metaDescription'] = artwork_meta(a, coll, subject, price_txt, sold_txt)
         a['alt'] = (f"{a['title']} — original {coll} painting by Ritushka in "
                     f"{a['palette']}" + (f", {size}" if size else ''))
 
@@ -352,16 +406,12 @@ def main():
         title = (by_slug.get(m['artworkSlug']) or a).get('title', m['title'])
         room = m['room']
         size = size_phrase(by_slug.get(m['artworkSlug']) or a) if (by_slug.get(m['artworkSlug']) or a) else None
-        m['title'] = f"{title} in a {room}"
-        m['alt'] = (f"{title} by Ritushka displayed in a {room.lower()}"
+        m['title'] = f"{title} in {a_an(room)} {room}"
+        m['alt'] = (f"{title} by Ritushka displayed in {a_an(room)} {room.lower()}"
                     + (f" — {size}" if size else ''))
-        m['seoTitle'] = f"{title} Styled in a {room} | Ritushka"
-        m['metaDescription'] = (
-            f"See {title}"
-            + (f" ({size})" if size else '')
-            + f" by Ritushka styled in a {room.lower()}, shown to scale. "
-              "Placement and proportion reference for collectors and interior designers. "
-              "Enquire to acquire or commission.")
+        # No "| Ritushka" — the root layout's title template appends it.
+        m['seoTitle'] = m['title']
+        m['metaDescription'] = mockup_meta(title, room, size)
 
     for a in art:
         a['mockups'] = [m['slug'] for m in mock if m['artworkSlug'] == a['slug']]

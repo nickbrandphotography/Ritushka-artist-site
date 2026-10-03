@@ -17,6 +17,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
 function render(body: string): ReactNode[] {
   const lines = body.split('\n').filter(Boolean);
+  // Posts written with only "###" sections would jump from the page's h1 to h3,
+  // so they render one level up.
+  const promote = !lines.some(l => l.startsWith('## '));
   const out: ReactNode[] = [];
   let list: string[] = [];
   const flush = (key: string) => {
@@ -30,7 +33,7 @@ function render(body: string): ReactNode[] {
     if (line.startsWith('- ')) { list.push(line.slice(2)); return; }
     flush('ul-' + i);
     if (line.startsWith('## ')) out.push(<h2 key={i}>{line.slice(3)}</h2>);
-    else if (line.startsWith('### ')) out.push(<h3 key={i}>{line.slice(4)}</h3>);
+    else if (line.startsWith('### ')) out.push(promote ? <h2 key={i} className="prose-sub">{line.slice(4)}</h2> : <h3 key={i}>{line.slice(4)}</h3>);
     else out.push(<p key={i}>{line}</p>);
   });
   flush('ul-end');

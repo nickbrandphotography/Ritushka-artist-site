@@ -7,7 +7,7 @@ import { artworks, collections } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 import { graph, worksListPageSchema } from '@/lib/schema';
 const description = 'The complete portfolio of Ritushka — abstract landscapes, seascapes and large-scale contemporary paintings. Original artworks, available and archived.';
-export const metadata = buildMetadata({ title: 'Portfolio', description, path: '/portfolio' });
+export const metadata = buildMetadata({ title: 'Portfolio of Abstract Landscapes & Seascapes', description, path: '/portfolio' });
 export default function Portfolio() {
   return (
     <Container className="py-14">
@@ -20,7 +20,7 @@ export default function Portfolio() {
         the <Link href="/sold" className="underline hover:text-ink">sold archive</Link>, or{' '}
         <Link href="/collections" className="underline hover:text-ink">collection</Link>.
       </p>
-      <div className="mt-10"><Gallery items={artworks} /></div>
+      <div className="mt-10"><Gallery items={artworks} heading="h2" /></div>
     </Container>
   );
 }

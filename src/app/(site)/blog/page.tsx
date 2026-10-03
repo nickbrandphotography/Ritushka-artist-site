@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import PageWatermark from '@/components/PageWatermark';
 import { blog } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
-export const metadata = buildMetadata({ title: 'Art Journal', description: 'Guides on choosing, commissioning, placing and investing in original abstract art — for collectors, interior designers, architects and luxury homeowners.', path: '/blog' });
+export const metadata = buildMetadata({ title: 'Art Journal — Guides for Collectors & Designers', description: 'Guides on choosing, commissioning, placing and investing in original abstract art — for collectors, interior designers, architects and luxury homeowners.', path: '/blog' });
 export default function BlogIndex() {
   return (
     <PageWatermark src="/about/watermark-journal.jpg" position="center 38%">

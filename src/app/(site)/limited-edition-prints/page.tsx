@@ -12,7 +12,7 @@ import { site } from '@/site.config';
 
 export const metadata = buildMetadata({
   title: 'Limited Edition Prints',
-  description: `Fixed, numbered limited edition archival prints of original paintings by ${site.artist.name}. Hand-signed, printed on archival cotton rag paper, never at the scale of the original.`,
+  description: `Numbered limited edition archival prints of original paintings by ${site.artist.name}. Hand-signed and printed on archival cotton rag paper.`,
   path: '/limited-edition-prints',
 });
 
@@ -78,7 +78,7 @@ export default function LimitedEditionPrintsPage() {
       <div className="mt-10">
         {editions.length > 0 ? (
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-            {editions.map((e, i) => <PrintCard key={e.artwork.slug} edition={e} priority={i < 3} />)}
+            {editions.map((e, i) => <PrintCard key={e.artwork.slug} edition={e} priority={i < 3} heading="h2" />)}
           </div>
         ) : (
           <p className="text-ink/65">The print programme is being prepared — check back shortly.</p>

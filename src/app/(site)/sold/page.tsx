@@ -7,8 +7,8 @@ import JsonLd from '@/components/JsonLd';
 import { soldWorks } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
 import { graph, worksListPageSchema } from '@/lib/schema';
-const description = 'An archive of sold paintings by Ritushka, with the price each work achieved. Browse past works for reference and commission a related piece in your size and palette.';
-export const metadata = buildMetadata({ title: 'Sold Works', description, path: '/sold' });
+const description = 'An archive of sold paintings by Ritushka with the price each achieved. Browse past works and commission a related piece in your size and palette.';
+export const metadata = buildMetadata({ title: 'Sold Paintings — Archive of Past Works', description, path: '/sold' });
 export default function Sold() {
   const works = soldWorks();
   return (
@@ -17,7 +17,7 @@ export default function Sold() {
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Sold Works', path: '/sold' }]} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">Sold works</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink/75">A reference archive of paintings that have found their collectors, shown with the price each achieved. Love something that&rsquo;s sold? A related commission can be created for you in a comparable size and palette.</p>
-      <div className="mt-10"><Gallery items={works} /></div>
+      <div className="mt-10"><Gallery items={works} heading="h2" /></div>
       <p className="mt-10 text-sm text-ink/65">
         See what&rsquo;s still available in the <Link href="/available" className="underline hover:text-ink">current collection</Link>.
       </p>

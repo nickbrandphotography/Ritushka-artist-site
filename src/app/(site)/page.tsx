@@ -5,6 +5,19 @@ import Gallery from '@/components/Gallery';
 import CtaBand from '@/components/CtaBand';
 import EmailCapture from '@/components/EmailCapture';
 import { collections, availableWorks } from '@/lib/data';
+import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
+import { site } from '@/site.config';
+
+const homeTitle = `${site.artist.name} — ${site.artist.tagline}`;
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: homeTitle,
+    description: 'Original abstract landscapes and seascapes by Ritushka, a contemporary artist in Lane Cove, Sydney. Large-scale paintings for collectors and designers.',
+    path: '/',
+  }),
+  title: { absolute: homeTitle },
+};
 
 export default function HomePage() {
   return (

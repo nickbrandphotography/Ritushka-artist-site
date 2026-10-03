@@ -41,6 +41,11 @@ COLL_NAME = {
 # slug -> { body, excerpt, seoTitle, metaDescription }  (title/audience/
 # publishedAt/relatedCollection/image are kept as already assigned)
 OVERRIDES = {}
+BLOG_SEO_TITLES = {
+    "the-difference-between-landscape-and-seascape-abstraction": "Landscape vs Seascape Abstraction: The Difference",
+    "art-for-property-developers-display-suites-that-sell": "Art for Property Developers: Display Suites",
+    "original-art-vs-prints-what-collectors-should-know": "Original Art vs Prints: A Collector's Guide"
+}
 
 def add(slug, excerpt, meta, body):
     OVERRIDES[slug] = {
@@ -49,14 +54,16 @@ def add(slug, excerpt, meta, body):
         # the root layout's `%s | Ritushka` template, which appends the brand
         # name exactly once. Baking it in here as well doubled it in every
         # <title> tag (confirmed live: "... | Art Journal | Ritushka | Ritushka").
-        'seoTitle': f"{by_slug[slug]['title']} | Art Journal",
+        # No " | Art Journal" either: with the template's " | Ritushka" it pushed
+        # most titles past 60 characters. BLOG_SEO_TITLES shortens the rest.
+        'seoTitle': BLOG_SEO_TITLES.get(slug, by_slug[slug]['title']),
         'metaDescription': meta,
         'body': body.strip(),
     }
 
 add('how-to-choose-art-for-a-large-wall',
     "A practical framework for sizing art to a genuinely large wall — width, not just height, and why two smaller works rarely read as well as one considered piece.",
-    "How to choose art for a large wall: a sizing framework, why width usually matters more than height, and when to commission instead of compromise. From Ritushka's Lane Cove studio.",
+    "How to choose art for a large wall: a sizing framework, why width matters more than height, and when to commission instead of compromising.",
     """A large wall is not really a size problem — it is a proportion problem. The instinct is to hunt for "a big painting", but the number that matters most is how much of the wall's *width* the work occupies, not its area. As a working guide, a single piece should fill roughly two-thirds to three-quarters of the wall's width to read as intentional rather than incidental; anything narrower starts to look like it wandered there by accident, however tall it is.
 
 ### Why one piece usually beats a cluster
@@ -74,7 +81,7 @@ If nothing in a collection lands at the right width for the wall, a commission r
 
 add('original-art-vs-prints-what-collectors-should-know',
     "Ritushka does not sell prints — only signed originals. Here is the practical difference that decision makes for value, texture and what actually arrives at your door.",
-    "Original art vs. prints: what the distinction actually means for surface, provenance and resale — and why Ritushka's studio sells only signed originals, no editions.",
+    "Original art vs prints: what the difference really means for surface, provenance and resale value, and how to judge which one suits you.",
     """This site does not sell prints, and that is a deliberate choice worth explaining rather than assuming. A print — even a good one — is a reproduction of a decision the artist already finished making. An original is the decision itself: the actual layers of acrylic, the ridges where a palette knife dragged through wet paint, the places where one colour was scraped back to let an earlier one breathe through. None of that survives being photographed and reprinted, no matter how good the paper.
 
 ### What you're actually paying for
@@ -92,7 +99,7 @@ Because nothing here is editioned, availability is genuinely one-of-one — when
 
 add('how-to-commission-an-abstract-painting',
     "What actually happens between briefing a commission and hanging it — brief, proposal, four to eight weeks of studio time, delivery. The real sequence, not a sales pitch.",
-    "How to commission an abstract painting from Ritushka: the brief, proposal and deposit, the four-to-eight-week studio process with progress images, and insured delivery.",
+    "How to commission an abstract painting from Ritushka: the brief, proposal and deposit, the four-to-eight-week studio process, and insured delivery.",
     """A commission exists to remove one specific compromise: searching a finished collection for a work that almost fits, in almost the right palette, at almost the right size. Instead, the dimensions, palette and orientation are specified up front, and the painting is built for that exact wall.
 
 ### The sequence
@@ -110,7 +117,7 @@ Rush timelines can sometimes be accommodated, but the honest number to plan arou
 
 add('best-art-for-coastal-homes',
     "The mistake most coastal homes make with their art: choosing literal seascapes instead of the abstracted light and horizon that actually holds up over years of daily living with a piece.",
-    "Best art for coastal homes: why abstraction usually outperforms literal seascapes, which palettes read as coastal without looking like a postcard, and where to look first.",
+    "Best art for coastal homes: why abstraction outperforms literal seascapes, and which palettes read as coastal without looking like a postcard.",
     """The obvious move in a coastal home is a literal seascape — a horizon, some waves, a lighthouse if you're really committing. It's also usually the wrong one. A photographic view of the ocean competes with the real one out the window; an abstracted field of the right blues, greys and foam-whites holds the *feeling* of the coast without trying to out-picture the view itself, and it doesn't date the way a literal scene does.
 
 ### What "coastal" actually means in a palette
@@ -128,7 +135,7 @@ Coastal homes tend to have more direct, harsher light than inland rooms, and tha
 
 add('the-complete-art-placement-guide',
     "The full mechanics of hanging art well: eye-level centring, furniture clearance, wall-fill percentage and negative space, in one reference.",
-    "The complete art placement guide: correct hanging height, furniture clearance, how much of a wall a piece should fill, and how negative space finishes the composition.",
+    "The complete art placement guide: hanging height, furniture clearance, how much wall a piece should fill, and how negative space finishes the look.",
     """Placement is mostly arithmetic, not instinct — a handful of numbers that, followed consistently, make almost any painting look considered.
 
 ### Height
@@ -150,7 +157,7 @@ Deep-edge, gallery-wrapped canvases can hang unframed for a clean contemporary l
 
 add('is-original-art-a-good-investment',
     "A grounded answer, not a sales pitch: what actually drives resale value in original art, what doesn't, and the paperwork that protects it either way.",
-    "Is original art a good investment? What genuinely affects resale value — provenance, scarcity, condition records — versus what's marketing, with a straight answer.",
+    "Is original art a good investment? What really affects resale value — provenance, scarcity, condition records — versus what is just marketing.",
     """The honest answer is: sometimes, and rarely predictably — treat any suggestion otherwise with suspicion. Original art can hold or grow in value, but it is not a liquid asset, and nobody can promise a specific return on a painting the way they might project a return on shares or property.
 
 ### What actually moves the number
@@ -204,7 +211,7 @@ High-resolution imagery and to-scale in-situ mockups do more to secure a client'
 
 add('art-for-property-developers-display-suites-that-sell',
     "Art in a display suite has one job — make the room feel finished and aspirational to a buyer who's there for twenty minutes. Practical guidance for that specific brief.",
-    "Art for property developers: how a display suite's art differs from a private home's — reusable across units, photographs well, and reads instantly to a buyer in the room briefly.",
+    "Art for property developers: how display suite art differs from a private home's — reusable across units, photographs well and reads instantly.",
     """A display suite is not a home — it's a twenty-minute pitch, and the art in it has to work at pitch speed. That changes the brief from a private commission in a real, specific way.
 
 ### The piece has to read instantly
@@ -240,7 +247,7 @@ In an abstract work, there's no literal subject to check against the room — no
 
 add('how-to-care-for-an-acrylic-painting',
     "Acrylic behaves differently to oil over the long term — what actually threatens the surface, and the two things (sunlight, solvents) that cause almost all the damage.",
-    "How to care for an acrylic painting long-term: the sunlight and humidity risks specific to acrylic, correct cleaning, and when re-varnishing is worth considering.",
+    "How to care for an acrylic painting: the sunlight and humidity risks specific to acrylic, correct cleaning, and when re-varnishing is worth it.",
     """Acrylic paint cures fast and stays flexible for decades, which makes it forgiving day to day — but it has its own specific vulnerabilities that differ from oil, and most damage to a well-made acrylic work traces back to one of two causes.
 
 ### The two real risks
@@ -258,7 +265,7 @@ A canvas that's loosened on its stretcher can usually be re-tensioned by a frame
 
 add('framing-vs-unframed-contemporary-canvas-art',
     "Deep-edge canvas doesn't need a frame to look finished — when to leave it bare, and the specific cases where a slim frame genuinely earns its place.",
-    "Framing vs. unframed contemporary canvas: when a deep-edge gallery-wrapped canvas works better bare, and the cases — busy walls, resale, formality — where a frame helps.",
+    "Framing vs unframed canvas: when a deep-edge gallery-wrapped canvas works better bare, and when a frame helps — busy walls, resale, formality.",
     """A gallery-wrapped canvas with a deep edge — where the image continues around the sides, or the sides are a clean painted finish — was designed to hang without a frame. That's not a compromise; it's the intended presentation, and forcing one into a frame can actually undersell it.
 
 ### The case for unframed
@@ -276,7 +283,7 @@ Neither choice affects the certificate of authenticity or the work's value — f
 
 add('how-art-consultants-work-with-collectors',
     "What a working relationship between an art consultant and this studio actually looks like — briefing, previews, trade terms — from the artist's side of the desk.",
-    "How art consultants work with collectors and this studio: briefing on a client's behalf, reserved previews of new work, and the trade terms that make it repeatable.",
+    "How art consultants work with collectors and this studio: briefing for a client, reserved previews of new work, and trade terms that make it repeatable.",
     """An art consultant sits between a collector's brief and the studio's output, and the relationship works best when that role is treated as a genuine trade partnership rather than a one-off referral.
 
 ### Briefing on a client's behalf
@@ -334,7 +341,7 @@ A collection built purely to "match" ends up feeling static. Buying what genuine
 
 add('buying-art-as-an-interior-designer-a-workflow',
     "The repeatable process — not the one-off purchase — that turns sourcing original art into something a design practice can build into every project without reinventing it each time.",
-    "Buying art as an interior designer: a repeatable sourcing workflow — brief, mockup, trade quote, delivery — built to slot into a project timeline without last-minute scrambling.",
+    "Buying art as an interior designer: a repeatable sourcing workflow — brief, mockup, trade quote, delivery — that fits a project timeline.",
     """The difference between sourcing art once and sourcing it as a repeatable part of a design practice is almost entirely process — the same four steps, run consistently, rather than reinvented under deadline pressure each time.
 
 ### 1. Brief early, not last
@@ -392,7 +399,7 @@ Avoid positioning any light source where it puts the painting in direct line of 
 
 add('art-for-hotels-and-hospitality-spaces',
     "Hospitality art has to survive being seen by thousands of different people for years, in spaces designed around flow, not contemplation. That changes the brief entirely.",
-    "Art for hotels and hospitality spaces: durability, guest-flow sightlines and consistent palette across multiple keys or public areas — the brief that differs from a private home.",
+    "Art for hotels and hospitality spaces: durability, guest-flow sightlines and a consistent palette across rooms — how the brief differs from a home.",
     """Art in a hotel or hospitality venue answers to guests who are moving through the space, not sitting with it — which changes almost every decision from what would apply in a private home.
 
 ### Sightlines follow guest flow, not room geometry
@@ -414,7 +421,7 @@ For anything beyond a single work — guest room runs, multiple public areas —
 
 add('understanding-certificates-of-authenticity',
     "What the certificate that ships with every original actually proves, why it matters years later at resale or insurance time, and how to keep it usable.",
-    "Understanding certificates of authenticity: what the document proves, why it matters for insurance and resale years later, and how to store it so it stays useful.",
+    "Certificates of authenticity explained: what the document proves, why it matters for insurance and resale, and how to store it so it stays useful.",
     """A certificate of authenticity is easy to file away and forget — until the day a work needs to be insured, appraised or resold, at which point it becomes the single most important piece of paper attached to the painting.
 
 ### What it actually establishes
@@ -472,7 +479,7 @@ Canvas support isn't always listed on every artwork page, and it's a completely 
 
 add('the-difference-between-landscape-and-seascape-abstraction',
     "Landscape and seascape abstraction aren't just different subjects — they behave differently on the wall, in palette, horizon and movement. Here's the actual distinction.",
-    "The difference between landscape and seascape abstraction: how horizon placement, palette and implied movement genuinely differ between the two, not just the subject label.",
+    "Landscape vs seascape abstraction: how horizon placement, palette and implied movement differ between the two, beyond the subject label.",
     """The two collection names — Abstract Landscapes and Abstract Seascapes — aren't just a subject label for cataloguing purposes; the two genuinely behave differently once they're on a wall, and knowing the difference helps in choosing between them.
 
 ### Horizon and structure
@@ -490,7 +497,7 @@ A landscape piece tends to sit more comfortably in a room with warmer materials 
 
 add('how-buyers-agents-add-value-with-art',
     "Where art fits in a buyer's agent's actual scope of work — property styling for resale versus a genuine acquisition for a client who's moving in, and why the brief differs.",
-    "How buyers agents add value with art: the difference between styling a property to sell and sourcing a genuine piece for a client's own home, and why the brief differs.",
+    "How buyers agents add value with art: styling a property to sell versus sourcing a genuine piece for a client's own home, and why the brief differs.",
     """Art shows up in a buyer's agent's work in two quite different ways, and conflating them leads to the wrong brief being given to the wrong purpose.
 
 ### Styling for resale is not the same brief as acquisition
@@ -544,7 +551,7 @@ What's genuinely lost buying direct is the gallery's independent curatorial vali
 
 add('how-to-commission-a-diptych-or-triptych',
     "A multi-panel commission isn't just one painting split in two or three — it changes the brief around gaps, alignment and how the piece is meant to be read as a whole.",
-    "How to commission a diptych or triptych: how panel gaps, cross-panel alignment and hanging sequence change the brief compared with commissioning a single canvas.",
+    "How to commission a diptych or triptych: how panel gaps, cross-panel alignment and hanging order change the brief compared with a single canvas.",
     """A diptych or triptych is not simply a large painting sliced into panels after the fact — treating it that way is the most common way a multi-panel commission goes wrong. The panel gap and cross-panel alignment need to be part of the brief from the start, not resolved at hanging time.
 
 ### Decide the gap before the brief, not after
@@ -562,7 +569,7 @@ Confirm the wall's total width including the gaps before finalising individual p
 
 add('how-designers-present-art-to-clients',
     "The gap between an art recommendation a client trusts and one they hesitate on usually isn't the work itself — it's how it's presented. Practical presentation tactics that close that gap.",
-    "How designers present art to clients: using scaled in-situ mockups instead of flat product shots, and the sequencing that gets a client to a confident decision faster.",
+    "How designers present art to clients: scaled in-situ mockups instead of flat product shots, and the sequence that gets clients to a confident yes.",
     """A client rarely rejects a genuinely good art recommendation on the work itself — far more often, they hesitate because they can't picture it in their own space from a flat product photo alone. Presentation, not persuasion, is usually the actual gap.
 
 ### Show scale, don't describe it
@@ -584,7 +591,7 @@ Trade partners have access to high-resolution imagery and mockup assets for clie
 
 add('investing-in-emerging-australian-artists',
     "What \"emerging\" actually signals for value and risk, and what to look for in an emerging Australian artist's practice before committing to a body of work early.",
-    "Investing in emerging Australian artists: what \"emerging\" actually signals for price and risk, and the practical signs of a developing, coherent practice worth watching.",
+    "Investing in emerging Australian artists: what \"emerging\" signals for price and risk, and the signs of a coherent practice worth watching.",
     """"Emerging" is a label that gets used loosely, and it's worth being precise about what it actually signals for anyone considering a purchase partly on the strength of an artist's trajectory rather than name recognition alone.
 
 ### What "emerging" really means for price

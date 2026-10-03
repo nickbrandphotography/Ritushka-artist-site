@@ -8,10 +8,12 @@ import type { Artwork } from '@/data/types';
  * Grid of artwork cards. Paintings are drawn in proportion to one another —
  * see ArtworkCard. Pass `toScaleNote={false}` where the caption would be
  * redundant (for example under a heading that already explains the hang).
+ * Pass `heading="h2"` where the grid sits directly under the page's h1, so
+ * card titles don't skip a heading level.
  */
 export default function Gallery({
-  items, max, toScaleNote = true,
-}: { items: Artwork[]; max?: number; toScaleNote?: boolean }) {
+  items, max, toScaleNote = true, heading,
+}: { items: Artwork[]; max?: number; toScaleNote?: boolean; heading?: 'h2' | 'h3' }) {
   const list = max ? items.slice(0, max) : items;
   const groups = groupPairs(list, artworkPairs, a => a.slug);
   let rendered = 0;
@@ -27,11 +29,11 @@ export default function Gallery({
           if (Array.isArray(g)) {
             const priority: [boolean, boolean] = [rendered < 3, rendered + 1 < 3];
             rendered += 2;
-            return <PairedArtworkCards key={`${g[0].slug}+${g[1].slug}`} pair={g} priority={priority} />;
+            return <PairedArtworkCards key={`${g[0].slug}+${g[1].slug}`} pair={g} priority={priority} heading={heading} />;
           }
           const priority = rendered < 3;
           rendered += 1;
-          return <ArtworkCard key={g.slug} a={g} priority={priority} />;
+          return <ArtworkCard key={g.slug} a={g} priority={priority} heading={heading} />;
         })}
       </div>
     </div>

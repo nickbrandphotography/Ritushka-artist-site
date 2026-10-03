@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import PageWatermark from '@/components/PageWatermark';
 import { collections, artworksInCollection } from '@/lib/data';
 import { buildMetadata } from '@/lib/seo';
-export const metadata = buildMetadata({ title: 'Collections', description: 'Browse Ritushka\'s collections of abstract landscapes, seascapes and large-scale contemporary paintings. Original art for collectors, designers and architects.', path: '/collections' });
+export const metadata = buildMetadata({ title: 'Abstract Art Collections by Ritushka', description: 'Browse Ritushka\'s collections of abstract landscapes, seascapes and large-scale contemporary paintings. Original art for collectors, designers and architects.', path: '/collections' });
 export default function CollectionsIndex() {
   return (
     <PageWatermark src="/about/watermark-collections.jpg">

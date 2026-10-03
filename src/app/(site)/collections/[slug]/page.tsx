@@ -25,7 +25,7 @@ export default function CollectionPage({ params }: { params: { slug: string } })
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Collections', path: '/collections' }, { name: c.name, path: `/collections/${c.slug}` }]} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">{c.heading}</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink/75">{c.intro}</p>
-      <div className="mt-10"><Gallery items={items} /></div>
+      <div className="mt-10"><Gallery items={items} heading="h2" /></div>
       <div className="mt-16"><FAQList faqs={c.faqs} /></div>
       {posts.length > 0 && (
         <section className="mt-16 border-t border-sand pt-10">

@@ -14,7 +14,7 @@ const faqs = [
   { q: 'Can I visit the studio?', a: 'Studio visits in Lane Cove, Sydney are available by appointment.' },
   { q: 'How do I care for the painting?', a: 'Keep out of direct sunlight and dust gently with a soft dry cloth. See the Installation Guide for more.' },
 ];
-export const metadata = buildMetadata({ title: 'FAQ', description: 'Frequently asked questions about buying original abstract art from Ritushka — authenticity, worldwide shipping, commissions, trade pricing and returns.', path: '/faq' });
+export const metadata = buildMetadata({ title: 'FAQ — Buying Original Abstract Art', description: 'Frequently asked questions about buying original abstract art from Ritushka — authenticity, worldwide shipping, commissions, trade pricing and returns.', path: '/faq' });
 export default function FAQPage() {
   return (
     <Container className="py-14">

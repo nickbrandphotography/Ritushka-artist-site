@@ -15,9 +15,9 @@ import { graph, personSchema, imageObjectSchema } from '@/lib/schema';
 const PORTRAIT = site.artist.portraitPath;
 
 export const metadata = buildMetadata({
-  title: 'About The Artist',
+  title: 'About the Artist — Abstract Painter in Sydney',
   description:
-    'Ritushka is a contemporary abstract landscape and seascape artist based in Lane Cove, Sydney. Born in communist Hungary, transformed by the Australian coast — her story, her practice, and a word in her own voice, in English and Hungarian.',
+    'Ritushka is a contemporary abstract landscape and seascape artist in Lane Cove, Sydney. Born in Hungary, shaped by the Australian coast: her story and practice.',
   path: '/about',
   image: PORTRAIT,
 });

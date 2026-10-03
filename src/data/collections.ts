@@ -8,8 +8,8 @@ export const collections: Collection[] = [
     "keyword": "abstract landscape art",
     "intent": "collectors seeking contemporary abstract landscape paintings",
     "heading": "Abstract Landscapes by Ritushka",
-    "seoTitle": "Abstract Landscapes | Original Paintings, Sydney",
-    "metaDescription": "Explore abstract landscapes by Ritushka — original abstract landscape art for collectors seeking contemporary abstract landscape paintings. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Abstract Landscapes by a Sydney Artist",
+    "metaDescription": "Original abstract landscape paintings by Ritushka, a contemporary artist in Lane Cove, Sydney. Browse available works with sizes and prices. Ships worldwide.",
     "intro": "This collection brings together Ritushka's abstract landscapes — original abstract landscape art created for collectors seeking contemporary abstract landscape paintings. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 100 × 150 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
@@ -37,8 +37,8 @@ export const collections: Collection[] = [
     "keyword": "abstract seascape paintings",
     "intent": "buyers of coastal and ocean abstract art",
     "heading": "Abstract Seascapes by Ritushka",
-    "seoTitle": "Abstract Seascapes | Original Paintings, Sydney",
-    "metaDescription": "Explore abstract seascapes by Ritushka — original abstract seascape paintings for buyers of coastal and ocean abstract art. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Abstract Seascapes by a Sydney Artist",
+    "metaDescription": "Original abstract seascape paintings by Ritushka — coastal and ocean abstract art from a Lane Cove, Sydney studio. Sizes and prices listed. Ships worldwide.",
     "intro": "This collection brings together Ritushka's abstract seascapes — original abstract seascape paintings created for buyers of coastal and ocean abstract art. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
@@ -66,8 +66,8 @@ export const collections: Collection[] = [
     "keyword": "large scale art",
     "intent": "designers and architects sourcing expansive statement works",
     "heading": "Large Scale Paintings by Ritushka",
-    "seoTitle": "Large Scale Paintings | Original Paintings, Sydney",
-    "metaDescription": "Explore large scale paintings by Ritushka — original large scale art for designers and architects sourcing expansive statement works. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Large Scale Paintings by a Sydney Artist",
+    "metaDescription": "Large scale original paintings by Ritushka for designers and architects sourcing statement works. Sizes and prices listed, shipped worldwide from Sydney.",
     "intro": "This collection brings together Ritushka's large scale paintings — original large scale art created for designers and architects sourcing expansive statement works. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 79 × 138 cm to 100 × 150 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$5,750 to A$7,350.",
     "faqs": [
       {
@@ -95,8 +95,8 @@ export const collections: Collection[] = [
     "keyword": "coastal abstract art",
     "intent": "luxury coastal homes",
     "heading": "Coastal Abstract Art by Ritushka",
-    "seoTitle": "Coastal Abstract Art | Original Paintings, Sydney",
-    "metaDescription": "Explore coastal abstract art by Ritushka — original coastal abstract art for luxury coastal homes. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Coastal Abstract Art by a Sydney Artist",
+    "metaDescription": "Coastal abstract art by Sydney artist Ritushka — original paintings for coastal homes, with sizes and prices listed. Commissions welcome. Ships worldwide.",
     "intro": "This collection brings together Ritushka's coastal abstract art — original coastal abstract art created for luxury coastal homes. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
@@ -124,8 +124,8 @@ export const collections: Collection[] = [
     "keyword": "ocean inspired paintings",
     "intent": "collectors drawn to the sea",
     "heading": "Ocean Inspired Paintings by Ritushka",
-    "seoTitle": "Ocean Inspired Paintings | Original Paintings, Sydney",
-    "metaDescription": "Explore ocean inspired paintings by Ritushka — original ocean inspired paintings for collectors drawn to the sea. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Ocean Inspired Paintings by a Sydney Artist",
+    "metaDescription": "Ocean inspired paintings by Ritushka — original abstract art for collectors drawn to the sea, painted in Lane Cove, Sydney and shipped worldwide.",
     "intro": "This collection brings together Ritushka's ocean inspired paintings — original ocean inspired paintings created for collectors drawn to the sea. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
@@ -153,8 +153,8 @@ export const collections: Collection[] = [
     "keyword": "contemporary landscape art",
     "intent": "modern interiors",
     "heading": "Contemporary Landscape Art by Ritushka",
-    "seoTitle": "Contemporary Landscape Art | Original Paintings, Sydney",
-    "metaDescription": "Explore contemporary landscape art by Ritushka — original contemporary landscape art for modern interiors. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Contemporary Landscape Art by a Sydney Artist",
+    "metaDescription": "Contemporary landscape art by Sydney artist Ritushka — original abstract paintings for modern interiors. Sizes and prices listed. Ships worldwide.",
     "intro": "This collection brings together Ritushka's contemporary landscape art — original contemporary landscape art created for modern interiors. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
@@ -182,8 +182,8 @@ export const collections: Collection[] = [
     "keyword": "textured abstract paintings",
     "intent": "collectors who value materiality and surface",
     "heading": "Textured Abstract Paintings by Ritushka",
-    "seoTitle": "Textured Abstract Paintings | Original Paintings, Sydney",
-    "metaDescription": "Explore textured abstract paintings by Ritushka — original textured abstract paintings for collectors who value materiality and surface. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Textured Abstract Paintings by a Sydney Artist",
+    "metaDescription": "Textured abstract paintings by Ritushka — layered originals for collectors who value materiality and surface. Painted in Sydney, shipped worldwide.",
     "intro": "This collection brings together Ritushka's textured abstract paintings — original textured abstract paintings created for collectors who value materiality and surface. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 150 × 100 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$7,350.",
     "faqs": [
       {
@@ -211,8 +211,8 @@ export const collections: Collection[] = [
     "keyword": "blue abstract paintings",
     "intent": "colour-led buyers",
     "heading": "Blue Abstract Paintings by Ritushka",
-    "seoTitle": "Blue Abstract Paintings | Original Paintings, Sydney",
-    "metaDescription": "Explore blue abstract paintings by Ritushka — original blue abstract paintings for colour-led buyers. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Blue Abstract Paintings by a Sydney Artist",
+    "metaDescription": "Blue abstract paintings by Sydney artist Ritushka — original, colour-led works in shades of blue. Sizes and prices listed. Ships worldwide.",
     "intro": "This collection brings together Ritushka's blue abstract paintings — original blue abstract paintings created for colour-led buyers. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 152 × 91 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$6,950.",
     "faqs": [
       {
@@ -240,8 +240,8 @@ export const collections: Collection[] = [
     "keyword": "modern australian art",
     "intent": "buyers seeking Australian provenance",
     "heading": "Modern Australian Art by Ritushka",
-    "seoTitle": "Modern Australian Art | Original Paintings, Sydney",
-    "metaDescription": "Explore modern australian art by Ritushka — original modern australian art for buyers seeking Australian provenance. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Modern Australian Art by a Sydney Artist",
+    "metaDescription": "Modern Australian art by Ritushka, a contemporary abstract painter in Lane Cove, Sydney. Original works with Australian provenance, shipped worldwide.",
     "intro": "This collection brings together Ritushka's modern australian art — original modern australian art created for buyers seeking Australian provenance. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 91 × 122 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$5,850.",
     "faqs": [
       {
@@ -269,8 +269,8 @@ export const collections: Collection[] = [
     "keyword": "statement artwork",
     "intent": "corporate and luxury commissions",
     "heading": "Statement Artworks by Ritushka",
-    "seoTitle": "Statement Artworks | Original Paintings, Sydney",
-    "metaDescription": "Explore statement artworks by Ritushka — original statement artwork for corporate and luxury commissions. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Statement Artworks by a Sydney Artist",
+    "metaDescription": "Statement artworks by Ritushka — large original abstract paintings for corporate, hospitality and luxury residential spaces. Commissions welcome.",
     "intro": "This collection brings together Ritushka's statement artworks — original statement artwork created for corporate and luxury commissions. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 60 × 60 cm to 100 × 120 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$2,450 to A$5,850.",
     "faqs": [
       {
@@ -298,8 +298,8 @@ export const collections: Collection[] = [
     "keyword": "original figurative and decorative art",
     "intent": "collectors looking beyond landscape",
     "heading": "Other Works by Ritushka",
-    "seoTitle": "Other Works | Original Paintings, Sydney",
-    "metaDescription": "Explore other works by Ritushka — original original figurative and decorative art for collectors looking beyond landscape. Contemporary artist in Lane Cove, Sydney, shipping worldwide. Enquire about available works and commissions.",
+    "seoTitle": "Other Works by a Sydney Artist",
+    "metaDescription": "Other works by Ritushka — original figurative and decorative paintings beyond landscape and seascape, from a studio in Lane Cove, Sydney.",
     "intro": "This collection brings together Ritushka's other works — original original figurative and decorative art created for collectors looking beyond landscape. Each work is painted in layers from a Lane Cove, Sydney studio and ships worldwide with a certificate of authenticity. Works in this collection range from 50 × 40 cm to 120 × 180 cm, and every painting page lists its exact dimensions, depth and framing. Prices in this collection run from A$4,700 to A$5,850.",
     "faqs": [
       {

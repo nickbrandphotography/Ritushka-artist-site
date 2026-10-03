@@ -17,8 +17,8 @@ import type { Artwork } from '@/data/types';
  * the middle of its stage with the gap swallowed by that centering margin.
  */
 export default function ArtworkCard({
-  a, priority, align = 'center',
-}: { a: Artwork; priority?: boolean; align?: 'start' | 'center' | 'end' }) {
+  a, priority, align = 'center', heading: Heading = 'h3',
+}: { a: Artwork; priority?: boolean; align?: 'start' | 'center' | 'end'; heading?: 'h2' | 'h3' }) {
   const justify = align === 'start' ? 'justify-start' : align === 'end' ? 'justify-end' : 'justify-center';
   const captionMargin = align === 'start' ? 'mr-auto' : align === 'end' ? 'ml-auto' : 'mx-auto';
   return (
@@ -42,7 +42,7 @@ export default function ArtworkCard({
             out to the stage's full square — a small painting reads with a
             small caption underneath it. */}
         <div className={`mt-3 ${captionMargin}`} style={{ width: stageWidth(a) }}>
-          <h3 className="font-serif text-lg leading-tight text-ink">{a.title}</h3>
+          <Heading className="font-serif text-lg leading-tight text-ink">{a.title}</Heading>
           <p className="text-sm text-ink/65">{dimsShort(a)}{a.year ? ` · ${a.year}` : ''}</p>
           <p className="text-sm text-ink/65">
             {a.medium}{a.medium && ' · '}{priceLabel(a)}
