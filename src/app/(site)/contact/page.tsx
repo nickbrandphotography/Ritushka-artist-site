@@ -5,7 +5,7 @@ import PageWatermark from '@/components/PageWatermark';
 import { site } from '@/site.config';
 import { instagramHandle } from '@/lib/schema';
 import { buildMetadata } from '@/lib/seo';
-export const metadata = buildMetadata({ title: 'Contact the Studio — Lane Cove, Sydney', description: 'Contact Ritushka\'s studio in Lane Cove, Sydney to enquire about original paintings, commissions, trade programs or studio visits by appointment.', path: '/contact' });
+export const metadata = buildMetadata({ title: 'Contact the Studios — Lane Cove & Surry Hills, Sydney', description: 'Contact Ritushka\'s studios in Lane Cove and at NITA Gallery, Surry Hills, Sydney to enquire about original paintings, commissions, trade programs or studio visits by appointment.', path: '/contact' });
 export default function Contact() {
   const ig = instagramHandle();
   return (
@@ -22,6 +22,7 @@ export default function Contact() {
             <div><dt className="text-ink/65">Studio</dt><dd><a href={`tel:${site.contact.studioPhone.replace(/\s+/g, '')}`} className="underline hover:text-ink">{site.contact.studioPhone}</a></dd></div>
             {ig && <div><dt className="text-ink/65">Instagram</dt><dd><a href={site.social.instagram} target="_blank" rel="noopener noreferrer me" className="underline hover:text-ink">@{ig}</a></dd></div>}
             <div><dt className="text-ink/65">Studio</dt><dd>{site.location.suburb}, {site.location.city}, {site.location.state} — by appointment</dd></div>
+            <div><dt className="text-ink/65">Gallery studio</dt><dd><a href="https://www.nitagallery.com.au/ritushka" className="underline hover:text-ink">NITA Gallery</a>, 68 Campbell Street, Surry Hills NSW 2010 — Tue–Sat, or by appointment</dd></div>
             <div><dt className="text-ink/65">Shipping</dt><dd>Worldwide, insured</dd></div>
           </dl>
         </div>

@@ -32,6 +32,34 @@ export const personSchema = () => ({
     addressRegion: site.location.state,
     addressCountry: site.location.countryCode,
   },
+  // Two studios: Lane Cove, and a painting studio at NITA Gallery, Surry Hills.
+  workLocation: [
+    {
+      '@type': 'Place',
+      name: `${site.location.suburb} studio`,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: site.location.suburb,
+        addressRegion: site.location.state,
+        addressCountry: site.location.countryCode,
+      },
+    },
+    {
+      '@type': 'ArtGallery',
+      '@id': 'https://www.nitagallery.com.au/#gallery',
+      name: 'NITA Gallery',
+      url: 'https://www.nitagallery.com.au/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '68 Campbell Street',
+        addressLocality: 'Surry Hills',
+        addressRegion: 'NSW',
+        postalCode: '2010',
+        addressCountry: 'AU',
+      },
+    },
+  ],
+  affiliation: { '@id': 'https://www.nitagallery.com.au/#gallery', '@type': 'ArtGallery', name: 'NITA Gallery', url: 'https://www.nitagallery.com.au/' },
   knowsAbout: ['Abstract landscape art', 'Abstract seascape paintings', 'Contemporary Australian art', 'Large scale painting', 'Art commissions'],
 });
 

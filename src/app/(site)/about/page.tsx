@@ -17,7 +17,7 @@ const PORTRAIT = site.artist.portraitPath;
 export const metadata = buildMetadata({
   title: 'About the Artist — Abstract Painter in Sydney',
   description:
-    'Ritushka is a contemporary abstract landscape and seascape artist in Lane Cove, Sydney. Born in Hungary, shaped by the Australian coast: her story and practice.',
+    'Ritushka is a contemporary abstract landscape and seascape artist with studios in Lane Cove and at NITA Gallery, Surry Hills, Sydney. Born in Hungary, shaped by the Australian coast: her story and practice.',
   path: '/about',
   image: PORTRAIT,
 });
