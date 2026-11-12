@@ -113,6 +113,11 @@ export default function PrintProductPage({ params }: { params: { slug: string } 
               <>Prefer the original painting? <Link href={`/artwork/${a.slug}`} className="underline">View {a.title}</Link>.</>
             )}
           </p>
+          <p className="mt-4 text-sm">
+            Ritushka&rsquo;s limited edition prints are also sold through the{' '}
+            <a href="https://www.nitagallery.com.au/shop" className="underline">NITA Gallery shop</a>, and her originals hang at{' '}
+            <a href="https://www.nitagallery.com.au/visit" className="underline">NITA Gallery, 68 Campbell Street, Surry Hills</a>.
+          </p>
         </div>
       </div>
 

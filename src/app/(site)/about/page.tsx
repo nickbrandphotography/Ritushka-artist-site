@@ -163,11 +163,19 @@ export default function About() {
             <div className="prose-art mt-4 max-w-[56ch]">
               <p>{site.artist.shortBio}</p>
               <p>
-                Born in Budapest and now painting from a studio in {site.location.suburb}, {site.location.city},
+                Born in Budapest and now painting from studios in {site.location.suburb} and at{' '}
+                <a href="https://www.nitagallery.com.au/" className="underline">NITA Gallery in Surry Hills</a>, {site.location.city},
                 Ritushka builds large abstract landscapes and seascapes in translucent layers, drawing on
                 Australian coastline, light and weather. Her work is held in private and corporate collections
                 worldwide and is specified by interior designers and architects for residential and commercial
                 projects.
+              </p>
+              <p>
+                She opened NITA Gallery with the photographer{' '}
+                <a href="https://www.nickbrandphotography.com/about" className="underline">Nick Brand</a>, whose
+                black-and-white series{' '}
+                <a href="https://www.fiftypagesofshades.com/" className="underline">Fifty Pages of Shades</a>{' '}
+                hangs alongside her paintings.
               </p>
             </div>
 

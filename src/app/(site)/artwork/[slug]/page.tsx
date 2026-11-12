@@ -121,6 +121,12 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
               Also available as a <Link href={`/limited-edition-prints/${a.slug}`} className="underline">limited edition print</Link>.
             </p>
           )}
+          <p className="mt-4 text-sm">
+            See Ritushka&rsquo;s paintings in person at{' '}
+            <a href="https://www.nitagallery.com.au/ritushka" className="underline">NITA Gallery in Surry Hills</a>
+            {a.status !== 'sold' && (<>, or buy originals and prints from the{' '}
+            <a href="https://www.nitagallery.com.au/shop" className="underline">NITA Gallery shop</a></>)}.
+          </p>
           <p className="mt-4 text-sm">Part of:{' '}
             {a.collections.map((c, i) => (
               <span key={c}>{i > 0 && ', '}<Link href={`/collections/${c}`} className="underline">{collectionName(c)}</Link></span>

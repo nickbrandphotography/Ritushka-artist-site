@@ -14,6 +14,10 @@ export default function Footer() {
         <div className="md:col-span-1">
           <p className="font-serif text-2xl">{site.artist.name}</p>
           <p className="mt-3 text-sm text-bone/70">{site.artist.tagline}. {site.location.suburb}, {site.location.city}.</p>
+          <p className="mt-2 text-sm text-bone/70">
+            Gallery &amp; studio:{' '}
+            <a href="https://www.nitagallery.com.au/" className="underline hover:text-bone">NITA Gallery</a>, 68 Campbell Street, Surry Hills
+          </p>
           {ig && (
             <a
               href={site.social.instagram}
