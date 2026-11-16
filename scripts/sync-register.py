@@ -108,6 +108,12 @@ def read_register(path=REGISTER):
                           f"is {by_size} — using {by_size}")
                 orient = by_size
         frame_desc = (str(cell(row, hdr, 'Frame Description') or '').strip() or None)
+        # An explicit "No" in Framed? is authoritative: the row may still carry the
+        # template's "Floating oak frame" description, but the work is sold
+        # unframed, so neither the frame sentence nor the "framed" price label applies.
+        framed_flag = str(cell(row, hdr, 'Framed?') or '').strip().lower()
+        if framed_flag == 'no':
+            frame_desc = None
         out.append({
             'inventoryId': cell(row, hdr, 'Inventory ID'),
             'title': ' '.join(str(title).split()),
@@ -118,8 +124,7 @@ def read_register(path=REGISTER):
             'widthCm': trim_cm(w_mm / 10) if w_mm else None,
             'depthCm': num(cell(row, hdr, 'Depth (cm)')),
             # A recorded frame description is as good as "Yes" in Framed?.
-            'framed': (str(cell(row, hdr, 'Framed?') or '').strip().lower() == 'yes'
-                       or frame_desc is not None),
+            'framed': framed_flag == 'yes' or (framed_flag != 'no' and frame_desc is not None),
             'frameDescription': frame_desc,
             'edition': (str(cell(row, hdr, 'Edition Type') or '').strip() or None),
             'sold': sold,
@@ -283,8 +288,12 @@ def main():
     # Exact matches first, then fuzzy over what is left — one row per artwork.
     matched, unmatched, taken = {}, [], set()
     pending = []
+    by_inv = {a['inventoryId']: a for a in art if a.get('inventoryId')}
     for r in reg:
-        target = by_norm.get(norm(r['title']))
+        # Inventory ID first: it survives a title edit in the register (a retitled
+        # row otherwise fuzzy-matches nothing and silently keeps stale prices).
+        # The published title/slug only change via TITLE_OVERRIDES/SLUG_CORRECTIONS.
+        target = by_inv.get(r['inventoryId']) or by_norm.get(norm(r['title']))
         if target and target['slug'] not in taken:
             matched[target['slug']] = r
             taken.add(target['slug'])
