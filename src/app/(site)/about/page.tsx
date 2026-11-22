@@ -171,11 +171,8 @@ export default function About() {
                 projects.
               </p>
               <p>
-                She opened NITA Gallery with the photographer{' '}
-                <a href="https://www.nickbrandphotography.com/about" className="underline">Nick Brand</a>, whose
-                black-and-white series{' '}
-                <a href="https://www.fiftypagesofshades.com/" className="underline">Fifty Pages of Shades</a>{' '}
-                hangs alongside her paintings.
+                She co-owns{' '}
+                <a href="https://www.nitagallery.com.au/" className="underline">NITA Gallery</a> in Surry Hills.
               </p>
             </div>
 
