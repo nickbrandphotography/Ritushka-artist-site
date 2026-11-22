@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const statics = ['', '/about', '/portfolio', '/collections', '/available', '/sold', '/commission', '/framing',
     '/trade', '/trade/interior-designers', '/trade/art-consultants', '/trade/buyers-agents', '/trade/corporate',
     '/installation-guide', '/shipping', '/faq', '/contact', '/mockups', '/blog',
-    '/limited-edition-prints'];
+    '/limited-edition-prints', '/view-on-your-wall'];
   return [
     ...statics.map(p => ({ url: u(p || '/'), changeFrequency: 'weekly' as const, priority: p === '' ? 1 : 0.7 })),
     ...collections.map(c => ({ url: u(`/collections/${c.slug}`), changeFrequency: 'weekly' as const, priority: 0.8 })),

@@ -84,6 +84,10 @@ export default function PrintProductPage({ params }: { params: { slug: string } 
           <section className="mt-8 border-t border-sand pt-6" aria-labelledby="print-selection">
             <h2 id="print-selection" className="sr-only">Size and reservation</h2>
             <PrintSizeSelector artworkTitle={a.title} sizes={sizes} />
+            <Link href={`/view-on-your-wall?work=${a.slug}&type=print`}
+              className="mt-4 inline-block rounded-full border border-ink px-6 py-2.5 text-sm text-ink transition hover:bg-ink hover:text-bone">
+              See it on your wall
+            </Link>
           </section>
 
           <section className="mt-8 border-t border-sand pt-6" aria-labelledby="specification">

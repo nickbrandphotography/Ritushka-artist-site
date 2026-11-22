@@ -116,6 +116,12 @@ export default function ArtworkPage({ params }: { params: { slug: string } }) {
             <p className="mt-2 text-sm text-ink/65">Ask about size, medium, price and availability — Ritushka&rsquo;s studio replies within two business days.</p>
             <div className="mt-4"><EnquiryForm subject={a.title} kind={a.status === 'sold' ? 'commission' : 'enquiry'} /></div>
           </div>
+          {a.status !== 'sold' && a.widthCm != null && a.heightCm != null && (
+            <Link href={`/view-on-your-wall?work=${a.slug}`}
+              className="mt-4 inline-block rounded-full border border-ink px-6 py-2.5 text-sm text-ink transition hover:bg-ink hover:text-bone">
+              See it on your wall
+            </Link>
+          )}
           {isInPrintProgramme(a.slug) && (
             <p className="mt-4 text-sm">
               Also available as a <Link href={`/limited-edition-prints/${a.slug}`} className="underline">limited edition print</Link>.
