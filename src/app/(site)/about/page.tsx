@@ -163,16 +163,12 @@ export default function About() {
             <div className="prose-art mt-4 max-w-[56ch]">
               <p>{site.artist.shortBio}</p>
               <p>
-                Born in Budapest and now painting from studios in {site.location.suburb} and at{' '}
-                <a href="https://www.nitagallery.com.au/" className="underline">NITA Gallery in Surry Hills</a>, {site.location.city},
+                Born in Budapest and now painting from studios in {site.location.suburb} and she co-owns{' '}
+                <a href="https://www.nitagallery.com.au/" className="underline">NITA Gallery</a> in Surry Hills. {site.location.city}.
                 Ritushka builds large abstract landscapes and seascapes in translucent layers, drawing on
                 Australian coastline, light and weather. Her work is held in private and corporate collections
                 worldwide and is specified by interior designers and architects for residential and commercial
                 projects.
-              </p>
-              <p>
-                She co-owns{' '}
-                <a href="https://www.nitagallery.com.au/" className="underline">NITA Gallery</a> in Surry Hills.
               </p>
             </div>
 
