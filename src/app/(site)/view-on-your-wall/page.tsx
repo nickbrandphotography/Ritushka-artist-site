@@ -11,6 +11,22 @@ export const metadata = buildMetadata({ title: 'View Art on Your Wall', descript
 
 const r1 = (n: number) => Math.round(n * 10) / 10;
 
+/* The size to draw a work at without cropping or stretching it. The photograph's own proportions are
+   kept; a photo of a canvas is rarely a perfect match for the tape-measured size, so the drawn area
+   equals the recorded area and any small disagreement is split between width and height. This is
+   the same rule the room mockups use (scripts/mockup_engine.py, displayed_size_cm). */
+function trueSize(wCm: number, hCm: number, imgW: number, imgH: number) {
+  const s = Math.sqrt((wCm * hCm) / (imgW * imgH));
+  return { dw: imgW * s, dh: imgH * s };
+}
+
+/* A print is made from the photograph, so it has the photograph's proportions; the long edge is the
+   size it is sold at. */
+function printSize(wCm: number, hCm: number, imgW: number, imgH: number) {
+  const ratio = imgW / imgH;
+  return wCm >= hCm ? { dw: wCm, dh: wCm / ratio } : { dw: hCm * ratio, dh: hCm };
+}
+
 export default function ViewOnYourWall() {
   // Only works with recorded dimensions can be shown at true scale.
   const originals: VisItem[] = availableWorks()
@@ -18,14 +34,16 @@ export default function ViewOnYourWall() {
     .map((a) => ({
       slug: a.slug, title: a.title, image: a.image, href: `/artwork/${a.slug}`,
       framed: !!a.framed, depthCm: a.depthCm ?? 4,
-      sizes: [{ label: 'Original', w: a.widthCm!, h: a.heightCm!, price: priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a) }],
+      sizes: [{ label: 'Original', w: a.widthCm!, h: a.heightCm!,
+        ...trueSize(a.widthCm!, a.heightCm!, a.imageWidth, a.imageHeight), price: priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a) }],
     }));
 
   const prints: VisItem[] = allPrintEditions().map((e) => ({
     slug: e.artwork.slug, title: e.artwork.title, image: e.artwork.image, href: `/limited-edition-prints/${e.artwork.slug}`,
     framed: false, depthCm: 0,
     sizes: e.sizes.map((s) => ({
-      label: s.label, w: r1(s.widthCm), h: r1(s.heightCm), price: formatPrice(s.price, s.currency),
+      label: s.label, w: r1(s.widthCm), h: r1(s.heightCm),
+      ...printSize(s.widthCm, s.heightCm, e.artwork.imageWidth, e.artwork.imageHeight), price: formatPrice(s.price, s.currency),
       note: s.remaining > 0 ? `${s.remaining} of ${s.editionSize} remaining.` : 'This size is sold out.',
       soldOut: s.remaining <= 0,
     })),

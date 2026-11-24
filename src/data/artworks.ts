@@ -31,7 +31,7 @@ export const artworks: Artwork[] = [
     "mockups": [
       "approaching-destination-in-walnut-boardroom",
       "approaching-destination-in-warehouse-gallery",
-      "approaching-destination-in-panelled-bedroom"
+      "approaching-destination-in-coastal-bedroom"
     ],
     "inventoryId": "RIT-0001",
     "depthCm": 4.0,
@@ -73,9 +73,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/aqua-frost-thinking-of-you.jpg",
     "alt": "Aqua Frost — Thinking of You — original abstract seascape painting by Ritushka in frosted aqua, silver and pale blue, 120 × 91 cm (47.2 × 35.8 in)",
     "mockups": [
-      "aqua-frost-thinking-of-you-in-plant-wall-living-room",
       "aqua-frost-thinking-of-you-in-heritage-hallway",
-      "aqua-frost-thinking-of-you-in-hotel-suite-bedroom"
+      "aqua-frost-thinking-of-you-in-restaurant-banquette",
+      "aqua-frost-thinking-of-you-in-studio-reception"
     ],
     "inventoryId": "RIT-0002",
     "depthCm": 4.0,
@@ -118,9 +118,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/blue-mountains.jpg",
     "alt": "Blue Mountains — original abstract landscape painting by Ritushka in stone grey, mist blue and chalk white, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "blue-mountains-in-scandi-living-room",
-      "blue-mountains-in-panelled-bedroom",
-      "blue-mountains-in-art-deco-hotel-lounge"
+      "blue-mountains-in-warehouse-gallery",
+      "blue-mountains-in-warehouse-meeting-room",
+      "blue-mountains-in-coastal-bedroom"
     ],
     "inventoryId": "RIT-0003",
     "depthCm": 4.0,
@@ -206,9 +206,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/coastal-waters.jpg",
     "alt": "Coastal Waters — original abstract seascape painting by Ritushka in turquoise, jade and foam white, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "coastal-waters-in-plant-wall-living-room",
-      "coastal-waters-in-calm-living-room",
-      "coastal-waters-in-limestone-hotel-lobby"
+      "coastal-waters-in-white-gallery-wall",
+      "coastal-waters-in-skylit-hallway",
+      "coastal-waters-in-architect-studio-entry"
     ],
     "inventoryId": "RIT-0005",
     "depthCm": 4.0,
@@ -249,9 +249,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/deliciousness.jpg",
     "alt": "Deliciousness — original statement abstract painting by Ritushka in blush pink, coral and cream, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
-      "deliciousness-in-red-brick-living-room",
-      "deliciousness-in-white-brick-loft",
-      "deliciousness-in-coastal-bedroom"
+      "deliciousness-in-architect-studio-entry",
+      "deliciousness-in-blue-study",
+      "deliciousness-in-calm-living-room"
     ],
     "inventoryId": "RIT-0006",
     "depthCm": 4.0,
@@ -294,9 +294,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/desire.jpg",
     "alt": "Desire — original abstract seascape painting by Ritushka in deep ocean blue, teal and breaking white, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
-      "desire-in-plant-wall-living-room",
-      "desire-in-architect-studio-entry",
-      "desire-in-art-deco-hotel-lounge"
+      "desire-in-art-deco-hotel-lounge",
+      "desire-in-coastal-living-room",
+      "desire-in-harbourside-boardroom"
     ],
     "inventoryId": "RIT-0007",
     "depthCm": 4.0,
@@ -338,9 +338,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/eruption.jpg",
     "alt": "Eruption — original abstract landscape painting by Ritushka in rust, cloud white and lagoon blue, 122 × 91 cm (48 × 35.8 in)",
     "mockups": [
-      "eruption-in-scandi-living-room",
       "eruption-in-heritage-hallway",
-      "eruption-in-boutique-hotel-lounge"
+      "eruption-in-boutique-hotel-lounge",
+      "eruption-in-heritage-gallery"
     ],
     "inventoryId": "RIT-0008",
     "depthCm": 4.0,
@@ -424,9 +424,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/horizon.jpg",
     "alt": "Horizon — original abstract landscape painting by Ritushka in warm grey, taupe and soft gold, 79 × 138 cm (31.1 × 54.3 in)",
     "mockups": [
-      "horizon-in-melbourne-penthouse",
-      "horizon-in-moody-hotel-bedroom",
-      "horizon-in-office-reception"
+      "horizon-in-penthouse-living-room",
+      "horizon-in-upstairs-landing",
+      "horizon-in-warehouse-gallery"
     ],
     "inventoryId": "RIT-0010",
     "depthCm": 4.0,
@@ -468,9 +468,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/into-the-ever-blue.jpg",
     "alt": "Into the Ever Blue — original abstract seascape painting by Ritushka in turquoise, ice white and slate, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "into-the-ever-blue-in-coastal-living-room",
-      "into-the-ever-blue-in-melbourne-penthouse",
-      "into-the-ever-blue-in-office-reception"
+      "into-the-ever-blue-in-heritage-gallery",
+      "into-the-ever-blue-in-art-deco-hotel-lounge",
+      "into-the-ever-blue-in-calm-living-room"
     ],
     "inventoryId": "RIT-0011",
     "depthCm": 4.0,
@@ -510,9 +510,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/just-add-champagne.jpg",
     "alt": "Just Add Champagne — original statement abstract painting by Ritushka in rose, blush and pale gold, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
-      "just-add-champagne-in-red-brick-living-room",
-      "just-add-champagne-in-upstairs-landing",
-      "just-add-champagne-in-coastal-bedroom"
+      "just-add-champagne-in-skylit-hallway",
+      "just-add-champagne-in-blue-study",
+      "just-add-champagne-in-harbourside-boardroom"
     ],
     "inventoryId": "RIT-0012",
     "depthCm": 4.0,
@@ -553,9 +553,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/life-chooses-you.jpg",
     "alt": "Life Chooses You — original textured abstract painting by Ritushka in cream, umber and weathered white, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
-      "life-chooses-you-in-restaurant-banquette",
-      "life-chooses-you-in-scandi-living-room",
-      "life-chooses-you-in-red-brick-living-room"
+      "life-chooses-you-in-wine-bar-banquette",
+      "life-chooses-you-in-green-study",
+      "life-chooses-you-in-heritage-gallery"
     ],
     "inventoryId": "RIT-0013",
     "depthCm": 4.0,
@@ -596,9 +596,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/marshmallow.jpg",
     "alt": "Marshmallow — original statement abstract painting by Ritushka in butter cream, sand and pale rose, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "marshmallow-in-red-brick-living-room",
       "marshmallow-in-blue-study",
-      "marshmallow-in-moody-hotel-bedroom"
+      "marshmallow-in-coastal-living-room",
+      "marshmallow-in-harbourside-boardroom"
     ],
     "inventoryId": "RIT-0014",
     "depthCm": 4.0,
@@ -767,9 +767,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/peony-thinking-of-me.jpg",
     "alt": "Peony — Thinking of Me — original statement abstract painting by Ritushka in cream, blush and soft apricot, 120 × 91 cm (47.2 × 35.8 in)",
     "mockups": [
-      "peony-thinking-of-me-in-white-brick-loft",
       "peony-thinking-of-me-in-skylit-hallway",
-      "peony-thinking-of-me-in-japanese-restaurant"
+      "peony-thinking-of-me-in-walnut-boardroom",
+      "peony-thinking-of-me-in-warehouse-apartment"
     ],
     "inventoryId": "RIT-0018",
     "depthCm": 4.0,
@@ -811,9 +811,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/peace-of-white-heaven.jpg",
     "alt": "Peace of White Heaven — original abstract landscape painting by Ritushka in sky blue, cloud white and aqua, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "peace-of-white-heaven-in-scandi-living-room",
-      "peace-of-white-heaven-in-penthouse-living-room",
-      "peace-of-white-heaven-in-restaurant-banquette"
+      "peace-of-white-heaven-in-boutique-hotel-lounge",
+      "peace-of-white-heaven-in-melbourne-penthouse",
+      "peace-of-white-heaven-in-office-reception"
     ],
     "inventoryId": "RIT-0019",
     "depthCm": 4.0,
@@ -898,9 +898,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/reflection.jpg",
     "alt": "Reflection — original  painting by Ritushka in cobalt, ultramarine and white, 76 × 76 cm (29.9 × 29.9 in)",
     "mockups": [
-      "reflection-in-hotel-suite-bedroom",
-      "reflection-in-japanese-restaurant",
-      "reflection-in-studio-reception"
+      "reflection-in-heritage-hallway",
+      "reflection-in-limestone-hotel-lobby",
+      "reflection-in-coastal-bedroom"
     ],
     "inventoryId": "RIT-0021",
     "depthCm": 4.0,
@@ -941,9 +941,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/river-of-my-thoughts.jpg",
     "alt": "River of My Thoughts — original textured abstract painting by Ritushka in pearl, russet and soft grey, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
-      "river-of-my-thoughts-in-blue-study",
-      "river-of-my-thoughts-in-calm-living-room",
-      "river-of-my-thoughts-in-harbourside-boardroom"
+      "river-of-my-thoughts-in-green-study",
+      "river-of-my-thoughts-in-hotel-suite-bedroom",
+      "river-of-my-thoughts-in-japanese-restaurant"
     ],
     "inventoryId": "RIT-0022",
     "depthCm": 4.0,
@@ -986,8 +986,8 @@ export const artworks: Artwork[] = [
     "alt": "Rushing Shallows — original coastal abstract painting by Ritushka in bone white, stone and pale aqua, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
       "rushing-shallows-in-green-study",
-      "rushing-shallows-in-upstairs-landing",
-      "rushing-shallows-in-walnut-boardroom"
+      "rushing-shallows-in-limestone-hotel-lobby",
+      "rushing-shallows-in-moody-hotel-bedroom"
     ],
     "inventoryId": "RIT-0023",
     "depthCm": 4.0,
@@ -1029,9 +1029,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/set-sail.jpg",
     "alt": "Set Sail — original abstract seascape painting by Ritushka in deep sea blue, teal and white, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "set-sail-in-warehouse-gallery",
-      "set-sail-in-warehouse-meeting-room",
-      "set-sail-in-wine-bar-banquette"
+      "set-sail-in-penthouse-living-room",
+      "set-sail-in-restaurant-banquette",
+      "set-sail-in-upstairs-landing"
     ],
     "inventoryId": "RIT-0024",
     "depthCm": 4.0,
@@ -1073,9 +1073,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/shoreham.jpg",
     "alt": "Shoreham — original coastal abstract painting by Ritushka in sky blue, cloud white and warm dune, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
-      "shoreham-in-wine-bar-banquette",
-      "shoreham-in-heritage-hallway",
-      "shoreham-in-plant-wall-living-room"
+      "shoreham-in-hotel-suite-bedroom",
+      "shoreham-in-japanese-restaurant",
+      "shoreham-in-melbourne-penthouse"
     ],
     "inventoryId": "RIT-0025",
     "depthCm": 4.0,
@@ -1116,9 +1116,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/soft-awakening.jpg",
     "alt": "Soft Awakening — original abstract seascape painting by Ritushka in pale aqua, mist and cream, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
-      "soft-awakening-in-panelled-bedroom",
-      "soft-awakening-in-skylit-hallway",
-      "soft-awakening-in-boutique-hotel-lounge"
+      "soft-awakening-in-office-reception",
+      "soft-awakening-in-restaurant-banquette",
+      "soft-awakening-in-upstairs-landing"
     ],
     "inventoryId": "RIT-0026",
     "depthCm": 4.0,
@@ -1205,9 +1205,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/stillness.jpg",
     "alt": "Stillness — original abstract seascape painting by Ritushka in cobalt, aqua and warm sand, 72 × 72 cm (28.3 × 28.3 in)",
     "mockups": [
+      "stillness-in-hotel-suite-bedroom",
       "stillness-in-warehouse-apartment",
-      "stillness-in-plant-wall-living-room",
-      "stillness-in-panelled-bedroom"
+      "stillness-in-heritage-hallway"
     ],
     "inventoryId": "RIT-0028",
     "depthCm": 4.0,
@@ -1292,8 +1292,8 @@ export const artworks: Artwork[] = [
     "image": "/artworks/sunrise-over-tokyo.jpg",
     "alt": "Sunrise Over Tokyo — original statement abstract painting by Ritushka in coral, flame orange and rose, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "sunrise-over-tokyo-in-red-brick-living-room",
-      "sunrise-over-tokyo-in-white-gallery-wall",
+      "sunrise-over-tokyo-in-walnut-boardroom",
+      "sunrise-over-tokyo-in-warehouse-gallery",
       "sunrise-over-tokyo-in-heritage-hallway"
     ],
     "inventoryId": "RIT-0030",
@@ -1336,9 +1336,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/the-apostles.jpg",
     "alt": "The Apostles — original coastal abstract painting by Ritushka in sea green, storm grey and ochre stone, 91 × 122 cm (35.8 × 48 in)",
     "mockups": [
-      "the-apostles-in-coastal-living-room",
-      "the-apostles-in-green-study",
-      "the-apostles-in-heritage-gallery"
+      "the-apostles-in-melbourne-penthouse",
+      "the-apostles-in-moody-hotel-bedroom",
+      "the-apostles-in-office-reception"
     ],
     "inventoryId": "RIT-0031",
     "depthCm": 4.0,
@@ -1378,9 +1378,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/the-world-in-my-eyes-2.jpg",
     "alt": "The World In My Eyes II — original  painting by Ritushka in saturated orange, blue and teal, 90 × 60 cm (35.4 × 23.6 in)",
     "mockups": [
-      "the-world-in-my-eyes-2-in-heritage-gallery",
-      "the-world-in-my-eyes-2-in-white-brick-loft",
-      "the-world-in-my-eyes-2-in-architect-studio-entry"
+      "the-world-in-my-eyes-2-in-limestone-hotel-lobby",
+      "the-world-in-my-eyes-2-in-penthouse-living-room",
+      "the-world-in-my-eyes-2-in-walnut-boardroom"
     ],
     "inventoryId": "RIT-0033",
     "depthCm": 4.0,
@@ -1420,9 +1420,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/the-world-in-my-eyes.jpg",
     "alt": "The World In My Eyes — original  painting by Ritushka in saturated blue, red and gold, 90 × 60 cm (35.4 × 23.6 in)",
     "mockups": [
-      "the-world-in-my-eyes-in-limestone-hotel-lobby",
-      "the-world-in-my-eyes-in-coastal-bedroom",
-      "the-world-in-my-eyes-in-skylit-hallway"
+      "the-world-in-my-eyes-in-architect-studio-entry",
+      "the-world-in-my-eyes-in-art-deco-hotel-lounge",
+      "the-world-in-my-eyes-in-coastal-living-room"
     ],
     "inventoryId": "RIT-0032",
     "depthCm": 4.0,
@@ -1506,9 +1506,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/turbulence.jpg",
     "alt": "Turbulence — original abstract seascape painting by Ritushka in pale blue, cloud white and aqua, 60 × 60 cm (23.6 × 23.6 in)",
     "mockups": [
-      "turbulence-in-coastal-bedroom",
-      "turbulence-in-skylit-hallway",
-      "turbulence-in-heritage-gallery"
+      "turbulence-in-warehouse-meeting-room",
+      "turbulence-in-white-gallery-wall",
+      "turbulence-in-wine-bar-banquette"
     ],
     "inventoryId": "RIT-0035",
     "depthCm": 4.0,
@@ -1551,9 +1551,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/turquoise-tuesday.jpg",
     "alt": "Turquoise Tuesday — original abstract seascape painting by Ritushka in turquoise, surf white and soft sky, 90 × 90 cm (35.4 × 35.4 in)",
     "mockups": [
-      "turquoise-tuesday-in-panelled-bedroom",
-      "turquoise-tuesday-in-harbourside-boardroom",
-      "turquoise-tuesday-in-heritage-gallery"
+      "turquoise-tuesday-in-studio-reception",
+      "turquoise-tuesday-in-warehouse-apartment",
+      "turquoise-tuesday-in-wine-bar-banquette"
     ],
     "inventoryId": "RIT-0036",
     "depthCm": 4.0,
@@ -1594,9 +1594,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/urban-jungle.jpg",
     "alt": "Urban Jungle — original textured abstract painting by Ritushka in pale grey, aqua and silver, 110 × 76 cm (43.3 × 29.9 in)",
     "mockups": [
-      "urban-jungle-in-scandi-living-room",
-      "urban-jungle-in-warehouse-apartment",
-      "urban-jungle-in-white-brick-loft"
+      "urban-jungle-in-heritage-hallway",
+      "urban-jungle-in-coastal-bedroom",
+      "urban-jungle-in-boutique-hotel-lounge"
     ],
     "inventoryId": "RIT-0037",
     "depthCm": 4.0,
@@ -1636,9 +1636,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/without-sweet-harmony-2.jpg",
     "alt": "Without Sweet Harmony II — original statement abstract painting by Ritushka in flame orange, crimson and rose, 91 × 61 cm (35.8 × 24 in)",
     "mockups": [
-      "without-sweet-harmony-2-in-warehouse-meeting-room",
-      "without-sweet-harmony-2-in-white-gallery-wall",
-      "without-sweet-harmony-2-in-heritage-hallway"
+      "without-sweet-harmony-2-in-studio-reception",
+      "without-sweet-harmony-2-in-calm-living-room",
+      "without-sweet-harmony-2-in-moody-hotel-bedroom"
     ],
     "inventoryId": "RIT-0039",
     "depthCm": 4.0,
@@ -1678,9 +1678,9 @@ export const artworks: Artwork[] = [
     "image": "/artworks/without-sweet-harmony.jpg",
     "alt": "Without Sweet Harmony — original statement abstract painting by Ritushka in scarlet, orange and deep rose, 91 × 61 cm (35.8 × 24 in)",
     "mockups": [
-      "without-sweet-harmony-in-white-brick-loft",
-      "without-sweet-harmony-in-walnut-boardroom",
-      "without-sweet-harmony-in-warehouse-gallery"
+      "without-sweet-harmony-in-skylit-hallway",
+      "without-sweet-harmony-in-heritage-gallery",
+      "without-sweet-harmony-in-japanese-restaurant"
     ],
     "inventoryId": "RIT-0038",
     "depthCm": 4.0,
@@ -1722,8 +1722,8 @@ export const artworks: Artwork[] = [
     "alt": "Behind the Scenes — original  painting by Ritushka in cobalt, turquoise and coral, 60 × 150 cm (23.6 × 59.1 in)",
     "mockups": [
       "behind-the-scenes-in-limestone-hotel-lobby",
-      "behind-the-scenes-in-penthouse-living-room",
-      "behind-the-scenes-in-studio-reception"
+      "behind-the-scenes-in-warehouse-meeting-room",
+      "behind-the-scenes-in-white-gallery-wall"
     ],
     "inventoryId": "RIT-0040",
     "depthCm": 4.0,

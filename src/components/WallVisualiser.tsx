@@ -8,7 +8,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import EnquiryForm from './EnquiryForm';
 
-export type VisSize = { label: string; w: number; h: number; price: string; note?: string; soldOut?: boolean };
+// w × h is the recorded size, shown as text. dw × dh is the size the work is drawn at: the photograph's
+// own proportions at the recorded area, so the image is never cropped or stretched.
+export type VisSize = { label: string; w: number; h: number; dw?: number; dh?: number; price: string; note?: string; soldOut?: boolean };
+const drawn = (s: VisSize) => ({ w: s.dw ?? s.w, h: s.dh ?? s.h });
 export type VisItem = {
   slug: string; title: string; image: string; href: string;
   sizes: VisSize[]; // one entry for an original
@@ -17,26 +20,85 @@ export type VisItem = {
 };
 
 type Pt = { x: number; y: number };
-type Room = { src: string; w: number; h: number; ppc: number | null; sample?: { eyeY: number; furnitureTop: number } };
+type M3 = number[]; // 3x3 matrix, row-major
+
+// ---------------------------------------------------------------- perspective
+// A wall is a flat plane, so one 3x3 projective matrix (a homography) maps centimetres on the wall
+// to pixels in the photo, including the foreshortening of a wall photographed at an angle. It comes
+// from four points: the corners of something rectangular on the wall whose size is known.
+function solveH(src: Pt[], dst: Pt[]): M3 {
+  const a: number[][] = [];
+  for (let i = 0; i < 4; i++) {
+    const { x, y } = src[i], { x: u, y: v } = dst[i];
+    a.push([x, y, 1, 0, 0, 0, -u * x, -u * y, u]);
+    a.push([0, 0, 0, x, y, 1, -v * x, -v * y, v]);
+  }
+  for (let c = 0; c < 8; c++) {                       // Gaussian elimination with pivoting
+    let p = c;
+    for (let r = c + 1; r < 8; r++) if (Math.abs(a[r][c]) > Math.abs(a[p][c])) p = r;
+    [a[c], a[p]] = [a[p], a[c]];
+    for (let r = 0; r < 8; r++) {
+      if (r === c || a[c][c] === 0) continue;
+      const f = a[r][c] / a[c][c];
+      for (let k = c; k < 9; k++) a[r][k] -= f * a[c][k];
+    }
+  }
+  const h = a.map((row, i) => row[8] / row[i]);
+  return [...h, 1];
+}
+const mul3 = (a: M3, b: M3): M3 => {
+  const o: number[] = [];
+  for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) o.push(a[r * 3] * b[c] + a[r * 3 + 1] * b[3 + c] + a[r * 3 + 2] * b[6 + c]);
+  return o;
+};
+function inv3(m: M3): M3 {
+  const [a, b, c, d, e, f, g, h, i] = m;
+  const A = e * i - f * h, B = -(d * i - f * g), C = d * h - e * g;
+  const det = a * A + b * B + c * C;
+  return [A, -(b * i - c * h), b * f - c * e, B, a * i - c * g, -(a * f - c * d), C, -(a * h - b * g), a * e - b * d].map((v) => v / det);
+}
+const applyH = (m: M3, p: Pt): Pt => {
+  const w = m[6] * p.x + m[7] * p.y + m[8];
+  return { x: (m[0] * p.x + m[1] * p.y + m[2]) / w, y: (m[3] * p.x + m[4] * p.y + m[5]) / w };
+};
+/** CSS matrix3d for a 2D homography (column-major 4x4). */
+const cssMatrix = (m: M3) => `matrix3d(${m[0]},${m[3]},0,${m[6]},${m[1]},${m[4]},0,${m[7]},0,0,1,0,${m[2]},${m[5]},0,${m[8]})`;
+
+// H maps wall cm to photo px. sample: where works hang in that room, in wall cm (y measured down).
+// floorY: the floor's wall y, when the reference rectangle stood on it (a door).
+type Room = {
+  src: string; w: number; h: number; H: M3 | null; floorY?: number;
+  sample?: { centreX: number; eyeY: number; furnitureTop: number; topY: number };
+};
 type Mode = 'originals' | 'prints';
 
-// Sample rooms: straight-on interiors from the mockup library (mockups/rooms.json), so a work is
-// shown flat at true size. ppc is pixels per cm on the back wall at this image size; eyeY is where a
-// centre 150 cm off the floor falls; furnitureTop is the highest point of the sofa, bed or plant in
-// front of the wall. Works are centred horizontally, which is where each room's furniture sits.
+// Sample rooms from the mockup library (mockups/rooms.json, scenes.json), measured there. H maps the
+// back wall in cm (origin at the wall's top-left) to pixels of the 1600 px image, so the two angled
+// rooms show a work in true perspective. centreX, eyeY (150 cm off the floor), furnitureTop and topY
+// are wall cm.
 const SAMPLES = [
-  { id: 'calm-living-room', label: 'Living room', src: '/rooms/calm-living-room.jpg', thumb: '/rooms/calm-living-room-thumb.jpg', w: 1600, h: 1073, ppc: 2.344, eyeY: 443, furnitureTop: 627 },
-  { id: 'hotel-suite-bedroom', label: 'Bedroom', src: '/rooms/hotel-suite-bedroom.jpg', thumb: '/rooms/hotel-suite-bedroom-thumb.jpg', w: 1600, h: 1073, ppc: 2.396, eyeY: 419, furnitureTop: 530 },
-  { id: 'office-reception', label: 'Office', src: '/rooms/office-reception.jpg', thumb: '/rooms/office-reception-thumb.jpg', w: 1600, h: 1073, ppc: 2.771, eyeY: 401, furnitureTop: 544 },
-  { id: 'limestone-hotel-lobby', label: 'Hotel lobby', src: '/rooms/limestone-hotel-lobby.jpg', thumb: '/rooms/limestone-hotel-lobby-thumb.jpg', w: 1600, h: 1073, ppc: 1.829, eyeY: 528, furnitureTop: 671 },
+  { id: 'calm-living-room', label: 'Living room', src: '/rooms/calm-living-room.jpg', thumb: '/rooms/calm-living-room-thumb.jpg', w: 1600, h: 1073,
+    H: [2.34396, 0, 227.848, 0, 2.34403, 137.975, 0, 0, 1], centreX: 243.0, eyeY: 130.0, furnitureTop: 208.4, topY: 25 },
+  { id: 'hotel-suite-bedroom', label: 'Bedroom', src: '/rooms/hotel-suite-bedroom.jpg', thumb: '/rooms/hotel-suite-bedroom-thumb.jpg', w: 1600, h: 1073,
+    H: [2.39622, 0, 212.025, 0, 2.39602, 107.595, 0, 0, 1], centreX: 245.7, eyeY: 130.0, furnitureTop: 176.5, topY: 25 },
+  { id: 'office-reception', label: 'Office', src: '/rooms/office-reception.jpg', thumb: '/rooms/office-reception-thumb.jpg', w: 1600, h: 1073,
+    H: [2.77086, 0, 0, 0, 2.77075, 68.3544, 0, 0, 1], centreX: 292.4, eyeY: 120.0, furnitureTop: 171.8, topY: 25 },
+  { id: 'limestone-hotel-lobby', label: 'Hotel lobby', src: '/rooms/limestone-hotel-lobby.jpg', thumb: '/rooms/limestone-hotel-lobby-thumb.jpg', w: 1600, h: 1073,
+    H: [1.8288, 0, 37.9747, 0, 1.82878, 107.595, 0, 0, 1], centreX: 417.0, eyeY: 230.0, furnitureTop: 308.0, topY: 25 },
+  { id: 'coastal-living-room', label: 'Living room, angled wall', src: '/rooms/coastal-living-room.jpg', thumb: '/rooms/coastal-living-room-thumb.jpg', w: 1600, h: 1073,
+    H: [3.47387, 0, 227.848, 0.634429, 2.89381, 91.2025, 0.00117977, 0, 1], centreX: 271.0, eyeY: 120.0, furnitureTop: 189.0, topY: 25 },
+  { id: 'architect-studio-entry', label: 'Studio, angled wall', src: '/rooms/architect-studio-entry.jpg', thumb: '/rooms/architect-studio-entry-thumb.jpg', w: 1600, h: 1073,
+    H: [3.52279, 0, 455.696, 0.646071, 2.7055, 31.2658, 0.00129147, 0, 1], centreX: 247.7, eyeY: 170.0, furnitureTop: 241.5, topY: 25 },
 ];
 
-const PRESETS: { label: string; cm: number | null }[] = [
-  { label: 'Door height (standard 204 cm)', cm: 204 },
-  { label: 'A4 sheet, long side (29.7 cm)', cm: 29.7 },
-  { label: 'Light switch plate, height (11.5 cm)', cm: 11.5 },
-  { label: "Something else I've measured", cm: null },
+// Something rectangular on the wall, of known size. A door also tells us where the floor is.
+const PRESETS: { label: string; w: number | null; h: number | null; floor?: boolean }[] = [
+  { label: 'A standard door (82 × 204 cm)', w: 82, h: 204, floor: true },
+  { label: 'An A4 sheet taped up (21 × 29.7 cm)', w: 21, h: 29.7 },
+  { label: 'A light switch plate (7.2 × 11.5 cm)', w: 7.2, h: 11.5 },
+  { label: "Something else I've measured", w: null, h: null },
 ];
+const KPX = 4; // pixels per cm at which a work is drawn before it is projected onto the wall
 
 // Print framing preview only. Build in cm.
 const MOULDINGS = [
@@ -57,7 +119,8 @@ const GLASS = [
   { id: 'museum', label: 'Museum', reflect: 0.02, note: 'Anti-reflective and UV protective. Almost invisible.' },
   { id: 'acrylic', label: 'Acrylic', reflect: 0.12, note: 'Lighter and shatter-resistant. Good for larger prints.' },
 ];
-const FLOAT = { face: 1.6, gap: 1.0 };
+// The floating oak frame on Ritushka's originals: 7 mm of oak and a 3 mm shadow gap, 10 mm in all.
+const FLOAT = { face: 0.7, gap: 0.3 };
 const PAPER_FACE = 2.4;
 const BEVEL = 0.35;
 
@@ -77,7 +140,8 @@ function mouldingStyle(id: string): React.CSSProperties {
 
 type Look = { kind: 'canvas'; framed: boolean } | { kind: 'paper'; moulding: string; mat: string; glass: string };
 
-function outerCm(size: VisSize, look: Look) {
+function outerCm(rec: VisSize, look: Look) {
+  const size = drawn(rec);
   if (look.kind === 'canvas') {
     const add = look.framed ? 2 * (FLOAT.face + FLOAT.gap) : 0;
     return { w: size.w + add, h: size.h + add };
@@ -89,12 +153,13 @@ function outerCm(size: VisSize, look: Look) {
 }
 
 /** The work as it would hang, drawn at k display pixels per cm. */
-function Piece({ image, size, look, k }: { image: string; size: VisSize; look: Look; k: number }) {
+function Piece({ image, size: rec, look, k }: { image: string; size: VisSize; look: Look; k: number }) {
+  const size = drawn(rec);
   const px = (cm: number) => Math.max(1, cm * k);
   const wallShadow = `${px(0.6)}px ${px(1.8)}px ${px(3.5)}px rgba(0,0,0,0.38), 0 ${px(0.3)}px ${px(0.8)}px rgba(0,0,0,0.25)`;
   const img = (
     <img src={image} alt="" draggable={false}
-      style={{ display: 'block', width: size.w * k, height: size.h * k, objectFit: 'cover', userSelect: 'none' }} />
+      style={{ display: 'block', width: size.w * k, height: size.h * k, objectFit: 'contain', userSelect: 'none' }} />
   );
 
   if (look.kind === 'canvas') {
@@ -132,9 +197,11 @@ function Piece({ image, size, look, k }: { image: string; size: VisSize; look: L
 export default function WallVisualiser({ originals, prints }: { originals: VisItem[]; prints: VisItem[] }) {
   const [step, setStep] = useState<'start' | 'measure' | 'place'>('start');
   const [room, setRoom] = useState<Room | null>(null);
-  const [handles, setHandles] = useState<[Pt, Pt]>([{ x: 0, y: 0 }, { x: 0, y: 0 }]);
+  // Corners of the reference rectangle in photo pixels: top-left, top-right, bottom-right, bottom-left.
+  const [handles, setHandles] = useState<Pt[]>([{ x: 0, y: 0 }, { x: 0, y: 0 }, { x: 0, y: 0 }, { x: 0, y: 0 }]);
   const [preset, setPreset] = useState(0);
-  const [refCm, setRefCm] = useState<number>(204);
+  const [refW, setRefW] = useState<number>(82);
+  const [refH, setRefH] = useState<number>(204);
   const [mode, setMode] = useState<Mode>('originals');
   const [idx, setIdx] = useState(0);
   const [sizeIdx, setSizeIdx] = useState(0);
@@ -145,6 +212,7 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
   const [brightness, setBrightness] = useState(1);
   const [scale, setScale] = useState(0.3);
   const wrapRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const drag = useRef<{ kind: 'art' | 'handle' | 'swipe'; i?: number; start: Pt; origin: Pt; t: number } | null>(null);
 
@@ -180,17 +248,27 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
     return () => { ro.disconnect(); window.removeEventListener('resize', fit); };
   }, [room, step]);
 
-  const ppc = room?.ppc ?? 3.2;
-  const artNat = { w: outer.w * ppc, h: outer.h * ppc };
+  // Positions are kept in wall centimetres, so moving a work along an angled wall keeps it on the wall.
+  const H = room?.H ?? null;
+  const Hinv = H ? inv3(H) : null;
   const autoPos = useCallback((): Pt => {
-    if (!room) return { x: 0, y: 0 };
+    if (!room || !H) return { x: 0, y: 0 };
     if (room.sample) {
-      const y = Math.min(room.sample.eyeY, room.sample.furnitureTop - 25 * ppc - artNat.h / 2);
-      return { x: room.w / 2, y: Math.max(artNat.h / 2 + 10, y) };
+      const s = room.sample;
+      // Eye level, unless the work would come down onto the sofa or bed, in which case it clears it by 25 cm.
+      const y = Math.min(s.eyeY, s.furnitureTop - 25 - outer.h / 2);
+      return { x: s.centreX, y: Math.max(s.topY + outer.h / 2, y) };
     }
-    return { x: room.w / 2, y: room.h * 0.42 };
-  }, [room, ppc, artNat.h]);
+    const mid = applyH(inv3(H), { x: room.w / 2, y: room.h * 0.45 });
+    return { x: mid.x, y: room.floorY != null ? room.floorY - 150 : mid.y };
+  }, [room, H, outer.h]);
   const centre = pos ?? autoPos();
+
+  /** Photo pixel under a pointer event. */
+  function photoPt(e: React.PointerEvent): Pt {
+    const r = stageRef.current?.getBoundingClientRect();
+    return r ? { x: (e.clientX - r.left) / scale, y: (e.clientY - r.top) / scale } : { x: 0, y: 0 };
+  }
 
   function loadImage(src: string): Promise<HTMLImageElement> {
     return new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = src; });
@@ -213,21 +291,30 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
     const src = URL.createObjectURL(f);
     const im = await loadImage(src);
     const w = im.naturalWidth, h = im.naturalHeight;
-    setRoom({ src, w, h, ppc: null });
-    setHandles([{ x: w * 0.15, y: h * 0.22 }, { x: w * 0.15, y: h * 0.86 }]);
+    setRoom({ src, w, h, H: null });
+    // Start with a door-shaped box the user drags onto the real thing.
+    const x0 = w * 0.12, x1 = w * 0.26, y0 = h * 0.2, y1 = h * 0.88;
+    setHandles([{ x: x0, y: y0 }, { x: x1, y: y0 }, { x: x1, y: y1 }, { x: x0, y: y1 }]);
     setPos(null);
     measureBrightness(src);
     setStep('measure');
     e.target.value = '';
   }
   function pickSample(s: (typeof SAMPLES)[number]) {
-    setRoom({ src: s.src, w: s.w, h: s.h, ppc: s.ppc, sample: { eyeY: s.eyeY, furnitureTop: s.furnitureTop } });
+    setRoom({ src: s.src, w: s.w, h: s.h, H: s.H,
+      sample: { centreX: s.centreX, eyeY: s.eyeY, furnitureTop: s.furnitureTop, topY: s.topY } });
     setPos(null); setBrightness(1); setStep('place');
   }
-  const handleDist = Math.hypot(handles[1].x - handles[0].x, handles[1].y - handles[0].y);
+  // The four corners must make a real, non-folded shape before they can define the wall.
+  const quadArea = handles.reduce((s, p, i) => {
+    const q = handles[(i + 1) % 4];
+    return s + p.x * q.y - q.x * p.y;
+  }, 0) / 2;
+  const measureOk = Math.abs(quadArea) > 400 && refW > 0 && refH > 0;
   function confirmMeasure() {
-    if (!room || handleDist < 10 || !(refCm > 0)) return;
-    setRoom({ ...room, ppc: handleDist / refCm });
+    if (!room || !measureOk) return;
+    const Hm = solveH([{ x: 0, y: 0 }, { x: refW, y: 0 }, { x: refW, y: refH }, { x: 0, y: refH }], handles);
+    setRoom({ ...room, H: Hm, floorY: PRESETS[preset].floor ? refH : undefined });
     setPos(null); setStep('place');
   }
 
@@ -259,16 +346,20 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
     e.stopPropagation();
     try { (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); } catch { /* pointer already gone */ }
     const origin = kind === 'art' ? centre : kind === 'handle' ? handles[i!] : { x: 0, y: 0 };
-    drag.current = { kind, i, start: { x: e.clientX, y: e.clientY }, origin, t: Date.now() };
+    // For the artwork, remember where on the wall the pointer started, in wall cm.
+    const start = kind === 'art' && Hinv ? applyH(Hinv, photoPt(e)) : { x: e.clientX, y: e.clientY };
+    drag.current = { kind, i, start, origin, t: Date.now() };
   }
   function move(e: React.PointerEvent) {
     const d = drag.current;
     if (!d || !room) return;
-    const dx = (e.clientX - d.start.x) / scale, dy = (e.clientY - d.start.y) / scale;
-    if (d.kind === 'art') setPos({ x: clamp(d.origin.x + dx, 0, room.w), y: clamp(d.origin.y + dy, 0, room.h) });
-    else if (d.kind === 'handle') {
+    if (d.kind === 'art' && Hinv) {
+      const p = applyH(Hinv, photoPt(e));
+      setPos({ x: d.origin.x + p.x - d.start.x, y: d.origin.y + p.y - d.start.y });
+    } else if (d.kind === 'handle') {
+      const dx = (e.clientX - d.start.x) / scale, dy = (e.clientY - d.start.y) / scale;
       const p = { x: clamp(d.origin.x + dx, 0, room.w), y: clamp(d.origin.y + dy, 0, room.h) };
-      setHandles((hs) => (d.i === 0 ? [p, hs[1]] : [hs[0], p]));
+      setHandles((hs) => hs.map((h, j) => (j === d.i ? p : h)));
     }
   }
   function up(e: React.PointerEvent) {
@@ -291,8 +382,9 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
           <p className="text-xs uppercase tracking-widest text-ink/65">Step 1</p>
           <h2 className="mt-2 font-serif text-3xl text-ink">Photograph your wall</h2>
           <p className="mt-4 max-w-md text-ink/70">
-            Stand square to the wall, a few steps back, and take a photo that shows something you know the size of:
-            a door, an A4 sheet taped to the wall, or a light switch. Your photo stays on your device and is never uploaded.
+            Take a photo of the wall from where you would usually see it, straight on or at an angle. Include something
+            rectangular you know the size of: a door, an A4 sheet taped to the wall, or a light switch plate. Your photo
+            stays on your device and is never uploaded.
           </p>
           <input ref={fileRef} type="file" accept="image/*" capture="environment" className="hidden" onChange={onFile} />
           <button onClick={() => fileRef.current?.click()} className={`mt-6 ${primary}`}>Take or upload a photo</button>
@@ -316,7 +408,8 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
   const stageW = room.w * scale, stageH = room.h * scale;
 
   if (step === 'measure') {
-    const mid = { x: ((handles[0].x + handles[1].x) / 2) * scale, y: ((handles[0].y + handles[1].y) / 2) * scale };
+    const poly = handles.map((h) => `${h.x * scale},${h.y * scale}`).join(' ');
+    const corner = ['Top left', 'Top right', 'Bottom right', 'Bottom left'];
     return (
       <div className={cols}>
         <div ref={wrapRef} className="w-full min-w-0">
@@ -324,50 +417,69 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
             onPointerMove={move} onPointerUp={up} onPointerCancel={up}>
             <img src={room.src} alt="Your wall" draggable={false} className="block h-full w-full" />
             <svg className="absolute inset-0" width={stageW} height={stageH}>
-              <line x1={handles[0].x * scale} y1={handles[0].y * scale} x2={handles[1].x * scale} y2={handles[1].y * scale} stroke="#fff" strokeWidth={4} strokeOpacity={0.9} />
-              <line x1={handles[0].x * scale} y1={handles[0].y * scale} x2={handles[1].x * scale} y2={handles[1].y * scale} stroke="#1a1a18" strokeWidth={2} strokeDasharray="8 6" />
+              <polygon points={poly} fill="rgba(255,255,255,0.12)" stroke="#fff" strokeWidth={4} strokeOpacity={0.9} />
+              <polygon points={poly} fill="none" stroke="#1a1a18" strokeWidth={2} strokeDasharray="8 6" />
             </svg>
             {handles.map((h, i) => (
-              <div key={i} role="slider" aria-label={i === 0 ? 'Start of measurement' : 'End of measurement'} aria-valuenow={0}
+              <div key={i} role="slider" aria-label={`${corner[i]} corner`} aria-valuenow={0}
                 onPointerDown={(e) => down(e, 'handle', i)}
                 className="absolute flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 cursor-grab items-center justify-center"
                 style={{ left: h.x * scale, top: h.y * scale, touchAction: 'none' }}>
                 <span className="block h-5 w-5 rounded-full border-2 border-white bg-ink shadow" />
               </div>
             ))}
-            <div className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 rounded bg-ink px-2 py-1 text-xs text-bone" style={{ left: mid.x + 40, top: mid.y }}>
-              {refCm > 0 ? `${refCm} cm` : '?'}
-            </div>
           </div>
         </div>
         <div>
           <p className="text-xs uppercase tracking-widest text-ink/65">Step 2</p>
-          <h2 className="mt-2 font-serif text-3xl text-ink">Set the scale</h2>
-          <p className="mt-4 text-ink/70">Drag the two dots to each end of something in the photo you know the size of. This tells us how big everything on your wall really is.</p>
+          <h2 className="mt-2 font-serif text-3xl text-ink">Mark something on the wall</h2>
+          <p className="mt-4 text-ink/70">
+            Drag the four dots onto the four corners of something rectangular in the photo, such as a door frame. It tells
+            us how big everything on the wall is and the angle you photographed it from, so the art is drawn in true
+            perspective.
+          </p>
           <label className="mt-6 block text-sm">
-            <span className="text-ink/70">What are you measuring?</span>
-            <select value={preset} onChange={(e) => { const i = +e.target.value; setPreset(i); if (PRESETS[i].cm) setRefCm(PRESETS[i].cm!); }}
-              className="mt-1 w-full rounded-md border border-ink/20 bg-bone px-3 py-2">
+            <span className="text-ink/70">What are you marking?</span>
+            <select value={preset} onChange={(e) => {
+              const i = +e.target.value; setPreset(i);
+              if (PRESETS[i].w && PRESETS[i].h) { setRefW(PRESETS[i].w!); setRefH(PRESETS[i].h!); }
+            }} className="mt-1 w-full rounded-md border border-ink/20 bg-bone px-3 py-2">
               {PRESETS.map((p, i) => <option key={p.label} value={i}>{p.label}</option>)}
             </select>
           </label>
-          <label className="mt-4 block text-sm">
-            <span className="text-ink/70">Its real length in cm</span>
-            <input type="number" inputMode="decimal" min={1} step="0.1" value={refCm || ''}
-              onChange={(e) => { setRefCm(parseFloat(e.target.value)); setPreset(PRESETS.length - 1); }}
-              className="mt-1 w-full rounded-md border border-ink/20 bg-bone px-3 py-2" />
-          </label>
+          <div className="mt-4 grid grid-cols-2 gap-3">
+            <label className="block text-sm">
+              <span className="text-ink/70">Width in cm</span>
+              <input type="number" inputMode="decimal" min={1} step="0.1" value={refW || ''}
+                onChange={(e) => { setRefW(parseFloat(e.target.value)); setPreset(PRESETS.length - 1); }}
+                className="mt-1 w-full rounded-md border border-ink/20 bg-bone px-3 py-2" />
+            </label>
+            <label className="block text-sm">
+              <span className="text-ink/70">Height in cm</span>
+              <input type="number" inputMode="decimal" min={1} step="0.1" value={refH || ''}
+                onChange={(e) => { setRefH(parseFloat(e.target.value)); setPreset(PRESETS.length - 1); }}
+                className="mt-1 w-full rounded-md border border-ink/20 bg-bone px-3 py-2" />
+            </label>
+          </div>
           <div className="mt-6 flex gap-3">
-            <button onClick={confirmMeasure} disabled={handleDist < 10 || !(refCm > 0)} className={primary}>Place artwork</button>
+            <button onClick={confirmMeasure} disabled={!measureOk} className={primary}>Place artwork</button>
             <button onClick={() => setStep('start')} className="rounded-full border border-ink/20 px-5 py-3 text-sm hover:border-ink">Back</button>
           </div>
-          <p className="mt-4 text-xs text-ink/65">Tip: measure something flat against the wall, at about the height you will hang the art, for the most accurate result.</p>
+          <p className="mt-4 text-xs text-ink/65">
+            Tip: use something flat on the same wall you want to hang the art on. A door frame works best: it is large, and
+            it also tells us where the floor is, so the art starts at eye level.
+          </p>
         </div>
       </div>
     );
   }
 
-  const k = ppc * scale;
+  // The work is drawn flat at KPX px per cm, then projected onto the wall: local pixel -> wall cm (T)
+  // -> photo pixel (H) -> screen pixel (S). On an angled wall that foreshortens it exactly as the wall is.
+  const X0 = centre.x - outer.w / 2, Y0 = centre.y - outer.h / 2;
+  const T: M3 = [1 / KPX, 0, X0, 0, 1 / KPX, Y0, 0, 0, 1];
+  const S: M3 = [scale, 0, 0, 0, scale, 0, 0, 0, 1];
+  const project = H ? mul3(S, mul3(H, T)) : null;
   const glassInfo = GLASS.find((g) => g.id === glass) ?? GLASS[0];
   const subject = mode === 'originals'
     ? `${item.title} (seen on my wall)`
@@ -376,16 +488,18 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
   return (
     <div className={cols}>
       <div ref={wrapRef} className="w-full min-w-0">
-        <div className="relative mx-auto select-none overflow-hidden rounded-md" style={{ width: stageW, height: stageH, touchAction: 'pan-y' }}
+        <div ref={stageRef} className="relative mx-auto select-none overflow-hidden rounded-md" style={{ width: stageW, height: stageH, touchAction: 'pan-y' }}
           onPointerDown={(e) => down(e, 'swipe')} onPointerMove={move} onPointerUp={up} onPointerCancel={up}>
           <img src={room.src} alt="Your wall" draggable={false} className="block h-full w-full" />
-          <div onPointerDown={(e) => down(e, 'art')} className="absolute cursor-grab active:cursor-grabbing"
-            style={{
-              left: centre.x * scale - (artNat.w * scale) / 2, top: centre.y * scale - (artNat.h * scale) / 2,
-              touchAction: 'none', filter: brightness < 0.99 ? `brightness(${brightness})` : undefined,
-            }}>
-            <Piece image={item.image} size={size} look={look} k={k} />
-          </div>
+          {project && (
+            <div onPointerDown={(e) => down(e, 'art')} className="absolute left-0 top-0 cursor-grab active:cursor-grabbing"
+              style={{
+                width: outer.w * KPX, height: outer.h * KPX, transformOrigin: '0 0', transform: cssMatrix(project),
+                touchAction: 'none', filter: brightness < 0.99 ? `brightness(${brightness})` : undefined,
+              }}>
+              <Piece image={item.image} size={size} look={look} k={KPX} />
+            </div>
+          )}
           <button aria-label="Previous artwork" onClick={() => go(-1)} onPointerDown={(e) => e.stopPropagation()}
             className="absolute left-2 top-1/2 h-10 w-10 -translate-y-1/2 rounded-full bg-bone/85 text-lg shadow hover:bg-bone">‹</button>
           <button aria-label="Next artwork" onClick={() => go(1)} onPointerDown={(e) => e.stopPropagation()}

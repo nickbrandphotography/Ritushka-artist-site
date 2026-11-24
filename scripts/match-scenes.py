@@ -98,7 +98,8 @@ def main():
         sys.exit(f"No {SCENES_JSON} yet — add master interiors first (see mockups/README.md).")
 
     from PIL import Image
-    scenes = json.load(open(SCENES_JSON, encoding='utf-8'))['scenes']
+    scenes = [s for s in json.load(open(SCENES_JSON, encoding='utf-8'))['scenes']
+              if s.get('active', True)]          # retired scenes stay on file but get no works
     for sc in scenes:                       # each scene keeps its own framing
         with Image.open(os.path.join('mockups/scenes', sc['file'])) as im:
             sc['_aspect'] = f'{im.width} / {im.height}'

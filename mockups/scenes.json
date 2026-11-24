@@ -78,7 +78,9 @@
           "modern-australian-art"
         ]
       },
-      "credit": null
+      "credit": null,
+      "active": false,
+      "_retired": "Nov 2026: calibration not reliable (floor line, tight crops). Kept for reference, not used for mockups."
     },
     {
       "id": "plant-wall-living-room",
@@ -156,7 +158,9 @@
           "coastal-abstract-art"
         ]
       },
-      "credit": null
+      "credit": null,
+      "active": false,
+      "_retired": "Nov 2026: calibration not reliable (floor line, tight crops). Kept for reference, not used for mockups."
     },
     {
       "id": "white-brick-loft",
@@ -225,7 +229,9 @@
           "other-works"
         ]
       },
-      "credit": null
+      "credit": null,
+      "active": false,
+      "_retired": "Nov 2026: calibration not reliable (floor line, tight crops). Kept for reference, not used for mockups."
     },
     {
       "id": "red-brick-living-room",
@@ -293,7 +299,9 @@
           "modern-australian-art"
         ]
       },
-      "credit": null
+      "credit": null,
+      "active": false,
+      "_retired": "Nov 2026: calibration not reliable (floor line, tight crops). Kept for reference, not used for mockups."
     },
     {
       "id": "panelled-bedroom",
@@ -362,7 +370,9 @@
           "blue-abstract-paintings"
         ]
       },
-      "credit": null
+      "credit": null,
+      "active": false,
+      "_retired": "Nov 2026: calibration not reliable (floor line, tight crops). Kept for reference, not used for mockups."
     },
     {
       "id": "calm-living-room",
