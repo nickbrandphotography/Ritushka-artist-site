@@ -90,9 +90,14 @@ class WallCamera:
 
     DEFAULT_FOCAL = 0.9     # times image width: roughly a 32 mm lens on full frame
 
-    def __init__(self, plane: WallPlane, image_size: tuple, focal_px: float | None = None):
+    def __init__(self, plane: WallPlane, image_size: tuple, focal_px: float | None = None,
+                 principal_y: float | None = None):
         w, h = image_size
-        self.cx, self.cy = w / 2.0, h / 2.0
+        # Architectural photos (and AI images imitating them) are often shot with a
+        # shift lens: the camera is level but the frame is moved up or down, so the
+        # optical centre is not the middle of the image. It lies on the horizon,
+        # which a scene can give as principalY.
+        self.cx, self.cy = w / 2.0, (principal_y if principal_y is not None else h / 2.0)
         hm = plane.h / plane.h[2, 2]
         self.estimated = False
         f = focal_px or self._solve_focal(hm, w, plane.width_cm, plane.height_cm)

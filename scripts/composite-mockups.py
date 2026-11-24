@@ -100,7 +100,8 @@ def composite(art_meta, scene, scene_img):
     out = scene_img.convert('RGB')
     light = scene.get('light', {})
     side = light.get('from', 'left')
-    cam = WallCamera(plane, out.size, scene.get('camera', {}).get('focalPx'))
+    cam_cfg = scene.get('camera', {})
+    cam = WallCamera(plane, out.size, cam_cfg.get('focalPx'), cam_cfg.get('principalY'))
     seed = int(hashlib.md5(art_meta['slug'].encode()).hexdigest()[:8], 16)
 
     # Shadows go down before the artwork does. They sit on the wall, depth_cm

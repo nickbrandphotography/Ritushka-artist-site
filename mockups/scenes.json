@@ -1797,6 +1797,612 @@
       },
       "credit": null,
       "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "coastal-living-room",
+      "name": "Coastal living room",
+      "room": "Living Room",
+      "file": "coastal-living-room.jpg",
+      "wall": {
+        "quad": [
+          [
+            360,
+            144.1
+          ],
+          [
+            2280,
+            459.7
+          ],
+          [
+            2280,
+            1142.0
+          ],
+          [
+            360,
+            1378.6
+          ]
+        ],
+        "widthCm": 686.0,
+        "heightCm": 270
+      },
+      "camera": {
+        "focalPx": 1881,
+        "principalY": 849.7
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 271.0,
+          "yCm": 169.0,
+          "maxWidthCm": 475.8,
+          "maxHeightCm": 144.0,
+          "minWidthCm": 104.7,
+          "bottomYCm": 169.0,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.7 m; sofa back reads 81 cm.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "art-deco-hotel-lounge",
+      "name": "Art deco hotel lounge",
+      "room": "Hotel Lobby",
+      "file": "art-deco-hotel-lounge.jpg",
+      "wall": {
+        "quad": [
+          [
+            650,
+            -188.1
+          ],
+          [
+            2050,
+            355.4
+          ],
+          [
+            2050,
+            892.6
+          ],
+          [
+            650,
+            980.1
+          ]
+        ],
+        "widthCm": 725.7,
+        "heightCm": 250
+      },
+      "camera": {
+        "focalPx": 2103,
+        "principalY": 818.1
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 228.6,
+          "yCm": 230.0,
+          "maxWidthCm": 437.2,
+          "maxHeightCm": 205.0,
+          "minWidthCm": 96.2,
+          "bottomYCm": 230.0,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Measured between the cornice and the brass rail, taken as 2.5 m (3.6 m ceiling, 1.1 m panelling).",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "harbourside-boardroom",
+      "name": "Harbourside boardroom",
+      "room": "Boardroom",
+      "file": "harbourside-boardroom.jpg",
+      "wall": {
+        "quad": [
+          [
+            520,
+            106.2
+          ],
+          [
+            2170,
+            382.9
+          ],
+          [
+            2170,
+            1090.4
+          ],
+          [
+            520,
+            1279.6
+          ]
+        ],
+        "widthCm": 589.4,
+        "heightCm": 270
+      },
+      "camera": {
+        "focalPx": 1869,
+        "principalY": 803.0
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 206.8,
+          "yCm": 120.0,
+          "maxWidthCm": 376.2,
+          "maxHeightCm": 185.0,
+          "minWidthCm": 82.8,
+          "bottomYCm": 210.0,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.7 m; works hang at eye level as the table stands away from the wall.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "architect-studio-entry",
+      "name": "Architect studio entry",
+      "room": "Office Reception",
+      "file": "architect-studio-entry.jpg",
+      "wall": {
+        "quad": [
+          [
+            720,
+            49.4
+          ],
+          [
+            2340,
+            383.8
+          ],
+          [
+            2340,
+            1134.4
+          ],
+          [
+            720,
+            1417.3
+          ]
+        ],
+        "widthCm": 636.8,
+        "heightCm": 320
+      },
+      "camera": {
+        "focalPx": 1296,
+        "principalY": 790.5
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 247.7,
+          "yCm": 221.5,
+          "maxWidthCm": 457.9,
+          "maxHeightCm": 196.5,
+          "minWidthCm": 100.7,
+          "bottomYCm": 221.5,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 3.2 m; the doorway on this wall then reads 2.14 m (standard 2.04 m), a 5% check.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "moody-hotel-bedroom",
+      "name": "Moody hotel bedroom",
+      "room": "Bedroom",
+      "file": "moody-hotel-bedroom.jpg",
+      "wall": {
+        "quad": [
+          [
+            300,
+            13.0
+          ],
+          [
+            2080,
+            345.8
+          ],
+          [
+            2080,
+            1056.2
+          ],
+          [
+            300,
+            1293.7
+          ]
+        ],
+        "widthCm": 609.6,
+        "heightCm": 280
+      },
+      "camera": {
+        "focalPx": 1692,
+        "principalY": 760.3
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 246.6,
+          "yCm": 161.5,
+          "maxWidthCm": 304.4,
+          "maxHeightCm": 136.5,
+          "minWidthCm": 67.0,
+          "bottomYCm": 161.5,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.8 m; headboard reads 98 cm.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "melbourne-penthouse",
+      "name": "Melbourne penthouse",
+      "room": "Penthouse",
+      "file": "melbourne-penthouse.jpg",
+      "wall": {
+        "quad": [
+          [
+            480,
+            434.5
+          ],
+          [
+            2150,
+            184.6
+          ],
+          [
+            2150,
+            1401.5
+          ],
+          [
+            480,
+            1045.5
+          ]
+        ],
+        "widthCm": 674.0,
+        "heightCm": 300
+      },
+      "camera": {
+        "focalPx": 1229,
+        "principalY": 686.5
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 405.4,
+          "yCm": 181.9,
+          "maxWidthCm": 383.7,
+          "maxHeightCm": 156.9,
+          "minWidthCm": 84.4,
+          "bottomYCm": 181.9,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 3 m; works clear the floor lamp.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "japanese-restaurant",
+      "name": "Japanese-inspired restaurant",
+      "room": "Restaurant",
+      "file": "japanese-restaurant.jpg",
+      "wall": {
+        "quad": [
+          [
+            730,
+            307.5
+          ],
+          [
+            2150,
+            3.4
+          ],
+          [
+            2150,
+            1034.1
+          ],
+          [
+            730,
+            887.9
+          ]
+        ],
+        "widthCm": 473.2,
+        "heightCm": 200
+      },
+      "camera": {
+        "focalPx": 2072,
+        "principalY": 699.5
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 264.0,
+          "yCm": 180.0,
+          "maxWidthCm": 274.3,
+          "maxHeightCm": 155.0,
+          "minWidthCm": 60.3,
+          "bottomYCm": 180.0,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Measured between the ceiling and the banquette rail, taken as 2 m (3 m ceiling, 1 m banquette).",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "upstairs-landing",
+      "name": "Upstairs landing",
+      "room": "Hallway",
+      "file": "upstairs-landing.jpg",
+      "wall": {
+        "quad": [
+          [
+            440,
+            268.8
+          ],
+          [
+            1880,
+            394.1
+          ],
+          [
+            1880,
+            1148.1
+          ],
+          [
+            440,
+            1394.6
+          ]
+        ],
+        "widthCm": 476.0,
+        "heightCm": 270
+      },
+      "camera": {
+        "focalPx": 1923,
+        "principalY": 648.1
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 210.3,
+          "yCm": 188.9,
+          "maxWidthCm": 364.5,
+          "maxHeightCm": 163.9,
+          "minWidthCm": 80.2,
+          "bottomYCm": 188.9,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.7 m; bench and books read 61 cm.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
     }
   ]
 }

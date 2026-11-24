@@ -65,7 +65,7 @@ def straight_on(r: dict) -> dict:
 def angled(r: dict) -> dict:
     return {
         'wall': {'quad': r['quad'], 'widthCm': r['widthCm'], 'heightCm': r['heightCm']},
-        'camera': {'focalPx': r['focalPx']},
+        'camera': {k: r[k] for k in ('focalPx', 'principalY') if k in r},
         'placements': r['placements'],
         '_calibration': r.get('note', ''),
     }

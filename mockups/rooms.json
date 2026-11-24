@@ -1,5 +1,5 @@
 {
-  "_comment": "Measurements of the AI-generated interiors (Nano Banana, Nov 2026), in pixels of the file in mockups/scenes/. scripts/calibrate-rooms.py turns each into a calibrated scene in scenes.json. Straight-on rooms: wall = [left, top, right, bottom] of the back wall, heightCm = the real height between top and bottom (from the prompt's ceiling height, checked against furniture). clear = [x from, x to] of open wall; furnitureTop = highest pixel of anything in front of that wall (sofa back, headboard, lamp, plant); topLimit = lowest pixel of anything hanging from the ceiling. Angled rooms give the full quad and a focal length instead. centreX = the pixel column to centre works on (the sofa, bed or desk below). hangAbove = hang a set gap above the furniture rather than at eye level.",
+  "_comment": "Measurements of the AI-generated interiors (Nano Banana, Nov 2026), in pixels of the file in mockups/scenes/. scripts/calibrate-rooms.py turns each into a calibrated scene in scenes.json. Straight-on rooms: wall = [left, top, right, bottom] of the back wall, heightCm = the real height between top and bottom (from the prompt's ceiling height, checked against furniture). clear = [x from, x to] of open wall; furnitureTop = highest pixel of anything in front of that wall (sofa back, headboard, lamp, plant); topLimit = lowest pixel of anything hanging from the ceiling. Angled rooms give the full quad and a focal length instead. centreX = the pixel column to centre works on (the sofa, bed or desk below). hangAbove = hang a set gap above the furniture rather than at eye level. Angled rooms give quad, widthCm, heightCm, focalPx and principalY (the horizon: these images are shot as if with a shift lens).",
   "rooms": [
     {
       "id": "calm-living-room",
@@ -578,6 +578,388 @@
         }
       ],
       "note": "Angled wall, floor to picture rail. The doorway (2.04 m) puts the rail at 3.05 m; focal length from the two walls' vanishing points; wall length then 7.84 m."
+    },
+    {
+      "id": "coastal-living-room",
+      "name": "Coastal living room",
+      "room": "Living Room",
+      "src": "29.jpg",
+      "quad": [
+        [
+          360,
+          144.1
+        ],
+        [
+          2280,
+          459.7
+        ],
+        [
+          2280,
+          1142.0
+        ],
+        [
+          360,
+          1378.6
+        ]
+      ],
+      "widthCm": 686.0,
+      "heightCm": 270,
+      "focalPx": 1881,
+      "principalY": 849.7,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 271.0,
+          "yCm": 169.0,
+          "maxWidthCm": 475.8,
+          "maxHeightCm": 144.0,
+          "minWidthCm": 104.7,
+          "bottomYCm": 169.0,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.7 m; sofa back reads 81 cm."
+    },
+    {
+      "id": "art-deco-hotel-lounge",
+      "name": "Art deco hotel lounge",
+      "room": "Hotel Lobby",
+      "src": "30.jpg",
+      "quad": [
+        [
+          650,
+          -188.1
+        ],
+        [
+          2050,
+          355.4
+        ],
+        [
+          2050,
+          892.6
+        ],
+        [
+          650,
+          980.1
+        ]
+      ],
+      "widthCm": 725.7,
+      "heightCm": 250,
+      "focalPx": 2103,
+      "principalY": 818.1,
+      "light": "left",
+      "palettes": [
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 228.6,
+          "yCm": 230.0,
+          "maxWidthCm": 437.2,
+          "maxHeightCm": 205.0,
+          "minWidthCm": 96.2,
+          "bottomYCm": 230.0,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Measured between the cornice and the brass rail, taken as 2.5 m (3.6 m ceiling, 1.1 m panelling)."
+    },
+    {
+      "id": "harbourside-boardroom",
+      "name": "Harbourside boardroom",
+      "room": "Boardroom",
+      "src": "31.jpg",
+      "quad": [
+        [
+          520,
+          106.2
+        ],
+        [
+          2170,
+          382.9
+        ],
+        [
+          2170,
+          1090.4
+        ],
+        [
+          520,
+          1279.6
+        ]
+      ],
+      "widthCm": 589.4,
+      "heightCm": 270,
+      "focalPx": 1869,
+      "principalY": 803.0,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 206.8,
+          "yCm": 120.0,
+          "maxWidthCm": 376.2,
+          "maxHeightCm": 185.0,
+          "minWidthCm": 82.8,
+          "bottomYCm": 210.0,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.7 m; works hang at eye level as the table stands away from the wall."
+    },
+    {
+      "id": "architect-studio-entry",
+      "name": "Architect studio entry",
+      "room": "Office Reception",
+      "src": "32.jpg",
+      "quad": [
+        [
+          720,
+          49.4
+        ],
+        [
+          2340,
+          383.8
+        ],
+        [
+          2340,
+          1134.4
+        ],
+        [
+          720,
+          1417.3
+        ]
+      ],
+      "widthCm": 636.8,
+      "heightCm": 320,
+      "focalPx": 1296,
+      "principalY": 790.5,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 247.7,
+          "yCm": 221.5,
+          "maxWidthCm": 457.9,
+          "maxHeightCm": 196.5,
+          "minWidthCm": 100.7,
+          "bottomYCm": 221.5,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 3.2 m; the doorway on this wall then reads 2.14 m (standard 2.04 m), a 5% check."
+    },
+    {
+      "id": "moody-hotel-bedroom",
+      "name": "Moody hotel bedroom",
+      "room": "Bedroom",
+      "src": "33.jpg",
+      "quad": [
+        [
+          300,
+          13.0
+        ],
+        [
+          2080,
+          345.8
+        ],
+        [
+          2080,
+          1056.2
+        ],
+        [
+          300,
+          1293.7
+        ]
+      ],
+      "widthCm": 609.6,
+      "heightCm": 280,
+      "focalPx": 1692,
+      "principalY": 760.3,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 246.6,
+          "yCm": 161.5,
+          "maxWidthCm": 304.4,
+          "maxHeightCm": 136.5,
+          "minWidthCm": 67.0,
+          "bottomYCm": 161.5,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.8 m; headboard reads 98 cm."
+    },
+    {
+      "id": "melbourne-penthouse",
+      "name": "Melbourne penthouse",
+      "room": "Penthouse",
+      "src": "34.jpg",
+      "quad": [
+        [
+          480,
+          434.5
+        ],
+        [
+          2150,
+          184.6
+        ],
+        [
+          2150,
+          1401.5
+        ],
+        [
+          480,
+          1045.5
+        ]
+      ],
+      "widthCm": 674.0,
+      "heightCm": 300,
+      "focalPx": 1229,
+      "principalY": 686.5,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 405.4,
+          "yCm": 181.9,
+          "maxWidthCm": 383.7,
+          "maxHeightCm": 156.9,
+          "minWidthCm": 84.4,
+          "bottomYCm": 181.9,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 3 m; works clear the floor lamp."
+    },
+    {
+      "id": "japanese-restaurant",
+      "name": "Japanese-inspired restaurant",
+      "room": "Restaurant",
+      "src": "37.jpg",
+      "quad": [
+        [
+          730,
+          307.5
+        ],
+        [
+          2150,
+          3.4
+        ],
+        [
+          2150,
+          1034.1
+        ],
+        [
+          730,
+          887.9
+        ]
+      ],
+      "widthCm": 473.2,
+      "heightCm": 200,
+      "focalPx": 2072,
+      "principalY": 699.5,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 264.0,
+          "yCm": 180.0,
+          "maxWidthCm": 274.3,
+          "maxHeightCm": 155.0,
+          "minWidthCm": 60.3,
+          "bottomYCm": 180.0,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Measured between the ceiling and the banquette rail, taken as 2 m (3 m ceiling, 1 m banquette)."
+    },
+    {
+      "id": "upstairs-landing",
+      "name": "Upstairs landing",
+      "room": "Hallway",
+      "src": "38.jpg",
+      "quad": [
+        [
+          440,
+          268.8
+        ],
+        [
+          1880,
+          394.1
+        ],
+        [
+          1880,
+          1148.1
+        ],
+        [
+          440,
+          1394.6
+        ]
+      ],
+      "widthCm": 476.0,
+      "heightCm": 270,
+      "focalPx": 1923,
+      "principalY": 648.1,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 210.3,
+          "yCm": 188.9,
+          "maxWidthCm": 364.5,
+          "maxHeightCm": 163.9,
+          "minWidthCm": 80.2,
+          "bottomYCm": 188.9,
+          "topYCm": 25.0
+        }
+      ],
+      "note": "Angled wall. Focal length and horizon from the vanishing points of this wall and the side wall; wall length then follows. Ceiling 2.7 m; bench and books read 61 cm."
     }
   ]
 }
