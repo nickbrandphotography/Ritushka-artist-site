@@ -19,9 +19,10 @@ import sys
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mockup_engine import (ENGINE_VERSION, PX_PER_CM, WallPlane, cast_shadow,  # noqa: E402
-                           choose_placement, contact_shadow, placements_of, displayed_size_cm, multiply_shadow, relight,
-                           render_panel, warp_into)
+from mockup_engine import (ENGINE_VERSION, PX_PER_CM, WallCamera, WallPlane,  # noqa: E402
+                           box_corners, choose_placement, displayed_size_cm, multiply_shadow,
+                           placements_of, relight, render_panel, render_sides,
+                           wall_contact_shadow, wall_shadow, warp_into)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
@@ -55,7 +56,7 @@ def signature(art, scene, art_hash, scene_hash):
         'scene': scene_hash,
         'dims': [art.get('heightCm'), art.get('widthCm'), art.get('depthCm')],
         'framed': art.get('framed'),
-        'geometry': [scene['wall'], placements_of(scene), scene['light']],
+        'geometry': [scene['wall'], placements_of(scene), scene['light'], scene.get('camera')],
         'out': [OUT_WIDTH, OUT_QUALITY],
     }
     return hashlib.sha1(json.dumps(payload, sort_keys=True).encode()).hexdigest()[:16]
@@ -73,7 +74,6 @@ def composite(art_meta, scene, scene_img):
 
     depth_cm = art_meta.get('depthCm') or 4.0
     framed = bool(art_meta.get('framed'))
-    frame_cm = float(scene.get('frameWidthCm', 2.0))
 
     art = Image.open('public/artworks/%s.jpg' % art_meta['slug'])
     # Keep the photograph's aspect ratio; match the recorded surface area.
@@ -82,7 +82,7 @@ def composite(art_meta, scene, scene_img):
         print(f"     note: {art_meta['slug']} photo and register disagree on shape by "
               f"{residual * 100:.0f}% — drawn undistorted at "
               f"{draw_h:.0f} x {draw_w:.0f} cm; worth re-measuring")
-    panel = render_panel(art, draw_w, draw_h, framed, frame_cm,
+    panel = render_panel(art, draw_w, draw_h, framed,
                          seed=int(hashlib.md5(art_meta['slug'].encode()).hexdigest()[:8], 16))
 
     # Panel is the artwork plus frame, so it is slightly larger than the canvas.
@@ -100,16 +100,24 @@ def composite(art_meta, scene, scene_img):
     out = scene_img.convert('RGB')
     light = scene.get('light', {})
     side = light.get('from', 'left')
+    cam = WallCamera(plane, out.size, scene.get('camera', {}).get('focalPx'))
+    seed = int(hashlib.md5(art_meta['slug'].encode()).hexdigest()[:8], 16)
 
-    # Shadows go down before the artwork does.
-    cast = cast_shadow(out.size, quad, side, depth_cm, local_scale,
+    # Shadows go down before the artwork does. They sit on the wall, depth_cm
+    # behind the front face, and are offset along the wall plane.
+    cast = wall_shadow(out.size, cam, cx, cy, panel_w_cm, panel_h_cm, depth_cm, side,
                        float(light.get('strength', 0.34)),
-                       float(light.get('softness', 3.0)))
+                       float(light.get('softness', 3.0)), local_scale)
     out = multiply_shadow(out, cast)
-    out = multiply_shadow(out, contact_shadow(out.size, quad, local_scale))
+    out = multiply_shadow(out, wall_contact_shadow(out.size, cam, cx, cy, panel_w_cm,
+                                                   panel_h_cm, depth_cm, local_scale))
 
-    layer = warp_into(panel, quad, out.size)
-    layer = relight(layer, out, quad,
+    # Visible sides of the canvas or frame, then the face on top of them.
+    sides = render_sides(panel, cam, cx, cy, panel_w_cm, panel_h_cm, depth_cm,
+                         out.size, side, framed, seed)
+    layer = Image.alpha_composite(sides, warp_into(panel, quad, out.size))
+    _, back = box_corners(cam, cx, cy, panel_w_cm, panel_h_cm, depth_cm)
+    layer = relight(layer, out, list(quad) + list(back),
                     strength=float(light.get('relight', 0.55)),
                     exposure=float(light.get('exposure', 1.0)))
     out = Image.alpha_composite(out.convert('RGBA'), layer).convert('RGB')

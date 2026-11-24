@@ -29,7 +29,6 @@
         }
       ],
       "light": { "from": "right", "strength": 0.30, "softness": 3.0, "relight": 0.5, "exposure": 1.0 },
-      "frameWidthCm": 2.0,
       "match": {
         "orientations": ["landscape", "square", "portrait"],
         "palettes": ["neutral", "warm", "cool"],
@@ -65,7 +64,6 @@
         }
       ],
       "light": { "from": "left", "strength": 0.32, "softness": 3.5, "relight": 0.5, "exposure": 1.0 },
-      "frameWidthCm": 2.0,
       "match": {
         "orientations": ["portrait", "square", "landscape"],
         "palettes": ["cool", "neutral"],
@@ -95,7 +93,6 @@
         }
       ],
       "light": { "from": "left", "strength": 0.34, "softness": 3.0, "relight": 0.55, "exposure": 1.0 },
-      "frameWidthCm": 2.0,
       "match": {
         "orientations": ["landscape", "portrait", "square"],
         "palettes": ["neutral", "vivid", "warm"],
@@ -125,7 +122,6 @@
         }
       ],
       "light": { "from": "left", "strength": 0.32, "softness": 3.5, "relight": 0.5, "exposure": 1.0 },
-      "frameWidthCm": 2.0,
       "match": {
         "orientations": ["landscape", "square"],
         "palettes": ["warm", "vivid", "neutral"],
@@ -155,7 +151,6 @@
         }
       ],
       "light": { "from": "left", "strength": 0.28, "softness": 4.0, "relight": 0.45, "exposure": 1.0 },
-      "frameWidthCm": 2.0,
       "match": {
         "orientations": ["landscape", "square", "portrait"],
         "palettes": ["cool", "neutral"],

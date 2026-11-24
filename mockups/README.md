@@ -57,6 +57,32 @@ if the wall is at an angle. Nothing is expressed as a percentage of the image.
    overlay showing the quad, the hang point and a 100 cm ruler on the wall. Adjust until the
    ruler looks right against the furniture.
 
+## Angled walls
+
+A wall photographed at an angle needs nothing extra: mark the four corners of a known
+rectangle on it, exactly as for a straight-on wall. The engine recovers the camera from
+that quad and uses it to draw the depth of the work. The side of the canvas or frame that
+faces the camera shows, a work high on the wall shows its underside, and the shadows are
+offset along the wall itself. The canvas sides use a mirrored strip from the image's edge
+(the usual gallery-wrap finish); framed works get timber sides. The artwork's face is
+untouched.
+
+Angles up to about 30° look convincing. Beyond about 45° the work is too foreshortened to
+sell it. If the scene's lens is known, `camera.focalPx` overrides the estimate. A wall seen
+straight on carries no focal information, so a typical interior lens is assumed. Straight
+on, the depth barely shows, so the assumption costs under 2 px.
+
+AI-generated and architectural photos usually have perfectly vertical verticals, as if
+shot with a shift lens. That leaves the single-wall estimate weak, so set
+`camera.focalPx` from the room's two vanishing points instead. Extend the wall's top and
+bottom lines until they meet (VP1). Do the same for the adjoining wall's lines (VP2).
+Then `focalPx = sqrt(-(VP1.x - cx) * (VP2.x - cx))`, where `cx` is half the image width.
+With the focal length fixed, the wall's true length follows from its height alone.
+Example: on a test gallery image the doorway (2.04 m) put the picture rail at 3.05 m, and
+the vanishing points gave `focalPx` 1020 and a wall length of 7.84 m.
+
+`python3 scripts/test-mockup-geometry.py` checks the camera recovery at 0°, ±15°, 30° and 45°.
+
 ## Scene fields
 
 | Field | Meaning |

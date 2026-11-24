@@ -81,6 +81,45 @@ def measure(base: Image.Image, comp: Image.Image):
     return int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max())
 
 
+def check_camera_recovery() -> bool:
+    """Angled walls: photograph a known wall with a known camera, then check that the
+    engine recovers that camera from the wall quad alone. It must place points standing
+    off the wall correctly, and show the side of the work that faces the camera."""
+    from mockup_engine import WallCamera
+    print('\n  angled walls (camera recovered from the wall quad):')
+    ok = True
+    f_true = 1800.0
+    k = np.array([[f_true, 0, W / 2], [0, f_true, H / 2], [0, 0, 1]])
+    for ang in (0, 15, 30, 45, -30):
+        a = math.radians(ang)
+        r = np.array([[math.cos(a), 0, math.sin(a)], [0, 1, 0], [-math.sin(a), 0, math.cos(a)]])
+        t = np.array([-200.0, -135.0, 450.0])
+
+        def proj(x, y, z=0.0):
+            p = k @ (r @ np.array([x, y, z]) + t)
+            return (p[0] / p[2], p[1] / p[2])
+
+        quad = [proj(0, 0), proj(420, 0), proj(420, 270), proj(0, 270)]
+        cam = WallCamera(WallPlane(quad, 420, 270), (W, H))
+        err = max(math.dist(cam.project(x, y, 4.0), proj(x, y, 4.0))
+                  for x, y in ((60, 60), (200, 130), (380, 240)))
+        # Which side of a 120 cm work centred at x = 200 should show?
+        cam_x = float(np.linalg.solve(r, -t)[0])
+        expect = 'left' if cam_x < 140 else 'right' if cam_x > 260 else 'neither'
+        got_left = cam.sees((140, 130, 2), (-1, 0, 0))
+        got_right = cam.sees((260, 130, 2), (1, 0, 0))
+        got = 'left' if got_left and not got_right else 'right' if got_right and not got_left \
+            else 'neither' if not (got_left or got_right) else 'both'
+        # Straight on, focal length can't be recovered and a default lens is assumed;
+        # the depth error must still stay within 2 px on a 2400 px image.
+        good = err < (2.0 if ang == 0 else 0.05) and got == expect
+        print(f"    {ang:+3d} deg  focal {'est' if cam.estimated else 'default'} {cam.f:6.0f} px"
+              f"  depth error {err:5.2f} px  visible side {got:7s} (expected {expect})"
+              f"  [{'ok' if good else 'WRONG'}]")
+        ok = ok and good
+    return ok
+
+
 def main():
     scene_img = build_scene()
     scene_img.save(f'{OUT}/_synthetic-room.jpg', quality=90)
@@ -92,7 +131,6 @@ def main():
         'hang': {'xCm': 165.0, 'yCm': WALL_H_CM - 150.0},
         'usable': {'maxWidthCm': 260, 'maxHeightCm': 170, 'minWidthCm': 40},
         'light': {'from': 'left', 'strength': 0.34, 'softness': 3.0, 'relight': 0.55},
-        'frameWidthCm': 2.0,
     }
 
     sys.path.insert(0, 'scripts')
@@ -175,6 +213,8 @@ def main():
     src = src_art.convert('HSV')
     hs_src = np.asarray(src, dtype=np.float32)[..., :2].mean(axis=(0, 1))
     print(f"\n  source artwork mean hue/sat: {hs_src[0]:.1f} / {hs_src[1]:.1f}")
+
+    ok = check_camera_recovery() and ok
 
     print('\nGEOMETRY VALIDATION:', 'PASS' if ok else 'FAIL')
     print('renders written to', OUT)
