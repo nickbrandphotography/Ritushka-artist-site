@@ -49,7 +49,7 @@ export const areaCm2 = (a: Artwork): number =>
 
 /** Framing line for the specification list. */
 export const framing = (a: Artwork): string =>
-  a.framed ? (a.frameDescription ?? 'Framed') : 'Unframed — ready to hang';
+  a.frameDescription ?? 'Floating oak frame';
 
 /** CSS aspect-ratio string taken from the real photograph. */
 export const aspect = (a: Artwork): string => `${a.imageWidth} / ${a.imageHeight}`;

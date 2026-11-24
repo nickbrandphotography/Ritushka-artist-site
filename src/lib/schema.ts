@@ -108,7 +108,7 @@ export const visualArtworkSchema = (a: Artwork) => ({
   ...(a.heightCm != null ? { height: { '@type': 'QuantitativeValue', value: a.heightCm, unitCode: 'CMT', unitText: 'cm' } } : {}),
   ...(a.depthCm != null ? { depth: { '@type': 'QuantitativeValue', value: a.depthCm, unitCode: 'CMT', unitText: 'cm' } } : {}),
   ...(a.heightCm != null && a.widthCm != null
-    ? { size: `${a.heightCm} × ${a.widthCm} cm`, material: a.framed && a.frameDescription ? a.frameDescription : 'Canvas' }
+    ? { size: `${a.heightCm} × ${a.widthCm} cm`, material: a.frameDescription ?? 'Floating oak frame' }
     : {}),
   ...(a.inventoryId ? { identifier: a.inventoryId } : {}),
   ...(a.edition ? { artEdition: a.edition } : {}),
