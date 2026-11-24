@@ -20,6 +20,16 @@ export type VisItem = {
   depthCm: number;
 };
 
+// Open on the largest size still available, so a print isn't lost on a big wall.
+function defaultSize(item: VisItem): number {
+  let best = -1;
+  item.sizes.forEach((s, i) => {
+    if (s.soldOut) return;
+    if (best < 0 || s.w * s.h > item.sizes[best].w * item.sizes[best].h) best = i;
+  });
+  return best < 0 ? 0 : best;
+}
+
 type Pt = { x: number; y: number };
 type M3 = number[]; // 3x3 matrix, row-major
 
@@ -211,7 +221,7 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
   const [refH, setRefH] = useState<number>(204);
   const [mode, setMode] = useState<Mode>('originals');
   const [idx, setIdx] = useState(0);
-  const [sizeIdx, setSizeIdx] = useState(0);
+  const [sizeIdx, setSizeIdx] = useState(-1); // -1: the default size for the item
   const [moulding, setMoulding] = useState('oak-shadow');
   const [mat, setMat] = useState('none');
   const [glass, setGlass] = useState('non-reflective');
@@ -225,7 +235,8 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
 
   const list = mode === 'originals' ? originals : prints;
   const item = list[clamp(idx, 0, list.length - 1)];
-  const size = item.sizes[clamp(sizeIdx, 0, item.sizes.length - 1)];
+  const sizeAt = sizeIdx < 0 ? defaultSize(item) : clamp(sizeIdx, 0, item.sizes.length - 1);
+  const size = item.sizes[sizeAt];
   const look: Look = mode === 'originals' ? { kind: 'canvas', framed: item.framed } : { kind: 'paper', moulding, mat, glass };
   const outer = outerCm(size, look);
 
@@ -327,7 +338,7 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
 
   const go = useCallback((dir: 1 | -1) => {
     setIdx((i) => (i + dir + list.length) % list.length);
-    setSizeIdx(0);
+    setSizeIdx(-1);
   }, [list.length]);
 
   useEffect(() => {
@@ -515,7 +526,7 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
         <p className="mt-3 text-center text-xs text-ink/65">Drag the artwork to move it. Swipe across the wall, or use the arrows, to try another work.</p>
         <div id="vis-thumbs" className="relative mt-5 flex snap-x gap-3 overflow-x-auto pb-2">
           {list.map((a, i) => (
-            <button key={a.slug} onClick={() => { setIdx(i); setSizeIdx(0); }} aria-label={a.title}
+            <button key={a.slug} onClick={() => { setIdx(i); setSizeIdx(-1); }} aria-label={a.title}
               className={`shrink-0 snap-start rounded border-2 p-0.5 transition ${i === idx ? 'border-ink' : 'border-transparent opacity-70 hover:opacity-100'}`}>
               <img src={thumb(a.image)} alt="" className="h-16 w-auto" loading="lazy" />
             </button>
@@ -525,8 +536,8 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
 
       <div>
         <div className="flex flex-wrap gap-2">
-          <button className={pill(mode === 'originals')} onClick={() => { setMode('originals'); setIdx(0); setSizeIdx(0); }}>Original paintings</button>
-          <button className={pill(mode === 'prints')} onClick={() => { setMode('prints'); setIdx(0); setSizeIdx(0); }}>Limited edition prints</button>
+          <button className={pill(mode === 'originals')} onClick={() => { setMode('originals'); setIdx(0); setSizeIdx(-1); }}>Original paintings</button>
+          <button className={pill(mode === 'prints')} onClick={() => { setMode('prints'); setIdx(0); setSizeIdx(-1); }}>Limited edition prints</button>
         </div>
         <p className="mt-6 text-xs uppercase tracking-widest text-ink/65">{idx + 1} of {list.length}</p>
         <h2 className="mt-1 font-serif text-3xl text-ink">{item.title}</h2>
@@ -537,7 +548,7 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
               <p className="mb-2 text-sm text-ink/70">Print size</p>
               <div className="flex flex-wrap gap-2">
                 {item.sizes.map((s, i) => (
-                  <button key={s.label} className={pill(i === sizeIdx)} onClick={() => setSizeIdx(i)}>{s.label} · {s.w} × {s.h} cm</button>
+                  <button key={s.label} className={pill(i === sizeAt)} onClick={() => setSizeIdx(i)}>{s.label} · {s.w} × {s.h} cm</button>
                 ))}
               </div>
             </div>
