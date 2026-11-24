@@ -15,7 +15,8 @@ const drawn = (s: VisSize) => ({ w: s.dw ?? s.w, h: s.dh ?? s.h });
 export type VisItem = {
   slug: string; title: string; image: string; href: string;
   sizes: VisSize[]; // one entry for an original
-  framed: boolean; // originals: floating oak frame on record
+  framed: boolean; // drawn in the floating oak frame (house style: always, for originals)
+  soldFramed?: boolean; // originals: the register says it is sold in the frame
   depthCm: number;
 };
 
@@ -570,7 +571,7 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
           <p className="font-serif text-2xl text-ink">{size.price}</p>
           <p className="mt-1 text-sm text-ink/70">
             {mode === 'originals'
-              ? `Original painting, ${size.w} × ${size.h} cm${item.framed ? ', in a floating oak frame' : ''}.`
+              ? `Original painting, ${size.w} × ${size.h} cm${item.soldFramed ? ', in a floating oak frame' : ', sold unframed (pictured in a floating oak frame)'}.`
               : `Unframed print, ${size.w} × ${size.h} cm.${size.note ? ' ' + size.note : ''}`}
             {(outer.w !== size.w || outer.h !== size.h) && (mode === 'prints'
               ? ` In the frame you're previewing, about ${Math.round(outer.w)} × ${Math.round(outer.h)} cm overall.`

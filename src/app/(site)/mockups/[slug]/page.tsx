@@ -74,6 +74,7 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
                         : m.credit
                           ? 'Composited into a photographed interior at its true physical size, measured against the room’s own furniture.'
                           : 'Shown at its true physical size in a visualised interior, measured against the room’s own furniture. The painting itself is unaltered.'}
+                      {!a.framed && ' Pictured in a floating oak frame to show how it could be framed; the painting is sold unframed.'}
                     </p>
                     <Link
                       href={`/artwork/${a.slug}`}

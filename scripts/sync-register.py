@@ -15,7 +15,6 @@ import pandas as pd
 
 REGISTER = 'Artwork Records.ods'
 SHEET = 'Artwork Register'
-HOUSE_FRAME = 'Floating oak frame'
 
 # Register spellings that supersede the earlier working titles, with the
 # typography we want on the site.
@@ -108,11 +107,13 @@ def read_register(path=REGISTER):
                     print(f"   !! {title}: register says {orient} but {h_mm:g} x {w_mm:g} mm "
                           f"is {by_size} — using {by_size}")
                 orient = by_size
-        # House style: every original is presented in the floating oak (shadow) frame,
-        # whatever the register's Framed? column says. A recorded description is kept
-        # if it names a different frame.
-        frame_desc = (str(cell(row, hdr, 'Frame Description') or '').strip() or HOUSE_FRAME)
-        framed_flag = 'yes'
+        frame_desc = (str(cell(row, hdr, 'Frame Description') or '').strip() or None)
+        # An explicit "No" in Framed? is authoritative: the row may still carry the
+        # template's "Floating oak frame" description, but the work is sold
+        # unframed, so neither the frame sentence nor the "framed" price label applies.
+        framed_flag = str(cell(row, hdr, 'Framed?') or '').strip().lower()
+        if framed_flag == 'no':
+            frame_desc = None
         out.append({
             'inventoryId': cell(row, hdr, 'Inventory ID'),
             'title': ' '.join(str(title).split()),
@@ -392,8 +393,8 @@ def main():
         a.setdefault('heightIn', None)
         a.setdefault('widthIn', None)
         a.setdefault('depthIn', None)
-        a.setdefault('framed', True)
-        a.setdefault('frameDescription', HOUSE_FRAME)
+        a.setdefault('framed', False)
+        a.setdefault('frameDescription', None)
         a.setdefault('edition', 'Original')
         a.setdefault('inspiration', None)
         a.setdefault('registerDescription', None)
