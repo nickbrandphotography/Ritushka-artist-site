@@ -33,6 +33,9 @@ SCENE_DIR = 'mockups/scenes'
 OUT_DIR = 'public/mockups'
 OUT_WIDTH = 1800
 OUT_QUALITY = 84
+# House style: every Ritushka work is shown in the 10 mm oak shadow (floating) frame, as on the
+# NITA Gallery site, whatever the register's framed column says.
+ALWAYS_FRAMED = True
 
 
 def load_ts_array(path):
@@ -55,7 +58,7 @@ def signature(art, scene, art_hash, scene_hash):
         'art': art_hash,
         'scene': scene_hash,
         'dims': [art.get('heightCm'), art.get('widthCm'), art.get('depthCm')],
-        'framed': art.get('framed'),
+        'framed': ALWAYS_FRAMED or art.get('framed'),
         'geometry': [scene['wall'], placements_of(scene), scene['light'], scene.get('camera')],
         'out': [OUT_WIDTH, OUT_QUALITY, '444'],
     }
@@ -73,7 +76,7 @@ def composite(art_meta, scene, scene_img):
         raise ValueError(f"{art_meta['slug']} has no recorded dimensions")
 
     depth_cm = art_meta.get('depthCm') or 4.0
-    framed = bool(art_meta.get('framed'))
+    framed = ALWAYS_FRAMED or bool(art_meta.get('framed'))
 
     art = Image.open('public/artworks/%s.jpg' % art_meta['slug'])
     # Keep the photograph's aspect ratio; match the recorded surface area.

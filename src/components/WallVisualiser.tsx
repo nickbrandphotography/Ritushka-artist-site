@@ -101,7 +101,10 @@ const PRESETS: { label: string; w: number | null; h: number | null; floor?: bool
 const KPX = 4; // pixels per cm at which a work is drawn before it is projected onto the wall
 
 // Print framing preview only. Build in cm.
+// The oak shadow frame (7 mm oak, 3 mm gap, no mat) is the house frame and the default; the others are
+// alternatives a buyer can preview.
 const MOULDINGS = [
+  { id: 'oak-shadow', label: 'Oak shadow frame' },
   { id: 'none', label: 'Unframed' },
   { id: 'black', label: 'Black' },
   { id: 'oak', label: 'Oak' },
@@ -147,6 +150,7 @@ function outerCm(rec: VisSize, look: Look) {
     return { w: size.w + add, h: size.h + add };
   }
   if (look.moulding === 'none') return { w: size.w, h: size.h };
+  if (look.moulding === 'oak-shadow') return { w: size.w + 2 * (FLOAT.face + FLOAT.gap), h: size.h + 2 * (FLOAT.face + FLOAT.gap) };
   const m = MATS.find((x) => x.id === look.mat)?.width ?? 0;
   const add = 2 * (m + PAPER_FACE);
   return { w: size.w + add, h: size.h + add };
@@ -162,13 +166,15 @@ function Piece({ image, size: rec, look, k }: { image: string; size: VisSize; lo
       style={{ display: 'block', width: size.w * k, height: size.h * k, objectFit: 'contain', userSelect: 'none' }} />
   );
 
-  if (look.kind === 'canvas') {
-    if (!look.framed) return <div style={{ boxShadow: `${px(1)}px ${px(2.5)}px ${px(4)}px rgba(0,0,0,0.4)` }}>{img}</div>;
+  if (look.kind === 'canvas' || (look.kind === 'paper' && look.moulding === 'oak-shadow')) {
+    if (look.kind === 'canvas' && !look.framed) return <div style={{ boxShadow: `${px(1)}px ${px(2.5)}px ${px(4)}px rgba(0,0,0,0.4)` }}>{img}</div>;
+    // The brand frame image (the same one the NITA site and the room mockups use): 56 px of oak and
+    // shadow gap around its edge, stretched to 10 mm at this scale.
+    const b = px(FLOAT.face + FLOAT.gap);
     return (
-      <div style={{ ...mouldingStyle('oak'), padding: px(FLOAT.face), boxShadow: `${wallShadow}, inset 0 0 0 1px rgba(0,0,0,0.25)` }}>
-        <div style={{ background: '#0d0c0b', padding: px(FLOAT.gap), boxShadow: `inset ${px(0.4)}px ${px(0.4)}px ${px(0.8)}px rgba(0,0,0,0.9)` }}>
-          <div style={{ boxShadow: `${px(0.3)}px ${px(0.5)}px ${px(0.7)}px rgba(0,0,0,0.6)` }}>{img}</div>
-        </div>
+      <div style={{ borderStyle: 'solid', borderWidth: b, borderImage: 'url(/brand/frame-oak.png) 56 stretch',
+        boxShadow: wallShadow, boxSizing: 'content-box', width: size.w * k, height: size.h * k }}>
+        {img}
       </div>
     );
   }
@@ -205,8 +211,8 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
   const [mode, setMode] = useState<Mode>('originals');
   const [idx, setIdx] = useState(0);
   const [sizeIdx, setSizeIdx] = useState(0);
-  const [moulding, setMoulding] = useState('oak');
-  const [mat, setMat] = useState('white-8');
+  const [moulding, setMoulding] = useState('oak-shadow');
+  const [mat, setMat] = useState('none');
   const [glass, setGlass] = useState('non-reflective');
   const [pos, setPos] = useState<Pt | null>(null);
   const [brightness, setBrightness] = useState(1);
@@ -540,7 +546,7 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
                 {MOULDINGS.map((m) => <button key={m.id} className={pill(moulding === m.id)} onClick={() => setMoulding(m.id)}>{m.label}</button>)}
               </div>
             </div>
-            {moulding !== 'none' && (
+            {moulding !== 'none' && moulding !== 'oak-shadow' && (
               <>
                 <div className="mt-5">
                   <p className="mb-2 text-sm text-ink/70">Mat board</p>

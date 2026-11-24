@@ -33,7 +33,8 @@ export default function ViewOnYourWall() {
     .filter((a) => a.widthCm != null && a.heightCm != null)
     .map((a) => ({
       slug: a.slug, title: a.title, image: a.image, href: `/artwork/${a.slug}`,
-      framed: !!a.framed, depthCm: a.depthCm ?? 4,
+      // House style: every original is shown in the oak shadow frame.
+      framed: true, depthCm: a.depthCm ?? 4,
       sizes: [{ label: 'Original', w: a.widthCm!, h: a.heightCm!,
         ...trueSize(a.widthCm!, a.heightCm!, a.imageWidth, a.imageHeight), price: priceLabel(a) === 'Enquire' ? 'Price on application' : priceLabel(a) }],
     }));

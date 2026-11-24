@@ -76,7 +76,7 @@ def main():
                             f"{residual * 100:.0f}% — worth re-measuring the canvas")
 
         # --- clearance -------------------------------------------------------
-        place = choose_placement(scene, *panel_size_cm(draw_w, draw_h, bool(a.get('framed'))))
+        place = choose_placement(scene, *panel_size_cm(draw_w, draw_h, True))
         if place is None:
             problems.append(f"{m['slug']}: does not fit any hanging position in {scene['id']}")
             continue
@@ -94,7 +94,7 @@ def main():
             continue
 
         plane = WallPlane(scene['wall']['quad'], scene['wall']['widthCm'], scene['wall']['heightCm'])
-        cx, cy = hang_centre(place, panel_size_cm(draw_w, draw_h, bool(a.get('framed')))[1])
+        cx, cy = hang_centre(place, panel_size_cm(draw_w, draw_h, True)[1])
         q = plane.quad_for(cx, cy, draw_w, draw_h)
         expect_w = (max(p[0] for p in q) - min(p[0] for p in q)) * scale
         got_w = xs.max() - xs.min()
