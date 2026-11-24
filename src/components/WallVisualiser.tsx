@@ -20,10 +20,15 @@ type Pt = { x: number; y: number };
 type Room = { src: string; w: number; h: number; ppc: number | null; sample?: { eyeY: number; furnitureTop: number } };
 type Mode = 'originals' | 'prints';
 
-// Sample rooms are drawn at 3.2 px per cm (wall about 5 m wide, 2.6 m high) with the floor at y=840.
+// Sample rooms: straight-on interiors from the mockup library (mockups/rooms.json), so a work is
+// shown flat at true size. ppc is pixels per cm on the back wall at this image size; eyeY is where a
+// centre 150 cm off the floor falls; furnitureTop is the highest point of the sofa, bed or plant in
+// front of the wall. Works are centred horizontally, which is where each room's furniture sits.
 const SAMPLES = [
-  { id: 'living', label: 'Living room', src: '/rooms/living.svg', w: 1600, h: 1000, ppc: 3.2, eyeY: 840 - 145 * 3.2, furnitureTop: 512 },
-  { id: 'office', label: 'Office', src: '/rooms/office.svg', w: 1600, h: 1000, ppc: 3.2, eyeY: 840 - 145 * 3.2, furnitureTop: 540 },
+  { id: 'calm-living-room', label: 'Living room', src: '/rooms/calm-living-room.jpg', thumb: '/rooms/calm-living-room-thumb.jpg', w: 1600, h: 1073, ppc: 2.344, eyeY: 443, furnitureTop: 627 },
+  { id: 'hotel-suite-bedroom', label: 'Bedroom', src: '/rooms/hotel-suite-bedroom.jpg', thumb: '/rooms/hotel-suite-bedroom-thumb.jpg', w: 1600, h: 1073, ppc: 2.396, eyeY: 419, furnitureTop: 530 },
+  { id: 'office-reception', label: 'Office', src: '/rooms/office-reception.jpg', thumb: '/rooms/office-reception-thumb.jpg', w: 1600, h: 1073, ppc: 2.771, eyeY: 401, furnitureTop: 544 },
+  { id: 'limestone-hotel-lobby', label: 'Hotel lobby', src: '/rooms/limestone-hotel-lobby.jpg', thumb: '/rooms/limestone-hotel-lobby-thumb.jpg', w: 1600, h: 1073, ppc: 1.829, eyeY: 528, furnitureTop: 671 },
 ];
 
 const PRESETS: { label: string; cm: number | null }[] = [
@@ -297,7 +302,8 @@ export default function WallVisualiser({ originals, prints }: { originals: VisIt
           <div className="mt-3 grid grid-cols-2 gap-4">
             {SAMPLES.map((s) => (
               <button key={s.id} onClick={() => pickSample(s)} className="group text-left">
-                <img src={s.src} alt={`Sample ${s.label.toLowerCase()}`} className="w-full rounded-md border border-sand transition group-hover:border-ink" />
+                <img src={s.thumb} alt={`Sample ${s.label.toLowerCase()}`} loading="lazy" width={640} height={429}
+                  className="w-full rounded-md border border-sand transition group-hover:border-ink" />
                 <span className="mt-2 block text-sm text-ink/70">{s.label}</span>
               </button>
             ))}
