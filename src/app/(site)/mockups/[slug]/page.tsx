@@ -71,7 +71,9 @@ export default function MockupPage({ params }: { params: { slug: string } }) {
                     <p className="mt-2 text-xs text-ink/65">
                       {m.sceneId.startsWith('procedural-')
                         ? 'Shown to scale against a 2.7 m wall and a 120 cm bench, so the proportions match the painting in a real room.'
-                        : 'Composited into a photographed interior at its true physical size, measured against the room’s own furniture.'}
+                        : m.credit
+                          ? 'Composited into a photographed interior at its true physical size, measured against the room’s own furniture.'
+                          : 'Shown at its true physical size in a visualised interior, measured against the room’s own furniture. The painting itself is unaltered.'}
                     </p>
                     <Link
                       href={`/artwork/${a.slug}`}

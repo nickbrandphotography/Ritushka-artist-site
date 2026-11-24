@@ -20,7 +20,7 @@ from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from mockup_engine import (ENGINE_VERSION, PX_PER_CM, WallCamera, WallPlane,  # noqa: E402
-                           box_corners, choose_placement, displayed_size_cm, multiply_shadow,
+                           box_corners, choose_placement, hang_centre, displayed_size_cm, multiply_shadow,
                            placements_of, relight, render_panel, render_sides,
                            wall_contact_shadow, wall_shadow, warp_into)
 
@@ -57,7 +57,7 @@ def signature(art, scene, art_hash, scene_hash):
         'dims': [art.get('heightCm'), art.get('widthCm'), art.get('depthCm')],
         'framed': art.get('framed'),
         'geometry': [scene['wall'], placements_of(scene), scene['light'], scene.get('camera')],
-        'out': [OUT_WIDTH, OUT_QUALITY],
+        'out': [OUT_WIDTH, OUT_QUALITY, '444'],
     }
     return hashlib.sha1(json.dumps(payload, sort_keys=True).encode()).hexdigest()[:16]
 
@@ -93,7 +93,7 @@ def composite(art_meta, scene, scene_img):
     if place is None:
         raise ValueError(f"{art_meta['slug']} ({h_cm}x{w_cm} cm) does not fit any "
                          f"hanging position in {scene['id']}")
-    cx, cy = place['xCm'], place['yCm']
+    cx, cy = hang_centre(place, panel_h_cm)
     quad = plane.quad_for(cx, cy, panel_w_cm, panel_h_cm)
     local_scale = plane.px_per_cm_at(cx, cy)
 
@@ -215,7 +215,8 @@ def main():
             print('  FAILED', m['slug'], '-', e)
             failed += 1
             continue
-        img.save(out_path, quality=OUT_QUALITY, optimize=True, progressive=True)
+        img.save(out_path, quality=OUT_QUALITY, optimize=True, progressive=True,
+                 subsampling=0)  # full colour resolution: 4:2:0 dulls fine colourful detail
         manifest[m['slug']] = sig
         rendered += 1
         print('  rendered', m['slug'])

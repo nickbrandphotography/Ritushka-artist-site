@@ -163,6 +163,28 @@ def placements_of(scene: dict) -> list:
     }]
 
 
+def hang_centre(place: dict, h_cm: float) -> tuple:
+    """Where the centre of a work h_cm tall hangs, in wall centimetres.
+
+    `yCm` is the preferred centre (usually 150 cm off the floor). A position above a
+    sofa, bed or desk also sets `bottomYCm`, the lowest the bottom edge may go, so a
+    tall work rises to clear the furniture instead of sitting on it, while a small
+    one still hangs at eye level.
+    """
+    cy = place['yCm']
+    if 'bottomYCm' in place:
+        cy = min(cy, place['bottomYCm'] - h_cm / 2)
+    if 'topYCm' in place:
+        cy = max(cy, place['topYCm'] + h_cm / 2)
+    return place['xCm'], cy
+
+
+def panel_size_cm(w_cm: float, h_cm: float, framed: bool) -> tuple:
+    """Outer size of the work as hung: the canvas plus the 10 mm frame if it has one."""
+    b = 2 * (FRAME_OAK_MM + FRAME_GAP_MM) / 10.0 if framed else 0.0
+    return w_cm + b, h_cm + b
+
+
 def choose_placement(scene: dict, w_cm: float, h_cm: float):
     """The tightest position that still fits the work. Deterministic."""
     ok = [p for p in placements_of(scene)

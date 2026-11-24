@@ -6,33 +6,77 @@
       "name": "Scandinavian living room",
       "room": "Living Room",
       "file": "scandi-sideboard.jpg",
-
       "_calibration": "Measured: the sideboard is 839 px wide and 462 px in the case. At a standard 120 x 65 cm that gives 6.99 and 7.11 px/cm, so the wall plane is 7.0 px/cm. Skirting edge at y=1703 puts the floor line at y=1780, just below the frame.",
       "wall": {
-        "quad": [[200, 240], [1600, 247], [1600, 1787], [200, 1780]],
+        "quad": [
+          [
+            200,
+            240
+          ],
+          [
+            1600,
+            247
+          ],
+          [
+            1600,
+            1787
+          ],
+          [
+            200,
+            1780
+          ]
+        ],
         "widthCm": 200,
         "heightCm": 220
       },
-      "hang": { "xCm": 74, "yCm": 70 },
+      "hang": {
+        "xCm": 74,
+        "yCm": 70
+      },
       "placements": [
         {
           "id": "above-sideboard",
           "_note": "Centred on the sideboard, 150 cm off the floor. The plants on top reach 104 cm, so nothing may hang lower than that.",
-          "xCm": 74, "yCm": 70,
-          "maxWidthCm": 130, "maxHeightCm": 88, "minWidthCm": 45
+          "xCm": 74,
+          "yCm": 70,
+          "maxWidthCm": 130,
+          "maxHeightCm": 88,
+          "minWidthCm": 45
         },
         {
           "id": "clear-wall",
           "_note": "The open wall right of the sideboard, above the armchair. Armchair tops out at 76 cm; the window frame limits width.",
-          "xCm": 190, "yCm": 70,
-          "maxWidthCm": 150, "maxHeightCm": 140, "minWidthCm": 70
+          "xCm": 190,
+          "yCm": 70,
+          "maxWidthCm": 150,
+          "maxHeightCm": 140,
+          "minWidthCm": 70
         }
       ],
-      "light": { "from": "right", "strength": 0.30, "softness": 3.0, "relight": 0.5, "exposure": 1.0 },
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.0,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
       "match": {
-        "orientations": ["landscape", "square", "portrait"],
-        "palettes": ["neutral", "warm", "cool"],
-        "styles": ["abstract-landscapes", "contemporary-landscape-art", "textured-abstract-paintings", "modern-australian-art"]
+        "orientations": [
+          "landscape",
+          "square",
+          "portrait"
+        ],
+        "palettes": [
+          "neutral",
+          "warm",
+          "cool"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "contemporary-landscape-art",
+          "textured-abstract-paintings",
+          "modern-australian-art"
+        ]
       },
       "credit": null
     },
@@ -41,33 +85,76 @@
       "name": "Plant wall living room",
       "room": "Modern Apartment",
       "file": "plant-wall.jpg",
-
       "_calibration": "Scale set from the tall cylindrical planters: 35 cm diameter, 60 cm high, both giving ~6.2 px/cm. Floor line at y=1790. Usable wall stops short of the large plant on the right, which stands in front of the wall.",
       "wall": {
-        "quad": [[80, 240], [1320, 250], [1320, 1800], [80, 1785]],
+        "quad": [
+          [
+            80,
+            240
+          ],
+          [
+            1320,
+            250
+          ],
+          [
+            1320,
+            1800
+          ],
+          [
+            80,
+            1785
+          ]
+        ],
         "widthCm": 200,
         "heightCm": 250
       },
-      "hang": { "xCm": 68, "yCm": 100 },
+      "hang": {
+        "xCm": 68,
+        "yCm": 100
+      },
       "placements": [
         {
           "id": "clear-wall",
           "_note": "The plants stand in front of this wall and reach 95 cm, so a work hung centre-150 cm may be no more than 100 cm tall. The large plant on the right caps the width.",
-          "xCm": 68, "yCm": 100,
-          "maxWidthCm": 120, "maxHeightCm": 100, "minWidthCm": 40
+          "xCm": 68,
+          "yCm": 100,
+          "maxWidthCm": 120,
+          "maxHeightCm": 100,
+          "minWidthCm": 40
         },
         {
           "id": "hung-high",
           "_note": "Taller works hang with their centre at 170 cm, keeping the bottom edge clear of the planting.",
-          "xCm": 68, "yCm": 80,
-          "maxWidthCm": 130, "maxHeightCm": 140, "minWidthCm": 60
+          "xCm": 68,
+          "yCm": 80,
+          "maxWidthCm": 130,
+          "maxHeightCm": 140,
+          "minWidthCm": 60
         }
       ],
-      "light": { "from": "left", "strength": 0.32, "softness": 3.5, "relight": 0.5, "exposure": 1.0 },
+      "light": {
+        "from": "left",
+        "strength": 0.32,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
       "match": {
-        "orientations": ["portrait", "square", "landscape"],
-        "palettes": ["cool", "neutral"],
-        "styles": ["abstract-seascapes", "ocean-inspired-paintings", "blue-abstract-paintings", "coastal-abstract-art"]
+        "orientations": [
+          "portrait",
+          "square",
+          "landscape"
+        ],
+        "palettes": [
+          "cool",
+          "neutral"
+        ],
+        "styles": [
+          "abstract-seascapes",
+          "ocean-inspired-paintings",
+          "blue-abstract-paintings",
+          "coastal-abstract-art"
+        ]
       },
       "credit": null
     },
@@ -76,27 +163,67 @@
       "name": "White brick loft",
       "room": "Designer Space",
       "file": "white-brick-loft.jpg",
-
       "_calibration": "Scale from the brick coursing: a Fourier read of the mortar lines gives a 28.6 px period, which at a standard 86 mm course is 3.32 px/cm. Cross-checks against the armchair at 101 cm wide. Wall/floor edge detected at y=971.",
       "wall": {
-        "quad": [[60, 141], [1056, 141], [1056, 971], [60, 971]],
+        "quad": [
+          [
+            60,
+            141
+          ],
+          [
+            1056,
+            141
+          ],
+          [
+            1056,
+            971
+          ],
+          [
+            60,
+            971
+          ]
+        ],
         "widthCm": 300,
         "heightCm": 250
       },
-      "hang": { "xCm": 96, "yCm": 100 },
+      "hang": {
+        "xCm": 96,
+        "yCm": 100
+      },
       "placements": [
         {
           "id": "clear-brick-wall",
           "_note": "The open brick left of the armchair, which begins around x=700.",
-          "xCm": 96, "yCm": 100,
-          "maxWidthCm": 150, "maxHeightCm": 130, "minWidthCm": 50
+          "xCm": 96,
+          "yCm": 100,
+          "maxWidthCm": 150,
+          "maxHeightCm": 130,
+          "minWidthCm": 50
         }
       ],
-      "light": { "from": "left", "strength": 0.34, "softness": 3.0, "relight": 0.55, "exposure": 1.0 },
+      "light": {
+        "from": "left",
+        "strength": 0.34,
+        "softness": 3.0,
+        "relight": 0.55,
+        "exposure": 1.0
+      },
       "match": {
-        "orientations": ["landscape", "portrait", "square"],
-        "palettes": ["neutral", "vivid", "warm"],
-        "styles": ["textured-abstract-paintings", "statement-artworks", "other-works"]
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "neutral",
+          "vivid",
+          "warm"
+        ],
+        "styles": [
+          "textured-abstract-paintings",
+          "statement-artworks",
+          "other-works"
+        ]
       },
       "credit": null
     },
@@ -105,27 +232,66 @@
       "name": "Red brick living room",
       "room": "Luxury Home",
       "file": "red-brick-living.jpg",
-
       "_calibration": "Brick coursing gives a 34.1 px period, 3.96 px/cm at an 86 mm course. Independently confirmed by the sofa measuring 206 cm wide, right for a three-seater. Wall/floor edge at y=1175; sofa back tops out around 60 cm.",
       "wall": {
-        "quad": [[200, 185], [1388, 185], [1388, 1175], [200, 1175]],
+        "quad": [
+          [
+            200,
+            185
+          ],
+          [
+            1388,
+            185
+          ],
+          [
+            1388,
+            1175
+          ],
+          [
+            200,
+            1175
+          ]
+        ],
         "widthCm": 300,
         "heightCm": 250
       },
-      "hang": { "xCm": 152, "yCm": 95 },
+      "hang": {
+        "xCm": 152,
+        "yCm": 95
+      },
       "placements": [
         {
           "id": "above-sofa",
           "_note": "Centred on the sofa, hung 155 cm off the floor so the bottom edge clears the sofa back with a comfortable gap.",
-          "xCm": 152, "yCm": 95,
-          "maxWidthCm": 160, "maxHeightCm": 130, "minWidthCm": 60
+          "xCm": 152,
+          "yCm": 95,
+          "maxWidthCm": 160,
+          "maxHeightCm": 130,
+          "minWidthCm": 60
         }
       ],
-      "light": { "from": "left", "strength": 0.32, "softness": 3.5, "relight": 0.5, "exposure": 1.0 },
+      "light": {
+        "from": "left",
+        "strength": 0.32,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
       "match": {
-        "orientations": ["landscape", "square"],
-        "palettes": ["warm", "vivid", "neutral"],
-        "styles": ["statement-artworks", "textured-abstract-paintings", "modern-australian-art"]
+        "orientations": [
+          "landscape",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "vivid",
+          "neutral"
+        ],
+        "styles": [
+          "statement-artworks",
+          "textured-abstract-paintings",
+          "modern-australian-art"
+        ]
       },
       "credit": null
     },
@@ -134,29 +300,1503 @@
       "name": "Panelled bedroom",
       "room": "Refined Bedroom",
       "file": "panelled-bedroom.jpg",
-
       "_calibration": "No brick to measure here. Scale set from two agreeing estimates: a 180 cm headboard gives 2.44 px/cm and a 280 cm floor-to-ceiling gives 2.48, so 2.46. Wall/floor edge at y=1025; headboard tops out near 83 cm.",
       "wall": {
-        "quad": [[380, 385], [1118, 385], [1118, 1025], [380, 1025]],
+        "quad": [
+          [
+            380,
+            385
+          ],
+          [
+            1118,
+            385
+          ],
+          [
+            1118,
+            1025
+          ],
+          [
+            380,
+            1025
+          ]
+        ],
         "widthCm": 300,
         "heightCm": 260
       },
-      "hang": { "xCm": 150, "yCm": 95 },
+      "hang": {
+        "xCm": 150,
+        "yCm": 95
+      },
       "placements": [
         {
           "id": "above-bed",
           "_note": "Centred over the headboard at 165 cm, which keeps the work clear of the bed and narrower than it.",
-          "xCm": 150, "yCm": 95,
-          "maxWidthCm": 140, "maxHeightCm": 120, "minWidthCm": 50
+          "xCm": 150,
+          "yCm": 95,
+          "maxWidthCm": 140,
+          "maxHeightCm": 120,
+          "minWidthCm": 50
         }
       ],
-      "light": { "from": "left", "strength": 0.28, "softness": 4.0, "relight": 0.45, "exposure": 1.0 },
+      "light": {
+        "from": "left",
+        "strength": 0.28,
+        "softness": 4.0,
+        "relight": 0.45,
+        "exposure": 1.0
+      },
       "match": {
-        "orientations": ["landscape", "square", "portrait"],
-        "palettes": ["cool", "neutral"],
-        "styles": ["abstract-seascapes", "abstract-landscapes", "ocean-inspired-paintings", "blue-abstract-paintings"]
+        "orientations": [
+          "landscape",
+          "square",
+          "portrait"
+        ],
+        "palettes": [
+          "cool",
+          "neutral"
+        ],
+        "styles": [
+          "abstract-seascapes",
+          "abstract-landscapes",
+          "ocean-inspired-paintings",
+          "blue-abstract-paintings"
+        ]
       },
       "credit": null
+    },
+    {
+      "id": "calm-living-room",
+      "name": "Calm living room",
+      "room": "Living Room",
+      "file": "calm-living-room.jpg",
+      "wall": {
+        "quad": [
+          [
+            360,
+            218
+          ],
+          [
+            2528,
+            218
+          ],
+          [
+            2528,
+            1255
+          ],
+          [
+            360,
+            1255
+          ]
+        ],
+        "widthCm": 585.4,
+        "heightCm": 280
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 243.0,
+          "yCm": 188.4,
+          "maxWidthCm": 417.4,
+          "maxHeightCm": 163.4,
+          "minWidthCm": 91.8,
+          "bottomYCm": 188.4,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "3.704 px/cm. Ceiling 2.8 m from the prompt; the sofa back then reads 70 cm, as expected.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "limestone-hotel-lobby",
+      "name": "Limestone hotel lobby",
+      "room": "Hotel Lobby",
+      "file": "limestone-hotel-lobby.jpg",
+      "wall": {
+        "quad": [
+          [
+            60,
+            170
+          ],
+          [
+            2330,
+            170
+          ],
+          [
+            2330,
+            1268
+          ],
+          [
+            60,
+            1268
+          ]
+        ],
+        "widthCm": 785.6,
+        "heightCm": 380
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 417.0,
+          "yCm": 288.0,
+          "maxWidthCm": 661.8,
+          "maxHeightCm": 263.0,
+          "minWidthCm": 145.6,
+          "bottomYCm": 288.0,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "2.889 px/cm. Prompt asks for a 4 m limestone wall; 3.8 m to the cove keeps the low sofas believable.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "walnut-boardroom",
+      "name": "Walnut boardroom",
+      "room": "Boardroom",
+      "file": "walnut-boardroom.jpg",
+      "wall": {
+        "quad": [
+          [
+            110,
+            172
+          ],
+          [
+            2310,
+            172
+          ],
+          [
+            2310,
+            1277
+          ],
+          [
+            110,
+            1277
+          ]
+        ],
+        "widthCm": 537.6,
+        "heightCm": 270
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 282.2,
+          "yCm": 175.0,
+          "maxWidthCm": 412.5,
+          "maxHeightCm": 150.0,
+          "minWidthCm": 90.7,
+          "bottomYCm": 175.0,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.093 px/cm. Floor is hidden by the table: solved from the 2.7 m ceiling and the 75 cm credenza (top at y 970).",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "office-reception",
+      "name": "Office reception",
+      "room": "Office Reception",
+      "file": "office-reception.jpg",
+      "wall": {
+        "quad": [
+          [
+            0,
+            108
+          ],
+          [
+            2400,
+            108
+          ],
+          [
+            2400,
+            1290
+          ],
+          [
+            0,
+            1290
+          ]
+        ],
+        "widthCm": 548.2,
+        "heightCm": 270
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 292.4,
+          "yCm": 151.8,
+          "maxWidthCm": 391.2,
+          "maxHeightCm": 126.8,
+          "minWidthCm": 86.1,
+          "bottomYCm": 151.8,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.378 px/cm. The branch in the vase reaches y 860, so works clear it.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "hotel-suite-bedroom",
+      "name": "Hotel suite bedroom",
+      "room": "Bedroom",
+      "file": "hotel-suite-bedroom.jpg",
+      "wall": {
+        "quad": [
+          [
+            335,
+            170
+          ],
+          [
+            2200,
+            170
+          ],
+          [
+            2200,
+            1230
+          ],
+          [
+            335,
+            1230
+          ]
+        ],
+        "widthCm": 492.6,
+        "heightCm": 280
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 245.7,
+          "yCm": 156.5,
+          "maxWidthCm": 315.5,
+          "maxHeightCm": 131.5,
+          "minWidthCm": 69.4,
+          "bottomYCm": 156.5,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "3.786 px/cm. Headboard top reads 103 cm against the 2.8 m ceiling.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "penthouse-living-room",
+      "name": "Penthouse living room",
+      "room": "Penthouse",
+      "file": "penthouse-living-room.jpg",
+      "wall": {
+        "quad": [
+          [
+            165,
+            225
+          ],
+          [
+            2360,
+            225
+          ],
+          [
+            2360,
+            1300
+          ],
+          [
+            165,
+            1300
+          ]
+        ],
+        "widthCm": 612.6,
+        "heightCm": 300
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 307.0,
+          "yCm": 211.6,
+          "maxWidthCm": 490.7,
+          "maxHeightCm": 186.6,
+          "minWidthCm": 108.0,
+          "bottomYCm": 211.6,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "3.583 px/cm. 3 m ceiling from the prompt; sofa back reads 68 cm.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "white-gallery-wall",
+      "name": "White gallery wall",
+      "room": "Gallery",
+      "file": "white-gallery-wall.jpg",
+      "wall": {
+        "quad": [
+          [
+            325,
+            425
+          ],
+          [
+            2205,
+            425
+          ],
+          [
+            2205,
+            1130
+          ],
+          [
+            325,
+            1130
+          ]
+        ],
+        "widthCm": 640.0,
+        "heightCm": 240
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 320.0,
+          "yCm": 90,
+          "maxWidthCm": 534.9,
+          "maxHeightCm": 124.9,
+          "minWidthCm": 117.7,
+          "bottomYCm": 149.9,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "2.938 px/cm. Freestanding partition, taken as 2.4 m high; furnitureTop stands in for a 70 cm minimum height.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "green-study",
+      "name": "Green study",
+      "room": "Study",
+      "file": "green-study.jpg",
+      "wall": {
+        "quad": [
+          [
+            170,
+            0
+          ],
+          [
+            2240,
+            0
+          ],
+          [
+            2240,
+            1300
+          ],
+          [
+            170,
+            1300
+          ]
+        ],
+        "widthCm": 471.3,
+        "heightCm": 296
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 249.3,
+          "yCm": 159.9,
+          "maxWidthCm": 360.2,
+          "maxHeightCm": 134.9,
+          "minWidthCm": 79.3,
+          "bottomYCm": 159.9,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.392 px/cm. Ceiling is out of frame. Scale from the 90 cm dado rail (y 905); the top edge of the image is 2.96 m.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "restaurant-banquette",
+      "name": "Restaurant banquette",
+      "room": "Restaurant",
+      "file": "restaurant-banquette.jpg",
+      "wall": {
+        "quad": [
+          [
+            300,
+            105
+          ],
+          [
+            2210,
+            105
+          ],
+          [
+            2210,
+            1340
+          ],
+          [
+            300,
+            1340
+          ]
+        ],
+        "widthCm": 464.0,
+        "heightCm": 300
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 233.2,
+          "yCm": 186.5,
+          "maxWidthCm": 388.1,
+          "maxHeightCm": 161.5,
+          "minWidthCm": 85.4,
+          "bottomYCm": 186.5,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.117 px/cm. 3 m to the cove; banquette back then reads 93 cm.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "cool",
+          "neutral"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "skylit-hallway",
+      "name": "Skylit hallway",
+      "room": "Hallway",
+      "file": "skylit-hallway.jpg",
+      "wall": {
+        "quad": [
+          [
+            830,
+            135
+          ],
+          [
+            1700,
+            135
+          ],
+          [
+            1700,
+            1265
+          ],
+          [
+            830,
+            1265
+          ]
+        ],
+        "widthCm": 300.3,
+        "heightCm": 390
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 150.1,
+          "yCm": 240,
+          "maxWidthCm": 231.9,
+          "maxHeightCm": 248.4,
+          "minWidthCm": 51.0,
+          "bottomYCm": 273.4,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "2.897 px/cm. End wall taken as 3 m wide, as prompted; the console then reads 69 cm high.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "warehouse-gallery",
+      "name": "Warehouse gallery",
+      "room": "Gallery",
+      "file": "warehouse-gallery.jpg",
+      "wall": {
+        "quad": [
+          [
+            175,
+            300
+          ],
+          [
+            2255,
+            300
+          ],
+          [
+            2255,
+            1240
+          ],
+          [
+            175,
+            1240
+          ]
+        ],
+        "widthCm": 770.0,
+        "heightCm": 348
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 385.0,
+          "yCm": 198,
+          "maxWidthCm": 435.4,
+          "maxHeightCm": 213.4,
+          "minWidthCm": 95.8,
+          "bottomYCm": 268.0,
+          "topYCm": 54.6
+        }
+      ],
+      "_calibration": "2.701 px/cm. Between the prompted 7 m width and 3.8 m height; the track lights hang to y 340.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "warehouse-apartment",
+      "name": "Warehouse apartment",
+      "room": "Apartment",
+      "file": "warehouse-apartment.jpg",
+      "wall": {
+        "quad": [
+          [
+            160,
+            160
+          ],
+          [
+            2528,
+            160
+          ],
+          [
+            2528,
+            1260
+          ],
+          [
+            160,
+            1260
+          ]
+        ],
+        "widthCm": 624.3,
+        "heightCm": 290
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 309.8,
+          "yCm": 197.5,
+          "maxWidthCm": 304.3,
+          "maxHeightCm": 172.5,
+          "minWidthCm": 66.9,
+          "bottomYCm": 197.5,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "3.793 px/cm. Concrete-block courses (20 cm) give 3.8 px/cm; sofa back reads 72 cm.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "coastal-bedroom",
+      "name": "Coastal bedroom",
+      "room": "Bedroom",
+      "file": "coastal-bedroom.jpg",
+      "wall": {
+        "quad": [
+          [
+            100,
+            100
+          ],
+          [
+            2280,
+            100
+          ],
+          [
+            2280,
+            1310
+          ],
+          [
+            100,
+            1310
+          ]
+        ],
+        "widthCm": 504.5,
+        "heightCm": 280
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 286.9,
+          "yCm": 144.3,
+          "maxWidthCm": 216.0,
+          "maxHeightCm": 119.3,
+          "minWidthCm": 47.5,
+          "bottomYCm": 144.3,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.321 px/cm. Bedside tables read 58 cm and the rattan headboard 116 cm against a 2.8 m ceiling.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "studio-reception",
+      "name": "Studio reception",
+      "room": "Office Reception",
+      "file": "studio-reception.jpg",
+      "wall": {
+        "quad": [
+          [
+            0,
+            0
+          ],
+          [
+            2290,
+            0
+          ],
+          [
+            2290,
+            1340
+          ],
+          [
+            0,
+            1340
+          ]
+        ],
+        "widthCm": 538.3,
+        "heightCm": 315
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 293.8,
+          "yCm": 212.7,
+          "maxWidthCm": 276.2,
+          "maxHeightCm": 187.7,
+          "minWidthCm": 60.8,
+          "bottomYCm": 212.7,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.254 px/cm. Ceiling out of frame; scale from an 80 cm sofa back.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "warehouse-meeting-room",
+      "name": "Warehouse meeting room",
+      "room": "Boardroom",
+      "file": "warehouse-meeting-room.jpg",
+      "wall": {
+        "quad": [
+          [
+            200,
+            150
+          ],
+          [
+            2250,
+            150
+          ],
+          [
+            2250,
+            1265
+          ],
+          [
+            200,
+            1265
+          ]
+        ],
+        "widthCm": 551.6,
+        "heightCm": 300
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 294.6,
+          "yCm": 202.0,
+          "maxWidthCm": 467.0,
+          "maxHeightCm": 120.5,
+          "minWidthCm": 102.7,
+          "bottomYCm": 202.0,
+          "topYCm": 81.5
+        }
+      ],
+      "_calibration": "3.717 px/cm. Wall taken as 3 m to the beam; the pendant hangs to y 345, so works stay below it.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "boutique-hotel-lounge",
+      "name": "Boutique hotel lounge",
+      "room": "Hotel Lobby",
+      "file": "boutique-hotel-lounge.jpg",
+      "wall": {
+        "quad": [
+          [
+            305,
+            105
+          ],
+          [
+            2100,
+            105
+          ],
+          [
+            2100,
+            1265
+          ],
+          [
+            305,
+            1265
+          ]
+        ],
+        "widthCm": 588.0,
+        "heightCm": 380
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 314.5,
+          "yCm": 260.1,
+          "maxWidthCm": 330.5,
+          "maxHeightCm": 235.1,
+          "minWidthCm": 72.7,
+          "bottomYCm": 260.1,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "3.053 px/cm. The 1 m wainscot (top at y 960) gives 3.05 px/cm, matching the prompted 3.8 m ceiling.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "blue-study",
+      "name": "Blue study",
+      "room": "Study",
+      "file": "blue-study.jpg",
+      "wall": {
+        "quad": [
+          [
+            240,
+            45
+          ],
+          [
+            2330,
+            45
+          ],
+          [
+            2330,
+            1330
+          ],
+          [
+            240,
+            1330
+          ]
+        ],
+        "widthCm": 520.5,
+        "heightCm": 320
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 257.7,
+          "yCm": 179.2,
+          "maxWidthCm": 366.0,
+          "maxHeightCm": 154.2,
+          "minWidthCm": 80.5,
+          "bottomYCm": 179.2,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.016 px/cm. Ceiling 3.2 m; panelling then reads 82 cm. The desk lamp reaches y 845.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "wine-bar-banquette",
+      "name": "Wine bar banquette",
+      "room": "Restaurant",
+      "file": "wine-bar-banquette.jpg",
+      "wall": {
+        "quad": [
+          [
+            110,
+            120
+          ],
+          [
+            2300,
+            120
+          ],
+          [
+            2300,
+            1390
+          ],
+          [
+            110,
+            1390
+          ]
+        ],
+        "widthCm": 539.7,
+        "heightCm": 313
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 287.1,
+          "yCm": 193.2,
+          "maxWidthCm": 386.7,
+          "maxHeightCm": 168.2,
+          "minWidthCm": 85.1,
+          "bottomYCm": 193.2,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "4.058 px/cm. Scale from a 1 m banquette back.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "heritage-hallway",
+      "name": "Heritage hallway",
+      "room": "Hallway",
+      "file": "heritage-hallway.jpg",
+      "wall": {
+        "quad": [
+          [
+            805,
+            165
+          ],
+          [
+            1700,
+            165
+          ],
+          [
+            1700,
+            1305
+          ],
+          [
+            805,
+            1305
+          ]
+        ],
+        "widthCm": 235.5,
+        "heightCm": 300
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 121.1,
+          "yCm": 150,
+          "maxWidthCm": 177.4,
+          "maxHeightCm": 140.5,
+          "minWidthCm": 39.0,
+          "bottomYCm": 165.5,
+          "topYCm": 25.0
+        }
+      ],
+      "_calibration": "3.800 px/cm. Scale from the console (75 cm high, 3.8 px/cm at the wall). The palm reaches y 870.",
+      "light": {
+        "from": "left",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
+    },
+    {
+      "id": "heritage-gallery",
+      "name": "Heritage gallery",
+      "room": "Gallery",
+      "file": "heritage-gallery.jpg",
+      "wall": {
+        "quad": [
+          [
+            858,
+            584
+          ],
+          [
+            2199,
+            284
+          ],
+          [
+            2199,
+            1225
+          ],
+          [
+            860,
+            1007
+          ]
+        ],
+        "widthCm": 784,
+        "heightCm": 305
+      },
+      "camera": {
+        "focalPx": 1289
+      },
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 450,
+          "yCm": 155,
+          "maxWidthCm": 400,
+          "maxHeightCm": 200,
+          "minWidthCm": 60,
+          "bottomYCm": 225,
+          "topYCm": 25
+        }
+      ],
+      "_calibration": "Angled wall, floor to picture rail. The doorway (2.04 m) puts the rail at 3.05 m; focal length from the two walls' vanishing points; wall length then 7.84 m.",
+      "light": {
+        "from": "right",
+        "strength": 0.3,
+        "softness": 3.5,
+        "relight": 0.5,
+        "exposure": 1.0
+      },
+      "match": {
+        "orientations": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "palettes": [
+          "warm",
+          "cool",
+          "neutral",
+          "vivid"
+        ],
+        "styles": [
+          "abstract-landscapes",
+          "abstract-seascapes",
+          "coastal-abstract-art",
+          "ocean-inspired-paintings",
+          "other-works",
+          "statement-artworks",
+          "textured-abstract-paintings"
+        ]
+      },
+      "credit": null,
+      "source": "AI-generated interior (Google Gemini / Nano Banana), Nov 2026"
     }
   ]
 }

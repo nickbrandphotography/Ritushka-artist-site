@@ -20,8 +20,8 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mockup_engine import (WallPlane, choose_placement,  # noqa: E402
-                           displayed_size_cm, placements_of)
+from mockup_engine import (WallPlane, choose_placement, hang_centre,  # noqa: E402
+                           displayed_size_cm, panel_size_cm, placements_of)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
@@ -76,7 +76,7 @@ def main():
                             f"{residual * 100:.0f}% — worth re-measuring the canvas")
 
         # --- clearance -------------------------------------------------------
-        place = choose_placement(scene, draw_w + 5, draw_h + 5)
+        place = choose_placement(scene, *panel_size_cm(draw_w, draw_h, bool(a.get('framed'))))
         if place is None:
             problems.append(f"{m['slug']}: does not fit any hanging position in {scene['id']}")
             continue
@@ -94,7 +94,8 @@ def main():
             continue
 
         plane = WallPlane(scene['wall']['quad'], scene['wall']['widthCm'], scene['wall']['heightCm'])
-        q = plane.quad_for(place['xCm'], place['yCm'], draw_w, draw_h)
+        cx, cy = hang_centre(place, panel_size_cm(draw_w, draw_h, bool(a.get('framed')))[1])
+        q = plane.quad_for(cx, cy, draw_w, draw_h)
         expect_w = (max(p[0] for p in q) - min(p[0] for p in q)) * scale
         got_w = xs.max() - xs.min()
         # The shadow spreads past the frame, so the changed region is always wider.
@@ -105,7 +106,7 @@ def main():
         # --- colour fidelity --------------------------------------------------
         # Compare the whole painting with the whole source, not two different
         # crops of it. The canvas quad is inset to exclude the frame and reveal.
-        inset = plane.quad_for(place['xCm'], place['yCm'], draw_w * 0.86, draw_h * 0.86)
+        inset = plane.quad_for(cx, cy, draw_w * 0.86, draw_h * 0.86)
         poly = [(x * scale, y * scale) for x, y in inset]
         mask = Image.new('L', comp.size, 0)
         ImageDraw.Draw(mask).polygon(poly, fill=255)
@@ -131,7 +132,14 @@ def main():
 
         sw, sh = art.size
         mx, my = int(sw * 0.07), int(sh * 0.07)
-        src_patch = art.convert('HSV').crop((mx, my, sw - mx, sh - my))
+        # Shrink the source to the size the painting occupies in the mock-up. Fine
+        # colourful detail averages out when a canvas is shown a few hundred pixels
+        # wide, which lowers measured saturation in any image of it, so the two must
+        # be compared at the same resolution for the test to measure compositing.
+        ys_, xs_ = np.where(sel)
+        tw, th = max(8, xs_.max() - xs_.min()), max(8, ys_.max() - ys_.min())
+        src_patch = art.convert('RGB').crop((mx, my, sw - mx, sh - my))
+        src_patch = src_patch.resize((tw, th), Image.LANCZOS).convert('HSV')
         sh_ = colour_stats(np.asarray(src_patch, dtype=float))
         if ph is None or sh_ is None:
             continue                      # too little colour to judge either way

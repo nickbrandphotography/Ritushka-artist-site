@@ -1,0 +1,583 @@
+{
+  "_comment": "Measurements of the AI-generated interiors (Nano Banana, Nov 2026), in pixels of the file in mockups/scenes/. scripts/calibrate-rooms.py turns each into a calibrated scene in scenes.json. Straight-on rooms: wall = [left, top, right, bottom] of the back wall, heightCm = the real height between top and bottom (from the prompt's ceiling height, checked against furniture). clear = [x from, x to] of open wall; furnitureTop = highest pixel of anything in front of that wall (sofa back, headboard, lamp, plant); topLimit = lowest pixel of anything hanging from the ceiling. Angled rooms give the full quad and a focal length instead. centreX = the pixel column to centre works on (the sofa, bed or desk below). hangAbove = hang a set gap above the furniture rather than at eye level.",
+  "rooms": [
+    {
+      "id": "calm-living-room",
+      "name": "Calm living room",
+      "room": "Living Room",
+      "src": "10.jpg",
+      "wall": [
+        360,
+        218,
+        2528,
+        1255
+      ],
+      "heightCm": 280,
+      "clear": [
+        450,
+        2450
+      ],
+      "furnitureTop": 990,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Ceiling 2.8 m from the prompt; the sofa back then reads 70 cm, as expected.",
+      "centreX": 1260,
+      "hangAbove": true
+    },
+    {
+      "id": "limestone-hotel-lobby",
+      "name": "Limestone hotel lobby",
+      "room": "Hotel Lobby",
+      "src": "11.jpg",
+      "wall": [
+        60,
+        170,
+        2330,
+        1268
+      ],
+      "heightCm": 380,
+      "clear": [
+        250,
+        2250
+      ],
+      "furnitureTop": 1060,
+      "light": "left",
+      "palettes": [
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Prompt asks for a 4 m limestone wall; 3.8 m to the cove keeps the low sofas believable.",
+      "centreX": 1265,
+      "hangAbove": true
+    },
+    {
+      "id": "walnut-boardroom",
+      "name": "Walnut boardroom",
+      "room": "Boardroom",
+      "src": "12.jpg",
+      "wall": [
+        110,
+        172,
+        2310,
+        1277
+      ],
+      "heightCm": 270,
+      "clear": [
+        300,
+        2150
+      ],
+      "furnitureTop": 970,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Floor is hidden by the table: solved from the 2.7 m ceiling and the 75 cm credenza (top at y 970).",
+      "centreX": 1265,
+      "hangAbove": true
+    },
+    {
+      "id": "office-reception",
+      "name": "Office reception",
+      "room": "Office Reception",
+      "src": "13.jpg",
+      "wall": [
+        0,
+        108,
+        2400,
+        1290
+      ],
+      "heightCm": 270,
+      "clear": [
+        380,
+        2250
+      ],
+      "furnitureTop": 860,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "The branch in the vase reaches y 860, so works clear it.",
+      "centreX": 1280,
+      "hangAbove": true
+    },
+    {
+      "id": "hotel-suite-bedroom",
+      "name": "Hotel suite bedroom",
+      "room": "Bedroom",
+      "src": "14.jpg",
+      "wall": [
+        335,
+        170,
+        2200,
+        1230
+      ],
+      "heightCm": 280,
+      "clear": [
+        600,
+        1900
+      ],
+      "furnitureTop": 838,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Headboard top reads 103 cm against the 2.8 m ceiling.",
+      "centreX": 1265,
+      "hangAbove": true
+    },
+    {
+      "id": "penthouse-living-room",
+      "name": "Penthouse living room",
+      "room": "Penthouse",
+      "src": "15.jpg",
+      "wall": [
+        165,
+        225,
+        2360,
+        1300
+      ],
+      "heightCm": 300,
+      "clear": [
+        350,
+        2250
+      ],
+      "furnitureTop": 1055,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "3 m ceiling from the prompt; sofa back reads 68 cm.",
+      "centreX": 1265,
+      "hangAbove": true
+    },
+    {
+      "id": "white-gallery-wall",
+      "name": "White gallery wall",
+      "room": "Gallery",
+      "src": "16.jpg",
+      "wall": [
+        325,
+        425,
+        2205,
+        1130
+      ],
+      "heightCm": 240,
+      "clear": [
+        450,
+        2080
+      ],
+      "furnitureTop": 924,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Freestanding partition, taken as 2.4 m high; furnitureTop stands in for a 70 cm minimum height.",
+      "centreX": 1265
+    },
+    {
+      "id": "green-study",
+      "name": "Green study",
+      "room": "Study",
+      "src": "17.jpg",
+      "wall": [
+        170,
+        0,
+        2240,
+        1300
+      ],
+      "heightCm": 296,
+      "clear": [
+        350,
+        2100
+      ],
+      "furnitureTop": 790,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Ceiling is out of frame. Scale from the 90 cm dado rail (y 905); the top edge of the image is 2.96 m.",
+      "centreX": 1265,
+      "hangAbove": true
+    },
+    {
+      "id": "restaurant-banquette",
+      "name": "Restaurant banquette",
+      "room": "Restaurant",
+      "src": "18.jpg",
+      "wall": [
+        300,
+        105,
+        2210,
+        1340
+      ],
+      "heightCm": 300,
+      "clear": [
+        400,
+        2100
+      ],
+      "furnitureTop": 955,
+      "light": "left",
+      "palettes": [
+        "cool",
+        "neutral"
+      ],
+      "note": "3 m to the cove; banquette back then reads 93 cm.",
+      "centreX": 1260,
+      "hangAbove": true
+    },
+    {
+      "id": "skylit-hallway",
+      "name": "Skylit hallway",
+      "room": "Hallway",
+      "src": "19.jpg",
+      "wall": [
+        830,
+        135,
+        1700,
+        1265
+      ],
+      "heightCm": 390,
+      "clear": [
+        900,
+        1650
+      ],
+      "furnitureTop": 985,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "orientations": [
+        "portrait",
+        "square"
+      ],
+      "note": "End wall taken as 3 m wide, as prompted; the console then reads 69 cm high.",
+      "centreX": 1265
+    },
+    {
+      "id": "warehouse-gallery",
+      "name": "Warehouse gallery",
+      "room": "Gallery",
+      "src": "20.jpg",
+      "wall": [
+        175,
+        300,
+        2255,
+        1240
+      ],
+      "heightCm": 348,
+      "clear": [
+        600,
+        1990
+      ],
+      "furnitureTop": 1078,
+      "topLimit": 380,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Between the prompted 7 m width and 3.8 m height; the track lights hang to y 340.",
+      "centreX": 1215
+    },
+    {
+      "id": "warehouse-apartment",
+      "name": "Warehouse apartment",
+      "room": "Apartment",
+      "src": "21.jpg",
+      "wall": [
+        160,
+        160,
+        2528,
+        1260
+      ],
+      "heightCm": 290,
+      "clear": [
+        650,
+        1950
+      ],
+      "furnitureTop": 985,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Concrete-block courses (20 cm) give 3.8 px/cm; sofa back reads 72 cm.",
+      "centreX": 1335,
+      "hangAbove": true
+    },
+    {
+      "id": "coastal-bedroom",
+      "name": "Coastal bedroom",
+      "room": "Bedroom",
+      "src": "22.jpg",
+      "wall": [
+        100,
+        100,
+        2280,
+        1310
+      ],
+      "heightCm": 280,
+      "clear": [
+        520,
+        1850
+      ],
+      "furnitureTop": 810,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Bedside tables read 58 cm and the rattan headboard 116 cm against a 2.8 m ceiling.",
+      "centreX": 1340,
+      "hangAbove": true
+    },
+    {
+      "id": "studio-reception",
+      "name": "Studio reception",
+      "room": "Office Reception",
+      "src": "23.jpg",
+      "wall": [
+        0,
+        0,
+        2290,
+        1340
+      ],
+      "heightCm": 315,
+      "clear": [
+        620,
+        2150
+      ],
+      "furnitureTop": 990,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Ceiling out of frame; scale from an 80 cm sofa back.",
+      "centreX": 1250,
+      "hangAbove": true
+    },
+    {
+      "id": "warehouse-meeting-room",
+      "name": "Warehouse meeting room",
+      "room": "Boardroom",
+      "src": "24.jpg",
+      "wall": [
+        200,
+        150,
+        2250,
+        1265
+      ],
+      "heightCm": 300,
+      "clear": [
+        300,
+        2200
+      ],
+      "furnitureTop": 975,
+      "topLimit": 360,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Wall taken as 3 m to the beam; the pendant hangs to y 345, so works stay below it.",
+      "centreX": 1295,
+      "hangAbove": true
+    },
+    {
+      "id": "boutique-hotel-lounge",
+      "name": "Boutique hotel lounge",
+      "room": "Hotel Lobby",
+      "src": "25.jpg",
+      "wall": [
+        305,
+        105,
+        2100,
+        1265
+      ],
+      "heightCm": 380,
+      "clear": [
+        420,
+        1800
+      ],
+      "furnitureTop": 960,
+      "light": "right",
+      "palettes": [
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "The 1 m wainscot (top at y 960) gives 3.05 px/cm, matching the prompted 3.8 m ceiling.",
+      "centreX": 1265,
+      "hangAbove": true
+    },
+    {
+      "id": "blue-study",
+      "name": "Blue study",
+      "room": "Study",
+      "src": "26.jpg",
+      "wall": [
+        240,
+        45,
+        2330,
+        1330
+      ],
+      "heightCm": 320,
+      "clear": [
+        450,
+        2050
+      ],
+      "furnitureTop": 845,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Ceiling 3.2 m; panelling then reads 82 cm. The desk lamp reaches y 845.",
+      "centreX": 1275,
+      "hangAbove": true
+    },
+    {
+      "id": "wine-bar-banquette",
+      "name": "Wine bar banquette",
+      "room": "Restaurant",
+      "src": "27.jpg",
+      "wall": [
+        110,
+        120,
+        2300,
+        1390
+      ],
+      "heightCm": 313,
+      "clear": [
+        450,
+        2250
+      ],
+      "furnitureTop": 985,
+      "light": "right",
+      "palettes": [
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "note": "Scale from a 1 m banquette back.",
+      "centreX": 1275,
+      "hangAbove": true
+    },
+    {
+      "id": "heritage-hallway",
+      "name": "Heritage hallway",
+      "room": "Hallway",
+      "src": "28.jpg",
+      "wall": [
+        805,
+        165,
+        1700,
+        1305
+      ],
+      "heightCm": 300,
+      "clear": [
+        860,
+        1640
+      ],
+      "furnitureTop": 870,
+      "light": "left",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "orientations": [
+        "portrait",
+        "square"
+      ],
+      "note": "Scale from the console (75 cm high, 3.8 px/cm at the wall). The palm reaches y 870.",
+      "centreX": 1265
+    },
+    {
+      "id": "heritage-gallery",
+      "name": "Heritage gallery",
+      "room": "Gallery",
+      "src": "35.jpg",
+      "quad": [
+        [
+          858,
+          584
+        ],
+        [
+          2199,
+          284
+        ],
+        [
+          2199,
+          1225
+        ],
+        [
+          860,
+          1007
+        ]
+      ],
+      "widthCm": 784,
+      "heightCm": 305,
+      "focalPx": 1289,
+      "light": "right",
+      "palettes": [
+        "warm",
+        "cool",
+        "neutral",
+        "vivid"
+      ],
+      "placements": [
+        {
+          "id": "main-wall",
+          "xCm": 450,
+          "yCm": 155,
+          "maxWidthCm": 400,
+          "maxHeightCm": 200,
+          "minWidthCm": 60,
+          "bottomYCm": 225,
+          "topYCm": 25
+        }
+      ],
+      "note": "Angled wall, floor to picture rail. The doorway (2.04 m) puts the rail at 3.05 m; focal length from the two walls' vanishing points; wall length then 7.84 m."
+    }
+  ]
+}

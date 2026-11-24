@@ -21,6 +21,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
 SCENES_JSON = 'mockups/scenes.json'
+REDIRECTS = 'mockups/redirects.json'
+PER_ARTWORK = 3
 
 WARM = {'rose', 'coral', 'flame', 'orange', 'crimson', 'gold', 'blush', 'apricot',
         'butter', 'umber', 'russet', 'scarlet', 'red', 'terracotta', 'peach', 'pink'}
@@ -80,7 +82,8 @@ def score(art, scene, used: dict) -> float | None:
         s += 3.0
 
     # A work should feel deliberate on the wall: neither lost nor wedged in.
-    sweet = u.get('maxWidthCm', 200) * 0.62
+    # Capped: on a long wall the ideal is a substantial work, not one 60% of the wall.
+    sweet = min(u.get('maxWidthCm', 200) * 0.62, 150.0)
     s += 2.0 * max(0.0, 1.0 - abs(w - sweet) / sweet)
     if w < u.get('minWidthCm', 0):
         s -= 2.5
@@ -100,15 +103,14 @@ def main():
         with Image.open(os.path.join('mockups/scenes', sc['file'])) as im:
             sc['_aspect'] = f'{im.width} / {im.height}'
     artworks = load_ts_array('src/data/artworks.ts')
-    previous = {m['artworkSlug']: m for m in load_ts_array('src/data/mockups.ts')}
-    old = {k: v['slug'] for k, v in previous.items()}
+    previous_all = load_ts_array('src/data/mockups.ts')
 
     # Largest works first: they have the fewest walls that can take them.
     ordered = sorted(artworks,
                      key=lambda a: (-(a['heightCm'] or 0) * (a['widthCm'] or 0), a['slug']))
 
     used: dict = {}
-    assigned = {}
+    assigned: dict = {}
     unplaced = []
     for a in ordered:
         ranked = []
@@ -120,50 +122,75 @@ def main():
             unplaced.append(a['slug'])
             continue
         ranked.sort(key=lambda t: (-t[0], t[1]))       # score desc, then id for stability
-        best = ranked[0][2]
-        assigned[a['slug']] = best
-        used[best['id']] = used.get(best['id'], 0) + 1
+        # Several views per work, each in a different kind of room, so a collector
+        # sees it in a home, a hotel and an office rather than three living rooms.
+        picks, kinds = [], set()
+        for _, _, sc in ranked:
+            kind = sc.get('room', sc['name'])
+            if kind in kinds:
+                continue
+            picks.append(sc)
+            kinds.add(kind)
+            if len(picks) == PER_ARTWORK:
+                break
+        assigned[a['slug']] = picks
+        for sc in picks:
+            used[sc['id']] = used.get(sc['id'], 0) + 1
 
     mockups = []
-    redirects = {}
-    by_slug = {a['slug']: a for a in artworks}
-    for i, a in enumerate(sorted(artworks, key=lambda x: x['slug'])):
-        sc = assigned.get(a['slug'])
-        if not sc:
-            # No calibrated wall suits this work yet — keep whatever it already had
+    redirects = dict(json.load(open(REDIRECTS, encoding='utf-8'))) if os.path.exists(REDIRECTS) else {}
+    for a in sorted(artworks, key=lambda x: x['slug']):
+        picks = assigned.get(a['slug'])
+        if not picks:
+            # No calibrated wall suits this work yet: keep whatever it already had
             # rather than leaving the artwork page without an in-situ view.
-            keep = previous.get(a['slug'])
-            if keep:
+            for keep in [m for m in previous_all if m['artworkSlug'] == a['slug']]:
                 keep['id'] = 'mk-' + str(len(mockups) + 1).zfill(3)
                 keep.setdefault('aspect', '4 / 3')
                 mockups.append(keep)
             continue
-        slug = f"{a['slug']}-in-{sc['id']}"
         size = (f"{a['heightCm']} × {a['widthCm']} cm"
                 if a['heightCm'] and a['widthCm'] else None)
-        room = sc.get('room', sc['name'])
-        mockups.append({
-            'id': 'mk-' + str(len(mockups) + 1).zfill(3),
-            'slug': slug,
-            'sceneId': sc['id'],
-            'room': room,
-            'artworkSlug': a['slug'],
-            'title': f"{a['title']} in a {room.lower()}",
-            'image': f'/mockups/{slug}.jpg',
-            'alt': (f"{a['title']} by Ritushka hanging in a {room.lower()}"
-                    + (f", shown to scale at {size}" if size else '')),
-            'seoTitle': f"{a['title']} in a {room} | Ritushka",
-            'metaDescription': (
-                f"See {a['title']}" + (f" ({size})" if size else '')
-                + f" by Ritushka hanging in a {room.lower()}, composited at true physical "
-                  "scale. Placement and proportion reference for collectors and interior "
-                  "designers. Enquire to acquire or commission."),
-            'credit': sc.get('credit'),
-            'aspect': sc['_aspect'],
-        })
-        prev = old.get(a['slug'])
-        if prev and prev != slug:
-            redirects[prev] = slug
+        for sc in picks:
+            slug = f"{a['slug']}-in-{sc['id']}"
+            room = sc.get('room', sc['name'])
+            mockups.append({
+                'id': 'mk-' + str(len(mockups) + 1).zfill(3),
+                'slug': slug,
+                'sceneId': sc['id'],
+                'room': room,
+                'artworkSlug': a['slug'],
+                'title': f"{a['title']} in a {room.lower()}",
+                'image': f'/mockups/{slug}.jpg',
+                'alt': (f"{a['title']} by Ritushka hanging in a {room.lower()}"
+                        + (f", shown to scale at {size}" if size else '')),
+                'seoTitle': f"{a['title']} in a {room}",  # the site template appends the name
+                'metaDescription': (
+                    f"See {a['title']}" + (f" ({size})" if size else '')
+                    + f" by Ritushka hanging in a {room.lower()}, composited at true physical "
+                      "scale. Placement and proportion reference for collectors and interior "
+                      "designers. Enquire to acquire or commission."),
+                'credit': sc.get('credit'),
+                'aspect': sc['_aspect'],
+            })
+        # Old mockup pages for this work now point at its first new view.
+        first = f"{a['slug']}-in-{picks[0]['id']}"
+        new_slugs = {f"{a['slug']}-in-{sc['id']}" for sc in picks}
+        for m in previous_all:
+            if m['artworkSlug'] == a['slug'] and m['slug'] not in new_slugs:
+                redirects[m['slug']] = first
+
+    # A redirect must never point at a page that is itself redirected or gone.
+    live = {m['slug'] for m in mockups}
+    for src in list(redirects):
+        if src in live:
+            del redirects[src]
+            continue
+        seen, dst = {src}, redirects[src]
+        while dst in redirects and dst not in seen:
+            seen.add(dst)
+            dst = redirects[dst]
+        redirects[src] = dst
 
     write_ts('src/data/mockups.ts', 'mockups', 'Mockup', mockups)
 
@@ -173,7 +200,7 @@ def main():
         a['mockups'] = [m['slug'] for m in mockups if m['artworkSlug'] == a['slug']]
     write_ts('src/data/artworks.ts', 'artworks', 'Artwork', art_src)
 
-    json.dump(redirects, open('mockups/redirects.json', 'w', encoding='utf-8'),
+    json.dump(redirects, open(REDIRECTS, 'w', encoding='utf-8'),
               indent=1, sort_keys=True)
 
     composited = sum(1 for m in mockups if m.get('sceneId') in {s['id'] for s in scenes})
@@ -184,7 +211,7 @@ def main():
     if unplaced:
         print('!! no wall large enough for:', ', '.join(unplaced))
     if redirects:
-        print(f"{len(redirects)} mockup URLs changed — added to mockups/redirects.json")
+        print(f"{len(redirects)} old mockup URLs redirect to new ones (mockups/redirects.json)")
 
 
 if __name__ == '__main__':
