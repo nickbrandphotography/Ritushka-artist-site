@@ -59,6 +59,7 @@ export default function Footer() {
             <li><Link href="/trade/corporate" className="hover:text-bone">Corporate Art</Link></li>
             <li><Link href="/trade" className="underline">All trade programs</Link></li>
             <li><Link href="/commission" className="hover:text-bone">Commissions</Link></li>
+            <li><a href="/ritushka-introduction.pdf" className="hover:text-bone">Studio introduction (PDF)</a></li>
           </ul>
         </nav>
         <div>

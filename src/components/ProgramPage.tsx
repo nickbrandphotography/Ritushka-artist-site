@@ -13,6 +13,11 @@ export default function ProgramPage({ p }: { p: Program }) {
       <Breadcrumbs crumbs={crumbs} />
       <h1 className="mt-5 font-serif text-4xl text-ink md:text-5xl">{p.title}</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink/75">{p.intro}</p>
+      <p className="mt-4">
+        <a href="/ritushka-introduction.pdf" className="text-accent underline underline-offset-4 hover:text-ink">
+          Download the studio introduction (PDF) →
+        </a>
+      </p>
       <div className="mt-12 grid gap-12 lg:grid-cols-2">
         <div>
           <h2 className="font-serif text-2xl text-ink">What you receive</h2>
